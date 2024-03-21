@@ -1,0 +1,2 @@
+Input: Year of birth
+Output: Age
