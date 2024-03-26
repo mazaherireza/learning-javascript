@@ -1,0 +1,4 @@
+Calculate sum of digits of a number.
+
+Input: 189
+Output: 1 + 8 + 9 (18)
