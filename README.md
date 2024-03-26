@@ -1,1 +1,1 @@
-"My Learning JavaScript Journey." 
+## My Learning JavaScript Journey.
