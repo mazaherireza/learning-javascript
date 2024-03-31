@@ -1,0 +1,1 @@
+Simple search in an array, get a username from user and iterate through the array to find whether it is in an array or not.
