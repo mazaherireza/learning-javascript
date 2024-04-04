@@ -21,15 +21,20 @@ const cart = [
   },
 ];
 
-const POSTAGE_FEE = 12
+const POSTAGE_FEE = 12;
 
-let postage = 0
-const POSTAGE_THRESHOLD = 10
-const isSubjectToPostage = cart.filter(product => product.price > POSTAGE_THRESHOLD)
-console.log('Products that are subject to postage are:', isSubjectToPostage.map(product => product.name) )
+let postage = 0;
+const POSTAGE_THRESHOLD = 10;
+const isSubjectToPostage = cart.filter(
+  (product) => product.price > POSTAGE_THRESHOLD
+);
+console.log(
+  "Products that are subject to postage are:",
+  isSubjectToPostage.map((product) => product.name)
+);
 
-isSubjectToPostage.forEach(product => {
-  postage += (product.price * (POSTAGE_FEE / 100))
-})
+isSubjectToPostage.forEach((product) => {
+  postage += product.price * (POSTAGE_FEE / 100);
+});
 
-console.log('Postage is: ', postage)
+console.log("Postage is: ", postage);
