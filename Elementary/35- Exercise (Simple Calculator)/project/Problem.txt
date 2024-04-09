@@ -1,0 +1,7 @@
+Implement a simple calculator:
+
+Input: 2 5 *
+Output: 10
+
+
+
