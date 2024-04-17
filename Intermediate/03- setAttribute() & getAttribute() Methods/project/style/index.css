@@ -3,13 +3,14 @@ body {
   display: flex;
 }
 
-section {
+section,
+main {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-#main {
+main {
   background: #a8ff78;
   background: linear-gradient(to left, #78ffd6, #a8ff78);
   align-items: center;
@@ -22,4 +23,8 @@ section {
 
 #playground .playground-title {
   margin-bottom: 1em;
+}
+
+#playground ul {
+  list-style-type: none;
 }
