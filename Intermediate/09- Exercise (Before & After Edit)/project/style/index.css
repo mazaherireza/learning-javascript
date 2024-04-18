@@ -1,0 +1,44 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+section,
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.container img {
+  width: 200px;
+  height: auto;
+  border-radius: 0.25em;
+}
+
+button {
+  width: 5em;
+  padding: 0.25em;
+  margin-top: 0.5em;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-weight: bold;
+}
