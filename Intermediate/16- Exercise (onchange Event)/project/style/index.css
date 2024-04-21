@@ -1,0 +1,30 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+section,
+main {
+  width: 50%;
+  display: flex;
+}
+
+main {
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  flex-direction: column;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 2em;
+}
+
+#positions {
+  width: 40%;
+}
