@@ -1,0 +1,52 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+section,
+main {
+  width: 50%;
+  display: flex;
+}
+
+main {
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  flex-direction: column;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 2em;
+}
+
+#positions {
+  width: 50%;
+}
+
+.wrapper {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  width: 80%;
+  padding: 0.25em;
+}
+
+button {
+  padding: 0.25em;
+  cursor: pointer;
+}
+
+#information {
+  font-size: small;
+  font-weight: bold;
+  margin-top: 1em;
+}
