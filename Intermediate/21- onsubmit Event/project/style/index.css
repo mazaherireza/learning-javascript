@@ -1,0 +1,42 @@
+body {
+  height: 100vh;
+  display: flex;
+}
+
+section,
+main {
+  width: 50%;
+  display: flex;
+}
+
+main {
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  flex-direction: column;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 50%;
+  margin-bottom: 0.5rem;
+  padding: 0.5em;
+}
+
+input[type="submit"] {
+  width: 8em;
+  cursor: pointer;
+}
