@@ -1,0 +1,88 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+section,
+main {
+  width: 50%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  padding: 1em;
+  background-color: #c5c5c5;
+}
+
+input {
+  width: 100%;
+  padding: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+button {
+  cursor: pointer;
+  width: 12em;
+  padding: 0.25em;
+}
+
+#wrapper {
+  width: 100%;
+  /* 100vh - height of #playground-title - vertical padding */
+  height: calc(100vh - 27px - (16px * 2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#inner {
+  width: 80%;
+}
+
+#inner h3 {
+  margin-bottom: 0.5em;
+}
+
+.properties {
+  display: flex;
+  gap: 1em;
+  width: 100%;
+}
+
+.property {
+  border: 1px solid gray;
+  border-radius: 0.25em;
+  display: flex;
+  flex-direction: column;
+}
+
+#key-code {
+  margin: 0;
+  min-height: 2em;
+  align-items: center;
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.property-title {
+  width: 100%;
+  margin: 0;
+  padding: 0.5em;
+  background-color: #78ffd6;
+}
+
+.value {
+  min-height: 2em;
+  font-size: small;
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 0;
+  background-color: #808080;
+}
