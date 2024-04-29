@@ -1,0 +1,74 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+section, main {
+  width: 50%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  padding: 1em;
+  background-color: #c5c5c5;
+  position: relative;
+}
+
+.wrapper {
+  width: 100%;
+  /* 2 * 1em for vertical padding */
+  min-height: calc(100vh - 27px - 2em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner h4 {
+  text-transform: uppercase;
+}
+
+#btn {
+  cursor: pointer;
+  padding: 0.25em;
+  margin-top: 0.5em;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75em;
+  background: white;
+  border-radius: 0.5em;
+}
+
+.fa {
+  cursor: pointer;
+  align-self: flex-end;
+}
