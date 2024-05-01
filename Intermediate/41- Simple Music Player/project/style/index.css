@@ -1,0 +1,55 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  background-color: #c5c5c5;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+img {
+  border-radius: 0.25em;
+}
+
+audio {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5em;
+  font-weight: bold;
+  border-radius: 0.25em;
+}
+
+#audio-name {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#audio-name,
+#singer-name {
+  font-style: italic;
+}
