@@ -1,0 +1,3 @@
+const $ = document;
+
+console.log($);
