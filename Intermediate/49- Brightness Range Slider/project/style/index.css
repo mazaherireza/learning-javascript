@@ -1,0 +1,62 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  background-color: #c5c5c5;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+img {
+  border-radius: 0.25em;
+}
+
+figcaption {
+  font-size: small;
+}
+
+h5 {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.brightness-box {
+  width: 300px;
+  background-color: white;
+  border-radius: 0.75em;
+  padding: 1em;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #36454f; /* <------------- Update the color of track and thumb. */
+}
