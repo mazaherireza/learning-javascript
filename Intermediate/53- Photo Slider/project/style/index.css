@@ -1,0 +1,79 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  background-color: #c5c5c5;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+h3 {
+  margin-bottom: 2em;
+  font-style: italic;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+#carousel-container {
+  width: 55%;
+  height: 55%; /* <--------- Defines the height as a percentage of the containing block's hieght. */
+  margin: auto; /* <-------- To center an element horizontally within its parent container. */
+  position: relative;
+}
+
+#number-text {
+  font-size: small;
+  color: white;
+  background: black;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  border-radius: 0.25em;
+}
+
+.fa {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 0.25em;
+}
+
+.fa:hover {
+  opacity: 1;
+}
+
+.fa-chevron-circle-left {
+  left: 0;
+}
+
+.fa-chevron-circle-right {
+  right: 0;
+}
