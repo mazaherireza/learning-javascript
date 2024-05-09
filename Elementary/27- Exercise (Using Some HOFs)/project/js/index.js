@@ -25,15 +25,15 @@ const POSTAGE_FEE = 12;
 
 let postage = 0;
 const POSTAGE_THRESHOLD = 10;
-const isSubjectToPostage = cart.filter(
+const isSubjectedToPostage = cart.filter(
   (product) => product.price > POSTAGE_THRESHOLD
 );
 console.log(
-  "Products that are subject to postage are:",
-  isSubjectToPostage.map((product) => product.name)
+  "Products that are subjected to postage are:",
+  isSubjectedToPostage.map((product) => product.name)
 );
 
-isSubjectToPostage.forEach((product) => {
+isSubjectedToPostage.forEach((product) => {
   postage += product.price * (POSTAGE_FEE / 100);
 });
 
