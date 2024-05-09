@@ -19,13 +19,18 @@ const availableBooks = [
   },
 ];
 
-const prependWithCurrency = (symbol = "€") => {
-  return availableBooks.map((book) => `${symbol}${book.price}`);
+const prependWithCurrency = (arr, symbol = "€") => {
+  return arr.map((book) => {
+    const { price, ...other } = book;
+    return {
+      ...other,
+      price: `${symbol}${price}`,
+    };
+  });
 };
 
-const pricesWithCurrency = prependWithCurrency("$");
-
-const authorNovels = (authorName = "Gabriel García Márquez") => {
+// Authors' Novels
+const authorsNovels = (authorName = "Gabriel García Márquez") => {
   return availableBooks.filter((book) => book.author == authorName);
 };
-const GeorgeOrwellsNovels = authorNovels("George Orwell");
+console.log(prependWithCurrency(authorsNovels("George Orwell"), "$"));
