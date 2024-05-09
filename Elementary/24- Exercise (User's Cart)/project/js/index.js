@@ -12,11 +12,14 @@ const availableBooks = [
     price: 25,
   },
 ];
+
 const ID = "CRD_1001_";
+
 const selectedBook = prompt(
   "Enter Book's Title That You Want To Buy:",
   "Book's Title"
 );
+
 let temp = {};
 const found = availableBooks.some((book) => {
   if (book.title == selectedBook) {
