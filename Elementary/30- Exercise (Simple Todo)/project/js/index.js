@@ -11,7 +11,7 @@ const todos = [
   },
   {
     id: "RXS_3",
-    title: "Rendezvous with Yousef",
+    title: "Learn English",
     isDone: false,
   },
 ];
@@ -43,7 +43,8 @@ const addTodo = () => {
 const removeTodo = () => {
   const title = getUsersInput();
   const index = todos.findIndex((todo) => todo.title === title);
-  if (index !== -1) todos.splice(index, 1);
+  const DELETE_COUNT = 1;
+  if (index !== -1) todos.splice(index, DELETE_COUNT);
 };
 
 const doATodo = () => {
