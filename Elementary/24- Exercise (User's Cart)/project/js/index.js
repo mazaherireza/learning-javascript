@@ -13,8 +13,6 @@ const availableBooks = [
   },
 ];
 
-const ID = "CRD_1001_";
-
 const selectedBook = prompt(
   "Enter Book's Title That You Want To Buy:",
   "Book's Title"
@@ -39,6 +37,7 @@ const calculateSum = () => {
   return sum;
 };
 
+const ID = "CRD_1001_";
 if (found) {
   const index = cart.length;
   cart.push({
