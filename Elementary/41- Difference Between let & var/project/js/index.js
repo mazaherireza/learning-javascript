@@ -1,8 +1,8 @@
-x = 100; 
+x = 100;
 console.log(`x is: ${x}`);
 var x; // Hoisting
 
-// var x = 200 // Redeclare is OK.
+// var x = 200 // Redeclaration is OK.
 
 // y = 10
 // console.log(`y is: ${y}`) // Error: Cannot access 'y' before initialization
@@ -12,12 +12,12 @@ var x; // Hoisting
 // let z = 'Redeclare' <--------------------- Uncaught SyntaxError: Identifier 'z' has already been declared
 
 if (true) {
-  let insideIf = 'Inside'
+  let insideIf = "Inside";
 }
 
 // console.log(`insideIf is: ${insideIf}`) // <-------------------  Uncaught ReferenceError: insideIf is not defined
 
 if (1001) {
-  var insideAnotherIf = 'Inside'
+  var insideAnotherIf = "Inside";
 }
-console.log(`insideAnotherIf is: ${insideAnotherIf}`)
+console.log(`insideAnotherIf is: ${insideAnotherIf}`);
