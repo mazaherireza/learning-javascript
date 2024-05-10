@@ -11,7 +11,6 @@ const timer = setInterval(() => {
   if (minute === 0 && second === 0) {
     clearInterval(timer);
   }
-
   console.log(`${useLeadingZero(minute)} : ${useLeadingZero(second)}`);
   second--;
 }, 1_000);
