@@ -32,7 +32,9 @@ const questions = [
   },
 ];
 
+// User's Score
 let usersScore = 0;
+// User's Answer (usersAnswer has apostrophe)
 let usersAnswer = "I don't know!";
 
 questions.forEach((question) => {
