@@ -4,6 +4,6 @@ setTimeout(
   (name) => {
     alert(`Welcome ${name}`);
   },
-  5000,
+  5_000,
   NAME
 );
