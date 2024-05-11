@@ -1,0 +1,148 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  --theme-color: #00c87a;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  background-color: #c5c5c5;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+#title {
+  margin-bottom: 1em;
+}
+
+.card-wrapper {
+  width: 50%;
+  margin: auto;
+}
+
+#card-header {
+  height: 8em;
+  background-color: var(--theme-color);
+  position: relative;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+img {
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin-right: -50px; /* Width of img / 2 */
+  border: 0.5em solid white;
+}
+
+#card-main {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  padding-top: 3em;
+  padding-bottom: 2em;
+}
+
+#name {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: var(--theme-color);
+}
+
+#position {
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
+#card-engagement {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#card-engagement section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.num {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.engagement-title {
+  font-size: small;
+  font-weight: bold;
+  color: var(--theme-color);
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5em;
+  font-weight: bold;
+  width: 6em;
+  border: none;
+  border-radius: 2.5em;
+  margin-top: 1em;
+}
+
+#btn-follow {
+  background-color: var(--theme-color);
+  color: white;
+}
+
+#btn-message {
+  background-color: white;
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
+}
+
+.theme-wrapper {
+  width: 50%;
+  margin: auto;
+  margin-top: 1em;
+  padding: 1em 0.5em 1em 0.5em;
+  border-radius: 0.5em;
+  background-color: white;
+}
+
+.theme-wrapper h5 {
+  margin-bottom: 0.5em;
+}
+
+#themes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme {
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bordered {
+  border: 1px solid black;
+}
