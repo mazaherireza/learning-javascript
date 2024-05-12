@@ -1,0 +1,58 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+h4 {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#wrapper-clock {
+  width: 90%;
+  height: 12em;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  background: linear-gradient(to top right, #800080, #f6edf6);
+  border-radius: 0.25em;
+}
+
+.time {
+  width: 4em;
+  height: 4em;
+  border-radius: 0.5em;
+  background-color: white;
+  text-align: center;
+  line-height: 4em;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.delimeter div {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  margin-bottom: 0.25em;
+  background-color: white;
+}
