@@ -1,0 +1,126 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  --primary-color: #011f4b;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  padding: 1em;
+  background-color: silver;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+#title {
+  margin-bottom: 1em;
+}
+
+.booklist-title {
+  color: var(--primary-color);
+}
+
+.booklist-wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 0.5em;
+}
+
+#booklist-title {
+  margin-bottom: 1em;
+  color: var(--primary-color);
+}
+
+#book-title-error,
+#book-author-error {
+  visibility: hidden;
+  color: red;
+  font-size: small;
+}
+
+input[type="text"] {
+  display: block;
+  width: 80%;
+  border: none;
+  background-color: white;
+  color: var(--primary-color);
+  padding: 0.5em 0.25em;
+  border-radius: 0.25em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: var(--primary-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  background-color: var(--primary-color);
+  color: white;
+  opacity: 0.8;
+}
+
+#add-btn {
+  min-width: 5em;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+#num {
+  margin-right: 0.25em;
+}
+
+h5 {
+  margin-top: 2em;
+  font-style: italic;
+  color: var(--primary-color);
+}
+
+table {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.25em;
+  width: 100%;
+  margin-top: 1em;
+}
+
+thead,
+tbody {
+  width: 100%;
+}
+
+thead tr th {
+  background-color: white;
+  color: var(--primary-color);
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+td {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+tr:hover {
+  border: 1px dotted var(--primary-color);
+}
