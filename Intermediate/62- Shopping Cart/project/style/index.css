@@ -1,0 +1,149 @@
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a8ff78;
+  background: linear-gradient(to left, #78ffd6, #a8ff78);
+}
+
+#playground {
+  width: 50%;
+  padding: 1em;
+}
+
+#playground #playground-title {
+  margin-bottom: 1em;
+}
+
+.main-wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.project-title {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.product-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5em;
+  border: 2px solid transparent;
+  border-radius: 0.25em;
+  padding: 0.5em;
+}
+
+.product-card section {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.product-card:hover {
+  border: 2px solid var(--primary);
+  border-radius: 0.25em;
+}
+
+.product-card img {
+  width: 10em;
+  height: 10em;
+}
+
+.product-card div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card div span {
+  font-weight: bold;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5em;
+  border: none;
+  border-radius: 0.25em;
+}
+
+.product-card button {
+  background-color: var(--primary);
+  color: white;
+}
+
+.product-card button:disabled {
+  cursor: not-allowed;
+  background-color: #e5e4e2; /* Platinum */
+  color: black;
+}
+
+.max {
+  font-size: x-small;
+  color: var(--red-400);
+}
+
+table {
+  margin-top: 2em;
+  width: 100%;
+}
+
+th {
+  background-color: black;
+  color: white;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+tr td {
+  text-align: center;
+  font-size: small;
+  font-weight: bold;
+}
+
+.little-img {
+  width: 4em;
+  height: 4em;
+  border-radius: 0.25em;
+}
+
+i.fa {
+  cursor: pointer;
+  margin-right: 0.25em;
+}
+
+.fa-trash {
+  color: var(--red-400);
+}
+
+.total-wrapper {
+  margin-top: 1em;
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+#total-price {
+  font-weight: bold;
+  font-size: large;
+}
+
+.purchase {
+  color: white;
+  background-color: var(--primary);
+}
