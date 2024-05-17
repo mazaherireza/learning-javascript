@@ -1,2 +1,3 @@
 const heroTitle = document.getElementById("hero-title");
-console.log(heroTitle);
+
+console.log("heroTitle is %o", heroTitle);
