@@ -1,0 +1,15 @@
+Element: append() method
+------------------------
+... inserts a set of Node objects or string objects after the last child of the Element.
+String objects are inserted as equivalent Text nodes.
+
+Differences from Node.appendChild():
+------------------------------------
+Element.append() allows you to also append string objects, 
+whereas Node.appendChild() only accepts Node objects.
+
+Element.append() has no return value (undefind), 
+whereas Node.appendChild() returns the appended Node object.
+
+Element.append() can append several nodes and strings,
+whereas Node.appendChild() can only append one node.

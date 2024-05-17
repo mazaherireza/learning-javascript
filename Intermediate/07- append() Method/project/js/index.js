@@ -1,7 +1,12 @@
-const unorderedList = document.querySelector("ul");
+const $ = document;
+const unorderedList = $.querySelector("ul");
 
-const liElement = document.createElement("li");
+const liElement = $.createElement("li");
 liElement.innerHTML = "4th";
+const CLASS_NAME = "list-item";
+liElement.setAttribute("class", CLASS_NAME);
 unorderedList.append(liElement);
-// Or
-// unorderedList.appendChild(liElement)
+/* 
+ Or
+ unorderedList.appendChild(liElement)
+ */
