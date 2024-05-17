@@ -8,8 +8,8 @@ title.style.fontWeight = "bold";
 const items = document.querySelectorAll(".list-item");
 
 // innerHTML, innerText, textContent (for headings, paragraph, ...)
-items[0].innerHTML = "First";
 items[1].innerText = "Second";
+items[0].innerHTML = "First";
 items[2].textContent = "Third";
 
 const input = document.querySelector("#programming-language");
