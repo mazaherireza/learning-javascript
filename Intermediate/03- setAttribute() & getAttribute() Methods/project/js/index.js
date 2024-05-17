@@ -1,11 +1,17 @@
-const main = document.getElementsByTagName("main")[0];
-main.setAttribute("class", "wrapper");
+const $ = document;
+const main = $.querySelector("main");
 console.log(main);
+main.setAttribute("class", "wrapper");
 
-const listItems = document.getElementsByClassName("list-item");
+const listItems = $.getElementsByClassName("list-item");
 
 const firstItem = listItems[0];
 firstItem.setAttribute("id", "first");
 
-const value = firstItem.getAttribute("id");
-console.log(`Value of id is: ${value}`);
+const attributes = firstItem.getAttributeNames();
+const ATTRIBUTE = "id";
+const index = attributes.findIndex((attribute) => attribute == ATTRIBUTE);
+if (index >= 0) {
+  const value = firstItem.getAttribute("id");
+  console.log("value of id is: ", value);
+}
