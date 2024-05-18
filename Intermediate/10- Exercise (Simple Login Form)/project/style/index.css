@@ -1,18 +1,12 @@
 body {
   min-height: 100vh;
-  display: flex;
-}
-
-section,
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main {
-  background: #a8ff78;
-  background: linear-gradient(to left, #78ffd6, #a8ff78);
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -22,7 +16,7 @@ main {
 }
 
 #playground #playground-title {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 .wrapper {
