@@ -1,0 +1,7 @@
+A Proper Random Function
+------------------------
+... this JavaScript function always returns a random number between min(included) and max (excluded).
+
+function getRndInteger(min, max) {
+    reutrn Math.floor(Math.random() * (max - min)) + min;
+}
