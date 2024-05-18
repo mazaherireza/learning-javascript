@@ -67,5 +67,6 @@ input[type="submit"] {
 #password-validation {
   visibility: hidden;
   font-size: small;
+  margin-bottom: 1rem;
   color: #7c0a02;
 }
