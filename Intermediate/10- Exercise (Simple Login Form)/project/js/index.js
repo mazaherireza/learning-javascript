@@ -35,7 +35,7 @@ const manipulateNode = (node, message = "MESSAGE", style = {}) => {
   const augmentedStyle = { ...style, ...GENERAL_STYLE };
   const keys = Object.keys(augmentedStyle);
   keys.forEach((key) => {
-    node.style[key] = augmentedStyle[key]; // <-------- *
+    node.style[key] = augmentedStyle[key];
   });
 };
 
@@ -51,9 +51,6 @@ const submitHandler = (event) => {
   } else {
     manipulateNode(modal, "Invalid!, Try Again.", {
       background: "linear-gradient(to left, #7C0A02, #fd5c63)",
-      // textAlign: "center",
-      // fontWeight: "bold",
-      // fontSize: "small",
     });
   }
 
