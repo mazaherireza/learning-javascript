@@ -56,8 +56,6 @@ input[type="submit"] {
 
 .modal {
   width: 12em;
-  font-size: medium;
-  font-weight: 600;
   padding: 0.25em;
   border-radius: 0.25em;
   visibility: hidden;
