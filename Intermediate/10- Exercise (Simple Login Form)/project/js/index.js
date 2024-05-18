@@ -19,7 +19,7 @@ const setInputs = () => {
   password = passwordInput.value;
 };
 
-const reset = () => {
+const resetInputs = () => {
   usernameInput.value = "";
   passwordInput.value = "";
 };
@@ -58,5 +58,5 @@ const submitHandler = (event) => {
     modal.style.visibility = "hidden";
   }, 5_000);
 
-  reset();
+  resetInputs();
 };
