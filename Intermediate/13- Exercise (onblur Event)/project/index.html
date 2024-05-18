@@ -11,6 +11,16 @@
     />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
   </head>
 
   <body>
@@ -23,17 +33,18 @@
       <div class="modal"></div>
       <div class="wrapper">
         <div class="login-form">
-          <form method="post" onsubmit="validate(event)">
+          <form method="post" onsubmit="submitHandler(event)">
             <input
               type="text"
               placeholder="Username"
               name="username"
               id="username"
               autofocus
+              onfocus="usernameFocus()"
               onblur="usernameKeyLog()"
             />
             <span id="username-validation"
-              >At least 12 characters are needed.</span
+              >Must contain at least 12 characters.</span
             >
 
             <input
@@ -41,16 +52,17 @@
               placeholder="Password"
               name="password"
               id="password"
+              onfocus="passwordFocus()"
               onblur="passwordKeyLog()"
             />
             <span id="password-validation"
-              >At least 8 characters are needed.</span
+              >Must contain at least 8 characters.</span
             >
 
             <input type="submit" value="LOGIN" />
             <p class="info">
               <span>Not registered?</span>
-              <a href="">Create an acount</a>
+              <a href="">Create an account</a>
             </p>
           </form>
         </div>
