@@ -4,9 +4,9 @@ const unorderedList = $.querySelector(".list");
 const btn = $.querySelector("#add-btn");
 
 btn.addEventListener("click", () => {
-  const optional = $.querySelector("#optional").value;
+  const item = $.querySelector("#item").value;
   const li = $.createElement("li");
-  li.innerHTML = optional;
+  li.innerHTML = item;
   // input: node
   // output: HTMLElement
   unorderedList.appendChild(li);
