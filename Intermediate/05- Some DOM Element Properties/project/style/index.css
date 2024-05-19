@@ -12,19 +12,19 @@ main {
 }
 
 #playground {
-  padding: 1em;
+  padding: 1rem;
 }
 
 #playground #playground-title {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #playground ul {
   list-style-type: none;
   font-weight: bold;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #playground input {
-  padding: 0.25em 0.5em;
+  padding: 0.25rem 0.5rem;
 }
