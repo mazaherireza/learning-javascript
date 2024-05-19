@@ -1,0 +1,27 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+h3#info {
+  font-size: small;
+}
+
+.main-wrapper {
+  width: 80%;
+}
+
+#result {
+  font-size: large;
+}
+
+input {
+  width: 80%;
+}
+
+button {
+  font-size: x-small;
+}

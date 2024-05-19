@@ -11,6 +11,16 @@
     />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
   </head>
 
   <body>
@@ -25,12 +35,14 @@
         <input type="text" name="temp" id="temp" placeholder="Celsius" />
       </div>
 
-      <div id="result"></div>
+      <div class="main-wrapper">
+        <div class="action-wrapper">
+          <button id="convert">CONVERT</button>
+          <button id="reset">RESET</button>
+          <button id="calculate">CALCULATE</button>
+        </div>
 
-      <div class="wrapper">
-        <button id="convert">CONVERT</button>
-        <button id="reset">RESET</button>
-        <button id="calculate">CALCULATE</button>
+        <div id="result"></div>
       </div>
     </section>
 
