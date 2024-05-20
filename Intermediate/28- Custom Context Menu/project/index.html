@@ -12,6 +12,16 @@
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
     <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
@@ -24,40 +34,40 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
-      <div id="context-menu" style="display: none;">
+      <div id="context-menu">
         <ul>
           <li id="share">
             <a href="#">
               <i class="fa fa-share"></i>
-                Share
+              <span>Share</span>
             </a>
           </li>
 
           <li id="rename">
             <a href="#">
               <i class="fa fa-pencil"></i>
-                Rename
+              <span>Rename</span>
             </a>
           </li>
 
           <li id="copy">
             <a href="#">
               <i class="fa fa-copy"></i>
-                Copy
+              <span>Copy</span>
             </a>
           </li>
 
           <li id="paste">
             <a href="#">
               <i class="fa fa-paste"></i>
-                Paste
+              <span>Paste</span>
             </a>
           </li>
 
           <li id="download">
             <a href="#">
               <i class="fa fa-download"></i>
-                Download
+              <span>Download</span>
             </a>
           </li>
         </ul>
