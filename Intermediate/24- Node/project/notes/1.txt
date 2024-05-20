@@ -1,0 +1,20 @@
+Node (DOM)
+----------
+In the context of the DOM, a node is a single point in the node tree. <------------- 
+Various things that are nodes are the document itself, elements, text, and comments.
+...
+Node.nodeName 
+Returns a string containing the name of the Node.
+...
+
+Node.nodeType
+Returns and unsigned short representing the type of the node.
+
+Name                           Value
+ELEMENT_NODE                     1
+ATTRIBUTE_NODE                   2
+...
+CDATA_SECTION_NODE               4
+
+Node.nodeValue
+Returns / Sets the value of the current node.
