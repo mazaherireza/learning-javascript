@@ -5,9 +5,9 @@ const contextMenu = $.querySelector("#context-menu");
 
 playground.addEventListener("contextmenu", (event) => {
   event.preventDefault();
+  if (contextMenu.style.display === "none") contextMenu.style.display = "block";
   contextMenu.style.left = event.offsetX + "px";
   contextMenu.style.top = event.offsetY + "px";
-  contextMenu.style.display = "block";
 });
 
 playground.addEventListener("click", () => {
