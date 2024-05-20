@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM content loaded.");
+  console.log("DOM fully loaded and parsed.");
 });
 
 // DOMContentLoaded: Ideal for running JavaScript as soon as the DOM is ready,
