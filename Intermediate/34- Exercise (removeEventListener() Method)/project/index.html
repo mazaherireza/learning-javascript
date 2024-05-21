@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS💫</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/JS_Favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <h1 id="hero-title">Learning JavaScript.</h1>
+    </main>
+
+    <section id="playground">
+      <h2 id="playground-title">Playground</h2>
+      <h4>Mouse over the image!</h4>
+      <div class="wrapper">
+        <span id="message">mousemove Event is added.</span>
+        <img
+          id="img"
+          src="./assets/images/Iranian_Painting.jpg"
+          alt="Iranian Painting"
+        />
+        <div id="coordination">
+          <span id="pageX"></span>
+          <span id="pageY"></span>
+        </div>
+        <button id="btn">Remove Event</button>
+      </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
