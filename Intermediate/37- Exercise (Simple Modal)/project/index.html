@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link
       rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
@@ -24,25 +35,26 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
+
       <div class="wrapper">
-        <div class="inner">
-          <h4>Modal</h4>
-          <button id="btn">Open Modal</button>
-        </div>
-      </div>
-      <div class="modal-wrapper">
-        <div class="modal">
-          <i class="fa fa-close"></i>
-          <p>
-            Modals (also known as modal windows, overlays, and dialogs) are
-            large UI elements that sit on top of an application's main
-            window—often with a layer of transparency behind them to give users
-            a peek into the main app. To return to the application's main
-            interface, users must interact with the modal layer.
-          </p>
-        </div>
+        <h4>Modal</h4>
+        <button id="btn">Open Modal</button>
       </div>
     </section>
+    
+    <div class="modal-wrapper">
+      <div class="modal">
+        <i class="fa fa-close"></i>
+        <p>
+          Modals (also known as modal windows, overlays, and dialogs) are large
+          UI elements that sit on top of an application's main window—often with
+          a layer of transparency behind them to give users a peek into the main
+          app. To return to the application's main interface, users must
+          interact with the modal layer.
+        </p>
+      </div>
+    </div>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
