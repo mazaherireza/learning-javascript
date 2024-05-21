@@ -1,0 +1,15 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+form {
+  width: 80%;
+}
+
+form i.fa {
+  font-size: small;
+}
