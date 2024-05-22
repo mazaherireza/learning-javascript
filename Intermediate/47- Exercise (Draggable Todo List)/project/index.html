@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link
       rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="./js/index.js" defer></script>
@@ -25,25 +35,28 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
-      <h3>Todo With Drag & Drop</h3>
-      <input
-        type="text"
-        name="todo"
-        id="todo-input"
-        placeholder="Type Your Todo"
-      />
-
-      <div class="wrapper">
-        <div id="todo-box">
-          <h4 class="title">Todo</h4>
+      <div class="main-wrapper">
+        <h3>Todo With Drag & Drop</h3>
+        <input
+          type="text"
+          name="todo"
+          id="todo-input"
+          placeholder="Type Your Todo"
+          autofocus
+        />
+  
+        <div class="wrapper">
+          <div id="todo-box">
+            <h4 class="title">Todo</h4>
+          </div>
+          <div id="doing-box">
+            <h4 class="title">Doing</h4>
+          </div>
+          <div id="done-box">
+            <h4 class="title">Done</h4>
+          </div>
         </div>
-        <div id="doing-box">
-          <h4 class="title">Doing</h4>
-        </div>
-        <div id="done-box">
-          <h4 class="title">Done</h4>
-        </div>
+      </section>
       </div>
-    </section>
   </body>
 </html>
