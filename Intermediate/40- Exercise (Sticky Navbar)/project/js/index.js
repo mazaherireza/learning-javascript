@@ -1,9 +1,10 @@
 const $ = document;
 
 const wrapper = $.querySelector("#wrapper");
-const imgList = $.querySelectorAll("img");
+const img = $.querySelector("header img");
 const header = $.querySelector("header");
 const anchorList = $.querySelectorAll(".anchor");
+
 const THRESHOLD = 0;
 
 const applyStyle = (color) => {
@@ -12,9 +13,9 @@ const applyStyle = (color) => {
   });
 };
 
-const resizeImg = (newSize) => {
-  imgList[0].setAttribute("width", newSize);
-  imgList[0].setAttribute("height", newSize);
+const resizeImg = (size) => {
+  img.setAttribute("width", size);
+  img.setAttribute("height", size);
 };
 
 wrapper.addEventListener("scroll", () => {
@@ -27,6 +28,6 @@ wrapper.addEventListener("scroll", () => {
   } else {
     header.classList.remove("threshold");
     applyStyle("white");
-    resizeImg("60")
+    resizeImg("60");
   }
 });
