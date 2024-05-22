@@ -10,8 +10,9 @@ buttons.forEach((button) => {
     const text = event.target.innerText;
     const len = text.length;
     let vowels = [];
+    let char;
     for (let index = 0; index < len; index++) {
-      const char = text[index].toLowerCase();
+      char = text[index].toLowerCase();
       if (VOWELS.includes(char)) {
         vowels.push(char);
       }
