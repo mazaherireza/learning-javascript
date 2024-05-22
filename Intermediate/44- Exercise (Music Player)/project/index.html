@@ -13,19 +13,31 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link
       rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
 
   <body>
     <main>
-      <h1 id="heroTitle">Learning JavaScript.</h1>
+      <h1 id="hero-title">Learning JavaScript.</h1>
     </main>
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
+
       <h3>Music Play List</h3>
-      <h4>Singer: <span id="singer"></span></h4>
+      <h4 class="singer-wrapper">Singer: <span id="singer"></span></h4>
+
       <div class="wrapper">
         <div class="media-card">
           <img src="./assets/images/SiminGhanem.png" alt="Simin Ghanem" />
@@ -46,6 +58,7 @@
         </div>
       </div>
     </section>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
