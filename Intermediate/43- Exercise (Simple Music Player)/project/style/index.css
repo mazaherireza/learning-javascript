@@ -19,31 +19,40 @@ main {
   margin-bottom: 1rem;
 }
 
+.information {
+  visibility: hidden;
+  margin-bottom: 1rem;
+}
+
 .wrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  margin-top: 0.5rem;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
-  gap: 1em;
-}
-
-img {
-  border-radius: 0.25em;
-}
-
-audio {
-  display: block;
+  justify-content: space-between;
 }
 
 button {
-  cursor: pointer;
-  padding: 0.5em;
   font-weight: bold;
-  border-radius: 0.25em;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
 }
 
 #audio-name {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 #audio-name,

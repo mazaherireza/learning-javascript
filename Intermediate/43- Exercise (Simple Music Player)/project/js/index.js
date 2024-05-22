@@ -1,9 +1,13 @@
 const $ = document;
 
+const information = $.querySelector(".information");
+
 const audioName = $.querySelector("#audio-name");
 const singerName = $.querySelector("#singer-name");
+
 const img = $.querySelector("#img");
 const audio = $.querySelector("audio"); // HTMLAudioElement
+
 const prevBtn = $.querySelector("#prev");
 const minus = $.querySelector("#minus");
 const playBtn = $.querySelector("#play");
@@ -37,12 +41,20 @@ const updateContent = () => {
   audio.setAttribute("src", `${BASE_AUDIO_PATH}${audioList[index]}`);
 };
 
+const showInformation = () => {
+  information.style.visibility = "visible";
+};
+
+const hideInformation = () => {
+  information.style.visibility = "hidden";
+};
+
 prevBtn.addEventListener("click", () => {
   index--;
-  if (index < 0) {
+  if (index < 0) 
     index = MAX - 1;
-  }
   updateContent();
+  hideInformation();
 });
 
 minus.addEventListener("click", () => {
@@ -50,10 +62,12 @@ minus.addEventListener("click", () => {
 });
 
 playBtn.addEventListener("click", () => {
+  showInformation();
   audio.play();
 });
 
 pauseBtn.addEventListener("click", () => {
+  hideInformation()
   audio.pause();
 });
 
@@ -63,10 +77,10 @@ plus.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", () => {
   index++;
-  if (index > MAX - 1) {
+  if (index > MAX - 1) 
     index = 0;
-  }
   updateContent();
+  hideInformation();
 });
 
 window.addEventListener("load", () => {
