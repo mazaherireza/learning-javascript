@@ -22,7 +22,7 @@ const createNote = () => {
     const span = $.createElement("span");
     const icon = $.createElement("i");
 
-    icon.className = "fa fa-trash";
+    icon.className = "fa fa-times";
     span.innerHTML = title;
 
     icon.addEventListener("click", (event) => {
