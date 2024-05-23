@@ -1,0 +1,19 @@
+localStorage.setItem('languages', ['JavaScript', 'PHP', 'Python'])
+
+localStorage.getItem('languages')
+// 'JavaScript,PHP,Python'
+
+localStorage.setItem('languages', JSON.stringify(['JavaScript', 'PHP', 'Python']))
+JSON.parse(localStorage.getItem('languages'))
+
+localStorage.setItem('name', 'reza')
+localStorage.setItem('name', 'Reza') <------------- Override
+
+A common use of JSON is to exchange data to/from a web server.
+When sending data to a web server, the data has to be a string.
+
+JSON.stringify <----------- Convert a JS object into a string
+... to store JS objects as text.
+
+When receiving data from a web server, the data is always a string.
+Parse the data with JSON.parse(), and the data becomes a JS object.

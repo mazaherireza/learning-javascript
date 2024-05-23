@@ -1,0 +1,28 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+#playground h3 {
+  font-size: small;
+}
+
+.main-wrapper {
+  width: 100%;
+}
+
+.input-wrapper button {
+  padding: 0.25rem 0.5rem;
+}
+
+.input-wrapper input {
+  width: 70%;
+  padding: 0.25rem 0.5rem;
+}
+
+.card .status {
+  font-size: x-small;
+}
