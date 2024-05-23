@@ -51,8 +51,6 @@ input#new-todo {
 
 .todo {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
   justify-content: space-between;
   font-weight: bolder;
   border-radius: 0.25rem;
@@ -62,7 +60,7 @@ input#new-todo {
 }
 
 .todo:hover {
-  background-color: #6f6;
+  background-color: silver;
 }
 
 .todo:last-child {

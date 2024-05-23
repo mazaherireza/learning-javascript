@@ -19,7 +19,7 @@ const addNewTodo = (value) => {
   title.innerHTML = value;
 
   const icon = $.createElement("i");
-  icon.classList.add("fa", "fa-trash");
+  icon.classList.add("fa", "fa-times");
   icon.addEventListener("click", (event) => {
     deleteTodo(event);
   });
