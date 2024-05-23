@@ -8,11 +8,11 @@ let theme = "";
 
 label.addEventListener("click", () => {
   if (switchElement.checked) {
-    // Dark Mode
+    // Apply Dark Mode
     content.classList.add("dark");
     theme = "dark";
   } else {
-    // Light Mode
+    // Apply Light Mode
     content.classList.remove("dark");
     theme = "light";
   }
