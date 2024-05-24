@@ -1,13 +1,14 @@
 const $ = document;
 
 const something = $.querySelector("#something");
-const btn = $.querySelector("button");
+
+const errorWrapper = $.querySelector(".error-wrapper");
 const errorHeading = $.querySelector("#error-heading");
 const errorContent = $.querySelector("#error-content");
 
 const THRESHOLD = 12;
 
-const workHorse = () => {
+const handler = () => {
   try {
     if (something.value.length >= THRESHOLD) {
       throw "Too Long!";
@@ -15,20 +16,13 @@ const workHorse = () => {
       throw "Too Short!";
     }
   } catch (error) {
-    errorHeading.style.visibility = "visible";
+    errorWrapper.style.visibility = "visible";
     errorContent.innerHTML = error;
   } finally {
     something.value = "";
-    something.focus();
   }
 };
 
-btn.addEventListener("click", () => {
-  workHorse();
-});
-
-something.addEventListener("keydown", (event) => {
-  if (event.code == "Enter") {
-    workHorse();
-  }
+something.addEventListener("keyup", (event) => {
+  if (event.code == "Enter") handler();
 });
