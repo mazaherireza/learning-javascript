@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link
       rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="./js/index.js" defer></script>
@@ -25,16 +35,19 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
-      <h3>Slideshow / Carousel</h3>
-      <div id="carousel-container">
-        <span id="number-text">
-          <span id="num">Num</span>
-          <span>/</span>
-          <span id="total">Total</span>
-        </span>
-        <i id="prev" class="fa fa-chevron-circle-left fa-2x"></i>
-        <img src="" alt="Photo" id="img" />
-        <i id="next" class="fa fa-chevron-circle-right fa-2x"></i>
+
+      <div class="wrapper">
+        <h4>Slideshow / Carousel</h4>
+
+        <div id="carousel-container">
+          <p id="number-text">
+            <span id="num">Num</span> / <span id="total">Total</span>
+          </p>
+          
+          <i id="prev" class="fa fa-chevron-circle-left fa-2x"></i>
+          <img src="" alt="Photo" id="img" />
+          <i id="next" class="fa fa-chevron-circle-right fa-2x"></i>
+        </div>
       </div>
     </section>
   </body>
