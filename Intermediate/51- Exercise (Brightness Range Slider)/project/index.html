@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link
       rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="./js/index.js" defer></script>
@@ -25,21 +35,26 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
+
       <div class="wrapper">
         <figure>
-          <img src="./assets/images/Fragments.png" alt="Out of The Shadow" width="300" height="300" />
-          <figcaption>
-            Vivian Maier
-          </figcaption>
+          <img src="./assets/images/Fragments.png" alt="Out of The Shadow" />
+          <figcaption>Vivian Maier</figcaption>
         </figure>
-        <div class="brightness-box">
-          <h5>Drag to change the brightness.</h5>
-          <div class="icons">
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star"></i>
-          </div>
-          <input type="range" name="range" id="range" class="slider" min="0" max="100" value="60" />
+        <h4>Drag to change the brightness.</h4>
+        <div class="icons">
+          <i class="fa fa-star-half-o"></i>
+          <i class="fa fa-star"></i>
         </div>
+        <input
+          type="range"
+          name="range"
+          class="slider"
+          min="0"
+          max="100"
+          value="60"
+        />
       </div>
+    </section>
   </body>
 </html>
