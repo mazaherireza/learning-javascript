@@ -1,0 +1,16 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.wrapper button,
+.wrapper h4 {
+  font-size: x-small;
+}
+
+.wrapper img {
+  width: 75%;
+}

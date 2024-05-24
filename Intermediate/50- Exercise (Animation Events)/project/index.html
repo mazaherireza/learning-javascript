@@ -11,6 +11,16 @@
     />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
     <script src="./js/index.js" defer></script>
   </head>
 
@@ -24,7 +34,12 @@
       <div class="wrapper">
         <button>Apply Radius</button>
         <h4>No Animation</h4>
-        <img src="./assets/images/Car.png" alt="Car"  width="300" height="300" />
-    </div>
+        <h5 id="message">
+          Animation repeated <span id="count"></span> time(s), 
+          elapsed <span id="time"></span> second(s).
+        </h5>
+        <img src="./assets/images/Car.png" alt="Car" />
+      </div>
+    </section>
   </body>
 </html>
