@@ -2,6 +2,7 @@ const $ = document;
 
 const weight = $.querySelector("#weight");
 const wValue = $.querySelector("#w-value");
+
 const height = $.querySelector("#height");
 const hValue = $.querySelector("#h-value");
 
@@ -9,11 +10,11 @@ const bmi = $.querySelector("#bmi");
 const category = $.querySelector("#category");
 
 const setStyle = (color = "lightblue") => {
-  category.style.background = color;
+  category.style.backgroundColor = color;
   bmi.style.color = color;
 };
 
-const whichCategory = (BMI) => {
+const getCategory = (BMI) => {
   if (BMI < 16) {
     setStyle("lightblue");
     return "Underweight (Severe thinness)";
@@ -51,7 +52,7 @@ const calculateMBI = () => {
   heightValue /= 100;
   const BMI = (weightValue / (heightValue * heightValue)).toFixed(1);
   bmi.innerHTML = BMI;
-  category.innerHTML = whichCategory(BMI);
+  category.innerHTML = getCategory(BMI);
 };
 
 window.addEventListener("load", () => {
