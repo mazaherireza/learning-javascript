@@ -38,15 +38,19 @@
 
       <div class="main-wrapper">
         <h3>Todo App</h3>
-        <div class="input-wrapper">
-          <input
-            type="text"
-            name="todo-input"
-            id="todo-input"
-            placeholder="Type here"
-            autofocus
-          />
+        <h4 id="message">
+          You have done <span id="done"></span> from <span id="total"></span>
+        </h4>
+        <input
+          type="text"
+          name="todo-input"
+          id="todo-input"
+          placeholder="Type here"
+          autofocus
+        />
+        <div class="action-wrapper">
           <button id="add">Add Todo</button>
+          <button id="clear">Clear List</button>
         </div>
         <div class="todo-wrapper"></div>
       </div>

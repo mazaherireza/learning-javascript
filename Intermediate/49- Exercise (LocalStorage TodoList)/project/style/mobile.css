@@ -14,12 +14,11 @@ h1#hero-title {
   width: 100%;
 }
 
-.input-wrapper button {
+.action-wrapper button {
   padding: 0.25rem 0.5rem;
 }
 
-.input-wrapper input {
-  width: 70%;
+.main-wrapper input {
   padding: 0.25rem 0.5rem;
 }
 
