@@ -3,12 +3,14 @@ const $ = document;
 const themeList = $.querySelectorAll(".theme");
 
 const setTheme = (theme) => {
-  $.body.style.setProperty("--theme-color", theme);
+  $.documentElement.style.setProperty("--theme-color", theme);
+  // Or
+  // $.body.style.setProperty("--theme-color", theme);
 };
 
 const setStyle = (key) => {
   themeList.forEach((theme) => {
-    if (theme.getAttribute("data-id") == key) {
+    if (theme.getAttribute("data-id") === key) {
       theme.classList.add("bordered");
     } else {
       theme.classList.remove("bordered");
