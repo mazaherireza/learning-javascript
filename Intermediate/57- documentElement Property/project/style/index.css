@@ -1,25 +1,18 @@
-:root {
-  --primary-color: blue;
-}
-
 body {
   min-height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 main {
-  width: 50%;
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #a8ff78;
-  background: linear-gradient(to left, #78ffd6, #a8ff78);
 }
 
 #playground {
-  width: 50%;
-  background-color: #c5c5c5;
-  padding: 1em;
+  padding: 1rem;
 }
 
 #playground #playground-title {
@@ -32,7 +25,6 @@ h4 {
 }
 
 button {
-  cursor: pointer;
-  padding: 0.5em;
+  padding: 0.25rem 0.5rem;
   font-weight: bold;
 }
