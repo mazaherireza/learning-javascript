@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="./style/index.css" />
     <link
       rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="./js/index.js" defer></script>
@@ -25,11 +35,13 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
+      
       <div class="booklist-wrapper">
         <h3 id="booklist-title">
           <i class="fa fa-book"></i>
           BookList
         </h3>
+
         <input
           type="text"
           name="book-title"
@@ -38,6 +50,7 @@
           autofocus
         />
         <div id="book-title-error"></div>
+
         <input
           type="text"
           name="book-author"
@@ -49,6 +62,7 @@
         <button id="add-btn">Add</button>
 
         <h5><span id="num">0</span>Book(s)</h5>
+
         <div id="table-content">
           <table>
             <thead>
