@@ -11,6 +11,16 @@
     />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
     <script src="./js/index.js" defer></script>
   </head>
 
@@ -21,10 +31,19 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
-      <div class="wrapper-quotes">
-        <label for="num">Num of Quotes (between 1 and 5)</label>
-        <input type="number" name="num" id="num" min="1" max="5" />
-        <button id="btn" class="btn-primary">Show</button>
+
+      <div class="main-wrapper">
+        <div class="wrapper" >
+          <div class="input-wrapper">
+            <label for="num">
+              Num of Quotes (between <span id="min"></span> and
+              <span id="max"></span>)
+            </label>
+            <input type="number" name="num" autofocus />
+          </div>
+          <button id="btn">Show</button>
+        </div>
+
         <div id="quote-list"></div>
       </div>
     </section>
