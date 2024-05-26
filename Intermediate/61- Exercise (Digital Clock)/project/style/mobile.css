@@ -1,0 +1,21 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+#wrapper-clock {
+  width: 80%;
+  height: 8rem;
+  column-gap: 0.5rem;
+}
+
+.time {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.25rem;
+  line-height: 3rem;
+  font-size: x-large;
+}

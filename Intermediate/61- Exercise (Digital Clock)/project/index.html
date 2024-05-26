@@ -11,6 +11,16 @@
     />
     <link rel="stylesheet" href="./style/main.css" />
     <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
     <script src="./js/index.js" defer></script>
   </head>
 
@@ -21,8 +31,10 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
+
       <h4>Digital Clock</h4>
-      <section id="wrapper-clock">
+
+      <div id="wrapper-clock">
         <div class="hour time"></div>
         <div class="delimeter">
           <div></div>
@@ -34,7 +46,8 @@
           <div></div>
         </div>
         <div class="second time"></div>
-      </section>
+      </div>
+      <p id="date">Date</p>
     </section>
   </body>
 </html>
