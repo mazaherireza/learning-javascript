@@ -1,7 +1,7 @@
 const products = [
   {
     id: "PRT_1001",
-    title: "Creme 70ml",
+    title: "Creme 75ml",
     img: "Creme_75ml.webp",
     price: 4,
     max: 2,
@@ -60,7 +60,7 @@ const decrease = (order, orderIndex) => {
 };
 
 const decreaseQuantity = (order) => {
-  const id = order.id;
+  const { id } = order;
   const index = cart.findIndex((order) => order.id == id);
   if (index >= 0) {
     decrease(order, index);
@@ -72,25 +72,26 @@ const decreaseQuantity = (order) => {
 const BASE_PATH = "./assets/images/";
 
 const addToCart = (btn, product) => {
-  const index = cart.findIndex((order) => order.title == product.title);
+  const { img, title, price, max } = product;
+  const index = cart.findIndex((order) => order.title == title);
   if (index >= 0) {
     const currentOrder = cart[index];
-    if (currentOrder.quantity < product.max) {
+    if (currentOrder.quantity < max) {
       currentOrder.quantity++;
-      currentOrder.totalPrice += product.price;
+      currentOrder.totalPrice += price;
     }
-    if (currentOrder.quantity == product.max) {
+    if (currentOrder.quantity == max) {
       btn.setAttribute("disabled", "true");
     }
   } else {
     cart.push({
       id: `ORD_${cart.length}`,
-      img: product.img,
-      title: product.title,
-      price: product.price,
+      img,
+      title,
+      price,
       quantity: 1,
-      totalPrice: product.price,
-      limitation: product.max,
+      totalPrice: price,
+      limitation: max,
     });
   }
   calculateTotal();
@@ -99,7 +100,7 @@ const addToCart = (btn, product) => {
 };
 
 const renderProducts = () => {
-  const fragment = $.createDocumentFragment()
+  const fragment = $.createDocumentFragment();
   products.forEach((product) => {
     const container = $.createElement("div");
     container.className = "product-card";
@@ -110,17 +111,19 @@ const renderProducts = () => {
 
     const title = $.createElement("div");
     title.innerHTML = product.title;
+    title.className = "product-title";
 
     const price = $.createElement("span");
     price.innerHTML = `$${product.price}`;
+    price.className = "product-price";
 
     const max = $.createElement("span");
     max.innerHTML = `Max: ${product.max}`;
     max.className = "max";
 
     const btn = $.createElement("button");
-    btn.className = "btn";
     btn.innerHTML = "Add To Cart";
+    btn.className = "btn";
     if (!product.max) btn.setAttribute("disabled", "true");
 
     btn.addEventListener("click", () => {
@@ -131,7 +134,7 @@ const renderProducts = () => {
 
     division.append(price, max, btn);
     container.append(img, title, division);
-    fragment.append(container)
+    fragment.append(container);
   });
   productList.append(fragment);
 };
@@ -144,9 +147,9 @@ const renderCart = () => {
 
     const imageContainer = $.createElement("td");
     const img = $.createElement("img");
-    img.src = `${BASE_PATH}${order.img}`;
+    img.setAttribute("src", `${BASE_PATH}${order.img}`);
     img.className = "little-img";
-    imageContainer.innerHTML = img;
+    imageContainer.appendChild(img);
 
     const title = $.createElement("td");
     title.innerHTML = order.title;
@@ -198,7 +201,7 @@ const renderCart = () => {
     });
 
     icon.append(minus, trash, plus);
-    tr.append(img, title, price, quantity, totalPrice, icon);
+    tr.append(imageContainer, title, price, quantity, totalPrice, icon);
     fragment.append(tr)
   });
   tbody.append(fragment);
