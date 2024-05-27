@@ -12,7 +12,7 @@ console.log("After Delete");
 delete user.nationality;
 console.log(user);
 
-const books = ["1984", "Animal Farm"];
+const books = ["1984", "Never Let Me Go"];
 delete books[1];
 
 console.log(books);
