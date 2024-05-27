@@ -1,15 +1,13 @@
-const $ = document;
-
 const userList = [
-  { id: "USR_1001", firstName: "Reza", lastName: "Mazaheri" },
-  { id: "USR_1002", firstName: "Yousef", lastName: "Amini" },
-  { id: "USR_1003", firstName: "Hossein", lastName: "Kalaei" },
-  { id: "USR_1004", firstName: "Ahmad Reza", lastName: "Azizan" },
-  { id: "USR_1005", firstName: "Mastan", lastName: "Shabkhosh" },
-  { id: "USR_1006", firstName: "Mozhdeh", lastName: "Shadmand Hamedani" },
-  { id: "USR_1007", firstName: "Anahita", lastName: "Karkhaneh" },
-  { id: "USR_1008", firstName: "Sanaz", lastName: "Sadeghi" },
-  { id: "USR_1009", firstName: "Fargol", lastName: "Mazaheri" },
+  { id: "USR_10001", firstName: "Reza", lastName: "Mazaheri" },
+  { id: "USR_10002", firstName: "Yousef", lastName: "Amini" },
+  { id: "USR_10003", firstName: "Hossein", lastName: "Kalaei" },
+  { id: "USR_10004", firstName: "Ahmad Reza", lastName: "Azizan" },
+  { id: "USR_10005", firstName: "Mastan", lastName: "Shabkhosh" },
+  { id: "USR_10006", firstName: "Mozhdeh", lastName: "Shadmand Hamedani" },
+  { id: "USR_10007", firstName: "Anahita", lastName: "Karkhaneh" },
+  { id: "USR_10008", firstName: "Sanaz", lastName: "Sadeghi" },
+  { id: "USR_10009", firstName: "Fargol", lastName: "Mazaheri" },
   { id: "USR_10010", firstName: "Sima", lastName: "Shafaei" },
   { id: "USR_10011", firstName: "Sara", lastName: "Shafaei" },
   { id: "USR_10012", firstName: "Mahsa", lastName: "Shafaei" },
@@ -28,6 +26,7 @@ const PER_PAGE = 5;
 let currentPage = 1;
 const LEN = userList.length;
 
+const $ = document;
 const users = $.querySelector(".userList");
 const pagination = $.querySelector(".pagination");
 
@@ -56,9 +55,9 @@ const renderPagination = (limit) => {
     btn.innerHTML = index + 1;
     btn.className = currentPage == index + 1 ? "btn active" : "btn";
     btn.addEventListener("click", (event) => {
-      const activePage = event.target.innerHTML;
-      setStyle(activePage);
-      currentPage = activePage;
+      const activeButton = event.target.innerHTML;
+      setStyle(activeButton);
+      currentPage = activeButton;
       renderUserList(currentPage);
     });
     pagination.append(btn);
