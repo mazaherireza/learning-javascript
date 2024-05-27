@@ -57,7 +57,7 @@ main {
   position: absolute;
   bottom: 0;
   display: flex;
-  gap: 0.25rem;
+  column-gap: 0.5rem;
 }
 
 button {
