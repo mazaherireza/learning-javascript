@@ -1,6 +1,7 @@
+console.time("Test");
 console.log(
   "%cLearning JavaScript",
-  "color: yellow; background: black; padding: 0.5em; border-radius: 0.5em;"
+  "color: yellow; background-color: black; padding: 0.5rem; border-radius: 0.5rem;"
 );
 
 const book = {
@@ -32,3 +33,5 @@ console.group("Grouping");
 console.log("First");
 console.log("Second");
 console.groupEnd("Grouping");
+
+console.timeEnd("Test");
