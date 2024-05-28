@@ -4,16 +4,19 @@
 // Refresh
 // location.href = location.href;
 
+const { hash, host, hostname, href, origin, pathname, port, protocol, search } =
+  location;
+
 const route = {
-  hash: location.hash,
-  host: location.host,
-  hostname: location.hostname,
-  href: location.href,
-  origin: location.origin,
-  pathname: location.pathname,
-  port: location.port,
-  protocol: location.protocol,
-  search: location.search,
+  hash,
+  host,
+  hostname,
+  href,
+  origin,
+  pathname,
+  port,
+  protocol,
+  search,
 };
 
 console.table(route);
