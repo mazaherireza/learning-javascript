@@ -20,17 +20,12 @@ const region = regions.find((region) => region.title === destination);
 const moreThanOne = (arr) => arr.length > 1;
 
 if (region) {
-  if (moreThanOne(region.spectacularPlaces)) {
-    console.log(
-      `spectacular Places of ${destination} are: `,
-      region.spectacularPlaces
-    );
-  } else {
-    console.log(
-      `spectacular Place of ${destination} is: `,
-      region.spectacularPlaces
-    );
-  }
+  console.log(
+    `spectacular Places of ${destination} ${
+      moreThanOne(region.spectacularPlaces) ? `are` : `is`
+    }`,
+    region.spectacularPlaces
+  );
 } else {
   console.log("Not found!");
 }
