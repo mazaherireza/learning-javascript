@@ -1,0 +1,18 @@
+:root {
+  --primary: #0032a0;
+  --primary-300: #5a74b3;
+  --primary-100: #f4f8fb;
+  --gray-400: #b7b7b7;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  text-transform: uppercase;
+}

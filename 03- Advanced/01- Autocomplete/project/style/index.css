@@ -1,0 +1,88 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+.main-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#headline {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  gap: 1rem;
+}
+
+.wrapper {
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+
+input[type="submit"] {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.suggestion-wrapper {
+  position: absolute;
+  top: 100%; /* 100% of its parent's height */
+  left: 0;
+  right: 0;
+  max-height: 8rem;
+  overflow-y: auto;
+  font-size: small;
+}
+
+.matched-element {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--primary-100);
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
+}
+
+.matched-element:hover {
+  background-color: var(--gray-400);
+}
+
+.highlight {
+  background-color: var(--gray-400);
+}

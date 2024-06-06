@@ -1,0 +1,23 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.main-wrapper {
+  width: 100%;
+}
+
+#headline {
+  font-size: small;
+}
+
+form {
+  gap: 0.5rem;
+}
+
+input[type="submit"] {
+  font-size: x-small;
+}
