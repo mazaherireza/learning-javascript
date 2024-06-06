@@ -1,0 +1,5 @@
+Input: User's answers.
+
+Output: The score that user has acquired.
+
+

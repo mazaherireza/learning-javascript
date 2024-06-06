@@ -1,0 +1,2 @@
+The isNaN() method returns true if a value is NaN.
+

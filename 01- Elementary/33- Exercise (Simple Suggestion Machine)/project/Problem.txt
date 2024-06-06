@@ -1,0 +1,6 @@
+Implement an online suggestion machine.
+Get destination (province) and log it's spectacular places.
+
+Input: London
+Output: Hyde Park, Tower Bridge, Sky Garden
+
