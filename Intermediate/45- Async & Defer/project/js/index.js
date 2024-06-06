@@ -1,3 +1,0 @@
-const $ = document;
-
-console.log($);

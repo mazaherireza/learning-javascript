@@ -1,4 +1,0 @@
-Calulate the value of x to the power of y.
-
-Input: 2, 3
-Output: 2^3 (8)

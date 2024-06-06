@@ -1,6 +1,0 @@
-Implement a temperature convertor (from Celsius to Fahrenheit and vice versa)
-
-Formula = (0^C * 9/5) + 32 = 32^F
-
-
-

@@ -1,4 +1,0 @@
-Count digits in an integer
-
-Input: 83
-Output: 2

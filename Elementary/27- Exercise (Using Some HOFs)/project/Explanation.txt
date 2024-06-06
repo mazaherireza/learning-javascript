@@ -1,1 +1,0 @@
-Calculate postage of products in user's cart.

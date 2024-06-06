@@ -1,9 +1,0 @@
-Window: beforeunload event
---------------------------
-... is fired when the current window, contained document, and associated resources are about to be unloaded.
-The document is still visible and the event is still cancelable at this point.
-
-The main use case for this event is to trigger a browser-generated confirmation dialog 
-that asks users to confirm if they really want to leave the page when they try to close 
-or reload it, or navigate somewhere else.
-

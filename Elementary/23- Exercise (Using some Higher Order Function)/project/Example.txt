@@ -1,1 +1,0 @@
-Using some higher order function.
