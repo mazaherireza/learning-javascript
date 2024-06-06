@@ -1,0 +1,53 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.wrapper {
+  max-height: 25rem;
+}
+
+#header {
+  padding: 0.5rem;
+  flex-direction: column;
+}
+
+#left-side span {
+  font-size: small;
+}
+
+#right-side span {
+  font-size: x-small;
+}
+
+#logo {
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-width: 1px;
+  border-radius: 0.5rem;
+  font-size: small;
+}
+
+#content h2 {
+  font-size: medium;
+}
+
+#content h3 {
+  font-size: small;
+}
+
+#content p {
+  font-size: x-small;
+}
+
+#content ol li {
+  font-size: x-small;
+}
+
+#img-wrapper {
+  width: 100%;
+}

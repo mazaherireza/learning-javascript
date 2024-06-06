@@ -1,0 +1,11 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.product-list {
+  grid-template-columns: 1fr;
+}

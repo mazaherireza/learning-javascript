@@ -1,0 +1,20 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.wrapper .avatar {
+  width: 6rem;
+  height: 6rem;
+  border-width: 1px;
+}
+
+.wrapper .status {
+  width: 0.75rem;
+  height: 0.75rem;
+  left: 0.5rem;
+  bottom: 0.25rem;
+}

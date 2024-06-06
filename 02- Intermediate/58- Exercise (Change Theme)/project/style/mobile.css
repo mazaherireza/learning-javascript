@@ -1,0 +1,36 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.main-wrapper {
+  width: 85%;
+}
+
+#name {
+  margin-bottom: 0.5rem;
+}
+
+#name,
+#position {
+  font-size: small;
+}
+
+.num {
+  font-size: medium;
+}
+.engagement-title {
+  font-size: x-small;
+}
+
+button {
+  padding: 0.25rem;
+  font-size: small;
+}
+
+.theme-wrapper h5 {
+  font-size: small;
+}

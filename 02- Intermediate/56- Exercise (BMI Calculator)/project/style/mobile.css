@@ -1,0 +1,19 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.main-wrapper {
+  width: 90%;
+}
+
+.main-wrapper h4 {
+  font-size: small;
+}
+
+.result {
+  width: 70%;
+}

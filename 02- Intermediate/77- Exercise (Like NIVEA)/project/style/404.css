@@ -1,0 +1,62 @@
+main {
+  background: var(--primary) url(../assets/images/404.webp) no-repeat center center / cover;
+  height: 80vh;
+  position: relative;
+}
+
+.podium-container {
+  position: absolute;
+  top: 5rem;
+  left: 2rem;
+  background-color: white;
+  color: var(--primary);
+  padding: 2rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.podium-container p {
+  font-weight: bold;
+}
+
+.podium-container button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .podium-container {
+    top: 6rem;
+    left: 1rem;
+    padding: 1rem;
+  }
+
+  .podium-container h3 {
+    font-size: medium;
+  }
+
+  .podium-container p {
+    font-size: small;
+  }
+
+  .podium-container button {
+    font-size: small;
+    border-radius: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .podium-container {
+    max-width: 16rem;
+  }
+
+  .podium-container button {
+    font-size: x-small;
+  }
+}

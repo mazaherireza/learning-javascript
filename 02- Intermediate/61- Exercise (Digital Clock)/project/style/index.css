@@ -1,0 +1,67 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+h4 {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#wrapper-clock {
+  width: 60%;
+  height: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  background: #800080 linear-gradient(to top right, #800080, #f6edf6);
+  border-radius: 0.25rem;
+}
+
+.time {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  text-align: center;
+  line-height: 4rem;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+.delimeter div {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-bottom: 0.25rem;
+  background-color: white;
+}
+
+#date {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}

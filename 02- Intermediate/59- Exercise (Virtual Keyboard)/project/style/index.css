@@ -1,0 +1,95 @@
+body {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#playground {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 4fr;
+}
+
+pre#text {
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: large;
+}
+
+.keyboard {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: silver;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.key {
+  border-radius: 0.25rem;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  max-height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.multi-key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: small;
+  line-height: initial;
+}
+
+#Backspace,
+#Enter {
+  grid-column: 14 / span 3;
+}
+
+#Tab,
+#ShiftLeft {
+  grid-column: 1 / span 3;
+}
+
+#CapsLock {
+  grid-column: 1 / span 2;
+}
+
+#ShiftRight {
+  grid-column: 14 / span 2;
+}
+
+#ControlRight {
+  grid-column: 13 / span 2;
+}
+
+#Space {
+  grid-column: 6 / span 6;
+}
+
+#ControlLeft {
+  grid-column: 1 / span 2;
+}
+
+.animate {
+  animation: change 0.25s;
+}
+
+@keyframes change {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

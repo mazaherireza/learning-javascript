@@ -1,0 +1,36 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+#playground h3 {
+  font-size: small;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  width: 80%;
+}
+
+input {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  flex-flow: column wrap;
+  align-items: stretch;
+}
+
+#todo-box,
+#doing-box,
+#done-box {
+  min-height: 8rem;
+}
+
+.todo-card {
+  font-size: x-small;
+}

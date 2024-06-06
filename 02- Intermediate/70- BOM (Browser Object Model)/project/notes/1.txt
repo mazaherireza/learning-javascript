@@ -1,0 +1,27 @@
+The Browser Object Model (BOM), allows JavaScript to "talk to" the browser.
+
+JavaScript BOM
+--------------
+The BOM is the core of JS on the web. 
+The BOM provides you with objects that expose the web browser's functionality.
+
+Section 1. Window
+-----------------
+Window, Alert, Confirm, Prompt, setTimeout, setInterval
+
+Section 2. Location
+-------------------
+Location ... via the location object.
+Get query string parameters, Redirect to a new URL <-------------------- ***
+
+Section 3. Navigator
+--------------------
+Navigator - query the information and capabilities of the browser using the navigator object.
+
+Section 4. Screen
+-----------------
+Screen - get the information about the screen on which the browser is running by using the screen object.
+
+Section 5. History 
+------------------
+History - manage the web browser's history stack with the history object.

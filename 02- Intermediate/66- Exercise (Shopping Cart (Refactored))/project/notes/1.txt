@@ -1,0 +1,15 @@
+HTML DOM Element insertAdjacentHTML()
+-------------------------------------
+.... inserts HTML code into a specified position.
+
+afterBegin
+After the beginning of the element (first child)
+
+afterend
+After the element
+
+beforebegin
+Before the element
+
+beforeend
+Before the end of the element (last child)

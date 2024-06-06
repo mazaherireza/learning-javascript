@@ -1,0 +1,20 @@
+JavaScript onKeyPress, onKeyUp and onKeyDown Events
+---------------------------------------------------
+Whenever a key is pressed or released, there are certain events that are triggered.
+... in the following order:
+
+keydown Event
+... when the user "has pressed down" the key.
+It will occur even if the key pressed does not produce a character value.
+
+keypress Event
+... when the user presses a key that produces a character value.
+
+Modifier keys such as "Shift", "CapsLock", "Ctrl" etc. do not produce a character,
+therefore they have no "keypress" event attached to them. <---------------------- ***
+
+keyup event
+... when the use has released the key.
+It will occur even if the key released does not produce a character value.
+
+

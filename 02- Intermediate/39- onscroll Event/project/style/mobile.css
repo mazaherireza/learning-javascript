@@ -1,0 +1,19 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+#playground h3 {
+  font-size: medium;
+}
+
+#text {
+  width: 80%;
+}
+
+.message {
+  font-size: small;
+}

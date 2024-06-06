@@ -1,0 +1,55 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.information, .media {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.fa-music {
+  visibility: hidden;
+  animation: movement 2s infinite reverse;
+}
+
+@keyframes movement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+}
