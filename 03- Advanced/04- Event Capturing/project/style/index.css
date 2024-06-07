@@ -1,0 +1,54 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+#headline {
+  margin-bottom: 1rem;
+}
+
+div {
+  font-weight: bold;
+  font-size: small;
+  width: 10rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.primary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.red {
+  border: 1px solid var(--red-400);
+  color: var(--red-400);
+  margin-left: 1rem;
+}
+
+.gold {
+  border: 1px solid var(--gold-700);
+  color: var(--gold-700);
+  margin-left: 2rem;
+}
