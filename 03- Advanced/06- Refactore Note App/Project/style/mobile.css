@@ -1,0 +1,19 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.main-wrapper {
+  width: 70%;
+}
+
+#playground h3 {
+  font-size: small;
+}
+
+.card {
+  font-size: small;
+}
