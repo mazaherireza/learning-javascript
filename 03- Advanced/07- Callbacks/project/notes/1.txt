@@ -1,0 +1,13 @@
+JavaScript Callbacks
+--------------------
+"I will call back later!"
+
+A callback is a function passed as an argument to another function.
+This technique allows a function to call another function. <-------------- **
+
+Sometimes you would like to have better control over WHEN to execute a function.
+
+When you pass a function as an argument, remember not to use ().
+
+Where callbacks really shine are in asynchronous functions,
+where one function has to wait for another function (like waiting for a file to load).
