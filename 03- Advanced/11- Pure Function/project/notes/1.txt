@@ -1,0 +1,19 @@
+Pure Functions in JavaScript
+----------------------------
+... is a function (a block of code) that ALWAYS returns the same result if the same arguments are passed.
+It does not depend on any state or data change during a program's execution.
+Rather, it only depends on its input arguments. <--------------- **
+
+.. a pure function, does not produce any observable side effects such as network requests or data mutation, etc.
+
+Note: If a pure function calls a pure function, this isn't a side effect, 
+and the calling function is still considered pure.
+
+Some Side effects ...
+
+Making an HTTP request
+Mutating data
+Printing to a screen or console
+DOM Query/Manipulation
+Math.random()
+Getting the current time
