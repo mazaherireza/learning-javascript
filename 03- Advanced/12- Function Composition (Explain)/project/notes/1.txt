@@ -1,0 +1,9 @@
+What is Function Composition?
+-----------------------------
+Function Composition is a technique in which you combine 2 or more functions to produce a new function.
+The idea is to take the output of one function and use it as the input for another.
+
+One of the key benefits of function composition is reusability.
+Each function created can be used independently or in conjunction with others.
+
+Maintainability is another advantage. If you want to upgrade ...
