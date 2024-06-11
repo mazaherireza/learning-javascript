@@ -1,0 +1,6 @@
+Higher Order Functions and Composition
+--------------------------------------
+Functions that accept other functions as arguments or return functions are called HOFs.
+They are the backbone of function composition.
+
+const compose = (f, g) => x => f(g(x))
