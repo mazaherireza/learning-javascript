@@ -1,0 +1,14 @@
+JavaScript Use Strict
+---------------------
+"use strict"; Defines that JavaScript code should be executed in "strict mode".
+
+Strict mode is declared by adding "use strict"; to the beginning of a strict or a function.
+
+... makes it easiter to write "secure" JavaScript.
+
+The "this" keyword in functions behaves differently in strict mode.
+The "this" keyword refers to the object that called the function.
+If the object is not specified, function in strict mode will return "undefined"
+and functions in normal mode will return the global object (window)
+
+The "use strict" directive is only recognized at the beginning of a script or a function.
