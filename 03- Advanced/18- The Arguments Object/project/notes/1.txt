@@ -1,0 +1,39 @@
+Function parameters are the "names" listed in the function definition.
+Function arguments are the real "values" passed to (and received by) the function.
+
+JS functions do not check the number of arguments received. <--------------- ***
+
+Function Rest Parameter
+-----------------------
+The rest parameter (...) allows a function to treat an indefinite (without clear limits) 
+number of arguments as an array:
+
+function sum(...args) {
+  let sum = 0
+  for (let arg in args)
+    sum += arg
+}
+...
+
+The Arguments Object <---------------------- *
+JS functions have a built-in object ...
+The arguments object contains an array of the arguments used when the function was called (invoked).
+
+...
+
+(for let index = 0; index < arguments.length; index++)
+  ...
+
+If a function is called with too many arguments (more than declared),
+these arguments can be reached using the "arguments" object.
+
+Arguments are Passed by Value <--------------------------------------------------- *
+
+JS arguments are passed by "value": 
+The function only gets to know the values, not the argument's locations.
+
+Changes to arguments are not visible (reflected) outside the function.
+
+Objects are Passed by Reference <--------------------------------------------------- *
+
+Changes to object properties are visible (reflected) outside the function.
