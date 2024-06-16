@@ -1,0 +1,27 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.form-container {
+  width: 90%;
+}
+
+.form-container form {
+  padding: 1rem 0.5rem;
+}
+
+label, input[type="submit"] {
+  font-size: small;
+}
+
+.table-container {
+  width: 90%;
+}
+
+thead tr th {
+  font-size: small;
+}

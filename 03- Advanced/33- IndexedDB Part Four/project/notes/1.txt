@@ -1,0 +1,95 @@
+Delete data from IndexedDB
+__________________________
+
+The steps to remove objects from an Object Store are similar to when they are added.
+... using the delete(key) method, and finally the events are handled as required.
+
+function removeStudent(key) {
+  const request = db.transaction("Students", "readwrite").objectStore("Students").delete(key)
+  request.onsuccess = () => { console.log(`Student deleted, email: ${request.result}`) }
+  request.onerror = (error) => { console.error(`Error to delete student: ${error}`) }
+}
+
+... remove all data stored in an Object Store with the clear() method.
+
+...
+ `Object Store "${storeName}" emptied`
+..
+
+`Error to empty Object Store: ${storeName}`
+
+Get data from IndexedDB
+_______________________
+
+Individual data
+---------------
+To get a single specific object, the get(key) method is used, 
+to which the key of the object to be obtained is passed as a parameter.
+
+function getStudent(key) {
+  const request = db.tansaction("Students").objectStore("Students").get(key)
+  request.onsuccess = () => {
+    const student = request.result 
+    return student
+  }
+}
+...
+`Error to get student information: ${error}`
+
+Multiple Data
+-------------
+To get all the data from an Object Store there are 2 possible ways:
+
+1- getAll()
+
+If you want to get an array with ALL the data inside an Object Store, the getAll() method is used, 
+... creates all the objects at the same time and returns the array.
+
+function getAllStudents() {
+  const request = db.tansaction("Students").objectStore("Students").getAll()
+}
+
+cursor
+------
+If you want to work with all the data stored in an Object Store independently, 
+it is a good idea to use a cursor, ...
+
+To use a cursor, it must first be created with the openCursor() method of the objectStore object, 
+once the request is made, the success event is handled where the result of the request is the cursor,
+
+..., to move to the next stored data, we use the cursor's continue() method.
+
+function printStudents() {
+  const request = DB.transaction("Students").objectStore("Students").openCursor()
+
+  request.onsuccess = () => {
+    const cursor = request.result
+    if(cursor) {
+      printInfo(cursor.value)
+      cursor.continue()
+    } else {
+      console.log("No more entries.")
+    }
+  }
+}
+
+Update data from IndexedDB
+__________________________
+
+To update an existing data in the DB, the put(item, key) method is used.
+However, if the requested data doesn't exist, this method creates it and inserts it in the Object Store.
+This method returns the key of the stored object as a result.
+
+To update, usually the get(key) method is first used to get the stored object,
+then the necessary properties are updated, and finally the put(obj) method is used with the new object.
+
+function updateStudent(key) {
+  const objectStore = db.transaction("Students").objectStore("Students")
+  const request = objectStore.get(key)
+  request.onsuccess = () => {
+    const student = request.result
+    student.name = "Fulanito"
+    const updateRequest = objectStore.put(student)
+    updateRequest.onsuccess = () => { ... `Student updated, username: ${updatedRequest.result}`}
+  }
+}
