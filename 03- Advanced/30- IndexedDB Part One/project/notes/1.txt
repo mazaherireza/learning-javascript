@@ -1,0 +1,77 @@
+IndexedDB
+---------
+
+IndexedDB is a transactional DB system that stores structured information within a browser.
+
+... it is necessary to open a connection, then specify the DB Schema that it will have, 
+this refers to the structure of the objects that will be stored, ... carry out the desired transactions.
+
+... being independent of whether there is internet connection or not, 
+the application can work both online and offline.
+
+... to persist the data in user's browsers.
+
+Transactions 
+------------
+Before carrying out any operation on the DB (add, delete, get, put) it is necessary to create a transaction, 
+... which "tables" (Object Stores) ... type of access ... will be used to perform the transaction,
+
+...
+const request = window.indexedDB.open('Peeyade', 1)
+request.onsuccess = () => {
+  DB = request.result
+}
+...
+
+... readonly or readwrite.
+
+Finally, the transaction returns an object that contains the "objectStore(storeName)" method 
+which is used to access to each Object Store (table) ...
+________________________
+
+Before opening (creating) a DB using indexedDB, we must verify that the browser has the necessary support, ...
+
+Then we have to create a request to open the DB that returns an event (success or error)
+... version ... it will be defined a DB Schema that will determine the structure of the objects to be stored, ...
+
+onsuccess: This is executed every time the DB is connected or created.
+onupgradeneeded: This is executed only once, when the DB is created or updated, 
+so the structure of it (DB Schema) will be defined here.
+
+... this event is fired when the DB is created for the first time or when its version is updated,
+so it is the ideal place to specify the DB Schema.
+
+Creating an Object Store (table) <--------------------- *
+--------------------------------
+We must define where the objects will be stored for the current version of our DB.
+... IDBObjectStore ... createObjectStore(name, options) method, 
+... that contains the following attributes:
+keyPath: ... will identify each object. <--------------------- *
+
+const objectStore = DB.createObjectStore('user', { keyPath: 'email' })
+...
+
+If you want to update the Object Store, ... it will have the new structure, but it will be empty, ...
+
+Creating Indexes (fields or attributes)
+---------------------------------------
+To create "field"s (index) in a "table" (Object Store), use the createIndex(...)
+
+Add data to IndexedDB
+---------------------
+To add new objects to the Object Store, ... add(object) method ... 
+
+..., if you want to add several students, it is best to have the transaction and the objectStore separately, 
+since the transaction will be active as long as there are requests pending and the objectStore gives us access to the table.
+... the events of the transaction don't depend on the request ...
+
+function addStudents(students) {
+  const transaction = db.transaction('students', 'readwrite')
+  transaction.oncomplete = ...
+  transaction.onerror = ...
+  const objectStore = transaction.objectStore('students')
+  for(const student of students) {
+   const request = objectStore.add(student) 
+   ...
+  }
+}
