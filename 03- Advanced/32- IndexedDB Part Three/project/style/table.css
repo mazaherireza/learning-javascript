@@ -1,0 +1,21 @@
+.table-container {
+  padding-top: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+thead tr {
+  font-weight: bold;
+}
+
+thead td {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
