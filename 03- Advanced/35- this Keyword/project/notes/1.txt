@@ -1,0 +1,189 @@
+"this" binding in JavaScript [Incomplete]
+____________________________
+
+... there are 5 modes for "this" binding.
+
+1. default binding 
+2. implicit binding
+3. explicit binding
+4. new binding
+5. arrow functions
+
+Default binding
+---------------
+Default binding is what happens if you don't use any other kind of binding.
+
+If we call any function, plain (without a . before it), it will get default binding. <--------- ***
+...
+func() <----------- the function call does not have a . before it.
+In the plain function call func(), default binding applies.
+
+When default binding applies, "this" is the window object in normal mode and "undefined" in strict mode.
+
+"use strict"
+const book = {
+    title: "Dr. Jekyll and Mr. Hyde",
+    author: "Robert Louis Stevenson",
+    log: function() {
+        console.log(this)
+    }
+}
+
+const log = book.log;
+log(); 
+
+We call our function with this code:
+log();
+As this is a plain function call, we're using default binding, so "this" is "undefined".
+The only thing that matters is the function call, and the function call is plain and without a . before it.
+
+Implicit Binding
+----------------
+Implicit binding is what we get when we call a function with a . before it.
+.... has a higher precedence that default binding.
+
+When using implicit binding, the value of "this" is the object just before the FINAL . before the function.
+... the object at the very right of the function call before the actual function.
+
+"use strict" <---------------- With or without this directive, the result will be the same.
+const book = {
+    title: "Dr. Jekyll and Mr. Hyde",
+    author: "Robert Louis Stevenson",
+    log: function() {
+        console.log(this)
+    }
+}
+
+book.log();
+
+We are calling a function preceded by a . before it, so we're using implicit binding.
+... Therefore "this" becomes book.
+
+----------------------
+const title = "Title"
+
+const book = {
+    title: "Dr. Jekyll and Mr. Hyde",
+    author: "Robert Louis Stevenson",
+    log: function() {
+        console.log(title)
+    }
+}
+
+const log = book.log;
+log(); <---------------------------- Title NOT Dr. Jekyll and Mr. Hyde
+
+book.log() <------------------------ Title NOT Dr. Jekyll and Mr. Hyde
+
+Explicit Binding
+----------------
+Explicit binding has even higher precedence than implicit binding.
+
+We use it by using one of the 3 functions, call, apply or bind, present in function objects.
+
+call, apply and bind explicitly provide the value of "this". <-------------- ***
+
+For example, when calling something.call(book) the value of "this" in something is book.
+The FIRST argument passed in call is the value of "this" you want the function to have.
+
+call, apply and bind do the same thing in essence.
+They all bind the value of "this", which they accept as their FIRST argument. <------------ *
+But they have some slight differences.
+
+.call
+-----
+call accept additional arguments that are comma seprated.
+They will be passed to the function call.
+
+something.call(book, "$12", "4.5") does 2 things:
+
+1. It makes "this" inside the function be book
+2. It passes arguments to the function as though it was called with something("$12", "4.5")
+
+.apply
+------
+apply is very similar, the only difference being that it accepts arguments in an array.
+
+something.apply(book, ["$12", "4.5"]) ...
+
+1. It makes "this" inside the function be book
+2. It passes arguments to the function as though it was called with something("$12", "4.5")
+
+.bind 
+------
+bind is slightly different. 
+It returns your target function with the correct "this". <---------- ***
+It doesn't call it immediately.
+
+bind is also referred to as "hard binding".
+
+const movie = {
+    title: "The Invisible Guest",
+    director: "Oriol Paulo"
+}
+
+function display() {
+    console.log(this);
+}
+
+display.bind(movie)();
+
+bind has the highest precedence. ... bind is going to win.
+
+new Binding
+-----------
+... has even higher precedence than even hard binding.
+It ignores the normal binding rules and does its own binding.
+
+We can use new when calling functions like so: new something().
+
+"new" does 4 things:
+
+1. It creates a new empty object.
+2. It makes "this" be the new object.
+3. It makes something.prototype be the prototype of the object.
+4- It Implicitly returns "this" if nothing else is returned form the function.
+
+... when we call a function with "new" before it, 
+we create a brand new empty object which is assigned to "this" inside the function. <-------- **
+
+function display() {
+    console.log(this);
+}
+
+new display(); <-------------- Outputs and empty object,(display {}) ***
+
+... creates a new object and binds it to "this". <------------------------- ****
+
+Arrow Functions  sargalias.medium.com
+---------------
+Rememeber the old trick using self to make "this" use lexical scope? <---------- ?!
+
+Arrow functions do not bind their own "this", instead, 
+they inherit the one from the parent scope, which is called lexical scoping.
+
+const display = () => { console.log(this) }
+display(); <------- window or global object
+
+"use strict" <-------------- It will be the same result
+
+Arrow functions as methods
+--------------------------
+"use strict"
+const displaying = {
+    display : () => { console.log(this) }
+}
+
+displaying.display() // window or global object
+
+const show = displaying.display;
+show() // window or global object
+
+const complex = {
+    arrFunc : null,
+    assignArrFun: function () {
+        this.arrFunc = () => { console.log(this) }
+    }
+}
+
+complex.assignArrFun() .... [Incomplete]

@@ -1,0 +1,70 @@
+Lexical and Dynamic Scopes 
+__________________________
+
+Scope refers to the area where an item (such as a function or variable)
+is visible and accessible to other code.
+
+Scope means area, space, or region.
+
+Global scope means global space or a public space.
+... visible and accessible globally to all code within the script.
+
+Local scope means a local region or a restricted region.
+
+A scope chain, refers to the unique spaces that exist from the scope where the variable got called to the global scope.
+The global scope is the last link in JavaScript's scope chain.
+
+JavaScript's scope chain determines the hierarchy of places the computer must go through
+-one after the other- to find the lexical scope of the specific variable that got called.
+
+What does lexical mean?
+
+Lexical refers to the definition of things.
+Anything related to creating words, expressions, or variables is termed lexical.
+
+Lexical (static) scope is the DEFINITION area of an expression.
+... is the place in which the item got created. <------------------- ***
+
+The place an item got invoked is NOT necessarily the item's lexical scope.
+Instead, and item's DEFINITION space is its lexical scope.
+... DEFINITION space, not INVOCATION space.
+
+const salutation = (name = "Reza") => console.log(`Salut ${name}!`)
+salutation's lexical scope is the global environment. <------------------ ***
+
+Any time your hear lexical, think DEFINITION.
+
+An alternative to the lexical scope is the dynamic scope. 
+
+Dynamic Scope 
+-------------
+In dynamic scoping, you search in the local function first, <----------- ***
+then you search in the function that called the local function, ... and so on, up the call-stack.
+
+Call-stack is a mechanism for an interpreter to keep track of its place in a script that calls multiple functions.
+What function is currently being run and what functions are called from within that function, etc.
+
+... is a near cousin to another mechanism called "this" in JS.
+
+... that scope can be determined dynamically at run-time, ...
+
+Dynamic scope does NOT concern itself with how and where functions and scopes are declared,
+but rather where they are CALLED FROM.
+ ... the scope chain is based on call-stack, ... <------------- ***
+
+If JS had dynamic scope, when salutation() is executed, 
+theoretically the code below would result "Salut Reza" as the output.
+
+function salutation() {
+    console.log(`Salut ${name}`);
+}
+
+function start() {
+   let name = "Reza";
+    salutation(); <-------- ... where () WAS CALLED FROM.
+}
+
+let name = "Name";
+start();
+
+JS does NOT have dynamic socpe. It has lexical scope. <------------------ ***
