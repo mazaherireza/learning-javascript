@@ -126,7 +126,7 @@ function countUser(user) {
   We can store (cache) results from a function, so that future calls on the same object can reuse it.
   ...
   For multiple calls of process(obj) with the same object, 
-  it only calculates the result the first time, and then just takes it form cache.
+  it only calculates the result the first time, and then just takes it from cache.
 */
 
 let cache = new WeakMap();
@@ -168,7 +168,7 @@ visitedSet.add(diran);
 hayk = null; // visitedSet will be cleaned automatically.
 
 /* 
-  The most notable limitation of WeakMap and WeakSet is the absence if iterations, <--------- ***
+  The most notable limitation of WeakMap and WeakSet is the absence of iterations, <--------- ***
   and the inability to get all current content.
   ... their MAIN job - be an "additional" storage of data for objects which are stored/managed at another place.
 */
