@@ -1,0 +1,65 @@
+JS Promises
+-----------
+"I Promise a Result!"
+
+"Producing code" is code that can take some time
+"Consuming code" is code that MUST wait for the result 
+A Promise is an Object that links Producing code and Consuming code
+
+JS Promise Object
+-----------------
+A Promise contains both the producing code and calls to the consuming code:
+
+const promise = new Promise((resolve, reject) => {
+    // Producing Code (May take some time)
+    resolve() // When successful
+    reject() // When error
+})
+
+// "Consuming Code" (MUST wait for a (fulfilled) Promise)
+promise.then(
+    (value) => {} // When successful
+    (error) => {} // When error
+)
+
+When the producing code, obtains the result, it should call one of the two callbacks:
+
+When                        Call
+=========================================
+Success             resolve(result value)
+Error               reject(error object)
+
+Promise Object Properties
+-------------------------
+A JS Promise object can be:
+Pending
+Fulfilled
+Rejected
+
+The Promise object supports 2 properties: 
+state and result.
+
+While a Promise object is "pending" (working), the result is undefined.
+When a Promise object is "fulfilled", the result is a value.
+When a Promise object is "rejected", the result is an error object.
+
+promise.state	                 promise.result
+================================================
+pending                          undefined
+fulfilled                        a result value
+rejected                         an error object
+
+You cannot access the Promise properties state and result. <------------ **
+You MUST use a Promise method to handle promises.
+
+Promise How To
+--------------
+Here is how to use a Promise:
+
+promise.then(
+    value => {} // Code if successful
+    error => {} // Code if some error
+)
+
+Promise.then() takes two arguments, a callback for success and another for failure.
+Both are optional, so you can add a callback for success or failure only.
