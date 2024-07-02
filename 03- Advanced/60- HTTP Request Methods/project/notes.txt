@@ -1,0 +1,90 @@
+HTTP Request Methods
+--------------------
+What is HTTP?
+
+The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
+HTTP works as a request-response protocol between a client and server.
+
+... a client (browser) sends an HTTP request to the server,then the server returns a response to the client. 
+The response contains status information about the request and may also contain the requested content.
+
+HTTP Methods
+------------
+GET
+POST
+PUT
+HEAD
+DELETE
+PATCH
+OPTIONS
+CONNECT
+TRACE
+
+The GET Method
+--------------
+GET is used to request data from a specified resource.
+... the query string (name/value pairs) is sent in the URL of a GET request:
+
+/test/demo_form.php?firstName=Reza&lastName=Mazaheri
+
+GET requests can be cached
+... remain in the browser history
+... can be bookmarked
+... should NEVER be used when dealing with sensitive data
+... have length restrictions
+... are only used to request data (not modify)
+
+The POST Method
+---------------
+POST is used to send data to a server to create/update a resource.
+The data sent to the server with POST, is stored in the request body of the HTTP request: <------- ***
+
+POST /test/demo_form.php HTTP/1.1
+Host: w3schools.com
+
+firstName=Reza&lastName=Mazaheri
+
+POST requests are NEVER cached <--------------- *
+... do not remain in the browser history
+... cannot be bookmarked
+... have no restrictions on data length
+
+The PUT Method
+--------------
+PUT is used to send data to a server to create/update a resource.
+
+The difference between POST and PUT is that PUT requests are idempotent. <----------- *
+That is, calling the same PUT request multiple times will always produce the same result. 
+In contrast, calling a POST request repeatedly have side effects of creating the same resource multiple times.
+
+The HEAD Method
+---------------
+HEAD is almost identical to GET, but without the response body. <----------- ***
+
+In other words, if GET /users returns a list of users, 
+then HEAD /users will make the same request but will not return the list of users.
+
+A HEAD request is useful for checking what a GET request will return before actually making a GET request - 
+a HEAD request can read the Content-Length header to check the size of the file, 
+without actually downloading the file.
+
+The DELETE Method
+-----------------
+The DELETE method deletes the specified resource.
+
+The PATCH Method
+----------------
+The PATCH method is used to apply partial modifications to a resource.
+
+The OPTIONS Method
+------------------
+The OPTIONS method describes the communication options for the target resource.
+
+The CONNECT Method
+------------------
+The CONNECT method is used to start a two-way communications (a tunnel) with the requested resource.
+
+The TRACE Method
+----------------
+The TRACE method is used to perform a message loop-back test that tests the path for the target resource 
+(useful for debugging purposes).
