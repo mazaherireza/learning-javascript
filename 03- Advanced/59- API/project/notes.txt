@@ -1,0 +1,60 @@
+What is an API (Application Programming Interface)?
+---------------------------------------------------
+... you can think of an API as a waiter in a restaurant who listens to your order request, 
+goes to the chef, ...
+
+... the API is responsible to send your request to the DB and responds with the output.
+...
+API ... is a collection of communication protocols and subroutins used by various programs to communicate between them.
+
+An API acts as a communication medium between 2 programs ... <------------ **
+
+Steps followed ...
+The client initiates the requests via the APIs URI (Uniform Resource Identifier)
+The API makes a call to the server after receiving the request
+Then the server sends the response back to the API with the information
+Finally, the API transfers the data to the client
+
+...
+To provide additional security layers to the data, HTTP headers, query string parameters, or cookies are used.
+
+.. API's architectures are: <----------------- **
+REST 
+SOAP
+
+... a web application is a network-based resource, responsible for completing a single task.
+
+Types of APIs
+...
+REST (Representational State Transfer):
+It makes use of HTTP to GET, POST, PUT, or DELETE data.
+
+What are REST APIs?
+REST stands for ... and follows the constraints of REST architecture 
+allowing interaction with RESTful web services.
+It defines a set of functions (GET, ...) that clients use to access server data.
+
+The functions used are:
+GET (retreive a record)
+PUT (update a record)
+POST (create a record)
+DELETE (delete a record)
+
+Its main feature is that REST API is stateless, i.e., the server do not save client's data between requests.
+
+What is a Web API?
+Web API is simply an API for the web. 
+It is an API that can be accessed using the HTTP protocol.
+
+REST
+... lightweight and needs less bandwidth
+It permits different data formats such as plain text, HTML, XML, JSON, etc.
+REST calls can be cached.
+
+API testing is a kind of software testing that analyzes an API in terms of its functionality, 
+security, performance, and reliability.
+
+... API endpoints ... 
+
+API Testing Tools
+Postman
