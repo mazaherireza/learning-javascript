@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS💫</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/JS_Favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/snackbar.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <script type="module" src="./js/form.js" defer></script>
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <h1 id="hero-title">Learning JavaScript.</h1>
+    </main>
+
+    <section id="playground">
+      <h2 id="playground-title">Playground</h2>
+
+      <div class="form">
+        <form action="">
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="First Name"
+            autofocus
+            required
+          />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Last Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="name@example.com"
+            required
+          />
+          <button id="btn">Register</button>
+        </form>
+      </div>
+    </section>
+    <div id="snackbar"></div>
+  </body>
+</html>
