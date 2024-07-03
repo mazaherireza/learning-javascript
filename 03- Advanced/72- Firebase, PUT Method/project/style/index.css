@@ -1,0 +1,53 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: var(--primary)
+    linear-gradient(to left, var(--secondary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+#playground h3 {
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.user-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid black;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.fa {
+  margin-left: 0.25rem;
+}
+
+.fa-trash {
+  color: red;
+}
