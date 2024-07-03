@@ -1,0 +1,69 @@
+What is a URL?
+--------------
+... Uniform Resource Locators (URL) ...
+It is the mechanism used by browsers to retrieve any published resource on the web.
+
+A URL is nothing more than the address of a given unique resource on the Web. 
+In theory, each valid URL points to a unique resource.
+
+As the resource represented by the URL and the URL itself are handled by the Web server, 
+... manage that resource and its associated URL.
+
+Basics: anatomy of a URL
+
+A URL is composed of different parts, some mandatory and others optional.
+
+http://www.example.com:80/path/to/myFile.html?key1=value1&key2=value2#SomewhereInTheDocument
+
+Scheme
+
+The first part of the URL is the scheme, 
+which indicates the protocol that the browser MUST use to request the resource 
+
+Usually for websites the protocol is HTTPS or HTTP.
+
+Authority
+
+Next follows the authority, which is separated from the scheme by the character pattern ://. 
+If present, the authority includes both the domain (e.g. www.example.com) and the port (80), separated by a colon:
+
+The domain indicates which Web server is being requested. <----------------- ***
+Usually this is a domain name, but an IP address may also be used.
+
+The port indicates the technical "gate" used to access the resources on the web server. 
+It is usually omitted if the web server uses the standard ports of the HTTP protocol 
+(80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.
+
+The separator between the scheme and authority is ://. 
+The colon separates the scheme from the next part of the URL, 
+while // indicates that the next part of the URL is the authority.
+
+Path to resource
+
+/path/to/myfile.html is the path to the resource on the Web server.
+
+Parameters
+
+?key1=value1&key2=value2 are extra parameters provided to the Web server. 
+Those parameters are a list of key/value pairs separated with the & symbol. 
+The Web server can use those parameters to do extra stuff before returning the resource.
+
+Anchor
+
+#SomewhereInTheDocument is an anchor to another part of the resource itself. 
+... the part after the #, also known as the fragment identifier, is NEVER sent to the server with the request.
+
+Absolute URLs vs. relative URLs
+...
+You don't need to include the protocol (the browser uses HTTP by default) <-------------------- ***
+or the port (which is only required when the targeted Web server is using some unusual port), 
+but all the other parts of the URL are necessary.
+
+When a URL is used within a document, such as in an HTML page, things are a bit different. 
+Because the browser already has the document's own URL, 
+it can use this information to fill in the missing parts of any URL available inside that document. 
+
+We can differentiate between an absolute URL and a relative URL by looking only at the path part of the URL. 
+If the path part of the URL starts with the "/" character, 
+the browser will fetch that resource from the top root of the server, <------------ **
+without reference to the context given by the current document.
