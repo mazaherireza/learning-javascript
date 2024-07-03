@@ -1,0 +1,69 @@
+How does the Internet work?
+---------------------------
+The Internet is the backbone of the Web, the technical infrastructure that makes the Web possible.
+... the Internet is a large network of computers which communicate all together.
+
+... history ... It began in the 1960s as a US-army-funded research project.
+Then evolved into a public infrastructure in the 1980s ...
+
+Internet is a way to connect computers all together and ensure that, whatever happens,
+they find a way to stay connected.
+
+Deeper dive
+A simple network
+When 2 computers need to communicate, you have to link them, either physically (... Ethernet cable)
+or wirelessly (... Wi-Fi or Bluetooth systems)
+
+... each computer on a network is connected to a special tiny computer called a router.
+This router has only one job: like a signaler at a railway station, 
+it makes sure that a message sent from a given computer, arrives at the right destination computer.
+
+To send a message to computer B, computer A must sent the message to the router,
+which in turn forwards the message to computer B and makes sure the message is not delivered to computer C.
+
+A network of networks
+
+... a router is a computer like any other, ...
+
+By connecting computers to routers, then routers to routers, we are able to scale infinitely.
+
+...
+There are other networks out there: ...
+The telephone infrastructure already connects your house with anyone in the world so it is the perfect wire we need.
+To connect our network to the telephone infrastructure, we need a special piece of equipment called a modem.
+This modem turns the information from our network into information managable 
+by the telephone infrastructure and vice versa.
+
+The next step is to send the messages from our network to the network we want to reach.
+To do that, we will connect our network to an Internet Service Provider (ISP).
+
+An ISP is a company that manages some special routers that are all linked together 
+and can also access other ISP's routers.
+
+Finding computers
+If you want to send a message to a computer, you have to specify which one.
+Thus any computer linked to a network has a unique address that identifies it, called an "IP address" (Internet Protocol)
+It is an address made of a series of four numbers separated by dots,
+192.0.2.172
+
+...
+... we can alias an IP address with a human-readable name called a domain name.
+... IP addresses can change. 
+
+Internet and the web <------------------------------------------------------------- **
+...
+..., the Internet is a technical infrastructure which allows billions of computers to be connected all together. 
+Among those computers, some computers (called Web servers) can send messages intelligible to web browsers.
+The Internet is an infrastructure, whereas the Web is a service built on top of the infrastructure.
+
+... several other services on top of the Internet, such as email and IRC (Internet Relay Chat).
+
+Intranets and Extranets
+Intranets are private networks that are restricted to members of a particular organization.
+The are commonly used to provide a portal for members to ...
+
+Extranets are very simialr to Intranets, except they open all or part of a private network 
+to allow sharing and collaboration with other organizations.
+
+Both intranets and extranets run on the same kind of infrastructure as the Internet,
+and use the same protocols.

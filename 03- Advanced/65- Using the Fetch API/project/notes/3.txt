@@ -1,0 +1,50 @@
+What is the difference between webpage, website, web server and search engine?
+------------------------------------------------------------------------------
+... web-related concepts
+
+Web page
+A document which can be displayed in a web browser such as Firefox, Google Chrome, ... or Apple Safari.
+... "pages".
+
+Website
+A collection of web pages which are grouped together and usually connected together in various ways.
+Often called a "website" or a "site".
+
+Web server
+A computer that hosts a website on the Internet.
+
+Search engine
+A web service that helps you find other web pages, such as Google, Bing, Yahoo or DuckDuckGo.
+
+... compare the library with a web server:
+Webpages can each be found at a unique location (URL)
+
+Web page
+A web page is a simple document displayed by a browser.
+
+(A Web browser or browser is a program that retrieves and displays pages from the Web, 
+and lets users access further pages through hyperlinks.)
+
+A browser is the most familiar type of user agent.
+
+User agent: ... a computer program representing a person
+a user agent can be a bot scraping webpages, a download manager, ...
+
+Along with each request they make to the server, 
+browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string.)
+
+A web page can embed a variety of different types of resources such as:
+style information, scripts, media
+
+All web pages available on the web are reachable through a unique address.
+... browser address bar.
+
+Website
+... is a collection of linked web pages (plus their associated resources) that share a unique domain name.
+
+Web server
+... is a computer hosting one or more websites.
+"Hosting" means that all the web pages and their supporting files are available on that computer.
+
+Search engine
+... is a special kind of website that helps users find web pages from other websites

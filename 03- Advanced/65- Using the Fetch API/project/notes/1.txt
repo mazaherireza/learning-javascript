@@ -1,0 +1,36 @@
+How do I start to design my website?
+------------------------------------
+... the all-important first step of every project: 
+define what you want to accomplish with it.
+
+..., but what really matters is what you want to accomplish.
+
+What exactly do I want to accomplish?
+How will a website help me reach my goals?
+What needs to be done, and in what order, to reach my goals?
+
+Deeper dive
+-----------
+A project never starts with the technical side.
+Technique comes second.
+
+... you must first step back and decide in detail what you want to do.
+
+An hour's discussoin with friends is a good start, ...
+
+What exactly do I want to accomplish?
+
+... list all the goals you want to reach.
+
+Once you have such a list, you need to prioritize.
+Order the goals from most important to least important.
+
+How could a website bring me to my goals?
+
+What needs to be done, and in what order, to reach my goals?
+
+... it's time to turn those goals into acctionable steps.
+
+Conclusion
+..., the simple idea "I want to make a website" generates a long to-do list, 
+which only grows longer as you can think about it.
