@@ -1,0 +1,58 @@
+What are hyperlinks?
+--------------------
+Hyperlinks, usually called links, are a foundational concept behind the Web.
+
+Back in 1989, Tim Berners-Lee, the Web's inventor, ...
+... three pillars on which the Web stands:
+
+URL, an address system that keeps track of Web documents
+HTTP, a transfer protocol to find documents when given their URLs
+HTML, a document format allowing for embedded hyperlinks
+
+... everything on the Web revolves around documents and how to access them.
+
+Links can correlate (connect) any text string with a URL, 
+such that the user can instantly reach the target document by activating the link.
+
+Links stand out from the surrounding text by being underlined and in blue text. 
+Tap or click a link to activate it, or if you use a keyboard, 
+press Tab until the link is in focus and hit Enter or Spacebar.
+
+...  a link is a text string tied to a URL, 
+and we use links to allow easy jumping from one document to another.
+
+Types of links
+
+Internal link
+A link between two webpages, where both webpages belong to the same website, is called an internal link. 
+Without internal links, there's no such thing as a website (unless, of course, it's a one-page website).
+
+External link
+A link from your webpage to someone else's webpage. 
+Without external links, there is no Web, since the Web is a network of webpages. 
+Use external links to provide information besides the content available through your webpage.
+
+Incoming links
+A link from someone else's webpage to your site. It's the opposite of an external link. 
+Note that you don't have to link back when someone links to your site.
+
+... as a rule, whenever you add a new webpage, 
+make sure at least one of your other pages links to that new page.
+
+Anchors
+Most links tie two webpages together. 
+Anchors tie two sections of one document together. 
+When you follow a link pointing to an anchor, 
+your browser jumps to another part of the current document instead of loading a new document. 
+However, you make and use anchors the same way as other links.
+
+Links and Search Engines
+Links matter both to users and search engines. Every time search engines crawl a webpage, 
+they index the website by following the links available on the webpage. 
+Search engines not only follow links to discover the various pages of the website, 
+but they also use the link's visible text to determine which search queries are appropriate for <------- ****
+reaching the target webpage.
+
+Links influence how readily a search engine will link to your site. 
+
+External links influence the search ranking both of source and target webpages, but it is unclear by how much.
