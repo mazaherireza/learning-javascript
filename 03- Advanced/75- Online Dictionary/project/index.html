@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS💫</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/JS_Favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/populate.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <h2>Online Dictionary</h2>
+      <input type="text" name="word" id="word" autofocus />
+      <div class="result">
+        <div class="row">
+          <span id="phonetic">Phonetic</span>
+          <i class="fa fa-volume-up"></i>
+          <audio src=""></audio>
+        </div>
+        <h5>Meanings:</h5>
+        <ol id="meaning"></ol>
+      </div>
+    </main>
+  </body>
+</html>
