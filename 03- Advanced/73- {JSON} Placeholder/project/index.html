@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS💫</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/JS_Favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <script type="module" src="./js/index.js" defer></script>
+    <script type="module" src="./js/populate.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <h1 id="hero-title">Learning JavaScript.</h1>
+    </main>
+
+    <section id="playground">
+      <h2 id="playground-title">Playground</h2>
+      <h3>
+        <a href="https://jsonplaceholder.typicode.com/">{JSON} Placeholder</a>
+      </h3>
+      <p>Free fake and reliable API for testing and prototyping.</p>
+
+      <p>Album's Information:</p>
+      <div class="JSON">
+        <div class="curly-brace">{</div>
+        <div class="keyValue">
+          <span>"userId":</span> <span id="user-id"></span>;
+        </div>
+        <div class="keyValue"><span>"id":</span> <span id="id"></span>;</div>
+        <div class="keyValue">
+          <span>"title": </span> "<span id="title"></span>";
+        </div>
+        <div class="curly-brace">}</div>
+
+        <div id="loading">
+          <p>Loading ...</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
