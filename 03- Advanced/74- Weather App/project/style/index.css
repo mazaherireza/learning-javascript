@@ -1,0 +1,69 @@
+body {
+  min-height: 100vh;
+}
+
+main {
+  height: 100vh;
+  background: white url("../assets/images/Banner.png") no-repeat center
+    center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 50%;
+  color: white;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.wrapper #heading {
+  margin-bottom: 1rem;
+}
+
+.wrapper #information {
+  margin-bottom: 0.5rem;
+}
+
+.wrapper input[type="text"] {
+  width: 100%;
+  height: 2rem;
+  font-size: large;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.wrapper .result p {
+  margin-bottom: 0.5rem;
+}
+
+.result {
+  position: relative;
+  min-height: 8rem;
+}
+
+#loading {
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  position: absolute;
+  inset: 0;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}

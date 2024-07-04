@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning JS💫</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/JS_Favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 768px)"
+      href="./style/tablet.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 425px)"
+      href="./style/mobile.css"
+    />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <div class="wrapper">
+        <h2 id="heading">Open Weather Map</h2>
+        <p id="information">Type name of city and press enter.</p>
+        <input type="text" name="city" id="city" placeholder="City" autofocus />
+        <div class="result">
+          <p id="location"></p>
+          <p id="date"></p>
+          <p id="temp"></p>
+          <p id="weather"></p>
+          <p id="temp-range"></p>
+          
+          <div id="loading">
+            <p>Loading ...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
