@@ -1,0 +1,37 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+.browsers {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.browsers img {
+  width: 3rem;
+  height: 3rem;
+  opacity: 0.25;
+}
+
+.active {
+  opacity: 1 !important;
+}

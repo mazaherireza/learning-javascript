@@ -1,0 +1,12 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: medium;
+}
+
+.browsers img {
+  width: 2rem;
+  height: 2rem;
+}
