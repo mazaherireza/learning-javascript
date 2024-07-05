@@ -1,0 +1,5 @@
+The window.navigator object contains information about the visitor's browser.
+
+navigator.onLine (returns true if the browser is online)
+navigator.platform (... the browser platform (operating system))
+

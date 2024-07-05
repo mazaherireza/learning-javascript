@@ -1,0 +1,45 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+button {
+  width: 6rem;
+  height: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  font-weight: bold;
+}
+
+#message {
+  visibility: hidden;
+  font-size: small;
+  font-weight: bold;
+}
