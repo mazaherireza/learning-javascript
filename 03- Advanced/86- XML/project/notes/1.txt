@@ -1,0 +1,22 @@
+XML (eXtensible Markup Language)
+--------------------------------
+XML is a software- and hardware-independent tool for storing and transporting data. <---------- ***
+Was designed to store and transport data.
+
+XML does not do anything.
+XML is just information wrapped in tags.
+
+The Difference Between XML and HTML
+---------------------------------- 
+XML was designed to carry data with focus on WHAT data is.
+HTML was designed to display data with focus on HOW data looks.
+XML tags are NOT predefined like HTML tags are. <------------------ **
+  
+The XML language has no predefined tags.
+With XML, the author must define both the tags and the document structure.
+
+XML is Extensible
+-----------------
+... note.xml
+...
+With XML, data can be available to all kinds of "reading machines" like people, computers, ...
