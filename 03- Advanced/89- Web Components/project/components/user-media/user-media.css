@@ -1,0 +1,44 @@
+@import url("../../style/main.css");
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 40%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.user-container h5 {
+  margin-bottom: 1rem;
+}
+
+.user-container img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.user-container:hover {
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 425px) {
+  .user-container {
+    width: 70%;
+  }
+
+  .user-container img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
