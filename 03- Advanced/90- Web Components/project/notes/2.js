@@ -45,6 +45,6 @@
   ----
   <product-card>
     <h5>Tilte</h5>
-    <span>Cose<span>
+    <span>Cost<span>
   </product-card>  
 */

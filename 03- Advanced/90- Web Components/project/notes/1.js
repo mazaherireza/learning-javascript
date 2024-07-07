@@ -6,9 +6,7 @@
   
   The truth about templates
   -------------------------
-  When you have to reuse the same markup structures repeatedly on a web page, 
-  it makes sense to use some kind of a template rather than repeating the same structure over and over again. 
-  This was possible before, but it is made a lot easier by the HTML <template> element. 
+  ...
   This element and its contents are not rendered in the DOM, but it can still be referenced using JavaScript.
 
   <template id="introduction">
@@ -19,8 +17,9 @@
   using something like the following:
 */
 
-const template = document.querySelector("template#introduction");
-document.body.appendChild(template.content);
+const $ = document
+const template = $.querySelector("template#introduction");
+$.body.appendChild(template.content);
 
 /*
   Using templates with web components
@@ -34,7 +33,7 @@ createElement.define(
   class ExamCard extends HTMLElement {
     constructor() {
       super();
-      const template = document.querySelector("template#introduction");
+      const template = $.querySelector("template#introduction");
       const shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
