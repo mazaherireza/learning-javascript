@@ -12,10 +12,10 @@ customElements.define(
     constructor() {
       super();
       // console.log(this);
-      this.attachShadow({
+      const shadowRoot = this.attachShadow({
         mode: "open",
       });
-      this.shadowRoot.appendChild(template.content.cloneNode(true));
+      shadowRoot.appendChild(template.content.cloneNode(true));
     }
   }
 );
