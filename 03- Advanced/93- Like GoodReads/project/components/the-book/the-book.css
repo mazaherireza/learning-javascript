@@ -1,0 +1,74 @@
+@import url("../../style/main.css");
+
+.book-container {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: 12rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.book-container img {
+  width: 10rem;
+  height: 12rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.book-container .title {
+  font-weight: bold;
+}
+
+.book-container .author {
+  font-style: italic;
+}
+
+.book-container .details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-container .details button {
+  border: none;
+  outline: none;
+  font-weight: bold;
+  padding: 0.25rem;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+
+.book-container .details button:hover {
+  opacity: 1;
+}
+
+.book-container .details .rate {
+  display: none;
+  font-weight: bold;
+  font-size: small;
+}

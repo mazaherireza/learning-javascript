@@ -1,0 +1,17 @@
+@import url("../../style/main.css");
+
+header {
+  border: 2px solid black;
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: medium;
+  }
+}

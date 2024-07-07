@@ -1,0 +1,11 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: medium;
+}
+
+.books-container {
+  flex-direction: column;
+}
