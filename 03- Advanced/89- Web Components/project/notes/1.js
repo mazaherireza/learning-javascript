@@ -17,9 +17,9 @@ customElements.define(
     }
     connectedCallback() {
       // Create a shadow root, the custom element itself is the shadow host.
-      const shadow = this.attachShadow({ mode: "open" });
+      const shadowRoot = this.attachShadow({ mode: "open" });
       // ...
-      shadow.appendChild();
+      shadowRoot.appendChild();
     }
   }
 );
