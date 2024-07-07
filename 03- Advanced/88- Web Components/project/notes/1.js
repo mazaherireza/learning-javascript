@@ -49,10 +49,10 @@
 
 const $ = document;
 const host = $.querySelector("#host");
-const shadow = host.attachShadow({ mode: "open" });
+const shadowRoot = host.attachShadow({ mode: "open" });
 const span = $.createElement("span");
 span.innerText = "In Shadow DOM";
-shadow.appendChild(span);
+shadowRoot.appendChild(span);
 
 /*
   2) Declaratively with HTML
@@ -95,7 +95,7 @@ shadow.appendChild(span);
 
 const upper = $.querySelector("button#upper");
 upper.onclick = () => {
-  // What about shadow.querySelectorAll("span") ?!
+  // What about shadowRoot.querySelectorAll("span") ?!
   const spans = Array.from(host.shadowRoot.querySelectorAll("span"));
   for (const span of spans) span.textContent = span.textContent.toUpperCase();
 };
@@ -131,7 +131,7 @@ upper.onclick = () => {
 
 const sheet = new CSSStyleSheet();
 sheet.replaceSync("span { font-weight: bold; }");
-shadow.adoptedStyleSheets = [sheet];
+shadowRoot.adoptedStyleSheets = [sheet];
 
 /*
   Adding <style> elements in <template> declarations
@@ -147,4 +147,4 @@ shadow.adoptedStyleSheets = [sheet];
 */
 
 const template = $.querySelector("template#course-box");
-shadow.appendChild(template.content);
+shadowRoot.appendChild(template.content);
