@@ -15,10 +15,10 @@ template.innerHTML = `
 class UserMedia extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({
+    const shadowRoot = this.attachShadow({
       mode: "open",
     });
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+    shadowRoot.appendChild(template.content.cloneNode(true));
   }
 }
 
