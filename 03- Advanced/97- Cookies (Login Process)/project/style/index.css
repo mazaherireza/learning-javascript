@@ -1,0 +1,19 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: var(--primary) linear-gradient(to left, var(--secondary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

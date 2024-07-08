@@ -1,0 +1,82 @@
+.form-container {
+  width: 50%;
+  box-shadow: 0.5rem 0.25rem 0.5rem var(--primary);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.form-container form {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid var(--primary);
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="password"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.125rem;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: 2px solid var(--primary);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border: 1px solid var(--primary);
+  background-color: white;
+  padding-bottom: 0.5rem;
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--primary);
+}
+
+@media screen and (max-width: 425px) {
+  .form-container {
+    width: 75%;
+  }
+
+  .form-container form {
+    width: 90%;
+  }
+
+  label {
+    font-size: small;
+  }
+}

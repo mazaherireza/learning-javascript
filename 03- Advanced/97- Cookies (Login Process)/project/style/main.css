@@ -1,0 +1,15 @@
+:root {
+  --primary: #a8ff78;
+  --secondary: #78ffd6;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
