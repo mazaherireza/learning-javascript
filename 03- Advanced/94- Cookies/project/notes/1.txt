@@ -1,0 +1,74 @@
+Document: cookie property
+-------------------------
+The Document property cookie lets you read and write cookies associated with the document.
+It serves as a getter and setter for the actual values of the cookies.
+
+Syntax
+------
+Read all cookies accessible from this location
+allCookies = document.cookie;
+... allCookies is a string containing a semicolon-separated list of all cookies (i.e. key=value pairs). 
+
+Write a new cookie
+document.cookie = newCookie;
+... newCookie is a string of form key=value, specifying the cookie to set/update. 
+Note that you can only set/update a single cookie at a time using this method. <----------------- ***
+
+Consider also that:
+Any of the following cookie attribute values can optionally follow the key-value pair, 
+each preceded by a semicolon separator:
+
+;domain=domain (e.g., example.com or subdomain.example.com): 
+The host to which the cookie will be sent. If not specified, 
+this defaults to the host portion of the current document location and the cookie is not available on subdomains. 
+If a domain is specified, subdomains are always included. <---------------- ***
+...
+leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots.
+
+Note: The domain must match the domain of the JavaScript origin. 
+Setting cookies to foreign domains will be silently ignored.
+
+;expires=date-in-GMTString-format: The expiry date of the cookie. 
+If neither expires nor max-age is specified, it will expire at the end of session.
+
+Security
+
+... the path attribute does not protect against unauthorized reading of the cookie from a different path. 
+It can be easily bypassed using the DOM, ...
+
+Cookies are often used in web applications to identify a user and their authenticated session. <--------- **
+
+Using HTTP Cookies
+
+An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser. 
+The browser may store the cookie and send it back to the same server with later requests. 
+Typically, an HTTP cookie is used to tell if two requests come from the same browser, 
+keeping a user logged in, for example. 
+It remembers stateful information for the stateless HTTP protocol.
+
+Cookies are mainly used for 3 purposes:
+
+Session management
+Logins, shopping carts, game scores, or anything else the server should remember
+
+Personalization
+User preferences, themes, and other settings
+
+Tracking
+Recording and analyzing user behavior
+
+...
+Cookies are sent with every request, so they can worsen performance (especially for mobile data connections). 
+
+Creating Cookies
+
+After receiving an HTTP request, a server can send one or more Set-Cookie headers with the response.
+The browser usually stores the cookie and sends it with requests made to the same server inside a Cookie HTTP header.
+
+The Set-Cookie and Cookie headers
+
+The Set-Cookie HTTP response header sends cookies from the server to the user agent.
+
+...
+If your site authenticates users, it should regenerate and resend session cookies, 
+even ones that already exist, whenever a user authenticates. 
