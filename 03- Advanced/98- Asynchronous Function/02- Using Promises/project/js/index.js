@@ -1,8 +1,4 @@
-const user = {
-  username: "rezamazaheri",
-  firstName: "Reza",
-  lastName: "Mazaheri",
-};
+import { user } from "./user.js";
 
 const INTERVAL = 2_000;
 
@@ -43,4 +39,8 @@ const getCourseInfo = (title) => {
 isLogin(user)
   .then(() => getCourses(user.username))
   .then((courses) => getCourseInfo(courses[0]))
-  .then((info) => console.log(info));
+  .then((course) => {
+    console.log(
+      `Information of course "${course.title}": Instructor: ${course.instructor}, Duration: ${course.duration}`
+    );
+  });

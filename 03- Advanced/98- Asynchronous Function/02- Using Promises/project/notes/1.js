@@ -1,5 +1,5 @@
 /*
-  Using promises
+  Using Promises
   --------------
   A Promise is an object representing the eventual completion or failure of an "asynchronous" operation. <---------- ***
 
@@ -29,7 +29,7 @@ doSomethingAsync(settings).then(success, failure);
   where each subsequent operation starts when the previous operation succeeds, 
   with the result from the previous step. 
   
-  In the old days, doing several asynchronous operations in a row would lead to the classic callback hell
+  In the old days, doing several asynchronous operations in a row would lead to the classic callback hell.
 
   With promises, we accomplish this by creating a promise chain. <------------- **
   The API design of promises makes this great, 
