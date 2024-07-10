@@ -1,28 +1,28 @@
 /*
   JavaScript Async
   ----------------
-  "async and await make promises easier to write" <-------------- ***
+  "async and await make promises easier to write" <------------ *
   async makes a function return a Promise
   await makes a function wait for a Promise 
  
   The keyword async before a function makes the function return a promise:
 */
 
-async function salutation() {
-  return "Salut!";
-}
-
-/* 
-  Is the same as:
-  
-  function salutation() {
-    return Promise.resolve("Salut!");
+/*
+  async function salutation() {
+    return "Salut!";
   }
 */
 
+// Is the same as:
+
+function salutation() {
+  return Promise.resolve("Salut!");
+}
+
 // Here is how to use the Promise.
 
-salutation.then(
+salutation().then(
   function (value) {},
   function (error) {}
 );
@@ -39,5 +39,7 @@ const flirtation = async () => {
       resolve("❤");
     }, 5_000);
   });
-  $.querySelcector("#love").innerHTML = await promise;
+  $.querySelector("#love").innerHTML = await promise;
 };
+
+flirtation();

@@ -1,5 +1,5 @@
 /*
-  Async functions ALWAYS return a promise. <-------------- *** 
+  Async functions always return a promise. <-------------- *** 
   If the return value of an async function is not explicitly a promise, it will be implicitly wrapped in a promise.
 */
 
@@ -58,15 +58,18 @@ async function fPrime() {
   return Promise.resolve(1).then(() => undefined);
 }
 
-/*
-  [Incomplete]
-  
+/*  
   Code after each await expression can be thought of as existing in a .then callback. 
   In this way a promise chain is progressively constructed with each re-entrant step through the function. 
   The return value forms the final link in the chain.
 */
 
-async function test() {
+/*
+  ... we successively await two promises. 
+  Progress moves through function foo in 3 stages.
+*/
+
+async function foo() {
   const result1 = await new Promise((resolve) => {
     setTimeout(() => resolve("One"), 5_000);
   });
@@ -76,4 +79,13 @@ async function test() {
   });
   console.log(result2);
 }
-test();
+
+foo();
+
+//  [Incomplete]
+
+/*
+  async function declarations behave similar to function declarations, 
+  they are hoisted to the top of their scope and can be called anywhere in their scope, 
+  and they can be redeclared only in certain contexts.
+*/
