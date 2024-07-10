@@ -1,8 +1,4 @@
-const user = {
-  username: "rezamazaheri",
-  firstName: "Reza",
-  lastName: "Mazaheri",
-};
+import { user } from "./user.js";
 
 const INTERVAL = 2_000;
 
@@ -45,7 +41,9 @@ async function execute() {
     await isLogin(user);
     const courses = await getCourses(user.username);
     const course = await getCourseInfo(courses[0]);
-    console.log(course);
+    console.log(
+      `Information of course "${course.title}": Instructor: ${course.instructor}, Duration: ${course.duration}`
+    );
   } catch (error) {
     console.error(error);
   }
