@@ -2,7 +2,7 @@
   Callback Hell in JavaScript
   ---------------------------
   JavaScript is an asynchronous (non-blocking) and single-threaded programming language, 
-  meaning only one process can be run at a time.
+  meaning only one process can be run at a time. <-------------- *
 
   ... callback hell generally refers to an ineffective way of writing code with asynchronous calls. 
   It is also known as the Pyramid of Doom.
@@ -28,7 +28,7 @@ calculateResult(add, 100, 101);
   ...  a typical JavaScript engine consists of a heap memory and a call stack. 
   The heap memory is responsible for allocating the memory for objects and functions at runtime whenever they are needed.
 
-  ... the event loop in JavaScript handles the asynchronous tasks.
+  ... the event loop in JavaScript handles the asynchronous tasks. <--------------- **
 */
 
 /*

@@ -1,8 +1,4 @@
-const user = {
-  username: "rezamazaheri",
-  firstName: "Reza",
-  lastName: "Mazaheri",
-};
+import { user } from "./user.js";
 
 const INTERVAL = 1_000;
 
@@ -44,7 +40,7 @@ isLogin(user, (result) => {
     console.log(`username course(s): ${coursers}`);
     getCourseInfo(coursers[0], (information) => {
       console.log(
-        `Information of course ${coursers[0]}: ${information.instructor}, ${information.duration}`
+        `Information of course "${coursers[0]}": Instructor: ${information.instructor}, Duration: ${information.duration}`
       );
     });
   });
