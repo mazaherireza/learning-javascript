@@ -1,0 +1,19 @@
+regexr.com
+
+/ss/g <------------ *
+expreSSion, ...
+
+/ab|ac|ad/g
+/a[bcd]/g
+
+[], Character set <------ Match any character in the set
+
+/a[^xy ]/g <------------ x, y Space
+
+/ [a-z][a-z][a-z][a-z] /g
+
+/ [a-zA-Z][a-z][a-z][a-z] /g
+
+/ .... /g
+
+regexone.com

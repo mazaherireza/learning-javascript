@@ -1,0 +1,12 @@
+\d [0-9]
+
+\D 
+
+\w [a-zA-Z0-9]
+The \w metacharacter matches word characters.
+A word character is a character a-z, A-Z, 0-9, including _ (Underscore).
+
+/ed\b/g <---------- \b End of the word
+\B
+... specifying word boundary.
+

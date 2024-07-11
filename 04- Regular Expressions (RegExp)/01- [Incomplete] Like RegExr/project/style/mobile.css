@@ -1,0 +1,21 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+.wrapper {
+  width: 90%;
+}
+
+input[type="text"] {
+  font-size: medium;
+  margin-bottom: 1rem;
+}
+
+#text {
+  line-height: 1.5rem;
+  font-size: small;
+}

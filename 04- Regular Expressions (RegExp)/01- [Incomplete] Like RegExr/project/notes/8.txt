@@ -1,0 +1,23 @@
+Positive lookahead:
+Matches a group after the main expression WITHOUT including it in the result.
+
+/Text(?=\sis)/g
+
+/\d+(?=rem)/g
+
+Negative lokahead:
+Specifies a group that can not match after the main expression 
+(if it matches, the result is discarded).
+
+/\d+(?!em)/g
+
+Positive lookbehind:
+Matches a group before the main expression without including it in the result.
+
+/(?<=and\s)Text/g
+
+Negative lookbehind:
+Specifies a group that can not match before the main expression
+(if it matches, the result is discarded)
+
+/(?<!&\s)Text/g

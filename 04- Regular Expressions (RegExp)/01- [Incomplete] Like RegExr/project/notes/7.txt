@@ -1,0 +1,6 @@
+/(\w+\.)+com/
+
+codecademy.com
+courses.codecademy.com
+users.codecademy.com
+users.USER_100180008.codecademy.com

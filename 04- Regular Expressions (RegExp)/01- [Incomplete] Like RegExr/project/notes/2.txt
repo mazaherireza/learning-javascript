@@ -1,0 +1,4 @@
++ Quantifier. Match 1 or more of the preceding token.
+* Quantifier. Match 0 or more of the preceding token.
+
+/[a-zA-Z1-9]+@gmail.com/g
