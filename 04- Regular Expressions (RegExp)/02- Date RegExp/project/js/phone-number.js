@@ -6,4 +6,4 @@
   After this comes the 7-digit Subscriber Number (SN).
 */
 
-const regext = /^(+44)-\d{3, 5}- \d{7}$/;
+const regext = /^(+44)-\d{3, 5}-\d{7}$/;
