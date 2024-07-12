@@ -1,0 +1,12 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+#playground-title {
+  font-size: large;
+}
+
+textarea {
+  width: 95%;
+  font-size: small;
+}
