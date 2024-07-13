@@ -1,0 +1,44 @@
+@import url("../../style/main.css");
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.banner .content {
+  width: 25%;
+  position: absolute;
+  bottom: 5rem;
+  left: 2rem;
+  color: white;
+}
+
+::slotted(h3) {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+::slotted(p) {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  ::slotted(h3) {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  ::slotted(p) {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner .content {
+    width: 50%;
+  }
+}
