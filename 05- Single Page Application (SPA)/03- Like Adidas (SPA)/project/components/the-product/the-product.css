@@ -19,11 +19,11 @@
 }
 
 .wrapper:hover #price {
-  transform: translateY(-1rem);
-  -webkit-transform: translateY(-1rem);
-  -moz-transform: translateY(-1rem);
-  -ms-transform: translateY(-1rem);
-  -o-transform: translateY(-1rem);
+  transform: translateY(-0.25rem);
+  -webkit-transform: translateY(-0.25rem);
+  -moz-transform: translateY(-0.25rem);
+  -ms-transform: translateY(-0.25rem);
+  -o-transform: translateY(-0.25rem);
 }
 
 .wrapper img {
@@ -38,9 +38,9 @@
   left: 1rem;
   font-size: large;
   font-weight: bold;
-  transition: all 1s;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  -o-transition: all 1s;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
 }

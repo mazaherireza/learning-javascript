@@ -57,4 +57,9 @@ header nav a {
     gap: 1rem;
     padding: 1rem;
   }
+
+  header nav a {
+    margin-left: 0.75rem;
+    font-size: small;
+  }
 }

@@ -7,10 +7,9 @@ template.innerHTML = `
     <div class="ups-wrapper">FREE STANDARD SHIPPING WITH ADICLUB</div>
     <header>
       <nav>
-        <a href="/" class="nav-link">
           <img src="../components/the-header/assets/Logo.svg" alt="Adidas" />
-        </a>
           <div>
+            <a href="/" class="nav-link">HOME</a>
             <a href="/men" class="nav-link">MEN</a>
             <a href="/women" class="nav-link">WOMEN</a>
             <a href="/kids" class="nav-link">KIDS</a>

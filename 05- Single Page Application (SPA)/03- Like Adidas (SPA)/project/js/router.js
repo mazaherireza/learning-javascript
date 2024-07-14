@@ -1,17 +1,21 @@
-const title = "Adidas";
+const TITLE = "Adidas";
 
 const router = {
+  "/": {
+    template: "../index.html",
+    title: `${TITLE} | Home`,
+  },
   "/men": {
     template: "../pages/men.html",
-    title: `${title} | Men`,
+    title: `${TITLE} | Men`,
   },
   "/women": {
     template: "../pages/women.html",
-    title: `${title} | Women`,
+    title: `${TITLE} | Women`,
   },
   "/kids": {
     template: "../pages/kids.html",
-    title: `${title} | Kids`,
+    title: `${TITLE} | Kids`,
   },
   404: {
     template: "../pages/404.html",
