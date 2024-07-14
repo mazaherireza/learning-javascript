@@ -15,7 +15,7 @@ const router = {
   },
   404: {
     template: "../pages/404.html",
-    title: "404",
+    title: "Page Not Found",
   },
 };
 

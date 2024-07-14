@@ -13,13 +13,26 @@
     <link rel="stylesheet" href="../style/main.css" />
     <link rel="stylesheet" href="../style/index.css" />
     <link rel="stylesheet" href="../style/page.css" />
+    <link rel="stylesheet" href="../style/404.css" />
     <script type="module" src="../js/index.js" defer></script>
     <script type="module" src="../js/spa.js" defer></script>
   </head>
   <body>
     <div id="content">
       <the-header></the-header>
-      <main></main>
+      <main>
+        <div class="wrapper">
+          <h3>Page Not Found</h3>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="SEARCH"
+            autofocus
+          />
+          <p>Or return to the <a href="/">Homepage</a> and start again.</p>
+        </div>
+      </main>
       <the-footer></the-footer>
     </div>
   </body>
