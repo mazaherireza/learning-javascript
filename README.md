@@ -5,3 +5,6 @@
 - Advanced
 - Regular Expressions (RegExp)
 - Single Page Application (SPA)
+- npm
+- PWA (Progressive Web Apps)
+
