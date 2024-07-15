@@ -1,0 +1,11 @@
+npm uninstall 
+-------------
+Uninstalling packages and dependencies
+
+$ npm uninstall lodash <----------------- *
+removed 1 package, and audited 1 package in 1s
+found 0 vulnerabilities
+
+This uninstalls a package, completely removing everything npm installed on its behalf.
+It also removes the package from the dependencies, devDependencies, optionalDependencies, 
+and peerDependencies Objects in your package.json.
