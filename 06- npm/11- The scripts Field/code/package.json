@@ -1,0 +1,18 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "salutation": "node salutation.js",
+    "introduction": "node introduction.js"
+  },
+  "keywords": [
+    "Test",
+    "Scripts"
+  ],
+  "author": "Reza Mazaheri",
+  "email": "rezamazaheri.email@gmail.com",
+  "license": "ISC"
+}
