@@ -1,0 +1,9 @@
+Uninstalling packages and dependencies 
+--------------------------------------
+...
+Uninstalling global packages
+----------------------------
+To uninstall an unscoped global packages, on the command line, use the uninstall command with the -g flag.
+Include the scope if the package is scoped.
+
+npm uninstall -g <package-name>
