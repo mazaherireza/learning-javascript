@@ -1,0 +1,24 @@
+What is npm?
+	
+npm is the world's largest Software Library (Registry)
+npm is also a software Package Manager and Installer
+
+npm includes a CLI (Command Line Client) that can be used to download and install software:
+npm install <package>
+
+npm is installed with Node.js
+This means that you HAVE To install Node.js to get npm installed on your computer.
+
+Software Package Manager
+------------------------
+The name npm (Node Package Manager) stems from when npm first was created as a package manager for Node.js.
+
+All npm packages are defined in ... package.json. <----------------- **
+The content of package.json must be written in JSON.
+At least 2 fields must be present in the definition file: name and version.
+
+Managing Dependencies
+---------------------
+npm can manage dependencies.
+npm can (in one command line) install all the dependencies of a project.
+Dependencies are also defined in package.json.

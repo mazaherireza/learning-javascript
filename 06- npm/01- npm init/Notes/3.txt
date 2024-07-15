@@ -1,0 +1,16 @@
+nodejs.org
+
+Node.js is an open source server environment.
+Node.js is a JS runtime built on Chrome's V8 JS engine.
+
+Long Term Support (LTS)
+
+git-scm.com
+
+In CMD
+------
+node --version
+or
+node -v
+
+npm -v

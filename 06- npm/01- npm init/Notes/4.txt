@@ -1,0 +1,11 @@
+In Git Bash
+-----------
+cd c:
+cd directory
+cd ../
+
+mkdir project
+clear
+rmdir project
+
+ls
