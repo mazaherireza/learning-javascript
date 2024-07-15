@@ -1,6 +1,0 @@
-npm install
-or
-npm i
-
-This command installs a package, and any packages that it depends on.
-If the package has a package-lock or shrinkwrap file, the installation of dependencies will be driven by that.
