@@ -1,0 +1,18 @@
+npm config
+----------
+The npm config command can be used to update and edit the contents of the user and global npmrc files.
+
+Sub-commands
+------------
+set
+get
+list
+delete
+edit
+fix
+
+npm config set init-author-name "Reza Mazaheri"
+
+npm init -y
+
+npm set init-license "MIT"
