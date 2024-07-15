@@ -1,0 +1,12 @@
+npx
+---
+Run a command from a local or remote npm package
+
+This command allows you to run an arbitrary command from an npm package,
+in a similar context as running it via npm run.
+
+Sometimes you might want to take a look at a sepcific package and try out some commands.
+But you cannot do that without instaling the dependencies in your local node_modules folder
+...
+
+npx cowsay "Hello World"
