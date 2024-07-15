@@ -1,0 +1,23 @@
+About Semantic Versioning
+-------------------------
+To keep the JS ecosystem healthy, ...
+
+If you introduce a change that breaks a package dependency, we strongly recommend incrementing the version
+"major number", ...
+
+Incrementing semantic version in published packages
+---------------------------------------------------
+... starting your package version at 1.0.0 and incrementing as follows:
+
+  Code Status                     Stage                      Rule
+==========================================================================================
+ First release                  New product          Start with 1.0.0
+
+ Backward compatible            Patch release        Increment the 3rd digit
+ bug fixes
+
+ Backward compatible            Minor release        Increment the middle digit and rest last digit to 0
+ new features
+
+ Changes that break backward    Major release        Increment the 1st digit and reset middle and last digits to 0
+ compatibility    
