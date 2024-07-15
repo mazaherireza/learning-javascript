@@ -13,7 +13,7 @@ Software Package Manager
 ------------------------
 The name npm (Node Package Manager) stems from when npm first was created as a package manager for Node.js.
 
-All npm packages are defined in ... package.json. <----------------- **
+All npm packages are defined in ... package.json. <----------------- *
 The content of package.json must be written in JSON.
 At least 2 fields must be present in the definition file: name and version.
 
