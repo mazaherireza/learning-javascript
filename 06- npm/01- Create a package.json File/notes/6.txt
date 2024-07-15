@@ -1,0 +1,6 @@
+npm-init
+--------
+Create a package.json file.
+
+npm init can be used to set up a new or existing npm package.
+
