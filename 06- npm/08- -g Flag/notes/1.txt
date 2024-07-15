@@ -1,0 +1,8 @@
+Downloading and installing packages globally
+--------------------------------------------
+Installing a package globally allows you to use the code in the package as a set of tools on your local computer.
+
+To download and install packages globally, ..., run the following command:
+npm install -g <package-name>
+------------------------------------------------
+npm install -g typescript (This will install the latest version)
