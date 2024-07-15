@@ -1,0 +1,10 @@
+Install a package
+-----------------
+This command installs a package and any packages that it depends on.
+If the package has a package-lock, or an npm shrinkwrap file, or a yarn lock file,
+the installation of dependencies will be driven by that, ...
+
+...
+npm install <pkg>
+or 
+npm i <pkg>
