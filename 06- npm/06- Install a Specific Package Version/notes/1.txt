@@ -1,0 +1,6 @@
+$ npm i axios@1.1
+added 9 packages, and audited 10 packages in 15s
+1 moderate severity vulnerability <----------------------- ***
+To address all issues, run:
+  npm audit fix --force
+Run `npm audit` for details.
