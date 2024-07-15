@@ -1,0 +1,26 @@
+Specifying dependencies and devDependencies in a package.json file 
+------------------------------------------------------------------
+To specify the packages your project depends on, 
+you MUST list them as "dependencies" or "devDependencies" in your package's package.json file. 
+
+When you (or another user) run npm install, 
+npm will download dependencies and devDependencies that are listed in package.json 
+that meet the semantic version requirements listed for each.
+
+"dependencies": Packages required by your application in PRODUCTION.
+"devDependencies": Packages that are ONLY needed for local development and testing.
+
+To add dependencies and devDependencies to a package.json file from the command line, 
+you can install them in the root directory of your package using the --save-prod flag for dependencies 
+(the default behavior of npm install) or the --save-dev flag for devDependencies.
+
+To add an entry to the "devDependencies" attribute of a package.json file, 
+on the command line, run the following command:
+
+npm install <package-name> --save-dev
+----------------------------------
+... not for the application to run in production.
+Some common examples of such packages are testing frameworks, code linters (prettier, eslint),
+build tools (babel, webpack), ...
+----------------------------------
+$ npm i jest --save-dev
