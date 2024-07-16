@@ -21,3 +21,4 @@ Incrementing semantic version in published packages
 
  Changes that break backward    Major release        Increment the 1st digit and reset middle and last digits to 0
  compatibility    
+
