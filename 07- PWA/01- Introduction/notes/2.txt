@@ -6,16 +6,15 @@ but that provides a user experience like that of a platform-specific app.
 Platform-specific apps
 ----------------------
 Platform-specific apps are developed for a specific operating system (OS) and/or class of device, 
-like an iOS or Android device, generally using an SDK provided by the platform vendor. 
+like an iOS or Android device, generally using an SDK provided by the platform vendor. <---------- *
 
 They are usually distributed using the vendor's app store, where the user can find and install them, 
 and they subsequently seem to the user like a permanent extra feature of their device, 
 expanding its capabilities in some way.
-
-The benefits of platform-specific apps include:
-
+ 
+The benefits of platform-specific apps include: <-------------- **
 Easy for users to access
-Offline and background operation
+Offline and background operation <------------ *
 Dedicated UI
 OS integration
 App store integration
@@ -23,13 +22,13 @@ App store integration
 Traditional websites
 --------------------
 Traditionally, websites are less like "something the user has" and more like "somewhere the user visits". 
+
 Typically, a website: does not have a presence on the user's device when the user is not accessing it, 
 can only be accessed by the user opening the browser and navigating to the site, and is highly dependent on network connectivity.
 
 However, websites have some benefits over platform-specific apps, including:
-
 Single codebase: Because the web is inherently cross-platform, 
-a website can run on different operating systems and device classes from a single codebase.
+a website can run on different operating systems and device classes from a SINGLE codebase.
 
 Distribution via the web: The web is a great distribution platform. 
 Websites are indexed by search engines, and can be shared and accessed just using URLs. 
@@ -40,39 +39,51 @@ Progressive web apps
 Progressive web apps combine the best features of traditional websites and platform-specific apps.
 
 PWAs have the benefits of websites, including:
-
 PWAs are developed using standard web platform technologies, 
 so they can run on multiple operating systems and device classes from a single codebase.
 PWAs can be accessed directly from the web.
 
 PWAs also have many of the benefits of platform-specific apps, including:
-
 PWAs can be installed on the device. 
-Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
+  ...
+  Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
 
 PWAs can operate in the background and offline.
-(a typical website is only active while the page is loaded in the browser.)
+(a typical website is only active while the page is loaded in the browser.) A PWA can:
+ ...
+ Respond to push messages from the server. <------------ **
+ Display notifications using the OS notifications system.
 
-PWAs and the browser
+PWAs can use the whole screen, rather than running in the browser UI. <---------- *
+
+PWAs can be integrated into the device, registering as share targets and sources, and accessing device features.
+
+PWAs can be distributed in app stores, as well as openly via the web.
+
+PWAs and the browser <-------------- **
 --------------------
 ...
-PWAs typically look like platform-specific apps － they are usually displayed without the browser UI around them － 
-but they are, as a matter of technology, still websites. 
+The browser UI provides a visible frame around the website, 
+including UI features like back/forward buttons and a title for the page
+...
+PWAs typically look like platform-specific apps 
+－ they are usually displayed without the browser UI around them － <----------- **
+but they are, as a matter of technology, still websites. <------------ ***
 This means they need a browser engine, like the ones in Chrome or Firefox, to manage and run them. 
 
 With a platform-specific app, the platform OS manages the app, providing the environment in which it runs. 
-With a PWA, a browser engine performs this background role, just like it does for normal websites.
+With a PWA, a browser engine performs this background role, just like it does for normal websites. <------------- ***
 
 Technical features of PWAs
 --------------------------
-Because PWAs are websites, they have the same basic features as any other website: 
+Because PWAs are websites, <-------------- *
+they have the same basic features as any other website: 
 at least one HTML page, which very probably loads some CSS and JavaScript. 
 
 Like a normal website, the JavaScript loaded by the page has a global Window object and 
 can access all the Web APIs that are available through that object.
 
 Beyond that, a PWA has some additional features:
-
 A web app manifest file, which, at a minimum, provides information that the browser needs to install the PWA, 
 such as the app name and icon.
 
@@ -88,31 +99,36 @@ including its ability to act as a share target for data from other apps or to ha
 
 Service worker
 --------------
-Although a PWA does not need a service worker to be installed, 
+Although a PWA does not need a service worker to be installed, <------------ **
 service workers are often used with PWAs in order to provide at least a minimal offline experience.
 
-Service workers encourage an architecture in which the app's pages - that is, 
-the traditional part of a website - implement the user interface, 
-and the service worker implements a backend which can support offline and background operation, <--------- ***
-making the PWA behave more like an app than a website. 
-This is because service workers can be started by the browser in the background when they are needed 
-(for example, to handle a push notification).
+Service workers encourage an architecture, in which, the app's pages (that is, the traditional part of a website) implement the user interface,
+and the service worker implements a backend which can support offline and background operation, <------------ ***
+making the PWA behave more like an app than a website. <---------------- *
+
+This is because service workers can be started by the browser in the background when they are needed (for example, to handle a push notification).
 
 PWAs and single-page apps
 -------------------------
 Traditionally a website is built as a collection of interlinked pages. 
+
 When the user clicks a link from one page in the site to another page in the same site, 
 the browser loads the NEW page as a completely NEW entity, 
 including the HTML and the subresources that the HTML loads, like CSS and JavaScript. 
 
-In a single-page app, the site consists of a SINGLE HTML page, and when the user clicks internal links, 
-this is handled by JavaScript fetching new content from the server and updating the relevant parts of the page.
+In a single-page app, the site consists of a SINGLE HTML page, <-------------- ***
+and when the user clicks internal links, 
+this is handled by JavaScript fetching new content from the server and updating the relevant PARTS of the page. <--------- ***
 
-Single-page apps can provide a user experience that is closer to platform-specific apps, 
-so PWAs are often implemented as single-page apps. <--------------- *
+Single-page apps can provide a user experience that is closer to platform-specific apps, <--------------- *
+so PWAs are often implemented as single-page apps. 
 
 In particular, single-page apps make it easier to achieve a seamless user interface, 
 in which the user is presented with a single, consistent page, 
-and only the relevant parts of the page are updated as the user interacts with the app.
+and only the RELEVANT PARTS of the page are updated as the user interacts with the app.
 
 However, PWAs don't have to be single-page apps, and single-page apps don't have to be PWAs.
+
+Progressive enhancement
+-----------------------
+
