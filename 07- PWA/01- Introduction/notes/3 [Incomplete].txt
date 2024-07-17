@@ -1,0 +1,56 @@
+Installing and uninstalling web apps
+------------------------------------
+
+History of web app installation
+-------------------------------
+Browsers have always enabled saving shortcuts to websites, known as "bookmarking." 
+These are just links to websites.
+
+Some operating systems (OS) have enhanced bookmarking capabilities, enabling saving bookmarks to common places, 
+such as the home screen or taskbar, with an icon launching the site in the OS's default browser.
+
+For many websites, this is also just a link to the site. 
+If the site is a Progressive Web Applications (PWA), saving to home screen installs the PWA on the user's device, 
+fully integrating it into the operating systems like native applications on most devices. 
+Just like PWAs can be installed, they can also be uninstalled.
+
+Bookmarking websites
+--------------------
+All browsers have add-to-favorites bookmark functionality. 
+A bookmark, or favorite, is a clickable shortcut for a web page. 
+Bookmarks enable quick access to websites without the user having to enter a URL or otherwise search for content. 
+Bookmarking is especially useful for long URLs and accessing frequently visited content that is not the site's homepage.
+
+All browsers enable users to view and manage their bookmarks, including renaming and deleting favorites. 
+By default, the bookmark's display includes the text content of the bookmarked page's <title> element along with an icon consisting of the site's favicon.
+
+Browsers enable saving, editing, moving, deleting, and otherwise managing bookmarks. 
+The UI for bookmark management differs by browser.
+
+Add to home screen
+------------------
+Smartphones,..., added "save to home screen" functionality. 
+For regular (non-PWA) websites, this feature is similar to bookmarks, 
+but instead of adding the favicon and title of the page to the bookmarks menu — a browser feature — 
+favoriting in this manner adds an icon to the OS's home screen.
+
+Adding a non-PWA site to the home screen does not install the website on the device. 
+Rather, it adds the developer-defined icon to the home screen, that, when clicked, opens the bookmarked link in the default browser.
+
+If the site added to the home screen is a PWA, the PWA will be installed on the device.
+
+Deleting the icon from the home screen removes the bookmark. 
+The deletion confirmation provides information as to whether deleting the icon deletes a bookmark or entire application.
+
+Installing and uninstalling PWAs
+--------------------------------
+
+Installing PWAs
+---------------
+...
+Uninstalling
+------------
+...
+
+
+
