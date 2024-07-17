@@ -1,0 +1,7 @@
+body {
+  height: 100vh;
+  background: white radial-gradient(var(--primary), white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

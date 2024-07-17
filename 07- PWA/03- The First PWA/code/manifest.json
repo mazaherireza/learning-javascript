@@ -1,0 +1,20 @@
+{
+  "name": "PWA",
+  "short_name": "PWA",
+  "start_url": ".",
+  "display": "standalone",
+  "description": "I'm learning PWA.",
+  "icons": [
+    {
+      "src": "./assets/images/img_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/images/img_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#bf40bf"
+}
