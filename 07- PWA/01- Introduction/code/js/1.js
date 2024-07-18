@@ -138,24 +138,3 @@ self.addEventListener("fetch", (event) => {
   An alternative would be a network first strategy, in which we try to fetch the resource from the server first, 
   and fall back to the cache if the device is offline.
 */
-
-/*
-  Background operation
-  --------------------
-  While offline operations are the most common use for service workers, 
-  they also enable a PWA to operate even while the main app is closed. <--------------- **
-  This is possible because the service worker can run while the main app is not running.
-  
-  This doesn't mean service workers run all the time: 
-  browsers may stop service workers when they think it is appropriate. 
-  For example, if a service worker has been inactive for a while, it will be stopped. 
-  However, the browser will restart the service worker when an event has happened that it needs to take care of. 
-  
-  This enables a PWA to implement background operations in the following way:
-  In the main app, register a request for the service worker to perform some operation <--------- *
-  At the appropriate time, the service worker will be restarted if necessary, 
-  and an event will fire in the service worker's scope
-  The service worker will perform the operation
-
-  ... a few different features that use this pattern to enable a PWA to work while the main app isn't open.
-*/
