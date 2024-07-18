@@ -1,30 +1,37 @@
 Making PWAs installable
 -----------------------
 One of the defining aspects of a PWA is that it can be promoted by the browser for installation on the device. 
-Once installed, a PWA appears to users as a platform-specific app, 
-a permanent feature of their device which they can launch directly from the operating system like any other app.
+Once installed, a PWA appears to users as a platform-specific app, <------------- *
+a permanent feature of their device which they can launch directly from the operating system like any other app. <----------- *
 
 We can summarize this as follows:
 
 Supporting browsers promote the PWA to the user for installation on the device.
-The PWA can be installed like a platform-specific app, and can customize the install process.
+The PWA can be installed like a platform-specific app, and can customize the install process. <------------- **
 Once installed, the PWA gets an app icon on the device, alongside platform-specific apps.
 Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
 
+... the requirements that a web app MUST meet for it to be promoted for installation. <----------- *
+
 Installability
 --------------
-...
+... it needs to meet some technical requirements.
+
 The web app manifest
 --------------------
-A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. 
+A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. <------------ *
 For a web app to be a PWA it must be installable, and for it to be installable it must include a manifest.
 
-The manifest is included using a <link> element in the app's HTML.
+The manifest is included using a <link> element in the app's HTML:
+...
+  <link rel="manifest" href="manifest.json" />
+...
 
-If the PWA has more than one page, every page must reference the manifest in this way.
+If the PWA has more than one page, every page must reference the manifest in this way. <----------- **
 
 The manifest contains a single JSON object containing a collection of members, 
 each of which defines some aspect of the PWA's appearance or behavior. 
+
 Here's a rather minimal manifest, containing just two members: "name" and "icons".
 
 {
@@ -38,19 +45,78 @@ Here's a rather minimal manifest, containing just two members: "name" and "icons
   ]
 }
 
-Required manifest members
+Required manifest members 
 -------------------------
-Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, 
-require that the manifest includes the following members:
-
+Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 name or short_name
-icons must contain a 192px and a 512px icon
+icons must contain a 192px and a 512px icon <------------ *
 start_url
 display and/or display_override
 prefer-related-application must be false or not present
 
 HTTPS, localhost, or loopback are required
 ------------------------------------------
-For a PWA to be installable it must be served using the https protocol, 
+For a PWA to be installable it MUST be served using the https protocol, <------------ *
 or from a local development environment using localhost or 127.0.0.1 — with or without a port number.
 
+Installation from an app store
+------------------------------
+... Google Play Store or the Apple App Store.
+
+Installation from the web
+-------------------------
+...
+
+Browser support
+---------------
+...
+
+On desktop:
+...
+Firefox and Safari do not support installing PWAs using a manifest file.
+
+On mobile:
+...
+
+Installing sites as apps
+------------------------
+Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support users installing any website as an app, 
+whether or not it has a manifest file, <------------------------ ?
+and without regard to the installability criteria for the manifest file.
+
+The benefit of using a manifest file is that the browser will actively promote the site for installation when it is visited, 
+and developers can customize installation behavior.
+
+Triggering the install prompt
+-----------------------------
+A PWA can provide its own in-page UI for the user to open the install prompt, <------------ **
+instead of relying on the UI provided by the browser by default.
+
+This technique relies on the beforeinstallprompt event, <---------------- ***
+which is fired on the global Window object as soon as the browser has determined that the PWA is installable. 
+This event has a prompt() method that shows the install prompt. 
+So a PWA can:
+add its own "Install" button
+listen for the beforeinstallprompt event
+cancel the event's default behavior by calling preventDefault()
+in the event handler for its own "Install" button, call prompt().
+
+This is not supported on iOS.
+
+Customizing the installation prompt
+-----------------------------------
+...
+If you provide values for the description and screenshots manifest members, then, on Android only, 
+these values will be shown in the install prompt, giving the user extra context and motivation to install the PWA.
+
+Launching the app
+-----------------
+Once the PWA is installed, its icon is shown on the device alongside any other apps that the user has installed, 
+and clicking the icon launches the app.
+
+You can use the display manifest member to control the display mode: 
+that is, how the PWA appears when it is launched. In particular:
+
+"standalone" indicates that the PWA should look and feel like a platform-specific application, with no browser UI elements
+"browser" indicates that the PWA should be opened as a new browser tab or window, just like a normal website.
+...
