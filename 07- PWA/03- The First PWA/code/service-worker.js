@@ -1,33 +1,36 @@
+const ASSETS = [
+  "/",
+  "./assets/images/favicon.png",
+  "./style/main.css",
+  "./style/index.css",
+  "./style/mobile.css",
+  "./style/tablet.css",
+  "./manifest.json",
+  "./js/index.js",
+];
+
 self.addEventListener("install", (event) => {
-  /*
-    An install event is always the first one sent to a service worker 
-    (this can be used to start the  process of populating an IndexedDB, and caching site assets)
-    During this step, the application is preparing to make everything available for use offline.
-  */
-  console.log(event);
-  /*
-    The skipWaiting() method of the ServiceWorkerGlobalScope interface, forces the waiting service worker 
-    to become the active service worker.
-  */
   self.skipWaiting();
+  const promise = caches.open("Learning_PWA");
+  promise.then((cache) => {
+    cache.addAll(ASSETS);
+  });
 });
 
 self.addEventListener("activate", (event) => {
-  /*
-    ... newly installed service worker, receives an activate event.
-    The primary use of activate is to clean up resources used in previous versions of the service worker.
-    The new service worker can call skipWaiting() to ask to be activated immediately 
-    without waiting for open pages to be closed.
-    ...
-  */
   console.log(event);
 });
 
 self.addEventListener("fetch", (event) => {
+  const promise = caches.match(event.request);
   /*
-    ... is fired in the service worker's global scope, when the main app thread, makes a network request. 
-    It enables the service worker to intercept  network requests and send customized responses
-    (for example, from a local cache)
+    The respondWith method ... prevents the browser's default fetch handling, 
+    and allows you to provide a promise for a Response yourself.
   */
-  console.log(event.request);
+  event.respondWith(
+    promise.then((response) => {
+      if (response) return response;
+      else return fetch(event.request);
+    })
+  );
 });
