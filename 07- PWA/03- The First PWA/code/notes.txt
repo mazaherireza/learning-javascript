@@ -30,3 +30,6 @@
   ...
   Cache.add(request)
   ....
+  --------------
+  waitUntil() tells the browser that work is ongoing until the promise settles, 
+  and it shouldn't terminate the service worker if it wants that work to complete.

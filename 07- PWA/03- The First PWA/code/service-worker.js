@@ -17,10 +17,6 @@ const activeCaches = {
 self.addEventListener("install", (event) => {
   self.skipWaiting();
   const promise = caches.open(activeCaches.Learning_PWA);
-  /*
-    waitUntil() tells the browser that work is ongoing until the promise settles, 
-    and it shouldn't terminate the service worker if it wants that work to complete.
-  */
   event.waitUntil(
     promise.then((cache) => {
       cache.addAll(ASSETS);
@@ -29,7 +25,19 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  console.log(event);
+  const activeCache = Object.values(activeCaches);
+  const promise = caches.keys();
+  event.waitUntil(
+    promise.then((keys) => {
+      return Promise.all(
+        keys.forEach((key) => {
+          if (!activeCache.includes(key)) {
+            return caches.delete(key);
+          }
+        })
+      );
+    })
+  );
 });
 
 self.addEventListener("fetch", (event) => {
