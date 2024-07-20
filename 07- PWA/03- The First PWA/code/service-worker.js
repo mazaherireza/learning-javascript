@@ -22,3 +22,12 @@ self.addEventListener("activate", (event) => {
   */
   console.log(event);
 });
+
+self.addEventListener("fetch", (event) => {
+  /*
+    ... is fired in the service worker's global scope, when the main app thread, makes a network request. 
+    It enables the service worker to intercept  network requests and send customized responses
+    (for example, from a local cache)
+  */
+  console.log(event.request);
+});
