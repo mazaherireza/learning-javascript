@@ -9,12 +9,23 @@ const ASSETS = [
   "./js/index.js",
 ];
 
+const VERSION = 1;
+const activeCaches = {
+  Learning_PWA: `Learning_PWA${VERSION}`,
+};
+
 self.addEventListener("install", (event) => {
   self.skipWaiting();
-  const promise = caches.open("Learning_PWA");
-  promise.then((cache) => {
-    cache.addAll(ASSETS);
-  });
+  const promise = caches.open(activeCaches.Learning_PWA);
+  /*
+    waitUntil() tells the browser that work is ongoing until the promise settles, 
+    and it shouldn't terminate the service worker if it wants that work to complete.
+  */
+  event.waitUntil(
+    promise.then((cache) => {
+      cache.addAll(ASSETS);
+    })
+  );
 });
 
 self.addEventListener("activate", (event) => {
