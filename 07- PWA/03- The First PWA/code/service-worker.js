@@ -11,7 +11,8 @@ const ASSETS = [
 
 const VERSION = 1;
 const activeCaches = {
-  Learning_PWA: `Learning_PWA${VERSION}`,
+  static: `Static_${VERSION}`,
+  dynamic: `Dynamic_${VERSION}`,
 };
 
 self.addEventListener("install", (event) => {
@@ -49,7 +50,13 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     promise.then((response) => {
       if (response) return response;
-      else return fetch(event.request);
+      else
+        return fetch(event.request).then((response) => {
+          caches.open(activeCaches.dynamic).then((cache) => {
+            cache.put(event.request, response.clone());
+            return response;
+          });
+        });
     })
   );
 });
