@@ -1,5 +1,6 @@
 const ASSETS = [
   "/",
+  "/fallback.html",
   "./assets/images/favicon.png",
   "./style/main.css",
   "./style/index.css",
@@ -17,9 +18,8 @@ const activeCaches = {
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
-  const promise = caches.open(activeCaches.Learning_PWA);
   event.waitUntil(
-    promise.then((cache) => {
+    caches.open(activeCaches).then((cache) => {
       cache.addAll(ASSETS);
     })
   );
@@ -27,9 +27,8 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   const activeCache = Object.values(activeCaches);
-  const promise = caches.keys();
   event.waitUntil(
-    promise.then((keys) => {
+    caches.keys().then((keys) => {
       return Promise.all(
         keys.forEach((key) => {
           if (!activeCache.includes(key)) {
@@ -42,21 +41,24 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  const promise = caches.match(event.request);
   /*
     The respondWith method ... prevents the browser's default fetch handling, 
     and allows you to provide a promise for a Response yourself.
   */
   event.respondWith(
-    promise.then((response) => {
+    caches.match(event.request).then((response) => {
       if (response) return response;
-      else
+      else {
         return fetch(event.request).then((response) => {
           caches.open(activeCaches.dynamic).then((cache) => {
             cache.put(event.request, response.clone());
             return response;
+          }).catch(error => {
+            console.error(error);
+            return caches.match("/fallback.html")
           });
         });
+      }
     })
   );
 });
