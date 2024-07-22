@@ -11,28 +11,30 @@ const ASSETS = [
 ];
 
 const VERSION = 1;
-const activeCaches = {
-  static: `Static_${VERSION}`,
-  dynamic: `Dynamic_${VERSION}`,
+const activeCache = {
+  learning: `Learning-V${VERSION}`,
 };
 
 self.addEventListener("install", (event) => {
+  console.log(event.type);
   self.skipWaiting();
   event.waitUntil(
-    caches.open(activeCaches).then((cache) => {
+    caches.open(activeCache.learning).then((cache) => {
       cache.addAll(ASSETS);
     })
   );
 });
 
 self.addEventListener("activate", (event) => {
-  const activeCache = Object.values(activeCaches);
+  console.log(event.type);
+  const CACHE_KEY = activeCache.learning;
   event.waitUntil(
-    caches.keys().then((keys) => {
+    caches.keys().then((cacheKeys) => {
+      console.log(cacheKeys)
       return Promise.all(
-        keys.forEach((key) => {
-          if (!activeCache.includes(key)) {
-            return caches.delete(key);
+        cacheKeys.forEach((cacheKey) => {
+          if (CACHE_KEY != cacheKey) {
+            caches.delete(cacheKey);
           }
         })
       );
@@ -41,21 +43,16 @@ self.addEventListener("activate", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
-  /*
-    The respondWith method ... prevents the browser's default fetch handling, 
-    and allows you to provide a promise for a Response yourself.
-  */
   event.respondWith(
     caches.match(event.request).then((response) => {
-      if (response) return response;
-      else {
-        return fetch(event.request).then((response) => {
-          caches.open(activeCaches.dynamic).then((cache) => {
-            cache.put(event.request, response.clone());
-            return response;
-          }).catch(error => {
-            console.error(error);
-            return caches.match("/fallback.html")
+      if (response) {
+        return response;
+      } else {
+        console.log(event.request.url);
+        return fetch(event.request).then((serverResponse) => {
+          caches.open(activeCache.learning).then((cache) => {
+            cache.put(event.request, serverResponse.clone());
+            return serverResponse;
           });
         });
       }

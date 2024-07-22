@@ -1,6 +1,6 @@
 if ("serviceWorker" in navigator) {
-  const promise = navigator.serviceWorker.register("../service-worker.js");
-  promise
+  navigator.serviceWorker
+    .register("../service-worker.js")
     .then((response) => {
       console.log(response);
     })
