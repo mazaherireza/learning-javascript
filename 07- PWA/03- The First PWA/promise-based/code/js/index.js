@@ -7,4 +7,6 @@ if ("serviceWorker" in navigator) {
     .catch((error) => {
       console.log(error);
     });
+} else {
+  console.error("Service workers are not supported.");
 }

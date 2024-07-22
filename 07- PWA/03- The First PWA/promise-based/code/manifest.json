@@ -1,9 +1,9 @@
 {
-  "name": "Learning PWA",
-  "short_name": "Learning",
+  "name": "Learning Progressive Web Application",
+  "short_name": "Learning PWA",
   "start_url": "/",
   "display": "standalone",
-  "description": "A simple PWA just for learning",
+  "description": "A simple PWA just for learning.",
   "icons": [
     {
       "src": "./assets/images/img_48.png",
@@ -20,16 +20,15 @@
     {
       "src": "./assets/images/img_192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     },
     {
       "src": "./assets/images/img_512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
   ],
+  "id": "/",
   "theme_color": "#bf40bf",
   "background-color": "#aa98a9"
 }
