@@ -1,0 +1,18 @@
+:root {
+  --primary: #bf40bf;
+  --secondary: #aa98a9;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

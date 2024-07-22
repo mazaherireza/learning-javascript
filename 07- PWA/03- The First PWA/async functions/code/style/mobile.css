@@ -1,0 +1,7 @@
+body {
+  background: white linear-gradient(to bottom, white, var(--primary));
+}
+
+h1 {
+  font-size: x-large;
+}
