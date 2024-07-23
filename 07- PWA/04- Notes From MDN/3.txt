@@ -1,0 +1,80 @@
+Base HTML and CSS
+-----------------
+To build a PWA, we need to create a fully-functioning web application. 
+... we will markup the HTML for a static web page and enhance the appearance with CSS.
+
+Static web content
+------------------
+...
+  <script src="app.js" defer></script>
+</body>
+
+HTML content
+------------
+...
+The HTML's first line is a doctype preamble, which ensures the content behaves correctly.
+
+The root <html> tags wrap all the content with the lang attribute defining the primary language of the page.
+
+Document head
+-------------
+The <head> contains machine-readable information about the web application that's not visible to readers except for the <title>, 
+which is displayed as the heading of the browser tab.
+
+The <head> includes all the meta data. <---------------- *
+
+The first two bits of information in your <head> should always be the character set definition, which defines the character encoding, 
+and the viewport <meta> tag, which ensures the page renders at the width of the viewport and isn't shrunken down when loaded on very small screens.
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+</head>
+
+...
+While the contents of the <head> are not displayed within the page, the contents of the <title> are seen!
+The <title> element's inner text appears in the browser tab when the page is loaded, in search engine results, 
+and is the default title used when a user bookmarks a web page. <--------------- *
+The title also provides an accessible name for screen reader users who depend on it to know which tab they're currently on.
+
+... we opted for a shortened name that is more discreet.
+
+While officially optional, for better user experience, <-------------------- *
+these two <meta> tags and the <title> are the three components of the <head> 
+that should be considered required components of any HTML document.
+
+The HTML <link> element is used to specify a relationship between the current document and an external resource. 
+... rel="stylesheet", imports an external resource as a stylesheet.
+
+Document body
+-------------
+The <body> element contains all the content we want displayed when users visit the site on the Internet.
+
+... a level-1 heading using an <h1> ...
+
+... we include a <fieldset> with a <legend> labeling the purpose of that set of form fields.
+...
+The type="submit" is optional, as submit is the default type for <button>.
+
+Temporary hard-coded results text
+---------------------------------
+...
+
+JavaScript link
+---------------
+...
+We include the defer attribute to defer the loading of this script and ensure the JavaScript is executed 
+after the document's HTML has been parsed.
+
+CSS content
+-----------
+...  
+irrelevant styles, like the list-style-type declaration on legend, are ignored.
+...
+
+li,
+legend {
+  list-style-type: none;
+  padding: 0.2em 0.5em;
+  background-color: #cfc;
+}
