@@ -1,0 +1,61 @@
+Secure Connection
+-----------------
+PWAs can only be installed using a manifest file when served with the https:// protocol, 
+or when served locally from 127.0.0.1 and localhost URLs with the http:// protocol.
+
+Viewing with the file:// protocol
+---------------------------------
+... which provides a secure context. 
+This ensures that the pages can be viewed with the current state of our codebase, <-------------------- **
+and will continue to work as we add JavaScript functionality that requires a secure context.
+
+Serving your app over https isn't only good for PWAs, but for all websites as it ensures 
+the information that transits between your web server and the user's browser is encrypted end to end. <----------- ***
+
+While we can view and test most application functionality using the file:// protocol, 
+we can't use it to test application installation using our manifest file. <---------------- **
+
+localhost
+---------
+The default method for setting up a local development environment varies by OS.
+
+localhost with a port number
+----------------------------
+...
+
+Localhost with npx
+------------------
+If you have node installed, you may have npm and npx installed as well. <---------------------- *
+At the command line, enter npx -v. 
+If a version number is returned, you can use http-server, a non-configurable static HTTP server, 
+without needing to install any requirements. 
+Enter npx http-server [path] at the command line, where [path] is the folder where your index file is stored.
+
+By default, entering localhost:8080 in the browser URL bar will load the page. <-------------- *
+If you already started a server at port 8080, it will automatically change the port number, 
+starting the developer environment using an available port, such at 8081.
+
+...
+Entering npx http-server /user/yourName/CycleTracker -p 8787 will start local server at port 8787 if available.
+If not, if you enter a port number that is already being used, you will get an "address already in use" or similar error.
+...
+This non-configurable static HTTP server suffices for our basic app. <-------------- **
+Apps served via localhost and 127.0.0.1 are exempt from https and always considered secure. 
+
+npm install -g local-web-server
+cd ~/user/yourName/CycleTracker/
+ws --https
+
+In the above, you may need to prefix the install with sudo.
+
+Secure external server
+---------------------
+..., you'll want to have your content hosted and available on a secure remote server.
+
+GitHub Pages
+------------
+...
+
+
+
+
