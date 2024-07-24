@@ -1,0 +1,59 @@
+JavaScript functionality
+------------------------
+...  we will be writing client-side JavaScript code ...
+
+JavaScript task
+---------------
+...
+Existing users will have existing data in local storage. 
+When a user comes back to our webpage with the same browser on the same device, we need to:
+1. Retrieve the data from local storage
+...
+
+Form submission
+---------------
+...
+// Reset teh form.
+form.reset();
+... reset the form using the HTMLFormElement reset() method
+
+Validate user input
+-------------------
+...
+A good application would inform the user what the error is, put focus on the offending form control, 
+and use ARIA live regions to alert assistive technology users to the error.
+
+Local storage
+-------------
+... Web Storage API, specifically window.localStorage, ... in a stringified JSON object.
+
+Limitations of localStorage include:
+Limited data storage: ... 5MB of data per origin.
+
+Stores strings only: <-------------------- ***
+localStorage stores data as string key and string value pairs. 
+Our start and end dates will be stored as a JSON object parsed as a string. 
+..., a more robust storage mechanism like IDB would be required.
+
+Can cause poor performance: <--------------------- ***
+Getting and setting from and to local storage is done synchronously on the main thread. <--------------- ***
+When the main thread is occupied, apps are not responsive and appear frozen.
+
+Only available to the main thread: 
+In addition to the performance issues of occupying the main thread, 
+service workers do not have access to the main thread, <------------------- ***
+meaning the service worker can't directly set or get the local storage data.
+
+Retrieve, append, sort, and re-store data
+-----------------------------------------
+...
+// Add the storage key as an app-wide constant
+const STORAGE_KEY = "something";
+...
+localStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
+...
+localStorage.getItem(STORAGE_KEY);
+
+Render data to screen
+---------------------
+...
