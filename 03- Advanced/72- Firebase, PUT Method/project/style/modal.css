@@ -6,8 +6,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 25%;
-  height: 40%;
-  /*Enablescrollifneeded*/
+  /* height: 40%; */
   overflow: auto;
   background-color: white;
   border: 1px solid black;
@@ -31,6 +30,7 @@
 }
 
 .modal-content {
+  margin-top: 0.25rem;
   padding: 0.5rem;
 }
 
@@ -62,4 +62,27 @@
 .btn-cancel {
   background-color: white;
   border: 1px solid var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 50%;
+    padding: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .modal {
+    width: 75%;
+    padding: 0.5rem;
+  }
+
+  .modal-header,
+  .modal-content {
+    font-size: small;
+  }
+
+  [class^="btn"] {
+    font-size: x-small;
+  }
 }
