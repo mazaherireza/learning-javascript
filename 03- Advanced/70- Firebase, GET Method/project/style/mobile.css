@@ -11,7 +11,11 @@ h1#hero-title {
 }
 
 .wrapper {
-  width: 90%;
+  width: 95%;
+}
+
+.user-wrapper {
+  font-size: small;
 }
 
 .fa {
