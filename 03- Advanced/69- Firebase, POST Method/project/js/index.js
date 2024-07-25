@@ -23,7 +23,7 @@ form.onsubmit = async (event) => {
       email: email.value,
     }),
   };
-  
+
   fetch(URL, init)
     .then((response) => {
       console.log(response);

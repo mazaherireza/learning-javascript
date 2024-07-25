@@ -6,9 +6,7 @@ const lastname = $.querySelector("#lastname");
 const email = $.querySelector("#email");
 
 const clearForm = () => {
-  firstname.value = "";
-  lastname.value = "";
-  email.value = "";
+  form.reset();
 };
 
 export { form, firstname, lastname, email, clearForm };
