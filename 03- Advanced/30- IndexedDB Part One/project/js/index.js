@@ -3,7 +3,7 @@ import isSupported from "./utils.js";
 let DB;
 
 const createDatabase = () => {
-  const NAME = "CodeCademy";
+  const NAME = "Learning";
   const VERSION = 1;
   const request = indexedDB.open(NAME, VERSION);
   request.onerror = (error) => {
