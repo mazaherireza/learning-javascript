@@ -1,10 +1,6 @@
 :root {
-  --primary: #0032a0;
-  --primary-300: #5a74b3;
-  --primary-100: #f4f8fb;
-  --gray-400: #b7b7b7;
-  --red-400: #dc143c;
-  --gold-700: #fe9119;
+  --primary: #a8ff78;
+  --secondary: #78ffd6;
 }
 
 * {

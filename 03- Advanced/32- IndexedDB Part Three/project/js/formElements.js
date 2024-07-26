@@ -7,9 +7,7 @@ const password = $.querySelector("#password");
 const email = $.querySelector("#email");
 
 const resetFields = () => {
-  username.value = "";
-  password.value = "";
-  email.value = "";
+  form.reset();
 };
 
 export { form, username, password, email, resetFields };

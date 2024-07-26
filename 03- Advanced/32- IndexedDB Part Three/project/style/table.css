@@ -15,7 +15,6 @@ thead tr {
   font-weight: bold;
 }
 
-thead td {
-  text-align: center;
+thead tr th {
   border-bottom: 1px solid black;
 }

@@ -11,6 +11,7 @@ h1#hero-title {
 }
 
 .form-container form {
+  width: 90%;
   padding: 1rem 0.5rem;
 }
 

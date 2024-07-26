@@ -10,9 +10,9 @@ import {
 let DB; // IndexedDB connection
 
 const createDatabase = () => {
-  const NAME = "CodeCademy";
-  let version = 1;
-  const request = indexedDB.open(NAME, version);
+  const NAME = "Learning";
+  const VERSION = 1;
+  const request = indexedDB.open(NAME, VERSION);
   // Event handling
   request.onerror = (error) => {
     console.error("IndexedDB error: ", error);
