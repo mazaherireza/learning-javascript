@@ -1,5 +1,5 @@
 .table-container {
-  padding-top: 2em;
+  padding-top: 2rem;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -9,20 +9,21 @@ table {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+}
+
+table tbody td {
+  font-weight: bold;
+}
+
+thead tr {
+  font-weight: bold;
 }
 
 thead tr th {
   border-bottom: 1px solid black;
-  text-align: center;
-  font-weight: bold;
 }
 
-tbody tr td {
-  font-size: small;
-  font-weight: bold;
-  text-align: center;
-}
-
-.fa-trash {
-  color: var(--red-400);
+tbody td .fa-trash {
+  color: var(--red);
 }

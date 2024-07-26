@@ -11,10 +11,12 @@ h1#hero-title {
 }
 
 .form-container form {
+  width: 90%;
   padding: 1rem 0.5rem;
 }
 
-label, input[type="submit"] {
+label,
+input[type="submit"] {
   font-size: small;
 }
 
@@ -22,6 +24,6 @@ label, input[type="submit"] {
   width: 90%;
 }
 
-thead tr th {
+table {
   font-size: small;
 }
