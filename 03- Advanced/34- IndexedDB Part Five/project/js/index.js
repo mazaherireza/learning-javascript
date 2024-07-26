@@ -11,9 +11,9 @@ let DB; // IndexedDB connection
 const STORE_NAME = "Users";
 
 const createDatabase = () => {
-  const NAME = "CodeCademy";
-  let version = 3;
-  const request = indexedDB.open(NAME, version);
+  const NAME = "Learning";
+  const VERSION = 1;
+  const request = indexedDB.open(NAME, VERSION);
 
   request.onsuccess = (event) => {
     // Create DB connection
