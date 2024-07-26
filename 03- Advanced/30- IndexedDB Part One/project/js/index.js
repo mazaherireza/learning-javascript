@@ -4,8 +4,8 @@ let DB;
 
 const createDatabase = () => {
   const NAME = "CodeCademy";
-  let version = 1;
-  const request = indexedDB.open(NAME, version);
+  const VERSION = 1;
+  const request = indexedDB.open(NAME, VERSION);
   request.onerror = (error) => {
     console.error("IndexedDB error: ", error);
   };
