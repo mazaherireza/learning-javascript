@@ -140,4 +140,3 @@ self.addEventListener("backgroundfetchclick", (event) => {
   if(registration.result == "success")
     clients.openWindow("play-movie")
 });
-
