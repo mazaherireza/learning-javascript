@@ -39,42 +39,50 @@ self.addEventListener("fetch", (event) => {
   // Skip the request, if request is not made with http protocol.
   if (!event.request.url.indexOf("http") == 0) return;
 
-  event.respondWith(
-    (async () => {
-      const cachedResponse = await caches.match(event.request);
-      if (cachedResponse) {
-        return cachedResponse;
-      } else {
-        const URL = event.request.url;
+  const URL = event.request.url;
+  if (URL.startsWith(BASE_URL)) {
+    event.respondWith(
+      (async () => {
+        // External Resource(s)
         try {
           const serverResponse = await fetch(event.request);
-          if (URL.startsWith(BASE_URL)) {
-            try {
-              const response = await serverResponse.json();
-              const DB_VERSION = 1;
-              createDatabase("Learning", DB_VERSION, "Product");
-              const { category, id, image, price, title } = response[0];
-              add("Product", {
-                category,
-                id,
-                image,
-                price,
-                title,
-              });
-            } catch (error) {
-              console.error(error);
-              get("Proudct");
-            }
-          } else {
+          const response = await serverResponse.json();
+          const { category, id, image, price, title } = response[0];
+          const DB_VERSION = 1;
+          createDatabase("Learning-PWA", DB_VERSION, "Product");
+          add("Product", {
+            category,
+            id,
+            image,
+            price,
+            title,
+          });
+          return serverResponse;
+        } catch (error) {
+          console.error(error);
+          get("Proudct");
+        }
+      })()
+    );
+  } else {
+    event.respondWith(
+      (async () => {
+        // Internal Resource(s)
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) {
+          return cachedResponse;
+        } else {
+          try {
+            const serverResponse = await fetch(event.request);
             const cache = await caches.open(CACHE_NAME);
             cache.put(event.request, serverResponse.clone());
             return serverResponse;
+          } catch (error) {
+            const fallbackResponse = await caches.match("/fallback.html");
+            if (fallbackResponse) return fallbackResponse;
           }
-        } catch (error) {
-          const fallbackResponse = await caches.match("/fallback.html");
-          if (fallbackResponse) return fallbackResponse;
         }
-      }
-    })()
-  );
+      })()
+    );
+  }
 });
