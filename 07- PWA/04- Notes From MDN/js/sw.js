@@ -192,4 +192,3 @@ if ("serviceWorker" in navigator) {
   on every reload as long as the developer tools are open. 
   There is also an option to bypass the service worker and load resources from the network. <------------ ***
 */
-
