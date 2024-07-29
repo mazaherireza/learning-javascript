@@ -4,7 +4,7 @@ const CACHE_NAME = `Learning-PWA-${VERSION}`;
 const STATIC_RESOURCES = [
   "/",
   "/fallback.html",
-  "/fallback.css",
+  "./style/fallback.css",
   "./assets/images/favicon.png",
   "./style/main.css",
   "./style/index.css",
