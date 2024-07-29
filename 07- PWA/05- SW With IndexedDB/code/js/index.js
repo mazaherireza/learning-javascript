@@ -9,7 +9,7 @@ const register = async () => {
   }
 };
 
-if (serviceWorkerSupport) {
+if (serviceWorkerSupport()) {
   register();
 } else {
   console.error("Service workers are not supported.");

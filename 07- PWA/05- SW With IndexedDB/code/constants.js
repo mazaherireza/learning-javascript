@@ -3,7 +3,7 @@ const BASE_URL = "https://fakestoreapi.com";
 const STATIC_RESOURCES = [
   "/",
   "/fallback.html",
-  "/fallback.css",
+  "./style/fallback.css",
   "./assets/images/favicon.png",
   "./style/main.css",
   "./style/index.css",

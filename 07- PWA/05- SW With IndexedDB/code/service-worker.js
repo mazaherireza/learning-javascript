@@ -1,3 +1,5 @@
+import { indexedDBSupport } from "./utils";
+
 self.importScripts("./constants.js");
 self.importScripts("./database.js");
 
@@ -48,15 +50,17 @@ self.addEventListener("fetch", (event) => {
           const serverResponse = await fetch(event.request);
           const response = await serverResponse.json();
           const { category, id, image, price, title } = response[0];
-          const DB_VERSION = 1;
-          createDatabase("Learning-PWA", DB_VERSION, "Product");
-          add("Product", {
-            category,
-            id,
-            image,
-            price,
-            title,
-          });
+          if (indexedDBSupport()) {
+            const DB_VERSION = 1;
+            createDatabase("Learning-PWA", DB_VERSION, "Product");
+            add("Product", {
+              category,
+              id,
+              image,
+              price,
+              title,
+            });
+          }
           return serverResponse;
         } catch (error) {
           console.error(error);
