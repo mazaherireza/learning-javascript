@@ -46,13 +46,13 @@ PWAs can be accessed directly from the web.
 PWAs also have many of the benefits of platform-specific apps, including:
 PWAs can be installed on the device. 
   ...
-  Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
+Once installed, the PWA can be launched as a standalone app, rather than a website in a browser.
 
 PWAs can operate in the background and offline.
 (a typical website is only active while the page is loaded in the browser.) A PWA can:
  ...
- Respond to push messages from the server. <------------ **
- Display notifications using the OS notifications system.
+Respond to push messages from the server. <------------ **
+Display notifications using the OS notifications system.
 
 PWAs can use the whole screen, rather than running in the browser UI. <---------- *
 

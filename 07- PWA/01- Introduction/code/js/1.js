@@ -107,7 +107,7 @@ const cacheFirst = async ({ request, fallbackURL }) => {
     const fallbackResponse = await caches.match(fallbackURL);
     if (fallbackResponse) return fallbackResponse;
     // When even the fallback response is not available, there is nothing we can do, but we must always return a Response object.
-    return new Response("Netword error happend", {
+    return new Response("Network error happend", {
       status: 408,
       headers: {
         "Content-Type": "text/plain",
