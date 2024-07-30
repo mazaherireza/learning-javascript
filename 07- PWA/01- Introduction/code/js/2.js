@@ -1,5 +1,5 @@
 /*
-  Background operation
+  Background Operation
   --------------------
   While offline operations are the most common use for service workers, 
   they also enable a PWA to operate even while the main app is closed. <--------------- ***

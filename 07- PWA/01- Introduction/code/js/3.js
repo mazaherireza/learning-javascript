@@ -11,7 +11,8 @@
   This makes background sync unsuitable for longer operations - downloading a movie, for example. 
   For this scenario, you need the Background Fetch API. <---------------- *
 
-  With background fetch, network requests can be performed while both the main app UI and the service worker are closed.
+  With background fetch, 
+  network requests can be performed while BOTH the main app UI and the service worker are closed. <---------- ***
   
   With background fetch:
   The request is initiated from the main app UI
@@ -22,7 +23,6 @@
 
   When the request is completed with success or failure, or the user has asked to check the request's progress, 
   then the browser starts the service worker (if necessary) and fires the appropriate event in the service worker's scope.
-
 */
 
 /*
@@ -30,7 +30,6 @@
   ---------------------------------
   A background fetch request is initiated in the main app code, <------------ *
   by calling backgroundFetch.fetch() on the ServiceWorkerRegistration object, like this:
-
 */
 
 const requestBackgroundFetch = async (movieData) => {
@@ -49,12 +48,13 @@ const requestBackgroundFetch = async (movieData) => {
 /*
   We're passing three arguments into backgroundFetch.fetch():
   1) An identifier for this fetch request
-  2) An array of Request objects or URLs. A single background fetch request can include multiple network requests.
+  2) An array of Request objects or URLs. 
+  (A single background fetch request can include multiple network requests.)
   3) An object containing data for the UI that the browser uses to show the existence and progress of the request.
 */
 
 /*
-  The backgroundFetch.fetch() call returns a Promise that resolves to a BackgroundFetchRegistration object. 
+  The backgroundFetch.fetch() call, returns a Promise that resolves to a BackgroundFetchRegistration object. 
   This enables the main app to update its own UI as the request progresses. 
   However, if the main app is closed, the fetch will continue in the background. <------------ **
 
@@ -75,7 +75,6 @@ const requestBackgroundFetch = async (movieData) => {
   backgroundfetchfail: at least one request failed
   backgroundfetchabort: the fetch was canceled by the user or by the main app
   backgroundfetchclick: the user clicked on the progress UI element that the browser is showing
-
 */
 
 /*
@@ -137,6 +136,5 @@ self.addEventListener("backgroundfetchsuccess", (event) => {
 
 self.addEventListener("backgroundfetchclick", (event) => {
   const registration = event.registration;
-  if(registration.result == "success")
-    clients.openWindow("play-movie")
+  if (registration.result == "success") clients.openWindow("play-movie");
 });
