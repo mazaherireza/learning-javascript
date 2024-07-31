@@ -1,0 +1,66 @@
+main {
+  background: var(--primary)
+    linear-gradient(to left, var(--secondary), var(--primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground #playground-title {
+  margin-bottom: 1rem;
+}
+
+h4#fullname {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--secondary);
+  border: none;
+  font-weight: bold;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.form {
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  padding: 0.5rem;
+}
+
+input {
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}

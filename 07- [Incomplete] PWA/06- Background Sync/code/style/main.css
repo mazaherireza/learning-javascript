@@ -1,0 +1,23 @@
+:root {
+  --primary: #bf40bf;
+  --secondary: #aa98a9;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+input[type="submit"],
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+}
