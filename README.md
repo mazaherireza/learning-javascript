@@ -7,4 +7,4 @@
 - Single Page Application (SPA)
 - npm
 - PWA (Progressive Web Apps)
-
+- Popular JS Libraries
