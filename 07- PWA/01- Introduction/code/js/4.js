@@ -2,17 +2,19 @@
   Periodic background sync
   ------------------------
   The Periodic Background Synchronization API enables a PWA to periodically update its data in the background, 
-  while the main app is closed. <---------------- ***
+  while the main app is closed. <------------- **
 
   This can greatly improve the offline experience offered by a PWA. <------------ *
+
   Consider an app that depends on reasonably fresh content, like a news app. 
   If the device is offline when the user opens the app, 
-  then even with service worker-based caching the stories will only be as fresh as the last time the app was opened. 
-  With periodic background sync, the app could have refreshed its stories in the background, 
-  when the device had connectivity, and so could be able to show relatively fresh content to the user.
+  then even with service worker-based caching, the stories will only be as fresh as the last time the app was opened. 
 
-  This takes advantage of the fact that on a mobile device especially, 
-  connectivity is not poor so much as intermittent: 
+  With periodic background sync, 
+  the app could have refreshed its stories in the background, when the device had connectivity, <------------- *
+  and so could be able to show relatively fresh content to the user.
+
+  This, takes advantage of the fact that on a mobile device especially, connectivity is not poor so much as intermittent: 
   by taking advantage of the times that the device has connectivity, the app can smooth over the connectivity gaps.
 */
 
@@ -24,7 +26,7 @@
   which has a register() method taking the name of the periodic sync as a parameter.
 
   However, periodicSync.register() takes an extra argument, which is an object with a minInterval property. 
-  This represents the minimum interval, in milliseconds, between synchronization attempts:
+  This, represents the minimum interval, in milliseconds, between synchronization attempts:
 */
 
 const registerPeriodicSync = async () => {
@@ -39,8 +41,8 @@ const registerPeriodicSync = async () => {
   Handling a periodic sync event
   ------------------------------
   Although the PWA asks for a particular interval in the register() call, 
-  it's up to the browser how often to generate periodic sync events. 
-  Apps that users open and interact with often will be more likely to receive periodic sync events, 
+  it's up to the browser how often to generate periodic sync events. <------------------ **
+  Apps that users open and interact with, often will be more likely to receive periodic sync events, 
   and will receive them more often, than apps which the user rarely or never interacts with.
 
   When the browser has decided to generate a periodic sync event, the pattern is the following: 
@@ -71,4 +73,4 @@ self.addEventListener("periodicsycn", (event) => {
   by calling the unregister() method of periodicSync:
 */
 
-// swRegistration.periodicSync.unregister("update-news");
+swRegistration.periodicSync.unregister("update-news");

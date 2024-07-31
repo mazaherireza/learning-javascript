@@ -1,8 +1,8 @@
 /*
   Push
   ----
-  The Push API enables a PWA to receive messages pushed from the server, 
-  whether the app is running or not. <---------------- *
+  The Push API, enables a PWA to receive messages pushed from the server, 
+  whether the app is running or not. <------------- *
 
   When the message is received by the device, the app's service worker is started and handles the message, 
   and a notification is shown to the user. 
@@ -15,11 +15,11 @@
   when the user receives a message from one of their contacts, 
   it is delivered as a push message and the app shows a notification.
 
-  Push messages are NOT sent directly from the app server to the device. 
+  Push messages are NOT sent directly from the app server to the device. <------------- **
   Instead, your app server sends messages to a push service, <------------ **
   from which the device can retrieve them and deliver them to the app.
 
-  ... messages from your server to the push service need to be encrypted  and signed ... <------------ **
+  ... messages from your server to the push service need to be encrypted and signed ... <------------ **
 
   The push service is operated by the browser vendor or by a third party, <------------- *
   and the app server communicates with it using the HTTP Push protocol. 
