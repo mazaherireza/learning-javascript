@@ -1,0 +1,41 @@
+body {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main {
+  background: var(--primary) radial-gradient(var(--primary), #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+#playground {
+  padding: 1rem;
+}
+
+#playground-title {
+  margin-bottom: 2rem;
+}
+
+.ih-item.circle {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ih-item.circle.effect13 .info h3,
+.ih-item.circle.effect13 .info p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.ih-item.circle.effect13 .info h3 {
+  text-transform: capitalize;
+}
+
+.ih-item.circle.effect13 .info p {
+  font-style: normal;
+  font-weight: bold;
+}

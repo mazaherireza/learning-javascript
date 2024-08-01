@@ -1,0 +1,15 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+h2#library,
+#playground-title {
+  font-size: medium;
+}
+
+.ih-item.circle {
+  width: 8rem;
+  height: 8rem;
+  margin-right: initial;
+  margin-left: initial;
+}
