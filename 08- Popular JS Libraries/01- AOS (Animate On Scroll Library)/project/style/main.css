@@ -1,0 +1,23 @@
+:root {
+  --primary: #ffa500;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+em {
+  font-weight: bold;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 0.25rem;
+}
