@@ -1,0 +1,12 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+h2#library,
+#playground-title {
+  font-size: medium;
+}
+
+#typing {
+  font-size: small;
+}
