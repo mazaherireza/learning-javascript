@@ -1,0 +1,13 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+h2#library,
+#playground-title {
+  font-size: medium;
+}
+
+canvas {
+  width: 12rem;
+  height: 12rem;
+}
