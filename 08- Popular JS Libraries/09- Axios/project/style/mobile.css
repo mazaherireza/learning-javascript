@@ -1,0 +1,20 @@
+h1#hero-title {
+  font-size: large;
+}
+
+h2#library,
+#playground-title {
+  font-size: medium;
+}
+
+form, table {
+  width: 80%;
+}
+
+table {
+  font-size: small;
+}
+
+.fa {
+  font-size: small;
+}
