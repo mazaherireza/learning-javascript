@@ -18,6 +18,50 @@ const closeEditModal = () => {
   modal.style.display = "none";
 };
 
+const populateTable = ([id, book]) => {
+  const row = $.createElement("tr");
+
+  const titleElement = $.createElement("td");
+  titleElement.innerHTML = book.title;
+
+  const authorElement = $.createElement("td");
+  authorElement.innerHTML = book.author;
+
+  const operation = $.createElement("td");
+  operation.className = "operation";
+
+  const trash = $.createElement("i");
+  trash.className = "fa fa-trash fa-lg";
+  trash.addEventListener("click", () => {
+    deleteBook(id);
+  });
+
+  const edit = $.createElement("i");
+  edit.className = "fa fa-edit fa-lg";
+  edit.addEventListener("click", () => {
+    openEditModal(id, book);
+  });
+  operation.append(trash, edit);
+
+  row.append(titleElement, authorElement, operation);
+  tbody.append(row);
+};
+
+const fetchBooks = async () => {
+  try {
+    const { data } = await getBooksAPI();
+    const books = Object.entries(data);
+    tbody.innerHTML = "";
+    console.log("FETCHBOOK, books are: ", books);
+
+    books.forEach((book) => {
+      populateTable(book);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const openEditModal = (id, book) => {
   modal.style.display = "block";
 
@@ -64,38 +108,10 @@ const deleteBook = async (id) => {
   }
 };
 
-const populateTable = ([id, book]) => {
-  const row = $.createElement("tr");
-
-  const titleElement = $.createElement("td");
-  titleElement.innerHTML = book.title;
-
-  const authorElement = $.createElement("td");
-  authorElement.innerHTML = book.author;
-
-  const operation = $.createElement("td");
-  operation.className = "operation";
-
-  const trash = $.createElement("i");
-  trash.className = "fa fa-trash fa-lg";
-  trash.addEventListener("click", () => {
-    deleteBook(id);
-  });
-
-  const edit = $.createElement("i");
-  edit.className = "fa fa-edit fa-lg";
-  edit.addEventListener("click", () => {
-    openEditModal(id, book);
-  });
-  operation.append(trash, edit);
-
-  row.append(titleElement, authorElement, operation);
-  tbody.append(row);
-};
-
 const postBook = async (book) => {
   try {
-    await postBookAPI(book);
+    const result = await postBookAPI(book);
+    console.log("Result of POST", result);
   } catch (error) {
     console.error(error);
   } finally {
@@ -103,7 +119,7 @@ const postBook = async (book) => {
   }
 };
 
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
   event.preventDefault();
   const title = titleElem.value;
   const author = authorElem.value;
@@ -111,21 +127,8 @@ form.onsubmit = (event) => {
     title,
     author,
   };
-  postBook(book);
-  fetchBooks();
-};
-
-const fetchBooks = async () => {
-  try {
-    const { data } = await getBooksAPI();
-    const books = Object.entries(data);
-    tbody.innerHTML = "";
-    books.forEach((book) => {
-      populateTable(book);
-    });
-  } catch (error) {
-    console.error(error);
-  }
+  await postBook(book);
+  await fetchBooks();
 };
 
 window.onload = () => {

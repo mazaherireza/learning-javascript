@@ -7,8 +7,14 @@ h2#library,
   font-size: medium;
 }
 
-form, table {
+form,
+table {
   width: 80%;
+}
+
+input[type="text"],
+input[type="submit"] {
+  padding: 0.25rem 0.5rem;
 }
 
 table {
