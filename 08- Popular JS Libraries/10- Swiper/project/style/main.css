@@ -1,0 +1,11 @@
+:root {
+  --primary: #097969;
+  --swiper-navigation-size: 1.5rem;
+}
+
+* {
+  font-family: "Times New Roman", Times, serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

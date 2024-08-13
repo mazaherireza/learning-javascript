@@ -1,0 +1,11 @@
+h1#hero-title {
+  font-size: larger;
+}
+
+h2#library,
+#playground-title {
+  font-size: medium;
+}
+.swiper {
+  height: 30%;
+}
