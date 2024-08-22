@@ -1,5 +1,5 @@
-const first = parseInt(prompt("Enter The First Number: ", 0)); // parseInt deletes leading zeros. (021 converts to 21)
-const second = parseInt(prompt("Enter The Second Number: ", 0));
+let first = parseInt(prompt("Enter The First Number: ", 0)); // parseInt deletes leading zeros. (021 converts to 21)
+let second = parseInt(prompt("Enter The Second Number: ", 0));
 
 if (first == second) {
   console.log("Two numbers are the same.");
