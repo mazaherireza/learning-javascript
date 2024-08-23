@@ -1,8 +1,9 @@
 let n = Number(prompt("Enter Number: ", 0));
 let sum = 0;
 
+let digit = 0;
 while (n > 0) {
-  const digit = n % 10;
+  digit = n % 10;
   sum += digit;
   n = Math.floor(n / 10);
 }
