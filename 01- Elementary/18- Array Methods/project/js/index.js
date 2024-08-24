@@ -1,6 +1,6 @@
 const fruits = ["Apple", "Cucumber", "Banana", "Kiwi"];
 
-console.log(fruits.at(-1)); // <---------- **** Kiwi Same as fruits[fruits.length - 1] (a bit cumbersome)
+console.log(fruits.at(-1)); // <---------- **** Kiwi, Same as fruits[fruits.length - 1] (a bit cumbersome)
 
 console.log(`The first element is: ${fruits.at(0)}`); // Apple
 // * Note: Arrays in JavaScript can work both as a queue and as a stack. (... deque)
