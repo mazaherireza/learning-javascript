@@ -20,7 +20,7 @@ const MIN = 3;
 const MAX = 15;
 let username = prompt("Enter Your Username: ", "username");
 while (username.length < MIN || username.length > MAX) {
-  alert(`Username Must Be Between ${MIN} and ${MAX} Characters Long. `);
+  alert(`Username Must Be Between ${MIN} and ${MAX} Characters Long.`);
   username = prompt("Enter Your Username: ", "username");
 }
 
