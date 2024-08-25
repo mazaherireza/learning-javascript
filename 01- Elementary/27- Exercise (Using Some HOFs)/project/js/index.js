@@ -1,23 +1,23 @@
 const cart = [
   {
-    id: "BAR_1001_0",
+    id: "CRT_1001_0",
     name: "Sunscreen",
     price: 13,
   },
   {
-    id: "YAR_1001_1",
+    id: "CRT_1001_1",
     name: "Book",
     price: 10,
   },
   {
-    id: "BAR_1001_2",
+    id: "CRT_1001_2",
     name: "Mineral Water",
     price: 2,
   },
   {
-    id: "RPR_1001_2",
+    id: "CRT_1001_3",
     name: "Wardrobe",
-    price: 502,
+    price: 102,
   },
 ];
 
@@ -29,7 +29,7 @@ const isSubjectedToPostage = cart.filter(
   (product) => product.price > POSTAGE_THRESHOLD
 );
 console.log(
-  "Products that are subjected to postage are:",
+  "Products that are subjected to postage:",
   isSubjectedToPostage.map((product) => product.name)
 );
 
