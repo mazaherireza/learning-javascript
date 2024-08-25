@@ -1,7 +1,7 @@
 const todos = [
   {
     id: "RXS_1",
-    title: "Hit the gym",
+    title: "Hit the Gym",
     isDone: true,
   },
   {
