@@ -2,6 +2,7 @@
 
 x = 1;
 console.log(`x is: ${x}`); // x is: 1
+// let x; <------- ReferenceError
 var x;
 
 console.log(`y is ${y}`); // y is: undefined
