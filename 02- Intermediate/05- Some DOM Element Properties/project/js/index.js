@@ -1,8 +1,8 @@
 const title = document.querySelector("#playground-title");
 title.style.color = "#78ffd6";
-title.style.background = "#000";
-title.style.padding = "0.5em";
-title.style.borderRadius = "0.25em";
+title.style.backgroundColor = "#000";
+title.style.padding = "0.5rem";
+title.style.borderRadius = "0.25rem";
 title.style.fontWeight = "bold";
 
 const items = document.querySelectorAll(".list-item");

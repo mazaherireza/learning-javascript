@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -27,4 +27,5 @@ main {
 
 #playground input {
   padding: 0.25rem 0.5rem;
+  border: 1px solid black;
 }

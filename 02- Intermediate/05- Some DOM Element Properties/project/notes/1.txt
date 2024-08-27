@@ -1,4 +1,4 @@
-The innerHTML property sets or returns the HTML content (inner HTML) of an element.
+The innerHTML property, sets or returns the HTML content (inner HTML) of an element.
 
 The differences between innerHTML, innerText and textContent
 
