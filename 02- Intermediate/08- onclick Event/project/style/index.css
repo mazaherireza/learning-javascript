@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -23,6 +23,5 @@ button {
   width: 10rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  cursor: pointer;
   font-weight: bold;
 }
