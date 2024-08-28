@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -19,19 +19,19 @@ main {
   margin-bottom: 1rem;
 }
 
-.wrapper {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
-}
-
 .login-form {
+  margin-top: 1rem;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
   border: 1px solid black;
-  box-shadow: 0.75rem 0.5rem silver;
+  box-shadow: 0.5rem 0.5rem 0.25rem silver;
   padding: 2rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 form {
@@ -41,8 +41,10 @@ form {
 
 input[type="text"],
 input[type="password"] {
+  display: block;
+  width: 100%;
   padding: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 input[type="submit"] {
@@ -57,6 +59,10 @@ input[type="submit"] {
 .modal {
   width: 12rem;
   padding: 0.25rem;
-  border-radius: 0.25rem;
   visibility: hidden;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
