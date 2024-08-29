@@ -1,14 +1,12 @@
 const $ = document;
 
+const form = $.querySelector("form");
 const usernameInput = $.querySelector("#username");
 const passwordInput = $.querySelector("#password");
 
-const isValidUsername = (username) => {
-  return username.length >= 10 ? true : false;
-};
-
-const isValidPassword = (password) => {
-  return password.length >= 8 ? true : false;
+const isValid = (identifier, input) => {
+  const LIMITATION = identifier == "U" ? 10 : 8;
+  return input.length >= LIMITATION;
 };
 
 let username;
@@ -17,11 +15,6 @@ let password;
 const setInputs = () => {
   username = usernameInput.value;
   password = passwordInput.value;
-};
-
-const resetInputs = () => {
-  usernameInput.value = "";
-  passwordInput.value = "";
 };
 
 const GENERAL_STYLE = {
@@ -44,7 +37,7 @@ const submitHandler = (event) => {
   setInputs();
   const modal = $.querySelector(".modal");
   modal.style.visibility = "visible";
-  if (isValidUsername(username) && isValidPassword(password)) {
+  if (isValid("U", username) && isValid("P", password)) {
     manipulateNode(modal, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
     });
@@ -58,10 +51,10 @@ const submitHandler = (event) => {
     modal.style.visibility = "hidden";
   }, 5_000);
 
-  resetInputs();
+  form.reset();
 };
 
 const keyLog = (event) => {
   console.log(event);
-  console.log("A character is typed");
+  console.log("A character is typed.");
 };

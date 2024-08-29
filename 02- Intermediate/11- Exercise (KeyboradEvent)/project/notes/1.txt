@@ -14,7 +14,7 @@ Modifier keys such as "Shift", "CapsLock", "Ctrl" etc. do not produce a characte
 therefore they have no "keypress" event attached to them. <---------------------- ***
 
 keyup event
-... when the use has released the key.
+... when the user has released the key.
 It will occur even if the key released does not produce a character value.
 
 
