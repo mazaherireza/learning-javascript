@@ -31,39 +31,36 @@
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
       <div class="modal"></div>
-      <div class="wrapper">
-        <div class="login-form">
-          <form method="post" onsubmit="submitHandler(event)">
-            <input
-              type="text"
-              placeholder="Username"
-              name="username"
-              id="username"
-              autofocus
-              onkeyup="usernameKeyLog()"
-            />
-            <span id="username-validation"
-              >Must contain at least 12 characters.</span
-            >
+      <div class="login-form">
+        <form method="post" onsubmit="submitHandler(event)">
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            id="username"
+            onkeyup="usernameKeyLog()"
+          />
+          <span id="username-validation"
+            >Must contain at least 10 characters.</span
+          >
 
-            <input
-              type="password"
-              placeholder="Password"
-              name="password"
-              id="password"
-              onkeyup="passwordKeyLog()"
-            />
-            <span id="password-validation"
-              >Must contain at least 8 characters.</span
-            >
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            id="password"
+            onkeyup="passwordKeyLog()"
+          />
+          <span id="password-validation"
+            >Must contain at least 8 characters.</span
+          >
 
-            <input type="submit" value="LOGIN" />
-            <p class="info">
-              <span>Not registered?</span>
-              <a href="">Create an account</a>
-            </p>
-          </form>
-        </div>
+          <input type="submit" value="LOGIN" />
+          <p class="info">
+            <span>Not registered?</span>
+            <a href="">Create an account</a>
+          </p>
+        </form>
       </div>
     </section>
 

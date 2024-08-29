@@ -1,27 +1,23 @@
 const $ = document;
 
+const form = $.querySelector("form");
 const usernameInput = $.querySelector("#username");
 const passwordInput = $.querySelector("#password");
 
-const isValidUsername = (username) => {
-  return username.length >= 10 ? true : false;
-};
-
-const isValidPassword = (password) => {
-  return password.length >= 8 ? true : false;
+const isValid = (identifier, input) => {
+  const LIMITATION = identifier == "U" ? 10 : 8;
+  return input.length >= LIMITATION;
 };
 
 let username;
 let password;
 
-const setInputs = () => {
+const setUsername = () => {
   username = usernameInput.value;
-  password = passwordInput.value;
 };
 
-const resetInputs = () => {
-  usernameInput.value = "";
-  passwordInput.value = "";
+const setPassword = () => {
+  password = passwordInput.value;
 };
 
 const GENERAL_STYLE = {
@@ -41,10 +37,11 @@ const manipulateNode = (node, message = "MESSAGE", style = {}) => {
 
 const submitHandler = (event) => {
   event.preventDefault();
-  setInputs();
+  setUsername();
+  setPassword();
   const modal = $.querySelector(".modal");
   modal.style.visibility = "visible";
-  if (isValidUsername(username) && isValidPassword(password)) {
+  if (isValid("U", username) && isValid("P", password)) {
     manipulateNode(modal, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
     });
@@ -58,7 +55,7 @@ const submitHandler = (event) => {
     modal.style.visibility = "hidden";
   }, 5_000);
 
-  resetInputs();
+  form.reset();
 };
 
 const usernameValidationInfo = $.querySelector("#username-validation");
@@ -69,19 +66,19 @@ const changeVisibility = (node, value = "visible") => {
 };
 
 const usernameKeyLog = () => {
-  const username = usernameInput.value;
-  if (username.length < 12) {
-    changeVisibility(usernameValidationInfo);
-  } else {
+  setUsername();
+  if (isValid("U", username)) {
     changeVisibility(usernameValidationInfo, "hidden");
+  } else {
+    changeVisibility(usernameValidationInfo);
   }
 };
 
 const passwordKeyLog = () => {
-  const password = passwordInput.value;
-  if (password.length < 8) {
-    changeVisibility(passwordValidationInfo);
-  } else {
+  setPassword();
+  if (isValid("P", password)) {
     changeVisibility(passwordValidationInfo, "hidden");
+  } else {
+    changeVisibility(passwordValidationInfo);
   }
 };

@@ -1,7 +1,13 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
-#playground-title {
-  font-size: large;
+#playground #playground-title {
+  font-size: medium;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  width: 90%;
+  padding: 1.5rem;
 }
