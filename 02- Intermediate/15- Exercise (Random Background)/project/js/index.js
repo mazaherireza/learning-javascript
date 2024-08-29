@@ -10,9 +10,9 @@ const colors = [
   "#1b4f72",
 ];
 const len = colors.length;
-const DELAY = 5_000;
+const DELAY = 2_500;
 
 setInterval(() => {
   const index = Math.floor(Math.random() * len);
-  playground.style.background = colors[index];
+  playground.style.backgroundColor = colors[index];
 }, DELAY);
