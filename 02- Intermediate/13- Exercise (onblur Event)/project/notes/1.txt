@@ -2,4 +2,4 @@ The onfocus event occurs when an element gets focus.
 ... is often used on input fields.
 
 The onblur event occurs when an HTML element loses focus.
-... is often used on input fields. (with form validation when the use leaves a form field).
+... is often used on input fields. (with form validation when the user leaves a form field).
