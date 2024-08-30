@@ -1,4 +1,4 @@
-const response = {
+const information = {
   tehran: {
     name: "Tehran",
     weather: "Sunny",
@@ -35,7 +35,7 @@ const resetNodes = () => {
 
 searchBtn.addEventListener("click", () => {
   const keySearch = $.querySelector("#key-search").value.toLowerCase();
-  const selectedCity = response[keySearch];
+  const selectedCity = information[keySearch];
   const city = $.querySelector("#city");
   const weather = $.querySelector("#weather");
   const temp = $.querySelector("#temp");
@@ -55,14 +55,14 @@ searchBtn.addEventListener("click", () => {
 // IIFE
 (() => {
   const colors = [
-    "#ffc300",
-    "#ff5733",
-    "#daf7a6",
-    "#2874a6",
-    "#aed6f1",
-    "#1b4f72",
+    "#7DF9FF",
+    "#228B22",
+    "#98FB98",
+    "#2E8B57",
+    "#009E60",
+    "#40E0D0",
   ];
   const len = colors.length;
   const index = Math.floor(Math.random() * len);
-  playground.style.background = colors[index];
+  playground.style.backgroundColor = colors[index];
 })();
