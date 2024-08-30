@@ -1,4 +1,4 @@
-const response = {
+const countries = {
   Iran: ["Tehran", "Isfahan", "Rasht", "Shiraz", "Kerman", "Yazd"],
   France: ["Paris", "Marseille", "Lyon"],
   England: ["London", "Oxford", "Liverpool"],
@@ -15,9 +15,9 @@ country.addEventListener("change", () => {
     city.setAttribute("disabled", "disabled");
   } else {
     city.removeAttribute("disabled");
-    const cities = response[selectedCountry];
-    cities.forEach((cityItem) => {
-      city.innerHTML += `<option value=${cityItem}>${cityItem}</option>`;
+    const cities = countries[selectedCountry];
+    cities.forEach((item) => {
+      city.innerHTML += `<option value=${item}>${item}</option>`;
     });
   }
 });

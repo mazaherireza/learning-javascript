@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -34,7 +34,7 @@ main {
 
 select {
   width: 40%;
-  padding: 0.5rem 0.25em;
+  padding: 0.5rem 0.25rem;
   font-size: small;
   font-weight: bold;
 }
