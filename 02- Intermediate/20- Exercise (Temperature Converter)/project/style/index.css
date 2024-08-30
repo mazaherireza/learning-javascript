@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -20,8 +20,8 @@ main {
 }
 
 .main-wrapper {
-  width: 50%;
   margin-top: 1rem;
+  width: 50%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -55,5 +55,4 @@ input {
 button {
   width: 6rem;
   padding: 0.25rem;
-  cursor: pointer;
 }

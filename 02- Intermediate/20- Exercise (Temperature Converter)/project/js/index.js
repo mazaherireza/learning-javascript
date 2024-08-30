@@ -40,6 +40,7 @@ calculateBtn.addEventListener("click", () => {
     response = "Invalid Input!, Enter a Number.";
     result.style.color = "red";
     result.style.fontSize = "small";
+    temp.value = "";
   } else {
     if (temp.placeholder == "Celsius") {
       response = `${(temp.value * (9 / 5) + 32).toFixed(2)} °F`;
