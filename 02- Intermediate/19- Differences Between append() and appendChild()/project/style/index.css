@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -35,16 +35,15 @@ input {
 button {
   width: 6rem;
   padding: 0.25rem;
-  cursor: pointer;
+  font-weight: bold;
 }
 
 ul {
   margin-top: 1rem;
-  list-style-type: none;
   font-weight: bold;
 }
 
 ul li {
-  margin-bottom: 0.5rem;
   font-size: small;
+  margin-bottom: 0.5rem;
 }

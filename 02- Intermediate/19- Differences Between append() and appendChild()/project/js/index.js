@@ -4,7 +4,8 @@ const unorderedList = $.querySelector(".list");
 const btn = $.querySelector("#add-btn");
 
 btn.addEventListener("click", () => {
-  const item = $.querySelector("#item").value;
+  const input = $.querySelector("#input");
+  const item = input.value.trim();
   const li = $.createElement("li");
   li.innerHTML = item;
   // input: node
@@ -13,4 +14,5 @@ btn.addEventListener("click", () => {
   // input: strings or nodes
   // output: void
   // unorderedList.append()
+  input.value = "";
 });
