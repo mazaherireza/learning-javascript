@@ -19,6 +19,10 @@ main {
   margin-bottom: 1rem;
 }
 
+label {
+  font-weight: bold;
+}
+
 #positions {
   width: 50%;
   padding: 0.5rem 0.25rem;

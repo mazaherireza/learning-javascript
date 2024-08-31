@@ -6,6 +6,10 @@ h1#hero-title {
   font-size: medium;
 }
 
+label {
+  font-size: small;
+}
+
 #positions {
   width: 60%;
 }
