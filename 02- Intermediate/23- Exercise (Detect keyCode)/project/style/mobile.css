@@ -1,15 +1,19 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 #inner h3 {
   font-size: small;
 }
 
-.property {
-  flex: 40%;
+.properties {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.properties .property:last-child {
+  grid-column: initial;
 }

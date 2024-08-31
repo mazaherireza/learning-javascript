@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: 100dvh;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
