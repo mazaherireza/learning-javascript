@@ -26,7 +26,7 @@ const $ = document;
 const searchBtn = $.querySelector("#search-btn");
 const playground = $.querySelector("#playground");
 
-const resetNodes = () => {
+const resetNodes = (city, weather, temp, message) => {
   city.innerHTML = "";
   weather.innerHTML = "";
   temp.innerHTML = "";
@@ -41,7 +41,7 @@ searchBtn.addEventListener("click", () => {
   const temp = $.querySelector("#temp");
   const message = $.querySelector("#message");
 
-  resetNodes();
+  resetNodes(city, weather, temp, message);
   if (selectedCity) {
     const { name, weather: W, temp: T } = selectedCity;
     city.innerHTML = name;
