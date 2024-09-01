@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -28,6 +28,10 @@ main {
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
   background-color: white;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 ul {
@@ -41,6 +45,14 @@ ul li {
   border-radius: 0.25rem;
   transition: background-color 1s;
   margin-bottom: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  -webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -ms-transition: background-color 1s;
+  -o-transition: background-color 1s;
 }
 
 ul li:last-child {
@@ -55,6 +67,10 @@ i.fa,
 a {
   color: black;
   transition: color 1s;
+  -webkit-transition: color 1s;
+  -moz-transition: color 1s;
+  -ms-transition: color 1s;
+  -o-transition: color 1s;
 }
 
 ul li:hover i.fa,
