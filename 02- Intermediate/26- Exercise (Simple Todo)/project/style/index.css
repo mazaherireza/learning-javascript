@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -34,7 +34,7 @@ main {
 input#new-todo {
   margin-top: 0.5rem;
   width: 60%;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 #todos {
@@ -52,12 +52,12 @@ input#new-todo {
 .todo {
   display: flex;
   justify-content: space-between;
-  column-gap: 0.5rem;
-  font-weight: bolder;
+  font-weight: bold;
+  font-size: small;
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
   transition: background-color 1s;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 
 .todo:hover {

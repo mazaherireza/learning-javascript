@@ -1,15 +1,11 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 input#new-todo {
   width: 80%;
-}
-
-.todo span {
-  font-size: small;
 }
