@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -38,7 +38,7 @@ form i.fa {
   position: absolute;
   width: 2rem;
   text-align: center;
-  /* The element does not react to pointer events. */
+  /* These elements don't react to pointer events. */
   pointer-events: none;
 }
 
@@ -48,5 +48,5 @@ form i.fa {
 
 form span {
   right: 0.25rem;
-  font-weight: bolder;
+  font-weight: bold;
 }
