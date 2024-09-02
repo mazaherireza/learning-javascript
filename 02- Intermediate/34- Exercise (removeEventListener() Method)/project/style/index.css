@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -28,11 +28,6 @@ main {
   gap: 1rem;
 }
 
-.wrapper #message::first-letter {
-  font-style: italic;
-  color: red;
-}
-
 .wrapper #message,
 .wrapper #coordination {
   font-size: small;
@@ -42,7 +37,11 @@ main {
 .wrapper #img {
   width: 10rem;
   height: 15rem;
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .wrapper #coordination {
@@ -54,6 +53,10 @@ main {
 
 .wrapper #btn {
   font-weight: bold;
-  padding: 0.5em;
-  border-radius: 0.25em;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
