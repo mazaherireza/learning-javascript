@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -21,7 +21,7 @@ main {
 
 .main-wrapper {
   margin-top: 1rem;
-  width: 50%;
+  width: 80%;
 }
 
 .wrapper {
@@ -71,4 +71,5 @@ input {
   margin-bottom: 0.5rem;
   border-radius: 0.25rem;
   font-weight: bold;
+  font-size: small;
 }
