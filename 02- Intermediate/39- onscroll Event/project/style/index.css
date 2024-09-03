@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -24,7 +24,7 @@ main {
 }
 
 #text {
-  width: 60%;
+  width: 75%;
   background-color: silver;
   padding: 0.5rem;
   height: 10rem;

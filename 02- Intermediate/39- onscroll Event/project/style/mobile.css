@@ -1,11 +1,8 @@
 h1#hero-title {
-  font-size: larger;
-}
-
-#playground-title {
   font-size: large;
 }
 
+#playground-title,
 #playground h3 {
   font-size: medium;
 }
