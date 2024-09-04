@@ -1,15 +1,15 @@
 h1#hero-title {
-  font-size: larger;
-}
-
-#playground-title {
   font-size: large;
 }
 
-#playground h3 {
+#playground-title {
+  font-size: medium;
+}
+
+.wrapper h3 {
   font-size: small;
 }
 
-#playground h4 {
+.wrapper h4 {
   font-size: x-small;
 }

@@ -3,7 +3,7 @@ const $ = document;
 const icons = $.querySelectorAll("i.fa");
 const audios = $.querySelectorAll("audio");
 const singerWrapper = $.querySelector(".singer-wrapper");
-const singer = $.querySelector("#singer");
+const singer = $.querySelector("#singer-name");
 
 let key;
 icons.forEach((icon) => {

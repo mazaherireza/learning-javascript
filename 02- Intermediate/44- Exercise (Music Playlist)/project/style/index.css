@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -24,10 +24,18 @@ main {
 }
 
 .wrapper {
-  margin-top: 1rem;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.wrapper h3,
+.wrapper h4 {
+  text-align: center;
+}
+
+.media-wrapper {
+  margin-top: 1rem;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -45,8 +53,12 @@ main {
 
 .media-card {
   position: relative;
-  opacity: 0.6;
-  transition: opacity 1s;
+  opacity: 0.75;
+  transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -ms-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
 }
 
 .media-card img {
@@ -69,7 +81,8 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: movement 1s;
+  animation: movement 1s linear;
+  -webkit-animation: movement 1s linear;
 }
 
 @keyframes movement {
@@ -83,5 +96,5 @@ main {
 
 i.fa {
   cursor: pointer;
-  font-size: larger;
+  font-size: large;
 }
