@@ -1,11 +1,11 @@
 h1#hero-title {
-  font-size: larger;
-}
-
-#playground-title {
   font-size: large;
 }
 
+#playground-title {
+  font-size: medium;
+}
+
 .btn {
-  font-size: x-small;
+  font-size: small;
 }

@@ -1,12 +1,11 @@
 const $ = document;
 
 const buttons = $.querySelectorAll(".btn");
-
 const VOWELS = ["a", "e", "i", "o", "u"];
+const SEPARATOR = " ";
 
 buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
-    console.table(event.target.dataset);
     const text = event.target.innerText;
     const len = text.length;
     let vowels = [];
@@ -17,7 +16,6 @@ buttons.forEach((button) => {
         vowels.push(char);
       }
     }
-    const SEPARATOR = " ";
     event.target.dataset.vowelCharacters = vowels.join(SEPARATOR);
     console.table(event.target.dataset);
   });
