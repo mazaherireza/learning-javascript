@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -24,10 +24,11 @@ main {
   flex-flow: row-reverse wrap;
   align-items: center;
   justify-content: center;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
 }
 
-.information, .media {
+.information,
+.media {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
