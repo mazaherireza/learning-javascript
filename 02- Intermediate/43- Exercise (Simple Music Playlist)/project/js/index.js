@@ -51,8 +51,7 @@ const hideInformation = () => {
 
 prevBtn.addEventListener("click", () => {
   index--;
-  if (index < 0) 
-    index = MAX - 1;
+  if (index < 0) index = MAX - 1;
   updateContent();
   hideInformation();
 });
@@ -67,7 +66,7 @@ playBtn.addEventListener("click", () => {
 });
 
 pauseBtn.addEventListener("click", () => {
-  hideInformation()
+  hideInformation();
   audio.pause();
 });
 
@@ -77,8 +76,7 @@ plus.addEventListener("click", () => {
 
 nextBtn.addEventListener("click", () => {
   index++;
-  if (index > MAX - 1) 
-    index = 0;
+  if (index > MAX - 1) index = 0;
   updateContent();
   hideInformation();
 });
