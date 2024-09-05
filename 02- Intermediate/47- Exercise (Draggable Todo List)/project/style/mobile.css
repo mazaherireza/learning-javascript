@@ -1,9 +1,9 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 #playground h3 {
@@ -15,14 +15,13 @@ h1#hero-title {
   width: 80%;
 }
 
-input {
+#todo-input {
   width: 100%;
 }
 
 .wrapper {
   width: 100%;
   flex-flow: column wrap;
-  align-items: stretch;
 }
 
 #todo-box,
