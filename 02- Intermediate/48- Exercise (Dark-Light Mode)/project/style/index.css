@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -20,7 +20,7 @@ main {
 }
 
 .dark {
-  background: black !important;
+  background-color: black !important;
   color: white;
 }
 
@@ -29,9 +29,13 @@ main {
   max-height: 30rem;
   overflow-y: auto;
   border: 1px solid black;
-  border-radius: 0.25rem;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 #header {
@@ -59,8 +63,12 @@ main {
   display: inline-block;
   width: 4rem;
   height: 1.5rem;
-  background: black;
+  background-color: black;
   border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
 }
 
 .toggle i.fa {
@@ -73,10 +81,14 @@ main {
   height: 1.25rem;
   border-radius: 50%;
   position: absolute;
-  top: 2px;
-  left: 5px;
+  top: 0.15rem;
+  left: 0.2rem;
   background-color: silver;
-  transition: all 0.5s;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
 }
 
 .checkbox {
@@ -101,22 +113,24 @@ main {
   gap: 1rem;
 }
 
-#left-side span, #logo {
+#left-side span {
   font-weight: bold;
 }
 
 #logo {
-  width: 2rem;
-  height: 2rem;
-  line-height: 2rem;
-  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid white;
-  border-radius: 0.75rem;
-}
-
-#logo span {
-  font-style: italic;
+  font-size: large;
   font-weight: bold;
+  border-radius: 0.75rem;
+  -webkit-border-radius: 0.75rem;
+  -moz-border-radius: 0.75rem;
+  -ms-border-radius: 0.75rem;
+  -o-border-radius: 0.75rem;
 }
 
 #content {

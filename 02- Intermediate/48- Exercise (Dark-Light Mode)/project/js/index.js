@@ -23,6 +23,6 @@ window.addEventListener("load", () => {
   theme = localStorage.getItem("theme");
   if (theme === "light") {
     content.classList.remove("dark");
-    switchElement.checked = true; // Is this corret?!
+    switchElement.checked = true; // Is this correct?!
   }
 });

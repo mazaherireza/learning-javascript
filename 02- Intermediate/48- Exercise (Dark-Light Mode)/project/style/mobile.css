@@ -1,9 +1,9 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 .wrapper {
@@ -13,6 +13,7 @@ h1#hero-title {
 #header {
   padding: 0.5rem;
   flex-direction: column;
+  row-gap: 0.75rem;
 }
 
 #left-side span {
@@ -24,12 +25,15 @@ h1#hero-title {
 }
 
 #logo {
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border-width: 1px;
+  font-size: medium;
   border-radius: 0.5rem;
-  font-size: small;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 #content h2 {
