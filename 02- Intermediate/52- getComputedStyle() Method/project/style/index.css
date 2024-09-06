@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -26,12 +26,15 @@ main {
 }
 
 img {
-  border-radius: 0.25rem;
   width: 100%;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 figcaption {
   font-weight: bold;
   font-size: small;
-  font-style: italic;
 }
