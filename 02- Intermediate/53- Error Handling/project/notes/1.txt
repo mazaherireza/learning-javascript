@@ -1,7 +1,7 @@
 JavaScript try...catch...finally
 --------------------------------
 When an error occurs, JavaScript will stop and generate an error message.
-(JavaScript throws and exception)
+(JavaScript throws an exception)
 
 JavaScript creates and Error object with 2 properties: name and message. <---------- ***
 
@@ -11,7 +11,7 @@ The try statement defines the code block to run (to try).
 The catch statement defines a code block to handle any error.
 The finally statement defines a code block to run regardless of the result. <--------------- ***
 
-The throw statement defines a custome error. <--------------- ***
+The throw statement defines a custom error. <--------------- ***
 
 Both catch and finally are optional, but you MUST use one of them.
 
