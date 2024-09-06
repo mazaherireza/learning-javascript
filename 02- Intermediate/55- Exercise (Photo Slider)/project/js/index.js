@@ -44,10 +44,12 @@ const goToNext = () => {
 
 next.addEventListener("click", goToNext);
 
+const INTERVAL = 3_000;
+
 const interval = setInterval(() => {
   showSlide();
   goToNext();
-}, 2_500);
+}, INTERVAL);
 
 window.addEventListener("load", () => {
   showSlide();
