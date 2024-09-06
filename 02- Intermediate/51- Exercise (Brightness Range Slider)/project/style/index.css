@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -20,7 +20,7 @@ main {
 }
 
 .wrapper {
-  width: 60%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -31,7 +31,11 @@ main {
 
 img {
   width: 100%;
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 figcaption {
