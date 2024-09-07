@@ -1,9 +1,9 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 .main-wrapper {
@@ -14,6 +14,14 @@ h1#hero-title {
   font-size: small;
 }
 
+.wrapper {
+  margin-bottom: 1rem;
+}
+
 .result {
-  width: 70%;
+  width: 60%;
+}
+
+#bmi {
+  font-size: x-large;
 }

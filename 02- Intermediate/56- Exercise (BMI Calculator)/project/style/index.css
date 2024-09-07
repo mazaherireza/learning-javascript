@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -30,6 +30,12 @@ main {
   margin-bottom: 1rem;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 label {
   font-weight: bold;
   font-size: small;
@@ -41,12 +47,7 @@ label {
 
 input[type="range"] {
   width: 100%;
-}
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  accent-color: #00008b;
 }
 
 #w-value,
@@ -59,12 +60,16 @@ input[type="range"] {
   width: 40%;
   margin: 2rem auto 0;
   background-color: black;
+  text-align: center;
   border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 #bmi {
   font-size: xx-large;
-  text-align: center;
 }
 
 #category {
@@ -73,7 +78,6 @@ input[type="range"] {
   font-weight: bold;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  text-align: center;
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
