@@ -69,7 +69,6 @@ img {
 }
 
 #position {
-  font-style: italic;
   margin-bottom: 0.75rem;
 }
 
@@ -79,7 +78,7 @@ img {
   justify-content: space-between;
 }
 
-#profile-engagement div {
+#profile-engagement > div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +87,7 @@ img {
 
 .num {
   font-size: large;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .engagement-title {
@@ -103,6 +102,10 @@ button {
   width: 6rem;
   border: none;
   border-radius: 2.5rem;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  -ms-border-radius: 2.5rem;
+  -o-border-radius: 2.5rem;
 }
 
 #btn-follow {
@@ -131,10 +134,14 @@ button {
 .theme {
   width: 1.2rem;
   height: 1.2rem;
-  border-radius: 50%;
   cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-.bordered {
-  border: 1px solid black;
+.shadowed {
+  box-shadow: 0.25rem 0.25rem 0.25rem silver;
 }

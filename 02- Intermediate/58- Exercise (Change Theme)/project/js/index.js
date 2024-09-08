@@ -11,9 +11,9 @@ const setTheme = (theme) => {
 const setStyle = (key) => {
   themeList.forEach((theme) => {
     if (theme.getAttribute("data-id") === key) {
-      theme.classList.add("bordered");
+      theme.classList.add("shadowed");
     } else {
-      theme.classList.remove("bordered");
+      theme.classList.remove("shadowed");
     }
   });
 };
