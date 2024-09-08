@@ -70,11 +70,12 @@ input[type="range"] {
 
 #bmi {
   font-size: xx-large;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 #category {
   font-size: small;
-  font-style: italic;
   font-weight: bold;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;

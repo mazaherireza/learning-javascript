@@ -42,7 +42,7 @@ const getCategory = (BMI) => {
   }
 };
 
-const calculateMBI = () => {
+const calculateBMI = () => {
   const weightValue = weight.value;
   wValue.innerHTML = `${weightValue} Kg`;
 
@@ -56,8 +56,8 @@ const calculateMBI = () => {
 };
 
 window.addEventListener("load", () => {
-  calculateMBI();
+  calculateBMI();
 });
 
-weight.addEventListener("input", calculateMBI);
-height.addEventListener("input", calculateMBI);
+weight.addEventListener("input", calculateBMI);
+height.addEventListener("input", calculateBMI);
