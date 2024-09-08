@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 1rem;
 }
 
@@ -24,6 +24,10 @@ pre#text {
   background-color: silver;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .row {
@@ -34,13 +38,17 @@ pre#text {
 }
 
 .key {
-  border-radius: 0.25rem;
   font-weight: bold;
   background-color: black;
   color: white;
   max-height: 3rem;
   text-align: center;
   line-height: 3rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .multi-key {
@@ -82,14 +90,23 @@ pre#text {
 }
 
 .animate {
-  animation: change 0.25s;
+  animation: change 0.25s linear;
+  -webkit-animation: change 0.25s linear;
 }
 
 @keyframes change {
   from {
     transform: scale(1.1);
-  }
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
   to {
     transform: scale(1);
-  }
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 }
