@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -34,7 +34,7 @@ main {
 #book-author-error {
   margin-top: 0;
   visibility: hidden;
-  color: red;
+  color: var(--red-400);
   font-size: small;
 }
 
@@ -43,25 +43,43 @@ input[type="text"] {
   width: 100%;
   background-color: white;
   color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   padding: 0.5rem 0.25rem;
-  border-radius: 0.25rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 ::placeholder {
   color: var(--primary-color);
 }
 
+input[type="text"]:focus {
+  border: 2px solid var(--primary-color);
+  outline: none;
+}
+
 button {
   min-width: 5rem;
   border: none;
-  border-radius: 0.25rem;
   padding: 0.5rem 0.75rem;
   background-color: var(--primary-color);
   color: white;
   opacity: 0.5;
-  transition: opacity 1s;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  transition: opacity 1s linear;
+  -webkit-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -ms-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
 }
 
 button:hover {
@@ -74,8 +92,7 @@ button:hover {
 }
 
 h5 {
-  margin-top: 2rem;
-  font-style: italic;
+  margin-top: 1.5rem;
   color: var(--primary-color);
 }
 
@@ -84,6 +101,10 @@ table {
   width: 100%;
   border: 1px solid var(--primary-color);
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 thead tr th {
