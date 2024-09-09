@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -37,31 +37,42 @@ h4 {
   column-gap: 1rem;
   background: #800080 linear-gradient(to top right, #800080, #f6edf6);
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .time {
   width: 4rem;
   height: 4rem;
-  border-radius: 0.5rem;
   background-color: white;
   text-align: center;
   line-height: 4rem;
   font-size: xx-large;
   font-weight: bolder;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 
 .delimeter div {
   width: 0.5rem;
   height: 0.5rem;
-  border-radius: 50%;
   margin-bottom: 0.25rem;
   background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 #date {
   margin-top: 1rem;
   font-weight: bold;
   font-size: small;
-  font-style: italic;
   text-align: center;
 }

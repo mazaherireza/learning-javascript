@@ -1,3 +1,5 @@
+import { MONTHS, WEEK_DAY } from "./constants.js";
+
 const $ = document;
 
 const hour = $.querySelector(".hour");
@@ -24,31 +26,6 @@ const setTimer = () => {
     second.innerHTML = s < 10 ? prependLeadingZero(s) : s;
   }, 1_000);
 };
-
-const MONTHS = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-const WEEK_DAY = [
-  "Sunday",
-  "Monday",
-  "Tuseday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
 
 const populateDate = () => {
   const now = new Date();

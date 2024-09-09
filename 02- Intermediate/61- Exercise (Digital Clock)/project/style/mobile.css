@@ -1,9 +1,9 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 #wrapper-clock {
@@ -15,7 +15,11 @@ h1#hero-title {
 .time {
   width: 3rem;
   height: 3rem;
-  border-radius: 0.25rem;
   line-height: 3rem;
   font-size: x-large;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
