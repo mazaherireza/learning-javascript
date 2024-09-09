@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -44,9 +44,17 @@ main {
   font-size: small;
   margin-bottom: 0.5rem;
   border: 1px solid black;
-  border-radius: 0.25rem;
   padding: 0.5rem 1rem;
-  transition: background-color 1s;
+  transition: background-color 1s linear;
+  -webkit-transition: background-color 1s linear;
+  -moz-transition: background-color 1s linear;
+  -ms-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .card:hover {
@@ -64,8 +72,12 @@ button {
   width: 2rem;
   height: 2rem;
   font-weight: bold;
-  border-radius: 0.25rem;
   border: none;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .active {

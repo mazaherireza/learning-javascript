@@ -1,26 +1,4 @@
-const userList = [
-  { id: "USR_10001", firstName: "Reza", lastName: "Mazaheri" },
-  { id: "USR_10002", firstName: "Yousef", lastName: "Amini" },
-  { id: "USR_10003", firstName: "Hossein", lastName: "Kalaei" },
-  { id: "USR_10004", firstName: "Ahmad Reza", lastName: "Azizan" },
-  { id: "USR_10005", firstName: "Mastan", lastName: "Shabkhosh" },
-  { id: "USR_10006", firstName: "Mozhdeh", lastName: "Shadmand Hamedani" },
-  { id: "USR_10007", firstName: "Anahita", lastName: "Karkhaneh" },
-  { id: "USR_10008", firstName: "Sanaz", lastName: "Sadeghi" },
-  { id: "USR_10009", firstName: "Fargol", lastName: "Mazaheri" },
-  { id: "USR_10010", firstName: "Sima", lastName: "Shafaei" },
-  { id: "USR_10011", firstName: "Sara", lastName: "Shafaei" },
-  { id: "USR_10012", firstName: "Mahsa", lastName: "Shafaei" },
-  { id: "USR_10013", firstName: "Mir Hossein", lastName: "Dezfoulian" },
-  { id: "USR_10014", firstName: "Hassan", lastName: "Khotanlou" },
-  { id: "USR_10015", firstName: "Mahlagha", lastName: "Afrasiabi" },
-  { id: "USR_10016", firstName: "Siavash", lastName: "Akhash" },
-  { id: "USR_10017", firstName: "Erfan", lastName: "Andesta" },
-  { id: "USR_10018", firstName: "Amir", lastName: "Kheiri" },
-  { id: "USR_10019", firstName: "Tomik", lastName: "Hacoupians" },
-  { id: "USR_10020", firstName: "Mani", lastName: "Khodabakhshian" },
-  { id: "USR_10021", firstName: "Ashraf", lastName: "Sarkhosh" },
-];
+import { userList } from "./userList.js";
 
 const PER_PAGE = 5;
 let currentPage = 1;

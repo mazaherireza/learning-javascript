@@ -1,9 +1,9 @@
 h1#hero-title {
-  font-size: larger;
+  font-size: large;
 }
 
 #playground-title {
-  font-size: large;
+  font-size: medium;
 }
 
 .wrapper {
@@ -21,4 +21,6 @@ h1#hero-title {
 
 .pagination .btn {
   font-size: x-small;
+  width: 1.5rem;
+  height: 1.5rem;
 }
