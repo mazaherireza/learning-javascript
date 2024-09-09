@@ -21,7 +21,7 @@
       media="screen and (max-width: 425px)"
       href="./style/mobile.css"
     />
-    <script src="./js/index.js" defer></script>
+    <script type="module" src="./js/index.js" defer></script>
   </head>
 
   <body>
@@ -33,13 +33,13 @@
       <h2 id="playground-title">Playground</h2>
 
       <div class="main-wrapper">
-        <div class="wrapper" >
+        <div class="wrapper">
           <div class="input-wrapper">
             <label for="num">
               Num of Quotes (between <span id="min"></span> and
               <span id="max"></span>)
             </label>
-            <input type="number" name="num" autofocus />
+            <input type="number" name="num" id="num" autofocus />
           </div>
           <button id="btn">Show</button>
         </div>
