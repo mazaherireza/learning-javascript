@@ -1,5 +1,5 @@
 :root {
-  --primary: #00008b; /* Dark Blue*/
+  --primary: #00008b;
   --red-400: #dc143c;
 }
 
@@ -10,6 +10,7 @@
   margin: 0;
 }
 
-button, i.fa {
+button,
+i.fa {
   cursor: pointer;
 }
