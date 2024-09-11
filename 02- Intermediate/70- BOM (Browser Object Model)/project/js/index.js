@@ -1,2 +1,2 @@
-const heroTitle = window.document.querySelector("#hero-title")
-window.console.log(heroTitle)
+const heroTitle = window.document.querySelector("#hero-title");
+window.console.log(heroTitle);
