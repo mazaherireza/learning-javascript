@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -43,9 +43,17 @@ main {
   row-gap: 0.5rem;
   align-items: center;
   border: 2px solid transparent;
-  border-radius: 0.25rem;
   padding: 0.5rem;
-  transition: border 1s;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  transition: border 1s linear;
+  -webkit-transition: border 1s linear;
+  -moz-transition: border 1s linear;
+  -ms-transition: border 1s linear;
+  -o-transition: border 1s linear;
 }
 
 .product-card:hover {
@@ -84,6 +92,10 @@ main {
   padding: 0.25rem 0.5rem;
   border: none;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 .product-card button {
@@ -119,6 +131,10 @@ tr td {
   width: 4rem;
   height: 4rem;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 i.fa {

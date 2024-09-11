@@ -1,30 +1,16 @@
-const products = [
-  {
-    id: "PRT_1001",
-    title: "Creme 75ml",
-    img: "Creme_75ml.webp",
-    price: 4,
-    max: 2,
-  },
-  {
-    id: "PRT_1002",
-    title: "Body Lotion",
-    img: "Body_Lotion.webp",
-    price: 14,
-    max: 4,
-  },
-];
+import { products } from "./products.js";
 
 const $ = document;
 const productList = $.querySelector(".product-list");
+const table = $.querySelector("table");
 const tbody = $.querySelector("tbody");
 const totalWrapper = $.querySelector(".total-wrapper");
 const totalPrice = $.querySelector("#total-price");
 
-cart = [];
+const cart = [];
+table.style.visibility = "hidden";
 
 const calculateTotal = () => {
-  totalPrice.innerHTML = "";
   totalPrice.innerHTML = `$${cart
     .map((order) => order.totalPrice)
     .reduce((accumulator, currentValue) => accumulator + currentValue, 0)}`;
@@ -32,17 +18,22 @@ const calculateTotal = () => {
 
 const deleteOrder = (orderIndex) => {
   const product = findProduct(orderIndex);
-  product.querySelector("button").removeAttribute("disabled");
+  const btn = product.querySelector("button");
+  if (btn.hasAttribute("disabled")) btn.removeAttribute("disabled");
   const DELETE_COUNT = 1;
   cart.splice(orderIndex, DELETE_COUNT);
-  if (!cart.length) totalWrapper.style.visibility = "hidden";
-  renderCart();
-  calculateTotal();
+  if (!cart.length) {
+    table.style.visibility = "hidden";
+    totalWrapper.style.visibility = "hidden";
+  } else {
+    renderCart();
+    calculateTotal();
+  }
 };
 
 const findProduct = (orderIndex) => {
   const orderTitle = cart[orderIndex].title;
-  for (child of productList.children) {
+  for (let child of productList.children) {
     if (child.querySelector("div").innerHTML == orderTitle) {
       return child;
     }
@@ -53,7 +44,8 @@ const decrease = (order, orderIndex) => {
   order.quantity--;
   order.totalPrice -= order.price;
   const product = findProduct(orderIndex);
-  product.querySelector("button").removeAttribute("disabled");
+  const btn = product.querySelector("button");
+  if (btn.hasAttribute("disabled")) btn.removeAttribute("disabled");
   if (order.quantity == 0) {
     deleteOrder(orderIndex);
   }
@@ -140,8 +132,9 @@ const renderProducts = () => {
 };
 
 const renderCart = () => {
+  table.style.visibility = "visible";
   tbody.innerHTML = "";
-  const fragment = $.createDocumentFragment()
+  const fragment = $.createDocumentFragment();
   cart.forEach((order) => {
     const tr = $.createElement("tr");
 
@@ -168,8 +161,7 @@ const renderCart = () => {
     const minus = $.createElement("i");
     minus.className = "fa fa-minus fa-lg";
     minus.addEventListener("click", (_) => {
-      if (order.quantity == 1) minus.style.visibility = "hidden";
-      plus.style.visibility = "visible";
+      if (plus.style.visibility == "hidden") plus.style.visibility = "visible";
       decreaseQuantity(order);
     });
 
@@ -202,12 +194,11 @@ const renderCart = () => {
 
     icon.append(minus, trash, plus);
     tr.append(imageContainer, title, price, quantity, totalPrice, icon);
-    fragment.append(tr)
+    fragment.append(tr);
   });
   tbody.append(fragment);
 };
 
 window.addEventListener("load", () => {
   renderProducts();
-  renderCart();
 });
