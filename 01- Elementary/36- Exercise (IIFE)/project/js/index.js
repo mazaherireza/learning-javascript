@@ -20,7 +20,7 @@ const employee = employees.find(
   (employee) => employee._id === "EMP_1001"
 );
 
-// IIFE (Immediately Invoked Function Expressions)
+// IIFE (Immediately Invoked Function Expression)
 // A soon as function is created it invokes itself doesn’t need to invoke explicitly.
 
 (() => {
