@@ -1,0 +1,7 @@
+The join() method, returns an array as a string.
+... does not change the original array.
+Any separator can be specified. The default is comma.
+
+The split() method splits a string into an array of substrings.
+... returns the new array.
+If (" ") is used as separator, the string is split between words.
