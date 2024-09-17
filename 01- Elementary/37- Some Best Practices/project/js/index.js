@@ -2,7 +2,7 @@
 
 const medicines = ["Minoxidle", "Dimact", "Famotidine"];
 
-// You should use foreach instead for for, while or do while (for arrays).
+// You should use forEach instead of for, while or do while (for arrays).
 medicines.forEach((medicine, index) => {
   console.log(`${index + 1}: ${medicine}`);
 });
