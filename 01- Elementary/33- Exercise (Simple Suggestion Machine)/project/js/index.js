@@ -21,10 +21,10 @@ const moreThanOne = (arr) => arr.length > 1;
 
 if (region) {
   console.log(
-    `spectacular Places of ${destination} ${
-      moreThanOne(region.spectacularPlaces) ? `are` : `is`
+    `Spectacular place(s) of ${destination} ${
+      moreThanOne(region.spectacularPlaces) ? `are: ` : `is: `
     }`,
-    region.spectacularPlaces
+    region.spectacularPlaces.join(", ")
   );
 } else {
   console.log("Not found!");
