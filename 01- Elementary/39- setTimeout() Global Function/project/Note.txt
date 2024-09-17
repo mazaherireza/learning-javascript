@@ -1,0 +1,4 @@
+To execute the function only once, use the setTimeout() method instead.
+... is executed only once.
+
+clearTimeout()
