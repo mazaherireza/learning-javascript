@@ -11,7 +11,7 @@ x = 0;
 // Post-Increment
 y = x++; // <-------------------------- 1.Assignment 2.Increment
 
-print(); // x is 1 and y is 1.
+print(); // x is 1 and y is 0.
 
 x = 0;
 // Pre-Increment
