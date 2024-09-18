@@ -1,5 +1,6 @@
 const $ = document;
 
+const loginForm = $.querySelector(".login-form");
 const form = $.querySelector("form");
 const usernameInput = $.querySelector("#username");
 const passwordInput = $.querySelector("#password");
@@ -39,23 +40,26 @@ const submitHandler = (event) => {
   event.preventDefault();
   setUsername();
   setPassword();
-  const modal = $.querySelector(".modal");
-  modal.style.visibility = "visible";
+  const notification = $.querySelector(".notification");
+  notification.style.visibility = "visible";
   if (isValid("U", username) && isValid("P", password)) {
-    manipulateNode(modal, "Welcome", {
+    manipulateNode(notification, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
     });
+    loginForm.style.visibility = "hidden";
   } else {
-    manipulateNode(modal, "Invalid!, Try Again.", {
+    manipulateNode(notification, "Invalid!, Try Again.", {
       background: "linear-gradient(to left, #7C0A02, #fd5c63)",
     });
   }
 
   setTimeout(() => {
-    modal.style.visibility = "hidden";
+    notification.style.visibility = "hidden";
   }, 5_000);
 
   form.reset();
+  changeVisibility(usernameValidationInfo, "hidden");
+  changeVisibility(passwordValidationInfo, "hidden");
 };
 
 const usernameValidationInfo = $.querySelector("#username-validation");
