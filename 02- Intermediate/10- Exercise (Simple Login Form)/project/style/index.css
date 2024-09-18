@@ -56,7 +56,7 @@ input[type="submit"] {
   margin-top: 0.5rem;
 }
 
-.modal {
+.notification {
   width: 12rem;
   padding: 0.25rem;
   visibility: hidden;
