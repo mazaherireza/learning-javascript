@@ -15,6 +15,3 @@ The textContent property returns:
 The text content of the element and all descendaces,
 with spacing and CSS hidden text, 
 but without tags. <----------------------- ***
-
-
-
