@@ -5,3 +5,7 @@ h1#hero-title {
 #playground-title {
   font-size: medium;
 }
+
+.container {
+  width: 80%;
+}

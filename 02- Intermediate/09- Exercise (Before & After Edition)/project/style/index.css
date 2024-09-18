@@ -20,6 +20,9 @@ main {
 }
 
 .container {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -28,8 +31,7 @@ main {
 }
 
 .container img {
-  width: 15rem;
-  height: auto;
+  width: 100%;
   border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
@@ -39,10 +41,10 @@ main {
 
 button {
   width: 5rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
   margin-top: 0.5rem;
-  border-radius: 0.25rem;
   font-weight: bold;
+  border-radius: 0.25rem;
   -webkit-border-radius: 0.25rem;
   -moz-border-radius: 0.25rem;
   -ms-border-radius: 0.25rem;
