@@ -30,6 +30,10 @@ input {
   width: 60%;
   padding: 0.25rem;
   border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
 }
 
 button {
