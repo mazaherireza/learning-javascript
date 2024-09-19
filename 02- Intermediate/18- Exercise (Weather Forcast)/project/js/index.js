@@ -1,36 +1,12 @@
-const information = {
-  tehran: {
-    name: "Tehran",
-    weather: "Sunny",
-    temp: "25",
-  },
-  paris: {
-    name: "Paris",
-    weather: "Sunny",
-    temp: "22",
-  },
-  bern: {
-    name: "Bern",
-    weather: "Cloudy",
-    temp: "21",
-  },
-  rome: {
-    name: "Rome",
-    weather: "Sunny",
-    temp: "22",
-  },
-};
+import { information } from "./information.js";
 
 const $ = document;
 
 const searchBtn = $.querySelector("#search-btn");
 const playground = $.querySelector("#playground");
 
-const resetNodes = (city, weather, temp, message) => {
-  city.innerHTML = "";
-  weather.innerHTML = "";
-  temp.innerHTML = "";
-  message.innerHTML = "";
+const resetNodes = (...args) => {
+  for (let arg of args) arg.innerHTML = "";
 };
 
 searchBtn.addEventListener("click", () => {
