@@ -16,6 +16,12 @@ main {
 }
 
 #playground #playground-title {
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
   margin-bottom: 1rem;
 }
 
@@ -30,5 +36,5 @@ button {
 }
 
 .highlight {
-  color: #3fff00;
+  background-color: #3fff00;
 }
