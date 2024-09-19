@@ -55,7 +55,7 @@ input[type="submit"] {
   margin-top: 0.5rem;
 }
 
-.modal {
+.notification {
   width: 12rem;
   padding: 0.25rem;
   visibility: hidden;
@@ -70,6 +70,7 @@ input[type="submit"] {
 #password-validation {
   visibility: hidden;
   font-size: small;
+  font-weight: bold;
   margin-bottom: 0.75rem;
   color: #7c0a02;
 }

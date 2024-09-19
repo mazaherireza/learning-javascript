@@ -30,7 +30,7 @@
 
     <section id="playground">
       <h2 id="playground-title">Playground</h2>
-      <div class="modal"></div>
+      <div class="notification"></div>
       <div class="login-form">
         <form method="post" onsubmit="submitHandler(event)">
           <input
@@ -39,8 +39,8 @@
             name="username"
             id="username"
             autofocus
-            onfocus="usernameFocus()"
-            onblur="usernameKeyLog()"
+            onfocus="usernameFocused()"
+            onblur="usernameBlured()"
           />
           <span id="username-validation"
             >Must contain at least 10 characters.</span
@@ -51,8 +51,8 @@
             placeholder="Password"
             name="password"
             id="password"
-            onfocus="passwordFocus()"
-            onblur="passwordKeyLog()"
+            onfocus="passwordFocused()"
+            onblur="passwordBlured()"
           />
           <span id="password-validation"
             >Must contain at least 8 characters.</span
