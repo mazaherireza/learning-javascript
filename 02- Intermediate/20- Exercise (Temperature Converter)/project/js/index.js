@@ -43,9 +43,9 @@ calculateBtn.addEventListener("click", () => {
     temp.value = "";
   } else {
     if (temp.placeholder == "Celsius") {
-      response = `${(temp.value * (9 / 5) + 32).toFixed(2)} °F`;
+      response = `${(+temp.value * (9 / 5) + 32).toFixed(2)} °F`;
     } else {
-      response = `${((temp.value - 32) * (5 / 9)).toFixed(2)} °C`;
+      response = `${((+temp.value - 32) * (5 / 9)).toFixed(2)} °C`;
     }
   }
   result.innerHTML = response;
