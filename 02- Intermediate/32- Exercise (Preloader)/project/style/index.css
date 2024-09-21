@@ -35,7 +35,8 @@ main {
   padding: 2rem;
   border: 1px solid black;
   border-radius: 0.5rem;
-  animation: shake 0.5s infinite;
+  animation: shake 0.5s infinite linear;
+  -webkit-animation: shake 0.5s infinite linear;
 }
 
 @keyframes shake {
