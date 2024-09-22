@@ -42,7 +42,6 @@ main {
 .modal {
   width: 40%;
   background-color: silver;
-  border-radius: 0.5rem;
   padding: 1rem 0.75rem;
   font-weight: bold;
   position: relative;
@@ -51,16 +50,17 @@ main {
   transform: translate(-50%, -50%);
   display: flex;
   flex-flow: column wrap;
-  animation: falling 1s;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  animation: falling 0.5s linear;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  -webkit-animation: falling 1s;
+  -webkit-animation: falling 0.5s linear;
 }
 
 @keyframes falling {
