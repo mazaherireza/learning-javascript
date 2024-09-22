@@ -4,6 +4,7 @@ Window: beforeunload event
 The document is still visible and the event is still cancelable at this point.
 
 The main use case for this event is to trigger a browser-generated confirmation dialog 
-that asks users to confirm if they really want to leave the page when they try to close 
-or reload it, or navigate somewhere else.
+that asks users to confirm if they really want to leave the page when they try to close or reload it, or navigate somewhere else.
 
+be about to do something:
+to be going to do something very soon
