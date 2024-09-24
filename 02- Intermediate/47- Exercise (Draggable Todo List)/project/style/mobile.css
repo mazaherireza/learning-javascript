@@ -20,14 +20,14 @@ h1#hero-title {
 }
 
 .wrapper {
-  width: 100%;
-  flex-flow: column wrap;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
 }
 
 #todo-box,
 #doing-box,
 #done-box {
-  min-height: 8rem;
+  min-height: 12rem;
 }
 
 .todo-card {

@@ -33,11 +33,9 @@ main {
 .wrapper {
   margin-top: 1rem;
   width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1rem;
 }
 
 #todo-box,
