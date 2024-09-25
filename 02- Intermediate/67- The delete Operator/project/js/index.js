@@ -2,7 +2,7 @@ const user = {
   firstName: "Reza",
   lastName: "Mazaheri",
   position: "Frontend Developer",
-  nationality: "Iran",
+  nationality: "Iranian",
 };
 
 console.log("Before Delete");
