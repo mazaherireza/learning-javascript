@@ -18,3 +18,7 @@ h1#hero-title {
   left: 0.5rem;
   bottom: 0.25rem;
 }
+
+.wrapper .name {
+  font-size: small;
+}
