@@ -1,5 +1,5 @@
 const $ = document;
-const divisions = document.querySelectorAll(".division");
+const divisions = $.querySelectorAll(".division");
 
 divisions.forEach((division) => {
   division.addEventListener(
