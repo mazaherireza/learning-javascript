@@ -1,6 +1,7 @@
 Asynchronous JavaScript
 -----------------------
 "I will finish later!"
+
 Functions running in parallel with other functions are called asynchronous. <------------ ***
 ... JavaScript setTimeout()
 
@@ -11,7 +12,3 @@ you can always pass a whole function instead.
 
 With asynchronous programming, JavaScript programs can start long-running tasks, 
 and continue running other tasks in parallel.
-
-
-
-
