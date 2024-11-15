@@ -4,12 +4,11 @@ const $ = document;
 const keySearch = $.querySelector("#key-search");
 const form = $.querySelector("form");
 
-const isMatched = (key, word, limit) => {
-  return word.substring(0, limit).toUpperCase() == key.toUpperCase();
-};
+const isMatched = (key, word, limit) =>
+  key.toUpperCase() == word.substring(0, limit).toUpperCase();
 
 const populateMatchedText = (word, limit) => {
-  return `<b>${word.substring(0, limit)}</b>${word.substring(limit)}`;
+  return `<strong>${word.substring(0, limit)}</strong>${word.substring(limit)}`;
 };
 
 const clearSuggestionList = () => {
@@ -70,7 +69,8 @@ let currentFocus = -1;
 keySearch.addEventListener("keydown", (event) => {
   const suggestionWrapper = $.querySelector(".suggestion-wrapper");
   if (suggestionWrapper) {
-    if (event.code == "ArrowDown") {
+    const { code } = event;
+    if (code == "ArrowDown") {
       currentFocus++;
       const len = suggestionWrapper.children.length;
       if (currentFocus < len) {
@@ -78,14 +78,14 @@ keySearch.addEventListener("keydown", (event) => {
         highlightSuggestion(currentFocus, suggestionWrapper);
       }
     }
-    if (event.code == "ArrowUp") {
+    if (code == "ArrowUp") {
       currentFocus--;
       if (currentFocus >= 0) {
         removeHighlight(suggestionWrapper);
         highlightSuggestion(currentFocus, suggestionWrapper);
       }
     }
-    if (event.code == "Enter") {
+    if (code == "Enter") {
       event.preventDefault();
       if (currentFocus > -1)
         // Simulate click ...
