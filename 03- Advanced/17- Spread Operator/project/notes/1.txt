@@ -1,11 +1,9 @@
 Spread Operator
 ---------------
-The JavaScript spread operator (...) allows us to quickly copy all or part of 
-an existing array or object into another array or object.
+The JavaScript spread operator (...) allows us to quickly copy all or 
+part of an existing array or object into another array or object.
 
 ... is often used in combination with destructuring.
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 const [one, two, ...rest] = numbers;
-
-... the property that did match, was overwritten by the last object that was passed.
