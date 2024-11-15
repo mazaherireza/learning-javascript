@@ -1,6 +1,6 @@
 const $ = document;
 
-const note = $.querySelector("#note");
+const note = $.querySelector("input#note");
 const colors = $.querySelectorAll(".color");
 const selectedColor = $.querySelector("#selected-color");
 
