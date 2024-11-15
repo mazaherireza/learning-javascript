@@ -1,5 +1,5 @@
 const $ = document;
-const divisions = document.querySelectorAll(".division");
+const divisions = $.querySelectorAll(".division");
 
 divisions.forEach((division) => {
   division.addEventListener("click", (event) => {
@@ -8,3 +8,5 @@ divisions.forEach((division) => {
     console.log(division.getAttribute("class").split(" ")[1]);
   });
 });
+
+// The stopPropagation() method, prevents propagation of the same event from being called.
