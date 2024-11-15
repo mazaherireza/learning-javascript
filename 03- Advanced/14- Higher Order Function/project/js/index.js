@@ -1,14 +1,14 @@
 const me = {
   firstName: "Reza",
   lastName: "Mazaheri",
-  job: "Frontend Developer",
+  occupation: "Frontend Developer",
   age: 35,
   favourites: [
     "Learning European languages",
     "Books",
     "Body building",
     "Photography",
-    "Carpet",
+    "Carpets",
     "❤",
   ],
 };
