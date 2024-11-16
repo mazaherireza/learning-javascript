@@ -7,11 +7,6 @@
 */
 
 function sum() {
-  /* 
-    If a function is called with too many arguments (more than declared),
-    these arguments can be reached using the "arguments" object. 
-  */
-
   console.log(arguments);
   console.log(typeof arguments); // object
   // arguments.forEach((element) => { <---------- Uncaught TypeError: arguments.forEach is not a function
