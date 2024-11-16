@@ -1,6 +1,8 @@
 /* 
-  const sum = (first, second) => { <-------- (Arrow Function)
+  const sum = (first, second) => {
     console.log(arguments); <--------- Uncaught ReferenceError: arguments is not defined
+    
+    The arguments object is a local variable available within all non-arrow functions. 
   };
 */
 

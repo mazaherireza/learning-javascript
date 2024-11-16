@@ -10,7 +10,7 @@ number of arguments as an array:
 
 function sum(...args) {
   let sum = 0
-  for (let arg in args)
+  for (let arg of args)
     sum += arg
 }
 ...
