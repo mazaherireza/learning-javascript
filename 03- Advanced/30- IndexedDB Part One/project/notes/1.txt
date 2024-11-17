@@ -1,6 +1,5 @@
 IndexedDB
 ---------
-
 IndexedDB is a transactional DB system that stores structured information within a browser.
 
 ... it is necessary to open a connection, then specify the DB Schema that it will have, 
