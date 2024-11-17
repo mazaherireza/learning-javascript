@@ -19,5 +19,3 @@ const { firstName = "Anonymous", id: userID } = users.find(
   (user) => user.id === "FR_1001"
 );
 console.log(firstName);
-
-// const { keyCode, target: input } = event
