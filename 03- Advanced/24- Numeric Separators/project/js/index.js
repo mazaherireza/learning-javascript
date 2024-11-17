@@ -2,6 +2,7 @@
 
 const x = 8_000;
 console.log(x);
+console.log(parseInt(x)); // 8000
 
 const y = "8_000_000";
 console.log(parseInt(y)); // 8
