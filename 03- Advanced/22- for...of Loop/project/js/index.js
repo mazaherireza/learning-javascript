@@ -5,8 +5,8 @@ const evenNumbers = [100, 102, 104, 106, 108];
 for (let num of evenNumbers) console.log(num);
 
 const fullName = "Reza Mazaheri";
-for (let char of fullName) console.log(char);
-for (let char in fullName) console.log(char); // for in <------------ *
+for (const char of fullName) console.log(char);
+for (const char in fullName) console.log(char); // for in <------------ *
 
 function sum() {
   let sum = 0;
