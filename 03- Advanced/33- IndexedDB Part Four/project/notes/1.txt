@@ -1,6 +1,5 @@
 Delete data from IndexedDB
 __________________________
-
 The steps to remove objects from an Object Store are similar to when they are added.
 ... using the delete(key) method, and finally the events are handled as required.
 
@@ -75,7 +74,6 @@ function printStudents() {
 
 Update data from IndexedDB
 __________________________
-
 To update an existing data in the DB, the put(item, key) method is used.
 However, if the requested data doesn't exist, this method creates it and inserts it in the Object Store.
 This method returns the key of the stored object as a result.
