@@ -1,9 +1,9 @@
 // Function Rest Parameter
 // ... allows a function to treat an indefinite number of arguments as an array.
 
-const sum = (...rest) => {
+const sum = (...restParameter) => {
   let sum = 0;
-  rest.forEach((num) => (sum += num));
+  restParameter.forEach((num) => (sum += num));
   return sum;
 };
 
