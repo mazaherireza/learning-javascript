@@ -11,7 +11,7 @@ const employee = {
   occupation: "Frontend Developer",
 };
 
-for (let key in employee) console.log(employee[key]);
+for (const key in employee) console.log(employee[key]);
 
 console.table(employee);
 
@@ -41,5 +41,5 @@ const scores = {
   Listening: 7.5,
 };
 
-for (let [topic, score] of Object.entries(scores))
+for (const [topic, score] of Object.entries(scores))
   console.log(`${topic}: ${score}`);
