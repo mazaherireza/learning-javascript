@@ -1,4 +1,4 @@
-import { developers } from "./developrs.js";
+import { developers } from "./developers.js";
 
 const INDEX = 0;
 const developer = developers[INDEX];
@@ -25,7 +25,8 @@ const person = {
   },
 };
 
-person.fullName.call(developer, developer.city, developer.country);
+const { city, country } = developer;
+person.fullName.call(developer, city, country);
 person.displayPosition.bind(developer)();
 
 /*
