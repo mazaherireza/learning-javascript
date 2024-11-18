@@ -22,4 +22,4 @@ const user = {
 
 console.log(user?.family ?? "Not Available");
 
-// It is not possible to  combine both && and || directly with ??. ... providing ()
+// It is not possible to combine both && and || directly with ??. ... providing ()
