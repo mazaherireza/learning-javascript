@@ -18,7 +18,7 @@ console.log(size); // 6
 // Sets are objects.
 
 // entries() Returns an Iterator with the [value, value] pairs from a Set.
-console.log(vowels.entries()); // SetIterator { "a" => "a", ... }
+console.log(vowels.entries()); // SetIterator { "a" => "a", ... 5 => 5}
 
 console.log(vowels.keys()); // SetIterator
 
