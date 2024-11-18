@@ -22,4 +22,5 @@ import { developers } from "./developers.js";
 
 const INDEX = 0;
 const developer = developers[INDEX];
-console.log(person.fullName.call(developer, developer.city, developer.country));
+const { city, country } = developer;
+console.log(person.fullName.call(developer, city, country));
