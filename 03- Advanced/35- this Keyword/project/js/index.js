@@ -1,8 +1,3 @@
-/* 
-In JS, the "this" keyword refers to an object. 
-Which object, depends on how "this" is being invoked.
-*/
-
 /*
 The "this" keyword refers to different objects depending on how it is used.
 In an object method, "this" refers to the object.
@@ -86,5 +81,5 @@ const book2 = {
 };
 
 const anotherLog = book2.log;
-anotherLog(); // undefined <---------- Why?
+anotherLog(); // undefined <---------- Why? (this references to Window)
 book2.log(); // Dr. Jekyll and Mr. Hyde

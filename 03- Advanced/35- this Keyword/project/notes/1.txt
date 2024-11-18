@@ -1,6 +1,5 @@
 "this" binding in JavaScript [Incomplete]
 ____________________________
-
 ... there are 5 modes for "this" binding.
 
 1. default binding 
@@ -40,12 +39,12 @@ The only thing that matters is the function call, and the function call is plain
 Implicit Binding
 ----------------
 Implicit binding is what we get when we call a function with a . before it.
-.... has a higher precedence that default binding.
+.... has a higher precedence than default binding.
 
 When using implicit binding, the value of "this" is the object just before the FINAL . before the function.
 ... the object at the very right of the function call before the actual function.
 
-"use strict" <---------------- With or without this directive, the result will be the same.
+"use strict" <---------------- With or without this directive, the result will be the same. **
 const book = {
     title: "Dr. Jekyll and Mr. Hyde",
     author: "Robert Louis Stevenson",
@@ -142,16 +141,16 @@ We can use new when calling functions like so: new something().
 1. It creates a new empty object.
 2. It makes "this" be the new object.
 3. It makes something.prototype be the prototype of the object.
-4- It Implicitly returns "this" if nothing else is returned form the function.
+4. It Implicitly returns "this" if nothing else is returned from the function.
 
 ... when we call a function with "new" before it, 
-we create a brand new empty object which is assigned to "this" inside the function. <-------- **
+we create a new empty object which is assigned to "this" inside the function. <-------- **
 
 function display() {
     console.log(this);
 }
 
-new display(); <-------------- Outputs and empty object,(display {}) ***
+new display(); <-------------- Outputs an empty object,(display {}) ***
 
 ... creates a new object and binds it to "this". <------------------------- ****
 

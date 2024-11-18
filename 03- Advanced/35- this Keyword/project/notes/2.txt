@@ -1,6 +1,5 @@
 Lexical and Dynamic Scopes 
 __________________________
-
 Scope refers to the area where an item (such as a function or variable)
 is visible and accessible to other code.
 
@@ -50,7 +49,7 @@ What function is currently being run and what functions are called from within t
 
 Dynamic scope does NOT concern itself with how and where functions and scopes are declared,
 but rather where they are CALLED FROM.
- ... the scope chain is based on call-stack, ... <------------- ***
+... the scope chain is based on call-stack, ... <------------- ***
 
 If JS had dynamic scope, when salutation() is executed, 
 theoretically the code below would result "Salut Reza" as the output.
