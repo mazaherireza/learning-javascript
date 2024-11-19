@@ -1,7 +1,7 @@
 /*
   Validation with "set" trap
   --------------------------
-  Let’s say we want an array exclusively for numbers. 
+  Let's say we want an array exclusively for numbers. 
   If a value of another type is added, there should be an error.
 
   The set trap triggers when a property is writtern. 
