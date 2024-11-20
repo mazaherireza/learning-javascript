@@ -34,10 +34,10 @@ const populateSuggestionList = (key, parent) => {
       matchedElement.className = "matched-element";
       const matchedText = populateMatchedText(suggestion, LIMIT);
       matchedElement.innerHTML = matchedText;
-      fragment.append(matchedElement);
       matchedElement.addEventListener("click", () => {
         fillKeySearch(suggestion);
       });
+      fragment.append(matchedElement);
     }
   });
   parent.append(fragment);
