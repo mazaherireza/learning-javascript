@@ -59,7 +59,7 @@ once the request is made, the success event is handled where the result of the r
 ..., to move to the next stored data, we use the cursor's continue() method.
 
 function printStudents() {
-  const request = DB.transaction("Students").objectStore("Students").openCursor()
+  const request = db.transaction("Students").objectStore("Students").openCursor()
 
   request.onsuccess = () => {
     const cursor = request.result
