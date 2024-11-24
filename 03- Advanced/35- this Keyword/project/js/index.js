@@ -7,7 +7,6 @@ Alone, "this" refers to the global object.
 In a function, "this" refers to the global object.
 In a function, in strict mode, "this" is undefined. <----------- **
 
-In an event, "this" refers to the element that received the event.
 */
 
 // "this" is not a variable. It is a keyword. <------------- **
