@@ -17,3 +17,4 @@ function sum() {
 }
 
 console.log(sum(...evenNumbers));
+console.log(sum(evenNumbers)); // 0100,102,104,106,108
