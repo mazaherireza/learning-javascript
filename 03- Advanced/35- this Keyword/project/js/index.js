@@ -23,8 +23,8 @@ const person = {
 // "this" refers to the person object, because fullName is a method of the person object.
 
 /* 
-When used alone, this refers to the global object. 
-Because this is running in the global scope. <-------------------- ***
+When used alone, "this" refers to the global object. 
+Because "this" is running in the global scope. <-------------------- ***
 In strict mode, when used alone, "this" also refers to the global object. 
 */
 console.log(this); // Window
@@ -44,7 +44,7 @@ So, when used in a function, in strict mode, "this" is undefined.
 // In HTML event handlers, "this" refers to the HTML element that received the event.
 
 /* The handling of "this" is different in arrow functions compared to regular functions.
-  ... with arrow functions there are NO binding of this. <--------------- ***
+  ... with arrow functions there are NO binding of "this". <--------------- ***
   
   In regular functions the "this" keyword represented the object that CALLED the function,
   which could be the window, the document, a button or whatever.
