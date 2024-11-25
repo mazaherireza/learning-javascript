@@ -26,8 +26,10 @@ const person = {
 };
 
 const { city, country } = developer;
-person.fullName.call(developer, city, country);
-person.displayPosition.bind(developer)();
+person.fullName(); // Yousef Amini from Tehran, Iran.
+person.fullName.call(developer, city, country); // Yousef Amini from Tehran, Iran.
+person.displayPosition(); // undefined Developer
+person.displayPosition.bind(developer)(); // Fullstack Developer
 
 /*
 const person = {
