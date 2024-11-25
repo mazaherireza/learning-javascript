@@ -8,7 +8,7 @@
 // Passing an array to new Set()
 const vowels = new Set(["a", "e", "i", "o", "u"]);
 vowels.add(5);
-console.log(vowels); // Set(6) {"a", "e", "i", "o", "u', 5}
+console.log(vowels); // Set(6) {"a", "e", "i", "o", "u", 5}
 
 const size = vowels.size;
 console.log(size); // 6
