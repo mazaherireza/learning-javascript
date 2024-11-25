@@ -44,7 +44,7 @@ const user = {
   lastName: "Mazaheri",
   email: "rezamazaheri.email@gmail.com",
 };
-console.table(user);
+
 const MappedUser = new Map(Object.entries(user)); // <--------------------- *
 console.log(MappedUser);
 
