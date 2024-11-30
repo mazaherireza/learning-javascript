@@ -10,7 +10,7 @@ const addBook = (title, author) => {
         title,
         author,
       });
-      reject("Rjected!")
+      reject("Rjected!");
     }, 5_000);
   });
 };
