@@ -28,21 +28,21 @@ template.innerHTML = `
     ${populateTemplate().innerHTML}
     <div>
       <h4>Follow Us</h4>
-      <ul>
+      <ul class="social-networks">
         <li>
-            <i class="fa fa-facebook fa-2x"></i>
+            <i class="fa fa-facebook fa-x"></i>
         </li>
 
         <li>
-            <i class="fa fa-instagram fa-2x"></i>
+            <i class="fa fa-instagram fa-x"></i>
         </li>
 
         <li>
-            <i class="fa fa-linkedin fa-2x"></i>
+            <i class="fa fa-linkedin fa-x"></i>
         </li>
 
         <li>
-            <i class="fa fa-twitter fa-2x"></i>
+            <i class="fa fa-twitter fa-x"></i>
         </li>  
       </ul>
     </div>
