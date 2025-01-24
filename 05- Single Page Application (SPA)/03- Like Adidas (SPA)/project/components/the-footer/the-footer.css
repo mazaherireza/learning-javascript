@@ -4,6 +4,8 @@ footer {
   padding: 2rem 4rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  background-color: black;
+  color: white;
 }
 
 footer div h4 {
@@ -11,9 +13,16 @@ footer div h4 {
   margin-bottom: 0.5rem;
 }
 
+footer div ul.social-networks {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
 footer div ul li {
   font-size: small;
   font-weight: bold;
+  margin-bottom: 0.25rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -31,7 +40,7 @@ footer div ul li {
     text-align: center;
   }
 
-  i.fa {
-    font-size: medium;
+  footer div ul.social-networks {
+    justify-content: center;
   }
 }
