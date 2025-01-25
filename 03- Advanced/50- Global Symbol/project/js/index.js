@@ -21,7 +21,7 @@ console.log(id); // Symbol(id)
 user[id] = "USR_1001AEH";
 user.age = 35;
 // user.id = "USR_1001AEH"; <----------------- *********** Wrong *************
-console.log(user); // { ..., Symbol(id): "USR_1001_FR" }
+console.log(user); // { ..., age: 35, Symbol(id): "USR_1001AEH" }
 console.log(user.id); // undefined <----------------- ************ Wrong **************
 console.log(user[id]); // USR_1001AEH, We can access the data using the symbol as the key.
 
