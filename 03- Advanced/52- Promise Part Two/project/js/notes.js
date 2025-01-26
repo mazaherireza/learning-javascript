@@ -64,7 +64,7 @@ new Promise(function (resolve, reject) {
 
 /*
   ... promisified loadScript, ...
-  ... there are no signs of "pryramid of doom".
+  ... there are no signs of "pyramid of doom".
   ... the nested function has access to the outer scope. <--------------- **
 */
 
