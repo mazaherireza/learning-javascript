@@ -5,7 +5,7 @@ that enables transfer of hypermedia documents on the Web,
 typically between a browser and a server so that humans can read them. 
 
 As part of a URI, the "http" within "http://example.com/" is called a "scheme". 
-Resources using the "http" schema are typically transported over unencrypted connections using the HTTP protocol.
+Resources using the "http" scheme are typically transported over unencrypted connections using the HTTP protocol.
 
 The "https" scheme (as in "https://developer.mozilla.org") 
 indicates that a resource is transported using the HTTP protocol, 
