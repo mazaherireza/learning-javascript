@@ -44,7 +44,7 @@ const professor = new Professor(
     "Data Structure",
     "Computer Architecture",
     "Image Processing",
-    "Artificial Engineering",
+    "Artificial Intelligence",
   ]
 );
 
