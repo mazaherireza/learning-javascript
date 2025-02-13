@@ -6,6 +6,6 @@ const result = books.reduce((prev, current) => {
 });
 console.log(result.grade);
 
-const compare = ({ grade: gradeA }, { grade: gradB }) => gradB - gradeA;
+const compare = ({ grade: gradeA }, { grade: gradeB }) => gradeB - gradeA;
 const sorted = books.sort(compare);
 console.log(sorted);
