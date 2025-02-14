@@ -20,3 +20,8 @@ XML is Extensible
 ... note.xml
 ...
 With XML, data can be available to all kinds of "reading machines" like people, computers, ...
+
+** Extensible:
+(IT) 
+Used to describe a computer program or language that can be changed by the people
+who use it in order to make it suitable for what they need to do.
