@@ -1,4 +1,4 @@
-import { getCookie, setCookie } from "./utils/cookie.js";
+import { doesExist, setCookie } from "./utils/cookie.js";
 import { BASE_URL } from "./utils/constants.js";
 
 const $ = document;
@@ -15,7 +15,7 @@ form.onsubmit = (event) => {
 };
 
 window.onload = () => {
-  if (getCookie("username")) {
+  if (doesExist("username")) {
     location.href = `${BASE_URL}/index.html`;
   }
 };
