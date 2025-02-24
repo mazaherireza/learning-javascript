@@ -48,7 +48,7 @@ const promisePrime = promise.then(success, failure);
   When that's the case, any callbacks added to promisePrime 
   get queued behind the promise returned by either success or failure.
 
-  ...  if your error handling code is the same for all steps, you can attach it to the end of the chain:
+  ... if your error handling code is the same for all steps, you can attach it to the end of the chain:
 */
 
 doSomething()
@@ -121,7 +121,6 @@ doSomething()
 /*
   Therefore, as a rule of thumb, whenever your operation encounters a promise, 
   return it and defer its handling to the next then handler. <------------------- **
-  (defer: to postpone)
 */
 
 doSomething()
