@@ -10,5 +10,5 @@ The start and end parameters specifies the part of the string to extract.
 start <---------- Required 
 end (up to, but not including)
 
-
-The substring method extracts characters from start to end (exclusive).
+The substring method extracts characters, between two indices, from a string and returns the substring.
+... extracts characters from start to end (exclusive).

@@ -6,9 +6,11 @@ console.log(
     motto.indexOf("JavaScript") + "JavaScript".length
   )
 );
+
 console.log("Motto is: ", motto); // slice doesn't mutate original text.
 
 console.log(
   motto.substring(motto.indexOf("VueJS"), "I Love JavaScript & VueJS".length)
 );
+
 console.log("Motto is: ", motto); // substring doesn't mutate original text.
