@@ -5,5 +5,5 @@ console.log(Math.trunc(13.8)); // 13
 
 console.log(Math.abs(-1)); // 1
 
-// Math.random()  [0. 1)
+// Math.random()  [0, 1)
 console.log(Math.random());
