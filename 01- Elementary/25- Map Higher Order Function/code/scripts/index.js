@@ -13,5 +13,9 @@ const availableBooks = [
   },
 ];
 
-const pricesWithCurrency = availableBooks.map((book) => `€${book.price}`);
-console.log(pricesWithCurrency);
+console.log(
+  availableBooks.map((book) => ({
+    ...book,
+    price: `€${book.price}`,
+  }))
+);
