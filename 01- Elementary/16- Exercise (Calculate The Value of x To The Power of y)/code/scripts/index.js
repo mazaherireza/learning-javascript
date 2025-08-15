@@ -1,4 +1,4 @@
-const first = parseInt(prompt("Enter The First Number: ", 1)); // parseInt deletes leading zeros. (021 converts to 21)
+const first = parseInt(prompt("Enter The First Number: ", 1));
 const second = parseInt(prompt("Enter The Second Number: ", 0));
 
 let multiplication = 1;
