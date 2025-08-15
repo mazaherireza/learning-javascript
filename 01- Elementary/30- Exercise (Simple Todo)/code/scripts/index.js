@@ -32,7 +32,9 @@ const getUsersInput = () => {
 
 const addTodo = () => {
   const title = getUsersInput();
+
   const len = todos.length;
+
   todos.push({
     id: `${PREFIX}${len + 1}`,
     title,
@@ -42,15 +44,24 @@ const addTodo = () => {
 
 const removeTodo = () => {
   const title = getUsersInput();
+
   const index = todos.findIndex((todo) => todo.title === title);
+
   const DELETE_COUNT = 1;
-  if (index !== -1) todos.splice(index, DELETE_COUNT);
+
+  if (index !== -1) {
+    todos.splice(index, DELETE_COUNT);
+  }
 };
 
-const doATodo = () => {
+const doTodo = () => {
   const title = getUsersInput();
+
   const index = todos.findIndex((todo) => todo.title === title);
-  if (index !== -1) todos[index].isDone = true;
+
+  if (index !== -1) {
+    todos[index].isDone = true;
+  }
 };
 
 switch (option) {
@@ -61,7 +72,7 @@ switch (option) {
     removeTodo();
     break;
   case "3":
-    doATodo();
+    doTodo();
     break;
   default:
     alert("Invalid Number!");
