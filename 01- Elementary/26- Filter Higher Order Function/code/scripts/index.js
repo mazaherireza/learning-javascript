@@ -1,8 +1,8 @@
 const availableBooks = [
   {
     id: "BK_1001_0",
-    title: "1984",
-    author: "George Orwell",
+    title: "Reunion",
+    author: "Fred Uhlman",
     price: 13,
   },
   {
@@ -29,8 +29,8 @@ const prependWithCurrency = (arr, symbol = "€") => {
   });
 };
 
-// Authors' Novels
-const authorsNovels = (authorName = "Gabriel García Márquez") => {
-  return availableBooks.filter((book) => book.author == authorName);
-};
+// Authors' Novel(s)
+const authorsNovels = (authorName = "Gabriel García Márquez") =>
+  availableBooks.filter((book) => book.author == authorName);
+
 console.log(prependWithCurrency(authorsNovels("George Orwell"), "$"));
