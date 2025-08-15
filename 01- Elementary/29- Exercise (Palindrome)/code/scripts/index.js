@@ -1,4 +1,5 @@
 const text = "LevEl".toLowerCase();
+
 const reversedText = text.split("").reverse().join("");
 
 if (text == reversedText) {
