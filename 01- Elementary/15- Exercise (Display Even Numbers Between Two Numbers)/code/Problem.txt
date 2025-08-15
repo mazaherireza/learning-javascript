@@ -2,4 +2,3 @@ Display even numbers between two numbers
 
 Input: 7,12
 Output: 8, 10
-

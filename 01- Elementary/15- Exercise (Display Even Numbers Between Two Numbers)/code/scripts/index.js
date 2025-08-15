@@ -1,4 +1,4 @@
-let first = parseInt(prompt("Enter The First Number: ", 0)); // parseInt deletes leading zeros. (021 converts to 21)
+let first = parseInt(prompt("Enter The First Number: ", 0));
 let second = parseInt(prompt("Enter The Second Number: ", 0));
 
 if (first == second) {
@@ -9,6 +9,10 @@ if (first == second) {
     first = second;
     second = temp;
   }
+
   let counter = (first + 1) % 2 == 0 ? first + 1 : first + 2;
-  for (counter; counter < second; counter += 2) console.log(counter);
+
+  for (counter; counter < second; counter += 2) {
+    console.log(counter);
+  }
 }
