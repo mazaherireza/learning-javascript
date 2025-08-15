@@ -19,6 +19,7 @@ const selectedBook = prompt(
 );
 
 let temp = {};
+
 const found = availableBooks.some((book) => {
   if (book.title == selectedBook) {
     const { id, ...other } = book;
@@ -38,6 +39,7 @@ const calculateSum = () => {
 };
 
 const ID = "CRD_1001_";
+
 if (found) {
   const index = cart.length;
   cart.push({
