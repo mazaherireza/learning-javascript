@@ -1,7 +1,7 @@
 const num1 = +prompt("Enter first number: ");
 const num2 = +prompt("Enter second number: ");
 
-const operator = prompt(`Enter the operator (Enter number not sign):
+const operator = prompt(`Enter the operator (Enter number, not sign):
   1. +
   2. -
   3. *
