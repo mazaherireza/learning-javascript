@@ -1,23 +1,24 @@
 const users = [
   {
-    _id: "AERY_1001",
+    _id: "USR_1001",
     username: "rezamazaheri",
     firstName: "Reza",
     lastName: "Mazaheri",
-    age: 35,
+    age: 36,
   },
   {
-    _id: "AYRY_8008",
+    _id: "USR_8008",
     username: "yo3ef_am",
     firstName: "Yousef",
     lastName: "Amini",
-    age: 25,
+    age: 26,
   },
 ];
 
 const username = prompt("Enter Your Username: ", "Username");
 
 let hasLoggedIn = false;
+
 for (const user of users) {
   if (user.username == username) {
     console.log("Welcome");
@@ -25,4 +26,7 @@ for (const user of users) {
     break;
   }
 }
-if (!hasLoggedIn) console.log("Sign Up");
+
+if (!hasLoggedIn) {
+  console.log("Sign Up");
+}
