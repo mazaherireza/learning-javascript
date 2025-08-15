@@ -13,7 +13,14 @@ const regions = [
   },
 ];
 
-const destination = prompt("Enter your destination: ");
+let destination = prompt("Enter your destination: ");
+
+const capitalize = () => {
+  destination =
+    destination.charAt(0).toUpperCase() + destination.slice(1).toLowerCase();
+};
+
+capitalize();
 
 const region = regions.find((region) => region.title === destination);
 
