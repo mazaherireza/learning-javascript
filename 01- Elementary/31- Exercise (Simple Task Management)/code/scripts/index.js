@@ -97,16 +97,19 @@ const TASK_ID = "TSW_";
 
 const emp = employees.find((employee) => employee.id === IDOftasksOwner);
 if (emp) {
-  // Is found
   const { tasks: employeesTasks, ...rest } = emp;
+
   const TASK_POSTFIX = tasks.length + 1000;
+
   const flag = getFlag(emp.position);
+
   const task = {
     id: `${TASK_ID}${TASK_POSTFIX}`,
     // Task's Title
     title: tasksTitle,
     flag,
   };
+
   emp.tasks.push({ ...task });
   tasks.push({ ...task, owner: { ...rest } });
 } else {
