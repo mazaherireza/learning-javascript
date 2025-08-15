@@ -24,10 +24,13 @@ const cart = [
 const POSTAGE_FEE = 12;
 
 let postage = 0;
+
 const POSTAGE_THRESHOLD = 10;
+
 const isSubjectedToPostage = cart.filter(
-  (product) => product.price > POSTAGE_THRESHOLD
+  (product) => product.price >= POSTAGE_THRESHOLD
 );
+
 console.log(
   "Products that are subjected to postage:",
   isSubjectedToPostage.map((product) => product.name)
