@@ -20,4 +20,5 @@ if (true) {
 if (1001) {
   var insideAnotherIf = "Inside";
 }
+
 console.log(`insideAnotherIf is: ${insideAnotherIf}`);
