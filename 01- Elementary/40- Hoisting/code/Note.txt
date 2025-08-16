@@ -1,0 +1,21 @@
+Hoisting is a concept or behavior in JavaScript where the declaration of a function, variable, 
+or class goes to the top of the scope they were defined in.
+
+Before the interpreter executes the whole code, it first hoists ...
+
+... hoisting does not occur on function expressions.
+
+... var, let and const ... these variable declarations would be hoisted, but behave differently. 
+
+With variables declared var, the variable declaration is hoisted but with a default value of undefined. 
+
+...
+Although variables declared with let are also hoisted, they have a different behavior.
+... variables declared with let do not have a default value when hoisted. 
+
+The variables are hoisted to the top of the scope they are declared in, 
+but are not accessible because they have not been initialized. 
+This concept is also referred to as the "Temporal Dead Zone".
+
+Just like let, variables declared with const are hoisted, but not accessible.
+... they remain inaccessible until the variables are initialized with a value.
