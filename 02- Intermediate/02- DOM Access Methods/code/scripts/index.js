@@ -1,11 +1,10 @@
 const $ = document;
 
 const main = $.getElementsByTagName("main");
+console.log(main);
 
 const listItems = $.getElementsByClassName("list-item");
 console.log(`listItems are: ${listItems}`); // listItems are: [object HTMLCollection]
-
-console.log(main);
 console.log(listItems);
 console.log(listItems[0]);
 
