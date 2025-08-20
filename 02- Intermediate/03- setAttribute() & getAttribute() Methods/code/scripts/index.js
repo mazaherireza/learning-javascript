@@ -10,8 +10,8 @@ firstItem.setAttribute("id", "first");
 
 const attributes = firstItem.getAttributeNames();
 const ATTRIBUTE = "id";
-const index = attributes.findIndex((attribute) => attribute == ATTRIBUTE);
+const index = attributes.findIndex((attribute) => attribute === ATTRIBUTE);
 if (index >= 0) {
   const value = firstItem.getAttribute("id");
-  console.log("value of id is: ", value);
+  console.log("Value of id is: ", value);
 }
