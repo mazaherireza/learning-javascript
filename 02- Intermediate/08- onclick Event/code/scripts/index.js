@@ -1,6 +1,6 @@
 const $ = document;
 
-const hidden = () => {
+const hideButton = () => {
   const btn = $.querySelector("button");
   btn.style.visibility = "hidden";
 };
@@ -16,5 +16,5 @@ const applyStyle = () => {
 
 const handler = () => {
   applyStyle();
-  hidden();
+  hideButton();
 };
