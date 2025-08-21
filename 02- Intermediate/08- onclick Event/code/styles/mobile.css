@@ -1,0 +1,19 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    button {
+      inline-size: 5rem;
+
+      font-size: x-small;
+    }
+  }
+}
