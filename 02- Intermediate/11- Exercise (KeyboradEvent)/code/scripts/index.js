@@ -38,6 +38,7 @@ const submitHandler = (event) => {
   setInputs();
   const notification = $.querySelector(".notification");
   notification.style.visibility = "visible";
+  
   if (isValid("U", username) && isValid("P", password)) {
     manipulateNode(notification, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
@@ -46,7 +47,7 @@ const submitHandler = (event) => {
     loginForm.style.visibility = "hidden";
   } else {
     manipulateNode(notification, "Invalid!, Try Again.", {
-      background: "linear-gradient(to left, #7C0A02, #fd5c63)",
+      background: "linear-gradient(to left, #fff, #fd5c63)",
     });
   }
 

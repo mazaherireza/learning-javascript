@@ -1,0 +1,69 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  section {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .notification {
+      inline-size: 12rem;
+
+      padding: 0.25rem;
+
+      visibility: hidden;
+
+      border-radius: 0.25rem;
+    }
+
+    .login-form {
+      inline-size: 50%;
+
+      margin: 1rem auto;
+      padding: 2rem;
+
+      border: 1px solid black;
+      border-radius: 0.25rem;
+
+      box-shadow: 0.5rem 0.5rem 0.25rem silver;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input[type="text"],
+        input[type="password"] {
+          display: block;
+
+          inline-size: 100%;
+
+          padding: 0.5rem;
+        }
+
+        input[type="submit"] {
+          padding: 0.25rem;
+
+          cursor: pointer;
+        }
+
+        .info {
+          font-size: small;
+        }
+      }
+    }
+  }
+}
