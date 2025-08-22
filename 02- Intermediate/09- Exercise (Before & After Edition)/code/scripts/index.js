@@ -9,10 +9,10 @@ const toggleContents = () => {
   hasBeenEdited = !hasBeenEdited;
 
   if (hasBeenEdited) {
-    img.setAttribute("src", "./assets/images/After.png");
+    img.setAttribute("src", "/assets/images/after.png");
     btn.innerHTML = "Before";
   } else {
-    img.setAttribute("src", "./assets/images/Before.png");
+    img.setAttribute("src", "/assets/images/before.png");
     btn.innerHTML = "After";
   }
 };

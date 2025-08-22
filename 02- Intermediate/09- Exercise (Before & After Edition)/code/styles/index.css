@@ -1,0 +1,73 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  section {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .container {
+      inline-size: 40%;
+
+      margin-inline: auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      position: relative;
+
+      img {
+        inline-size: 100%;
+
+        border-radius: 0.25rem;
+      }
+
+      button {
+        inline-size: 5rem;
+
+        padding: 0.5rem;
+        margin-block-start: 0.5rem;
+
+        font-weight: bold;
+
+        border: none;
+        border-radius: 0.25rem;
+      }
+
+      > div {
+        position: absolute;
+        inset-block-end: 4rem;
+
+        background-color: black;
+        color: white;
+
+        padding: 0.5rem;
+
+        border-radius: 0.25rem;
+
+        #city {
+          letter-spacing: 0.2rem;
+        }
+
+        #photographer {
+          font-size: x-small;
+        }
+      }
+    }
+  }
+}
