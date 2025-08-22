@@ -4,9 +4,11 @@ const loginForm = $.querySelector(".login-form");
 const form = $.querySelector("form");
 const usernameInput = $.querySelector("#username");
 const passwordInput = $.querySelector("#password");
+const notification = $.querySelector(".notification");
 
 const isValid = (identifier, input) => {
   const LIMITATION = identifier == "U" ? 10 : 8;
+
   return input.length >= LIMITATION;
 };
 
@@ -26,8 +28,11 @@ const GENERAL_STYLE = {
 
 const manipulateNode = (node, message = "MESSAGE", style = {}) => {
   node.innerHTML = message;
+
   const augmentedStyle = { ...style, ...GENERAL_STYLE };
+
   const keys = Object.keys(augmentedStyle);
+
   keys.forEach((key) => {
     node.style[key] = augmentedStyle[key];
   });
@@ -35,17 +40,21 @@ const manipulateNode = (node, message = "MESSAGE", style = {}) => {
 
 const submitHandler = (event) => {
   event.preventDefault();
+
   setInputs();
-  const notification = $.querySelector(".notification");
+
   notification.style.visibility = "visible";
+
   if (isValid("U", username) && isValid("P", password)) {
     manipulateNode(notification, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
     });
+
     loginForm.style.visibility = "hidden";
+
   } else {
     manipulateNode(notification, "Invalid!, Try Again.", {
-      background: "linear-gradient(to left, #7C0A02, #fd5c63)",
+      background: "linear-gradient(to left, #fff, #fd5c63)",
     });
   }
 
