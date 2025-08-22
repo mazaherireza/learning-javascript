@@ -30,7 +30,9 @@ const GENERAL_STYLE = {
 const manipulateNode = (node, message = "MESSAGE", style = {}) => {
   node.innerHTML = message;
   const augmentedStyle = { ...style, ...GENERAL_STYLE };
+
   const keys = Object.keys(augmentedStyle);
+
   keys.forEach((key) => {
     node.style[key] = augmentedStyle[key];
   });
@@ -38,18 +40,22 @@ const manipulateNode = (node, message = "MESSAGE", style = {}) => {
 
 const submitHandler = (event) => {
   event.preventDefault();
+
   setUsername();
   setPassword();
+
   const notification = $.querySelector(".notification");
   notification.style.visibility = "visible";
+
   if (isValid("U", username) && isValid("P", password)) {
     manipulateNode(notification, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
     });
+
     loginForm.style.visibility = "hidden";
   } else {
     manipulateNode(notification, "Invalid!, Try Again.", {
-      background: "linear-gradient(to left, #7C0A02, #fd5c63)",
+      background: "linear-gradient(to left, #fff, #fd5c63)",
     });
   }
 
@@ -71,6 +77,7 @@ const changeVisibility = (node, value = "visible") => {
 
 const usernameKeyLog = () => {
   setUsername();
+
   if (isValid("U", username)) {
     changeVisibility(usernameValidationInfo, "hidden");
   } else {
@@ -80,6 +87,7 @@ const usernameKeyLog = () => {
 
 const passwordKeyLog = () => {
   setPassword();
+  
   if (isValid("P", password)) {
     changeVisibility(passwordValidationInfo, "hidden");
   } else {

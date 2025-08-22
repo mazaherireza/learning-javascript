@@ -1,0 +1,21 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+
+      margin-block-end: 1rem;
+    }
+
+    .login-form {
+      inline-size: 80%;
+
+      padding: 1.5rem;
+    }
+  }
+}
