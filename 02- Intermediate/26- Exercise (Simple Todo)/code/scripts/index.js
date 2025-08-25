@@ -30,14 +30,19 @@ const addNewTodo = (value) => {
 
 newTodo.addEventListener("keydown", (event) => {
   warning.style.visibility = "hidden";
+
   if (event.key == "Enter") {
     // event.target.value or newTodo.value
     const trimmedValue = newTodo.value.trim();
     if (trimmedValue) {
       addNewTodo(trimmedValue);
       newTodo.value = "";
-      if (todos.hasChildNodes()) todos.classList.add("bordered");
-      else todos.classList.remove("bordered");
+
+      if (todos.hasChildNodes()) {
+        todos.classList.add("bordered");
+      } else {
+        todos.classList.remove("bordered");
+      }
     } else {
       warning.innerHTML = "Todo must have at least one character.";
       warning.style.visibility = "visible";
