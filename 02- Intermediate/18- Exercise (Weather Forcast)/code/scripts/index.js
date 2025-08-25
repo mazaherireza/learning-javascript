@@ -3,31 +3,35 @@ import { information } from "./information.js";
 const $ = document;
 
 const searchBtn = $.querySelector("#search-btn");
-const playground = $.querySelector("#playground");
 
 const resetNodes = (...args) => {
-  for (let arg of args) arg.innerHTML = "";
+  for (const arg of args) {
+    arg.innerHTML = "";
+  }
 };
 
 searchBtn.addEventListener("click", () => {
   const keySearch = $.querySelector("#key-search").value.toLowerCase();
+
   const selectedCity = information[keySearch];
+
   const city = $.querySelector("#city");
   const weather = $.querySelector("#weather");
   const temp = $.querySelector("#temp");
   const message = $.querySelector("#message");
 
   resetNodes(city, weather, temp, message);
+
   if (selectedCity) {
-    const { name, weather: W, temp: T } = selectedCity;
-    city.innerHTML = name;
-    weather.innerHTML = `Weather: ${W}`;
-    temp.innerHTML = `Temperature: ${T} °C`;
+    city.innerHTML = selectedCity.name;
+    weather.innerHTML = `Weather: ${selectedCity.weather}`;
+    temp.innerHTML = `Temperature: ${selectedCity.temp} °C`;
   } else {
     message.innerHTML = "Not Found!";
   }
 });
 
+const playground = $.querySelector("#playground");
 // IIFE
 (() => {
   const colors = [

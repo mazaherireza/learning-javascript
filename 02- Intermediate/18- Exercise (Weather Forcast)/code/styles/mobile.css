@@ -1,0 +1,29 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  > section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    h3 {
+      font-size: small;
+    }
+
+    .wrapper {
+      input {
+        inline-size: 70%;
+      }
+
+      #search-btn {
+        font-size: x-small;
+
+        padding: 0.25rem;
+      }
+    }
+  }
+}
