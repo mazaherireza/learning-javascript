@@ -1,0 +1,55 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  > section {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        inline-size: 60%;
+
+        padding: 0.25rem;
+
+        border-radius: 0.25rem;
+      }
+
+      button {
+        inline-size: 6rem;
+
+        padding: 0.25rem;
+
+        font-weight: bold;
+      }
+    }
+
+    ul {
+      margin-top: 1rem;
+      font-weight: bold;
+
+      li {
+        font-size: small;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

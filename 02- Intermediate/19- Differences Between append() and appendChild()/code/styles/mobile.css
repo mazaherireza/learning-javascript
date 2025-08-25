@@ -1,0 +1,23 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  > section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .wrapper {
+      flex-flow: column wrap;
+      align-items: flex-start;
+      row-gap: 1rem;
+
+      input {
+        inline-size: 80%;
+      }
+    }
+  }
+}
