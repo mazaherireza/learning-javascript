@@ -40,7 +40,7 @@ calculateBtn.addEventListener("click", () => {
   resetStyle();
   
   let response = "";
-  if (isNaN(temp.value) || temp.value.trim() == "") {
+  if (Number.isNaN(temp.value) || temp.value.trim() == "") {
     response = "Invalid Input!, Enter a Number.";
     result.style.color = "red";
     result.style.fontSize = "small";

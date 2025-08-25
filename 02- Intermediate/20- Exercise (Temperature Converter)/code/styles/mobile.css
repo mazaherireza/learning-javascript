@@ -15,15 +15,15 @@ body {
     }
 
     input {
-      inline-size: 80%;
+      inline-size: 100%;
     }
 
     .wrapper {
-      inline-size: 90%;
+      inline-size: 100%;
 
       .buttons {
         button {
-          font-size: x-small;
+          font-size: small;
         }
       }
     }
