@@ -1,0 +1,28 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    h4 {
+      font-size: small;
+      text-align: center;
+    }
+
+    .wrapper {
+      flex-flow: column wrap;
+      row-gap: 0.75rem;
+
+      select {
+        inline-size: 75%;
+        padding: 0.25rem 0.125rem;
+      }
+    }
+  }
+}
