@@ -1,0 +1,31 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    #wrapper {
+      #inner {
+        h3 {
+          font-size: small;
+        }
+      }
+
+      .properties {
+        grid-template-columns: repeat(2, 1fr);
+
+        .property {
+          &:last-child {
+            grid-column: initial;
+          }
+        }
+      }
+    }
+  }
+}
