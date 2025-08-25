@@ -18,6 +18,7 @@ const pasteHandler = (event) => {
 };
 
 const ACTIONS = ["copy", "cut", "paste"];
+
 ACTIONS.forEach((action) => {
   editor.addEventListener(action, (event) => {
     if (action == "copy") {
