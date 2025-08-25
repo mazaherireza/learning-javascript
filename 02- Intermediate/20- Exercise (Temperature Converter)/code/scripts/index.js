@@ -1,3 +1,5 @@
+import { Types } from "./type.js";
+
 const $ = document;
 
 const temp = $.querySelector("#temp");
@@ -15,14 +17,15 @@ const resetContent = () => {
 };
 
 convertBtn.addEventListener("click", () => {
-  if (temp.placeholder == "Celsius") {
-    temp.placeholder = "Fahrenheit";
+  if (temp.placeholder == Types.CELSIUS) {
+    temp.placeholder = Types.FAHRENHEIT;
     // temp.setAttribute('placeholder', 'Fahrenheit')
-    info.innerHTML = "Change Fahrenheit to Celsius";
+    info.innerHTML = `Change ${Types.FAHRENHEIT} to ${Types.CELSIUS}`;
   } else {
-    temp.placeholder = "Celsius";
-    info.innerHTML = "Change Celsius to Fahrenheit";
+    temp.placeholder = Types.CELSIUS;
+    info.innerHTML = `Change ${Types.CELSIUS} to ${Types.FAHRENHEIT}`;
   }
+
   resetContent();
 });
 
@@ -35,6 +38,7 @@ const resetStyle = () => {
 
 calculateBtn.addEventListener("click", () => {
   resetStyle();
+  
   let response = "";
   if (isNaN(temp.value) || temp.value.trim() == "") {
     response = "Invalid Input!, Enter a Number.";
@@ -42,12 +46,13 @@ calculateBtn.addEventListener("click", () => {
     result.style.fontSize = "small";
     temp.value = "";
   } else {
-    if (temp.placeholder == "Celsius") {
+    if (temp.placeholder == Types.CELSIUS) {
       response = `${(+temp.value * (9 / 5) + 32).toFixed(2)} °F`;
     } else {
       response = `${((+temp.value - 32) * (5 / 9)).toFixed(2)} °C`;
     }
   }
+
   result.innerHTML = response;
   result.style.visibility = "visible";
 });
