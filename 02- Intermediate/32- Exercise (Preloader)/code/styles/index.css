@@ -14,7 +14,7 @@ body {
     place-content: center;
   }
 
-  section {
+  > section {
     padding: 1rem;
 
     #playground-title {
@@ -30,7 +30,7 @@ body {
 
       background-color: silver;
 
-      p {
+      h4 {
         font-size: xx-large;
         font-weight: bold;
 
@@ -40,6 +40,39 @@ body {
         border-radius: 0.5rem;
 
         animation: shake 0.5s infinite linear;
+      }
+    }
+
+    #content {
+      h4 {
+        text-align: center;
+
+        margin-block-end: 1rem;
+      }
+
+      #tiles {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+          max-inline-size: 10rem;
+          max-block-size: 10rem;
+
+          border-radius: 0.25rem;
+
+          cursor: pointer;
+
+          transition: all 1s;
+
+          &:hover {
+            transform: translateY(-0.5rem);
+
+            box-shadow: 0.5rem 0.5rem 1rem silver;
+          }
+        }
       }
     }
   }
@@ -57,37 +90,5 @@ body {
   }
   100% {
     transform: translateY(-1rem);
-  }
-}
-
-#content {
-  h4 {
-    text-align: center;
-
-    margin-block-end: 1rem;
-  }
-
-  #tiles {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-
-    .img {
-      max-inline-size: 10rem;
-      max-block-size: 10rem;
-
-      border-radius: 0.25rem;
-
-      cursor: pointer;
-
-      transition: all 1s;
-
-      &:hover {
-        transform: translateY(-0.5rem);
-        box-shadow: 0.5rem 0.5rem 1rem silver;
-      }
-    }
   }
 }

@@ -1,16 +1,21 @@
 body {
-  grid-template-rows: repeat(3, 1fr);
-}
+  section {
+    #playground-title {
+      font-size: large;
+    }
 
-#playground-title {
-  font-size: large;
-}
+    #preloader {
+      h4 {
+        font-size: large;
 
-#preloader p {
-  font-size: large;
-  padding: 1rem;
-}
+        padding: 1rem;
+      }
 
-#tiles {
-  gap: 1rem;
+      #content {
+        #tiles {
+          gap: 1rem;
+        }
+      }
+    }
+  }
 }
