@@ -33,13 +33,19 @@ btn.addEventListener("click", () => {
   if (hasEvent) {
     message.innerHTML = "mousemove Event Is Removed.";
     img.removeEventListener(EVENT, mousemoveHandler);
+
     coordination.style.visibility = "hidden";
+
     btn.innerHTML = "Add Event";
   } else {
     message.innerHTML = "mousemove Event Is Added.";
+
     img.addEventListener(EVENT, mousemoveHandler);
+
     coordination.style.visibility = "visible";
+    
     btn.innerHTML = "Remove Event";
   }
+
   hasEvent = !hasEvent;
 });

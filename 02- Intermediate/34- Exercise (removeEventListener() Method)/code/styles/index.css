@@ -1,0 +1,62 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  section {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .wrapper {
+      margin-block-start: 1rem;
+
+      max-inline-size: 80vh;
+      max-inline-size: 80dvh;
+
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      gap: 1rem;
+
+      #message,
+      #coordination {
+        font-size: small;
+        font-weight: bold;
+      }
+
+      #img {
+        inline-size: 10rem;
+        block-size: 15rem;
+
+        border-radius: 0.25rem;
+      }
+
+      #coordination {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 2rem;
+      }
+
+      #btn {
+        font-weight: bold;
+
+        padding: 0.5rem;
+
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
