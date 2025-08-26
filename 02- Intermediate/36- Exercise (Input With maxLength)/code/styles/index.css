@@ -1,0 +1,58 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  section {
+    padding: 1rem;
+
+    form {
+      position: relative;
+
+      inline-size: 60%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      input {
+        inline-size: 100%;
+
+        padding: 0.5rem 2rem;
+
+        font-weight: bold;
+      }
+
+      span,
+      .fa {
+        position: absolute;
+
+        inline-size: 2rem;
+
+        text-align: center;
+
+        /* These elements don't react to pointer events. */
+        pointer-events: none;
+      }
+
+      fa {
+        inset-inline-start: 0;
+      }
+
+      span {
+        inset-inline-end: 0.25rem;
+
+        font-weight: bold;
+      }
+    }
+  }
+}
