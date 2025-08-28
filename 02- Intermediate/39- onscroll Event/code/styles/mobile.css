@@ -1,0 +1,25 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    h3 {
+      font-size: small;
+    }
+
+    #text {
+      inline-size: 80%;
+    }
+
+    .message {
+      font-size: small;
+    }
+  }
+}
