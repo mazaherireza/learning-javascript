@@ -1,0 +1,27 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    h3 {
+      font-size: small;
+    }
+
+    .main-wrapper {
+      width: 100%;
+
+      #notes {
+        .card {
+          font-size: small;
+        }
+      }
+    }
+  }
+}

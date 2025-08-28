@@ -17,6 +17,7 @@ const deleteNote = (event) => {
 
 const createNote = () => {
   const title = note.value.trim();
+
   if (title) {
     const div = $.createElement("div");
     const span = $.createElement("span");
@@ -28,6 +29,7 @@ const createNote = () => {
     icon.addEventListener("click", (event) => {
       deleteNote(event);
     });
+    
     div.appendChild(span);
     div.appendChild(icon);
 

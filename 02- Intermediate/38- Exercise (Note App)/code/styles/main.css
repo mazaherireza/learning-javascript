@@ -1,0 +1,14 @@
+*,
+*::before,
+*::after {
+  font-family: "Times New Roman", sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 0;
+}
+
+.fa {
+  cursor: pointer;
+}
