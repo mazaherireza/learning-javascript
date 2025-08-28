@@ -1,0 +1,93 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  section {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    #wrapper {
+      inline-size: 80%;
+      max-block-size: 20rem;
+
+      margin-inline: auto;
+
+      overflow: auto;
+
+      header {
+        position: sticky;
+        inset-block-start: 0;
+
+        background-color: black;
+
+        padding: 0.5rem 2rem;
+
+        nav {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .links {
+            display: flex;
+            flex-flow: row wrap;
+            gap: 1rem;
+
+            a {
+              font-weight: bold;
+              font-size: small;
+
+              color: white;
+            }
+          }
+        }
+
+        &.threshold {
+          background-color: white;
+        }
+      }
+
+      .content {
+        block-size: 20rem;
+
+        background-color: silver;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      footer {
+        padding: 0.5rem 2rem;
+
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        #info {
+          margin-block-end: 1rem;
+        }
+
+        .links {
+          a {
+            color: black;
+            font-size: small;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    #wrapper {
+      header {
+        nav {
+          flex-direction: column-reverse;
+
+          .links {
+            flex-flow: column;
+            align-items: center;
+            row-gap: 0.5rem;
+
+            a {
+              font-size: x-small;
+            }
+          }
+
+          .logo {
+            display: none;
+          }
+        }
+      }
+
+      .content {
+        img {
+          inline-size: 80%;
+          block-size: 40%;
+        }
+      }
+
+      footer {
+        #info {
+          h5 {
+            font-size: x-small;
+
+            text-align: center;
+          }
+        }
+
+        .links {
+          a {
+            font-size: x-small;
+          }
+        }
+      }
+    }
+  }
+}
