@@ -1,9 +1,10 @@
-const dateOfBirth = +prompt("Enter Your dateOfBirth: ", 1989);
+const yearOfBirth = +prompt("Enter Your year of birth: ", 1989);
 
-if (isNaN(dateOfBirth)) {
+if (isNaN(yearOfBirth)) {
   alert("Error!, (Invalid Input)");
 } else {
   const now = new Date();
-  let age = now.getFullYear() - dateOfBirth;
+  
+  const age = now.getFullYear() - yearOfBirth;
   alert(`You are ${age} year(s) old.`);
 }

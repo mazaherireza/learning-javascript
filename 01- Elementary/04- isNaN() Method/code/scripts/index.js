@@ -1,5 +1,5 @@
-let programmingLanguage = "JavaScript";
-let version = 12;
+const programmingLanguage = "JavaScript";
+const version = 12;
 
 console.log(`${programmingLanguage} ${version}`);
 

@@ -1,6 +1,6 @@
-let numberOfCourses = 18;
-let nameOfCourse = "Machine Learning";
-let isOnline = true;
+const numberOfCourses = 18;
+const nameOfCourse = "Machine Learning";
+const isOnline = true;
 
 console.log("Number of Courses is: ", numberOfCourses);
 console.log("Type of numberOfCourses is: ", typeof numberOfCourses);
