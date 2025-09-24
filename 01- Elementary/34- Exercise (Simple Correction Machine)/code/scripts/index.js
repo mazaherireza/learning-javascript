@@ -34,12 +34,15 @@ const questions = [
 
 // User's Score
 let usersScore = 0;
-// User's Answer (usersAnswer has apostrophe)
+// User's Answer
 let usersAnswer = "I don't know!";
 
 questions.forEach((question) => {
   usersAnswer = prompt(question.title);
-  if (usersAnswer === question.answer) usersScore += question.weight;
+
+  if (usersAnswer === question.answer) {
+    usersScore += question.weight;
+  }
 });
 
 console.log(`Your score is: ${usersScore}`);

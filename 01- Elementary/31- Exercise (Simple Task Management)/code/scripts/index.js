@@ -96,6 +96,7 @@ const EMPLOYEE_ID = "EMP_";
 const TASK_ID = "TSW_";
 
 const emp = employees.find((employee) => employee.id === IDOftasksOwner);
+
 if (emp) {
   const { tasks: employeesTasks, ...rest } = emp;
 

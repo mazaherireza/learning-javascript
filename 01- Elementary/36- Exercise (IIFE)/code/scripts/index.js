@@ -42,7 +42,7 @@ console.log(`iife is: ${iife}`);
 // https://www.freecodecamp.org/news/iife-in-javascript-what/
 
 /*
- This ensures that code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
+ This ensures that, code inside IIFE does not interfere with other code or be interfered by another code and so code is safe.
 
  One way to prevent the functions and variables from polluting the global object is to use immediately invoked function expressions.
 */

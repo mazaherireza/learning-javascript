@@ -9,7 +9,7 @@ const timer = setInterval(() => {
     second = 59;
   }
 
-  if (minute === 0 && second === 0) { 
+  if (minute === 0 && second === 0) {
     clearInterval(timer);
   }
 

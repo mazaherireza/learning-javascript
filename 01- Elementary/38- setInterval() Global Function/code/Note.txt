@@ -1,3 +1,2 @@
-The setInterval() method call a function at specified intervals.
+The setInterval() method, call a function at specified intervals.
 ... continues calling the function until clearInterval() is called, or the window is closed.
-
