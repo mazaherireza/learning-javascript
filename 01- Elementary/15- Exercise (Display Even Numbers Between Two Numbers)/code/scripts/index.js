@@ -1,7 +1,7 @@
 let first = parseInt(prompt("Enter The First Number: ", 0));
 let second = parseInt(prompt("Enter The Second Number: ", 0));
 
-if (first == second) {
+if (first === second) {
   console.log("Two numbers are the same.");
 } else {
   if (first > second) {

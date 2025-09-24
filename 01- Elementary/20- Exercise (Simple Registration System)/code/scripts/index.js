@@ -17,6 +17,7 @@ while (isNaN(age) || age.length > 3 || +age <= 0) {
   alert("Your Age Is Invalid.");
   age = prompt("Enter Your Age: ", 18);
 }
+
 const MIN = 3;
 const MAX = 15;
 

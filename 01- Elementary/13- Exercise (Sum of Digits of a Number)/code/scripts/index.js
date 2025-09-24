@@ -1,7 +1,7 @@
-let n = Number(prompt("Enter Number: ", 0));
+let n = Number(prompt("Enter a  Number: ", 0));
 let sum = 0;
 
-let digit = 0;
+let digit;
 while (n > 0) {
   digit = n % 10;
   sum += digit;

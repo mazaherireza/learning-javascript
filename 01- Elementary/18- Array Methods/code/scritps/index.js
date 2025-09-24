@@ -1,8 +1,9 @@
 const fruits = ["Apple", "Cucumber", "Banana", "Kiwi"];
 
-console.log(fruits.at(-1)); // <---------- **** Kiwi, Same as fruits[fruits.length - 1] (a bit cumbersome)
+console.log(fruits.at(-1)); // <----------  Kiwi, Same as fruits[fruits.length - 1] (a bit cumbersome)
 
 console.log(`The first element is: ${fruits.at(0)}`); // Apple
+
 // * Note: Arrays in JavaScript can work both as a queue and as a stack. (... deque)
 
 // Methods that work with the beginning of the array:
@@ -45,7 +46,7 @@ arr[2]();  a,b,function(){...}
 
 /*
 The call arr[2]() is syntactically the good old obj[method](), in the role of obj we have arr, and in the role of method we have 2.
-So we have a call of the function arr[2] as an object method. Naturally, it receives this referencing the object arr and outputs the array:
+So we have a call of the function arr[2] as an object method. Naturally, it receives "this", referencing the object arr and outputs the array:
 */
 
 // Should we cancel?

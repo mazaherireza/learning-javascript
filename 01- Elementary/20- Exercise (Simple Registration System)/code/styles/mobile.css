@@ -1,3 +1,5 @@
-h1#hero-title {
-  font-size: large;
+body {
+  #hero-title {
+    font-size: large;
+  }
 }
