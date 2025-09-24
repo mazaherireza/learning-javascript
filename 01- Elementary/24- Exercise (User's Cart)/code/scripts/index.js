@@ -21,9 +21,9 @@ const selectedBook = prompt(
 let temp = {};
 
 const found = availableBooks.some((book) => {
-  if (book.title == selectedBook) {
+  if (book.title === selectedBook) {
     const { id, ...other } = book;
-    temp = other;
+    temp = { ...other };
     return true;
   }
 });
@@ -32,9 +32,11 @@ const cart = [];
 
 const calculateSum = () => {
   let sum = 0;
+
   cart.forEach((item) => {
     sum += item.price;
   });
+
   return sum;
 };
 
@@ -42,6 +44,7 @@ const ID = "CRD_1001_";
 
 if (found) {
   const index = cart.length;
+  
   cart.push({
     id: `${ID}${index}`,
     ...temp,

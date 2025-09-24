@@ -31,6 +31,6 @@ const prependWithCurrency = (arr, symbol = "€") => {
 
 // Authors' Novel(s)
 const authorsNovels = (authorName = "Gabriel García Márquez") =>
-  availableBooks.filter((book) => book.author == authorName);
+  availableBooks.filter((book) => book.author === authorName);
 
 console.log(prependWithCurrency(authorsNovels("George Orwell"), "$"));

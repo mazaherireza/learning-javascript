@@ -20,7 +20,7 @@ const username = prompt("Enter Your Username: ", "Username");
 let hasLoggedIn = false;
 
 for (const user of users) {
-  if (user.username == username) {
+  if (user.username === username) {
     console.log("Welcome");
     hasLoggedIn = true;
     break;

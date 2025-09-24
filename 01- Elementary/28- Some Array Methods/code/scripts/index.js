@@ -12,5 +12,5 @@ console.log(
 
 const PROGRAMMING_LANGUAGE = "JavaScript";
 
-console.log(`My favorite programming language is: ${PROGRAMMING_LANGUAGE}`);
+console.log(`My favourite programming language is: ${PROGRAMMING_LANGUAGE}`);
 console.log(PROGRAMMING_LANGUAGE.split(""));

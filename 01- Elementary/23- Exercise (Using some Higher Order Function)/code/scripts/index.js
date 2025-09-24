@@ -17,5 +17,5 @@ const users = [
 
 const username = "yo3ef_am";
 
-const hasAccount = users.some((user) => user.username == username);
+const hasAccount = users.some((user) => user.username === username);
 hasAccount ? console.log("Welcome") : console.log("Sign Up");
