@@ -29,7 +29,10 @@ body {
       border-radius: 0.25rem;
     }
 
-    .login-form {
+    form {
+      display: grid;
+      gap: 1rem;
+
       inline-size: 50%;
 
       margin: 1rem auto;
@@ -40,29 +43,23 @@ body {
 
       box-shadow: 0.5rem 0.5rem 0.25rem silver;
 
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+      input[type="text"],
+      input[type="password"] {
+        display: block;
 
-        input[type="text"],
-        input[type="password"] {
-          display: block;
+        inline-size: 100%;
 
-          inline-size: 100%;
+        padding: 0.5rem;
+      }
 
-          padding: 0.5rem;
-        }
+      input[type="submit"] {
+        padding: 0.25rem;
 
-        input[type="submit"] {
-          padding: 0.25rem;
+        cursor: pointer;
+      }
 
-          cursor: pointer;
-        }
-
-        .info {
-          font-size: small;
-        }
+      .info {
+        font-size: small;
       }
     }
   }

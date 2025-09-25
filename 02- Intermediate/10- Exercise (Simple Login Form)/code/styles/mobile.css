@@ -12,7 +12,7 @@ body {
       margin-block-end: 1rem;
     }
 
-    .login-form {
+    form {
       inline-size: 80%;
 
       padding: 1.5rem;

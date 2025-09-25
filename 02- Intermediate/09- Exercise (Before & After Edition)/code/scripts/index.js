@@ -1,7 +1,7 @@
 const $ = document;
 
-const img = $.querySelector("#img");
-const btn = $.querySelector("#btn");
+const image = $.querySelector("img");
+const button = $.querySelector("button");
 
 let hasBeenEdited = false;
 
@@ -9,10 +9,10 @@ const toggleContents = () => {
   hasBeenEdited = !hasBeenEdited;
 
   if (hasBeenEdited) {
-    img.setAttribute("src", "/assets/images/after.png");
-    btn.innerHTML = "Before";
+    image.setAttribute("src", "/assets/images/after.png");
+    button.innerHTML = "Before";
   } else {
-    img.setAttribute("src", "/assets/images/before.png");
-    btn.innerHTML = "After";
+    image.setAttribute("src", "/assets/images/before.png");
+    button.innerHTML = "After";
   }
 };

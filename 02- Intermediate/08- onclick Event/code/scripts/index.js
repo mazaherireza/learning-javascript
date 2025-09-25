@@ -2,11 +2,13 @@ const $ = document;
 
 const hideButton = () => {
   const btn = $.querySelector("button");
+
   btn.style.visibility = "hidden";
 };
 
 const applyStyle = () => {
   const title = $.querySelector("#playground-title");
+
   title.style.color = "#78ffd6";
   title.style.backgroundColor = "#000";
   title.style.padding = "0.5rem";
