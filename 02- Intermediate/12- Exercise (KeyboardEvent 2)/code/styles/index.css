@@ -29,7 +29,7 @@ body {
       border-radius: 0.25rem;
     }
 
-    .login-form {
+    form {
       inline-size: 50%;
 
       margin: 1rem auto;
@@ -40,41 +40,38 @@ body {
 
       box-shadow: 0.5rem 0.5rem 0.25rem silver;
 
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
+      display: grid;
+      gap: 0.25rem;
 
-        input[type="text"],
-        input[type="password"] {
-          display: block;
+      input[type="text"],
+      input[type="password"] {
+        display: block;
 
-          inline-size: 100%;
+        inline-size: 100%;
 
-          padding: 0.5rem;
-        }
+        padding: 0.5rem;
+      }
 
-        #username-validation,
-        #password-validation {
-          visibility: hidden;
+      #username-validation,
+      #password-validation {
+        visibility: hidden;
 
-          font-size: small;
-          font-weight: bold;
+        font-size: small;
+        font-weight: bold;
 
-          color: #fd5c63;
+        color: #fd5c63;
 
-          margin-block-end: 0.5rem;
-        }
+        margin-block-end: 0.5rem;
+      }
 
-        input[type="submit"] {
-          padding: 0.25rem;
+      input[type="submit"] {
+        padding: 0.25rem;
 
-          cursor: pointer;
-        }
+        cursor: pointer;
+      }
 
-        .info {
-          font-size: small;
-        }
+      .info {
+        font-size: small;
       }
     }
   }

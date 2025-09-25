@@ -16,5 +16,3 @@ therefore they have no "keypress" event attached to them. <---------------------
 keyup event
 ... when the user has released the key.
 It will occur even if the key released does not produce a character value.
-
-

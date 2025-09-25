@@ -1,7 +1,7 @@
 const $ = document;
 const title = $.querySelector("#playground-title");
-const btn = $.querySelector("#btn");
+const button = $.querySelector("button");
 
-btn.addEventListener("click", () => {
+button.addEventListener("click", () => {
   title.classList.toggle("highlight");
 });

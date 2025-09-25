@@ -9,7 +9,7 @@ body {
   section {
     grid-row: 2 / span 2;
 
-    .login-form {
+    form {
       inline-size: 50%;
 
       padding: 1rem;

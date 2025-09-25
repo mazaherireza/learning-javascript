@@ -6,9 +6,9 @@ const temp = $.querySelector("#temp");
 const result = $.querySelector("#result");
 const info = $.querySelector("#info");
 
-const convertBtn = $.querySelector("#convert");
-const resetBtn = $.querySelector("#reset");
-const calculateBtn = $.querySelector("#calculate");
+const convertButton = $.querySelector("#convert");
+const resetButton = $.querySelector("#reset");
+const calculateButton = $.querySelector("#calculate");
 
 const resetContent = () => {
   temp.value = "";
@@ -16,7 +16,7 @@ const resetContent = () => {
   result.style.visibility = "hidden";
 };
 
-convertBtn.addEventListener("click", () => {
+convertButton.addEventListener("click", () => {
   if (temp.placeholder == Types.CELSIUS) {
     temp.placeholder = Types.FAHRENHEIT;
     // temp.setAttribute('placeholder', 'Fahrenheit')
@@ -29,14 +29,14 @@ convertBtn.addEventListener("click", () => {
   resetContent();
 });
 
-resetBtn.addEventListener("click", resetContent);
+resetButton.addEventListener("click", resetContent);
 
 const resetStyle = () => {
   result.style.color = "black";
   result.style.fontSize = "x-large";
 };
 
-calculateBtn.addEventListener("click", () => {
+calculateButton.addEventListener("click", () => {
   resetStyle();
   
   let response = "";

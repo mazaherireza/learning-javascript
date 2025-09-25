@@ -1,6 +1,5 @@
 const $ = document;
 
-const loginForm = $.querySelector(".login-form");
 const form = $.querySelector("form");
 const usernameInput = $.querySelector("#username");
 const passwordInput = $.querySelector("#password");
@@ -38,13 +37,11 @@ const submitHandler = (event) => {
   setInputs();
   const notification = $.querySelector(".notification");
   notification.style.visibility = "visible";
-  
+
   if (isValid("U", username) && isValid("P", password)) {
     manipulateNode(notification, "Welcome", {
       background: "linear-gradient(to left, #78ffd6, #a8ff78)",
     });
-
-    loginForm.style.visibility = "hidden";
   } else {
     manipulateNode(notification, "Invalid!, Try Again.", {
       background: "linear-gradient(to left, #fff, #fd5c63)",

@@ -2,7 +2,7 @@ import { information } from "./information.js";
 
 const $ = document;
 
-const searchBtn = $.querySelector("#search-btn");
+const searchButton = $.querySelector("#search-button");
 
 const resetNodes = (...args) => {
   for (const arg of args) {
@@ -10,7 +10,7 @@ const resetNodes = (...args) => {
   }
 };
 
-searchBtn.addEventListener("click", () => {
+searchButton.addEventListener("click", () => {
   const keySearch = $.querySelector("#key-search").value.toLowerCase();
 
   const selectedCity = information[keySearch];

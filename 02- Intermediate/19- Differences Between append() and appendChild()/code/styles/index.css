@@ -43,12 +43,14 @@ body {
     }
 
     ul {
-      margin-top: 1rem;
+      margin-block-start: 1rem;
+      
       font-weight: bold;
 
       li {
         font-size: small;
-        margin-bottom: 0.5rem;
+
+        margin-block-end: 0.5rem;
       }
     }
   }

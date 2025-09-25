@@ -1,9 +1,9 @@
 const $ = document;
 
 const unorderedList = $.querySelector(".list");
-const btn = $.querySelector("#add-btn");
+const addButton = $.querySelector("#add-button");
 
-btn.addEventListener("click", () => {
+addButton.addEventListener("click", () => {
   const input = $.querySelector("#input");
   const item = input.value.trim();
 
@@ -12,7 +12,7 @@ btn.addEventListener("click", () => {
   /* input: node
   output: HTMLElement */
   unorderedList.appendChild(li);
-  
+
   /* input: strings or nodes
   output: void
   unorderedList.append() */
