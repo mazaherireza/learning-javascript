@@ -1,11 +1,12 @@
 const $ = document;
 
-const form = $.querySelector("#form");
+const form = $.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   /*
-    The preventDefault() method of the Event interface, tells the user agent that,
-    if the event does not get explicitly handled, its default action should not be taken as it normally would be.
+    The preventDefault() method of the Event interface, 
+    tells the user agent that, if the event does not get explicitly handled, 
+    its default action should not be taken as it normally would be.
   */
   console.log(event);
 });

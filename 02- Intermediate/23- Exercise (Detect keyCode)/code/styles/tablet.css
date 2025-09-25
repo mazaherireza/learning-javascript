@@ -10,7 +10,7 @@ body {
     grid-row: 2 / span 2;
 
     #wrapper {
-      height: initial;
+      height: auto;
 
       #inner {
         h3 {

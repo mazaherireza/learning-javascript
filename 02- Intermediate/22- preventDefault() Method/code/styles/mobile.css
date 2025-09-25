@@ -10,9 +10,10 @@ body {
       font-size: medium;
     }
 
-    #form {
+    form {
       input {
         inline-size: 80%;
+        
         padding: 0.25rem;
       }
     }

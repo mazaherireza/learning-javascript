@@ -16,7 +16,7 @@ body {
     padding: 1rem;
 
     #playground-title {
-      margin-bottom: 1rem;
+      margin-block-end: 1rem;
     }
 
     input {
@@ -60,13 +60,6 @@ body {
           gap: 1rem;
 
           .property {
-            overflow: hidden;
-
-            border-radius: 0.5rem;
-
-            display: flex;
-            flex-direction: column;
-
             text-align: center;
 
             &:last-child {

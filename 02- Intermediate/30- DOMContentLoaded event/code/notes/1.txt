@@ -6,7 +6,7 @@ It doesn't wait for other things like images, subframes, and async scripts to fi
 
 Checking whether loading is already complete
 DOMContentLoaded may fire before your script has a chance to run,
-so it is wise to check before adding a listener.
+so it is wise to check, before adding a listener.
 
 if(document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", doSomething)

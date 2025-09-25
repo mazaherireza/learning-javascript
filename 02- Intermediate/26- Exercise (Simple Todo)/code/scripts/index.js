@@ -31,7 +31,7 @@ const addNewTodo = (value) => {
 newTodo.addEventListener("keydown", (event) => {
   warning.style.visibility = "hidden";
 
-  if (event.key == "Enter") {
+  if (event.key === "Enter") {
     // event.target.value or newTodo.value
     const trimmedValue = newTodo.value.trim();
     if (trimmedValue) {

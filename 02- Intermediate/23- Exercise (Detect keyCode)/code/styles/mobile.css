@@ -15,14 +15,14 @@ body {
         h3 {
           font-size: small;
         }
-      }
 
-      .properties {
-        grid-template-columns: repeat(2, 1fr);
+        .properties {
+          grid-template-columns: 1fr;
 
-        .property {
-          &:last-child {
-            grid-column: initial;
+          .property {
+            &:last-child {
+              grid-column: auto;
+            }
           }
         }
       }
