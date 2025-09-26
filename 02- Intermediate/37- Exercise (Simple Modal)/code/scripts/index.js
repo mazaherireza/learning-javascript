@@ -1,6 +1,6 @@
 const $ = document;
 
-const btn = $.querySelector("#btn");
+const button = $.querySelector("button");
 const modal = $.querySelector(".modal-wrapper");
 const close = $.querySelector(".fa-close");
 
@@ -13,7 +13,7 @@ const setFilter = () => {
   playground.style.filter = `blur(${RADIUS})`;
 };
 
-btn.addEventListener("click", () => {
+button.addEventListener("click", () => {
   modal.style.display = "block";
   setFilter();
 });
@@ -32,7 +32,7 @@ close.addEventListener("click", closeModal);
 
 $.body.addEventListener("keyup", (event) => {
   if (event.code == "Escape") {
-    btn.blur();
+    button.blur();
     closeModal();
   }
 });

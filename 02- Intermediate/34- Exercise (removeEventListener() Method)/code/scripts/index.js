@@ -2,13 +2,13 @@ const $ = document;
 
 const message = $.getElementById("message");
 
-const img = $.getElementById("img");
+const img = $.querySelector("img");
 
 const coordination = $.getElementById("coordination");
 const pageX = $.getElementById("pageX");
 const pageY = $.getElementById("pageY");
 
-const btn = $.getElementById("btn");
+const button = $.querySelector("button");
 
 const EVENT = "mousemove";
 
@@ -29,22 +29,23 @@ const mousemoveHandler = (event) => {
 img.addEventListener(EVENT, mousemoveHandler);
 
 let hasEvent = true;
-btn.addEventListener("click", () => {
+
+button.addEventListener("click", () => {
   if (hasEvent) {
     message.innerHTML = "mousemove Event Is Removed.";
     img.removeEventListener(EVENT, mousemoveHandler);
 
     coordination.style.visibility = "hidden";
 
-    btn.innerHTML = "Add Event";
+    button.innerHTML = "Add Event";
   } else {
     message.innerHTML = "mousemove Event Is Added.";
 
     img.addEventListener(EVENT, mousemoveHandler);
 
     coordination.style.visibility = "visible";
-    
-    btn.innerHTML = "Remove Event";
+
+    button.innerHTML = "Remove Event";
   }
 
   hasEvent = !hasEvent;

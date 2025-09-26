@@ -17,19 +17,18 @@ body {
 
     .wrapper {
       /* height of h2#playground-title: 27px */
-      inline-size: calc(100dvh - 2rem - 27px);
+      block-size: calc(100dvh - 2rem - 27px);
 
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-      row-gap: 0.5rem;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 0.5rem;
 
       h4 {
         text-transform: uppercase;
       }
 
-      #btn {
+      button {
         padding: 0.25rem 0.5rem;
       }
     }

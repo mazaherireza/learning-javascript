@@ -6,8 +6,8 @@ const selectedColor = $.querySelector("#selected-color");
 
 const notes = $.querySelector("#notes");
 
-const addBtn = $.querySelector("#add");
-const refreshBtn = $.querySelector("#refresh");
+const addButton = $.querySelector("#add");
+const refreshButton = $.querySelector("#refresh");
 
 let backgroundColor = "#FFF";
 
@@ -29,7 +29,7 @@ const createNote = () => {
     icon.addEventListener("click", (event) => {
       deleteNote(event);
     });
-    
+
     div.appendChild(span);
     div.appendChild(icon);
 
@@ -46,11 +46,11 @@ note.addEventListener("keyup", (event) => {
   }
 });
 
-addBtn.addEventListener("click", () => {
+addButton.addEventListener("click", () => {
   createNote();
 });
 
-refreshBtn.addEventListener("click", () => {
+refreshButton.addEventListener("click", () => {
   note.value = "";
   backgroundColor = "#FFF";
   selectedColor.style.backgroundColor = backgroundColor;

@@ -16,6 +16,8 @@ body {
     padding: 1rem;
 
     form {
+      margin-block-start: 1rem;
+
       position: relative;
 
       inline-size: 60%;
@@ -51,6 +53,7 @@ body {
       span {
         inset-inline-end: 0.25rem;
 
+        font-size: small;
         font-weight: bold;
       }
     }

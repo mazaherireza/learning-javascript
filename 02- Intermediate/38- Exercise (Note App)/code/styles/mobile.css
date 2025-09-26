@@ -15,7 +15,7 @@ body {
     }
 
     .main-wrapper {
-      width: 100%;
+      inline-size: 100%;
 
       #notes {
         .card {
