@@ -1,23 +1,35 @@
-h1#hero-title {
-  font-size: large;
-}
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
 
-#playground-title {
-  font-size: medium;
-}
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+  }
 
-.information h4 {
-  font-size: small;
-}
+  .wrapper {
+    inline-size: 80%;
 
-.information h5 {
-  font-size: x-small;
-}
+    .information {
+      h4 {
+        font-size: small;
+      }
 
-.wrapper {
-  width: 80%;
-}
+      h5 {
+        font-size: x-small;
+      }
+    }
 
-.actions button {
-  font-size: x-small;
+    .actions {
+      button {
+        font-size: x-small;
+
+        flex-basis: 100%;
+      }
+    }
+  }
 }

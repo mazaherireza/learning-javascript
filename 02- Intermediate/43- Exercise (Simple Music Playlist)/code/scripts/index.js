@@ -5,21 +5,21 @@ const information = $.querySelector(".information");
 const audioName = $.querySelector("#audio-name");
 const singerName = $.querySelector("#singer-name");
 
-const img = $.querySelector("#img");
-const audio = $.querySelector("audio"); // HTMLAudioElement
+const img = $.querySelector("img");
+const audio = $.querySelector("audio");
 
-const prevBtn = $.querySelector("#prev");
-const minus = $.querySelector("#minus");
-const playBtn = $.querySelector("#play");
-const pauseBtn = $.querySelector("#pause");
-const plus = $.querySelector("#plus");
-const nextBtn = $.querySelector("#next");
+const prevButton = $.querySelector("#prev");
+const minusButton = $.querySelector("#minus");
+const playButton = $.querySelector("#play");
+const pauseButton = $.querySelector("#pause");
+const plusButton = $.querySelector("#plus");
+const nextButton = $.querySelector("#next");
 
-const BASE_IMG_PATH = "./assets/images/";
-const imgList = ["First.png", "Second.png"];
+const BASE_IMG_PATH = "/assets/images/";
+const imgList = ["artists-1.png", "artists-2.png"];
 
-const BASE_AUDIO_PATH = "./media/";
-const audioList = ["Hayedeh_Soghati.mp3", "Viguen_Mahtab.mp3"];
+const BASE_AUDIO_PATH = "/media/";
+const audioList = ["hayedeh-soghati.mp3", "viguen-mahtab.mp3"];
 
 const MAX = audioList.length;
 
@@ -33,10 +33,11 @@ const extractName = () => {
 
 const updateContent = () => {
   const fullName = extractName();
-  const [_singerName, _audioName] = fullName.split("_");
+  const [_singerName, _audioName] = fullName.split("-");
 
   audioName.innerHTML = _audioName;
   singerName.innerHTML = _singerName;
+  
   img.setAttribute("src", `${BASE_IMG_PATH}${imgList[index]}`);
   audio.setAttribute("src", `${BASE_AUDIO_PATH}${audioList[index]}`);
 };
@@ -49,32 +50,32 @@ const hideInformation = () => {
   information.style.visibility = "hidden";
 };
 
-prevBtn.addEventListener("click", () => {
+prevButton.addEventListener("click", () => {
   index--;
   if (index < 0) index = MAX - 1;
   updateContent();
   hideInformation();
 });
 
-minus.addEventListener("click", () => {
+minusButton.addEventListener("click", () => {
   audio.currentTime -= 10;
 });
 
-playBtn.addEventListener("click", () => {
+playButton.addEventListener("click", () => {
   showInformation();
   audio.play();
 });
 
-pauseBtn.addEventListener("click", () => {
+pauseButton.addEventListener("click", () => {
   hideInformation();
   audio.pause();
 });
 
-plus.addEventListener("click", () => {
+plusButton.addEventListener("click", () => {
   audio.currentTime += 10;
 });
 
-nextBtn.addEventListener("click", () => {
+nextButton.addEventListener("click", () => {
   index++;
   if (index > MAX - 1) index = 0;
   updateContent();

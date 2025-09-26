@@ -1,60 +1,64 @@
 body {
-  min-height: 100dvh;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
 
-main {
-  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
 
-#playground {
-  padding: 1rem;
-}
+    display: grid;
+    place-content: center;
+  }
 
-#playground #playground-title {
-  margin-bottom: 1rem;
-}
+  #playground {
+    padding: 1rem;
 
-.information {
-  visibility: hidden;
-  margin-bottom: 1rem;
-}
+    #playground-title {
+      margin-block-end: 1rem;
+    }
 
-.wrapper {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
+    .information {
+      visibility: hidden;
 
-.wrapper img {
-  width: 100%;
-}
+      display: grid;
+      gap: 0.5rem;
 
-.actions {
-  margin-top: 0.5rem;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+      #audio-name,
+      #singer-name {
+        font-style: italic;
+      }
+    }
 
-button {
-  font-weight: bold;
-  padding: 0.25rem 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-}
+    .wrapper {
+      inline-size: 50%;
+      
+      margin-inline: auto;
 
-#audio-name {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
+      display: grid;
+      gap: 1rem;
 
-#audio-name,
-#singer-name {
-  font-style: italic;
+      img {
+        inline-size: 100%;
+      }
+
+      .actions {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        button {
+          font-weight: bold;
+
+          padding: 0.25rem 0.5rem;
+
+          border: none;
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
 }
