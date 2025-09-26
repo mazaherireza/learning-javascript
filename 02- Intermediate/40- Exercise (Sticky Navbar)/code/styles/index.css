@@ -35,6 +35,8 @@ body {
 
         padding: 0.5rem 2rem;
 
+        transition: background-color 1s;
+
         nav {
           display: flex;
           flex-flow: row wrap;
@@ -51,6 +53,14 @@ body {
               font-size: small;
 
               color: white;
+
+              transition: color 1s;
+            }
+          }
+
+          .logo {
+            img {
+              transition: all 1s;
             }
           }
         }
@@ -84,6 +94,7 @@ body {
         .links {
           a {
             color: black;
+
             font-size: small;
           }
         }

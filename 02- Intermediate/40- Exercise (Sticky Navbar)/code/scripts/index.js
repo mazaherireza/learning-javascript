@@ -1,14 +1,14 @@
 const $ = document;
 
 const wrapper = $.querySelector("#wrapper");
-const img = $.querySelector("header img");
+const img = $.querySelector("header .logo img");
 const header = $.querySelector("header");
-const anchorList = $.querySelectorAll(".anchor");
+const anchors = $.querySelectorAll(".anchor");
 
 const THRESHOLD = 0;
 
 const applyStyle = (color) => {
-  anchorList.forEach((anchor) => {
+  anchors.forEach((anchor) => {
     anchor.style.color = color;
   });
 };
