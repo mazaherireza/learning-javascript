@@ -1,23 +1,37 @@
 const $ = document;
 
-const audio = $.querySelector("audio"); // HTMLAudioElement
-const playBtn = $.querySelector("#play");
-const pauseBtn = $.querySelector("#pause");
-const speedBtn = $.querySelector("#speed");
+const audio = $.querySelector("audio");
+const playButton = $.querySelector("#play");
+const pauseButton = $.querySelector("#pause");
+const speedButton = $.querySelector("#speed");
+
+const PLAY_SPEEDS = [1, 1.5, 2];
+let playSpeedIndex = 1;
 
 const icon = $.querySelector(".fa-music");
 
-playBtn.addEventListener("click", () => {
+playButton.addEventListener("click", () => {
   audio.play();
   icon.style.visibility = "visible";
 });
 
-pauseBtn.addEventListener("click", () => {
+pauseButton.addEventListener("click", () => {
   audio.pause();
   icon.style.visibility = "hidden";
 });
 
-speedBtn.addEventListener("click", () => {
-  const speed = +speedBtn.innerHTML.split("x")[0];
+const changePlaySpeed = () => {
+  playSpeedIndex++;
+  if (playSpeedIndex > PLAY_SPEEDS.length - 1) {
+    playSpeedIndex = 0;
+  }
+
+  speedButton.innerHTML = `${PLAY_SPEEDS[playSpeedIndex]}x`;
+};
+
+speedButton.addEventListener("click", () => {
+  const speed = +speedButton.innerHTML.split("x")[0];
   audio.playbackRate = speed;
+
+  changePlaySpeed();
 });
