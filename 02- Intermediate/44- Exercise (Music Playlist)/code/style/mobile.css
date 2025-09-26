@@ -1,0 +1,23 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .wrapper {
+      h3 {
+        font-size: small;
+      }
+
+      .singer-wrapper {
+        font-size: x-small;
+      }
+    }
+  }
+}

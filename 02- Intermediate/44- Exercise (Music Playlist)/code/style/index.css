@@ -1,0 +1,103 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .wrapper {
+      inline-size: 80%;
+
+      display: grid;
+      gap: 1rem;
+
+      margin-inline: auto;
+
+      h3,
+      h4 {
+        text-align: center;
+      }
+
+      .singer-wrapper {
+        visibility: hidden;
+      }
+
+      #singer-name {
+        font-style: italic;
+      }
+
+      .media-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+
+        .media-card {
+          position: relative;
+
+          opacity: 0.75;
+
+          transition: opacity 1s linear;
+
+          img {
+            inline-size: 8rem;
+            block-size: 8rem;
+
+            border-radius: 0.25rem;
+          }
+
+          i {
+            visibility: hidden;
+
+            position: absolute;
+          }
+
+          &:hover {
+            opacity: 1;
+
+            i {
+              visibility: visible;
+
+              inset-block-start: 50%;
+              inset-inline-start: 50%;
+
+              transform: translate(-50%, -50%);
+
+              animation: movement 1s linear;
+
+              &.fa {
+                cursor: pointer;
+
+                font-size: large;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes movement {
+  from {
+    inset-inline-start: 0;
+  }
+  to {
+    inset-inline-start: 50%;
+  }
+}
