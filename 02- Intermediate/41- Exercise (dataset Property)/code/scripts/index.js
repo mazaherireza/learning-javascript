@@ -1,6 +1,6 @@
 const $ = document;
 
-const buttons = $.querySelectorAll(".btn");
+const buttons = $.querySelectorAll("button");
 const VOWELS = ["a", "e", "i", "o", "u"];
 const SEPARATOR = " ";
 

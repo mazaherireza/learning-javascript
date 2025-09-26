@@ -2,4 +2,5 @@ HTMLElement: dataset property
 -----------------------------
 The dataset read-only property of the HTMLElement interface provides read/write access
 to custom data attributes (data-*) on elements.
+
 It exposes a map of strings DOMStringMap with an entry for each data-* attribute.
