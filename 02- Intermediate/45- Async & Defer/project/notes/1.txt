@@ -1,2 +1,0 @@
-In practice, defer is used for scripts that need the whole DOM and / or their relative execution order is important.
-And sync is used for independent scripts, like ads, and their relative execution order does not matter.
