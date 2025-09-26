@@ -1,0 +1,20 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title,
+    .information {
+      font-size: medium;
+    }
+
+    .main-wrapper {
+      flex-direction: column;
+
+      row-gap: 1rem;
+    }
+  }
+}

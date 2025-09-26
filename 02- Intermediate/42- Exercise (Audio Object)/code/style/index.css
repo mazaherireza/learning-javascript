@@ -1,0 +1,61 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .main-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 1.5rem;
+
+      .information,
+      .media {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+      }
+
+      .fa-music {
+        visibility: hidden;
+        animation: movement 2s infinite reverse;
+      }
+
+      .actions {
+        button {
+          padding: 0.25rem 0.5rem;
+
+          font-weight: bold;
+
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes movement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
