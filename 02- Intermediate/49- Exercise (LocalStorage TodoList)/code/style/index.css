@@ -1,0 +1,135 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .main-wrapper {
+      display: grid;
+      gap: 1rem;
+
+      inline-size: 90%;
+
+      margin-inline: auto;
+
+      h3,
+      #message {
+        text-align: center;
+      }
+
+      #message {
+        visibility: hidden;
+
+        font-size: small;
+      }
+
+      #done {
+        color: green;
+      }
+
+      #done,
+      #total {
+        font-weight: bolder;
+      }
+
+      input {
+        inline-size: 100%;
+
+        padding: 0.5rem 0.75rem;
+
+        border-radius: 0.125rem;
+      }
+
+      .action-wrapper {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        button {
+          padding: 0.5rem 0.75rem;
+
+          font-weight: bold;
+
+          border: none;
+          border-radius: 0.25rem;
+        }
+      }
+
+      .todo-wrapper {
+        inline-size: 100%;
+
+        display: grid;
+        gap: 0.5rem;
+
+        .card {
+          font-size: small;
+          font-weight: bold;
+
+          border: 1px solid transparent;
+          border-radius: 0.25rem;
+
+          padding: 0.25rem 0.5rem;
+
+          display: flex;
+          justify-content: space-between;
+
+          transition: all 1s linear;
+
+          p {
+            align-self: center;
+          }
+
+          .actions {
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+          }
+
+          .status {
+            padding: 0.25rem 0.5rem;
+
+            background-color: white;
+
+            border-radius: 0.25rem;
+          }
+
+          .green {
+            color: green;
+
+            border: 1px solid green;
+          }
+
+          .red {
+            color: red;
+
+            border: 1px solid red;
+          }
+
+          .lineThrough {
+            text-decoration: line-through;
+          }
+
+          &:hover {
+            border: 1px solid black;
+            box-shadow: 0.125rem 0.125rem 0.25rem silver;
+          }
+        }
+      }
+    }
+  }
+}

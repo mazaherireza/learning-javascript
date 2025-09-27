@@ -1,8 +1,8 @@
 const $ = document;
 
 const todoInput = $.querySelector("input");
-const addBtn = $.querySelector("button#add");
-const clearBtn = $.querySelector("button#clear");
+const addButton = $.querySelector("button#add");
+const clearButton = $.querySelector("button#clear");
 
 const todoWrapper = $.querySelector(".todo-wrapper");
 
@@ -31,22 +31,31 @@ const populateMessage = () => {
 
 const applyDynamicClass = (selector, flag) => {
   const cls = flag ? "green" : "red";
+
   selector.className = `status ${cls}`;
 };
 
 const updateTitle = (event, flag) => {
   const title = event.target.parentElement.previousElementSibling;
-  if (flag) title.className = "lineThrough";
-  else title.className = "";
+
+  if (flag) {
+    title.className = "lineThrough";
+  } else {
+    title.className = "";
+  }
 };
 
 const updateStatus = (event, title) => {
   const index = todoList.findIndex((todo) => todo.title === title);
+
   if (index >= 0) {
     const status = !todoList[index].isCompleted;
     todoList[index].isCompleted = status;
+
     localStorage.setItem("todoList", JSON.stringify(todoList));
+
     event.target.innerHTML = status ? "Completed" : "Uncompleted";
+
     applyDynamicClass(event.target, status);
     updateTitle(event, status);
     populateMessage();
@@ -79,7 +88,10 @@ const representOnDOM = (todo) => {
 
   status.innerHTML = isCompleted ? "Completed" : "Uncompleted";
   applyDynamicClass(status, isCompleted);
-  if (isCompleted) todoTitle.className = "lineThrough";
+
+  if (isCompleted) {
+    todoTitle.className = "lineThrough";
+  }
 
   status.addEventListener("click", (event) => {
     updateStatus(event, title);
@@ -97,32 +109,39 @@ const representOnDOM = (todo) => {
 
 const afterValidationHandler = (title) => {
   todoInput.value = "";
+
   const todo = {
     title,
     isCompleted: false,
   };
   todoList.push(todo);
+
   populateMessage();
+
   representOnDOM(todo);
+
   localStorage.setItem("todoList", JSON.stringify(todoList));
 };
 
 todoInput.addEventListener("keyup", (event) => {
   const title = todoInput.value.trim();
-  if (title && event.code == "Enter") {
+
+  if (title && event.code === "Enter") {
     afterValidationHandler(title);
   }
 });
 
-addBtn.addEventListener("click", () => {
+addButton.addEventListener("click", () => {
   const title = todoInput.value.trim();
+
   if (title) {
     afterValidationHandler(title);
   }
 });
 
-clearBtn.addEventListener("click", () => {
+clearButton.addEventListener("click", () => {
   localStorage.removeItem("todoList");
+
   todoList = [];
   todoWrapper.innerHTML = "";
   populateMessage();
@@ -130,8 +149,10 @@ clearBtn.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
   todoList = JSON.parse(localStorage.getItem("todoList")) ?? [];
+
   todoList.forEach((todo) => {
     representOnDOM(todo);
   });
+
   populateMessage();
 });
