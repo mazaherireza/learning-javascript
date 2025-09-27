@@ -16,11 +16,13 @@ label.addEventListener("click", () => {
     content.classList.remove("dark");
     theme = "light";
   }
+
   localStorage.setItem("theme", theme);
 });
 
 window.addEventListener("load", () => {
   theme = localStorage.getItem("theme");
+
   if (theme === "light") {
     content.classList.remove("dark");
     switchElement.checked = true; // Is this correct?!
