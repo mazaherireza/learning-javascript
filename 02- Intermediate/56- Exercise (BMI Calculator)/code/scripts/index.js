@@ -44,7 +44,7 @@ const getCategory = (BMI) => {
 
 const calculateBMI = () => {
   const weightValue = weight.value;
-  wValue.innerHTML = `${weightValue} Kg`;
+  wValue.innerHTML = `${weightValue} kg`;
 
   let heightValue = height.value;
   hValue.innerHTML = `${heightValue} cm`;

@@ -1,0 +1,33 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .main-wrapper {
+      inline-size: 90%;
+
+      h4 {
+        font-size: small;
+      }
+
+      .wrapper {
+        margin-block-end: 1rem;
+      }
+
+      .result {
+        inline-size: 60%;
+
+        #bmi {
+          font-size: x-large;
+        }
+      }
+    }
+  }
+}
