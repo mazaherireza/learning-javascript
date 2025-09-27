@@ -18,6 +18,6 @@ const imgStyles = getComputedStyle(img);
 log(imgStyles.borderRadius); // 4px
 
 const figcaption = $.querySelector("figcaption");
-const cssObj = window.getComputedStyle(figcaption, ":first-letter");
+const cssObj = getComputedStyle(figcaption, "::first-letter");
 const size = cssObj.fontSize; // Or cssObj.getPropertyValue("font-size")
 log(size);

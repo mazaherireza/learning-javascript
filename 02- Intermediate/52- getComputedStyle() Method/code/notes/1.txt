@@ -1,0 +1,2 @@
+The getComputedStyle() method, gets the computed CSS properties and values of an HTML element.
+... returns a CSSStyleDeclaration object.
