@@ -24,5 +24,7 @@ const handler = () => {
 };
 
 something.addEventListener("keyup", (event) => {
-  if (event.code == "Enter") handler();
+  if (event.code === "Enter") {
+    handler();
+  }
 });
