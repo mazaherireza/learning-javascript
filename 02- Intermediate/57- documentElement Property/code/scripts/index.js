@@ -1,8 +1,8 @@
 const $ = document;
 
-const btn = $.querySelector("button");
+const button = $.querySelector("button");
 
-btn.addEventListener("click", () => {
+button.addEventListener("click", () => {
   $.documentElement.style.setProperty("--primary-color", "green");
   // console.log($.html); <----------- undefined
   console.log($.documentElement.style); // <------------------- CSSStyleDeclaration
@@ -12,9 +12,3 @@ btn.addEventListener("click", () => {
     )}`
   );
 });
-
-/*
-  The documentElement property returns a document's element (as an Element object).
-  ... is read-only.
-  For HTML documents the returned object is the <html> element.
-*/
