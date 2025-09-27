@@ -1,0 +1,27 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .wrapper {
+      inline-size: 80%;
+
+      figure {
+        figcaption {
+          font-size: x-small;
+        }
+      }
+
+      h4 {
+        font-size: small;
+      }
+    }
+  }
+}
