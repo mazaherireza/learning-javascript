@@ -1,0 +1,21 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    h3 {
+      font-size: small;
+    }
+
+    h4 {
+      font-size: x-small;
+    }
+  }
+}

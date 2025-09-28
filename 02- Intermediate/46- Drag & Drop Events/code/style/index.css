@@ -1,0 +1,32 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+
+    #destination {
+      inline-size: 15rem;
+      block-size: 15rem;
+
+      border: 1px solid black;
+      border-radius: 0.5rem;
+
+      padding: 0.5rem;
+    }
+  }
+}
