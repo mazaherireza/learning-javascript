@@ -1,0 +1,64 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .main-wrapper {
+      inline-size: 100%;
+
+      .product-list {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+
+        .product-card {
+          inline-size: 60%;
+
+          .product-title,
+          .product-price {
+            font-size: small;
+          }
+        }
+
+        .cart-container {
+          table {
+            thead {
+              tr {
+                th {
+                  font-size: x-small;
+                }
+              }
+            }
+
+            tbody {
+              tr {
+                td {
+                  .little-img {
+                    inline-size: 2.5rem;
+                    block-size: 2.5rem;
+                  }
+                }
+              }
+            }
+          }
+
+          .total-wrapper {
+            #total-price {
+              font-size: small;
+            }
+
+            .purchase {
+              font-size: x-small;
+            }
+          }
+        }
+      }
+    }
+  }
+}

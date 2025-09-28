@@ -8,6 +8,7 @@ const totalWrapper = $.querySelector(".total-wrapper");
 const totalPrice = $.querySelector("#total-price");
 
 const cart = [];
+
 table.style.visibility = "hidden";
 
 const calculateTotal = () => {
@@ -17,13 +18,13 @@ const calculateTotal = () => {
 };
 
 const deleteOrder = (orderIndex) => {
-  const product = findProduct(orderIndex);
-  const btn = product.querySelector("button");
-  if (btn.hasAttribute("disabled")) btn.removeAttribute("disabled");
   const DELETE_COUNT = 1;
+
   cart.splice(orderIndex, DELETE_COUNT);
+
   if (!cart.length) {
     table.style.visibility = "hidden";
+
     totalWrapper.style.visibility = "hidden";
   } else {
     renderCart();
@@ -33,8 +34,9 @@ const deleteOrder = (orderIndex) => {
 
 const findProduct = (orderIndex) => {
   const orderTitle = cart[orderIndex].title;
+
   for (let child of productList.children) {
-    if (child.querySelector("div").innerHTML == orderTitle) {
+    if (child.querySelector(".product-title").innerHTML === orderTitle) {
       return child;
     }
   }
@@ -43,37 +45,42 @@ const findProduct = (orderIndex) => {
 const decrease = (order, orderIndex) => {
   order.quantity--;
   order.totalPrice -= order.price;
+
   const product = findProduct(orderIndex);
-  const btn = product.querySelector("button");
-  if (btn.hasAttribute("disabled")) btn.removeAttribute("disabled");
+
+  const button = product.querySelector("button");
+
+  if (button.hasAttribute("disabled")) {
+    button.removeAttribute("disabled");
+  }
+
   if (order.quantity == 0) {
     deleteOrder(orderIndex);
   }
 };
 
-const decreaseQuantity = (order) => {
-  const { id } = order;
-  const index = cart.findIndex((order) => order.id == id);
-  if (index >= 0) {
-    decrease(order, index);
-    calculateTotal();
-    renderCart();
-  }
+const decreaseQuantity = (order, index) => {
+  decrease(order, index);
+  calculateTotal();
+  renderCart();
 };
 
-const BASE_PATH = "./assets/images/";
+const BASE_PATH = "/assets/images/";
 
-const addToCart = (btn, product) => {
+const addToCart = (button, product) => {
   const { img, title, price, max } = product;
-  const index = cart.findIndex((order) => order.title == title);
+
+  const index = cart.findIndex((order) => order.title === title);
+
   if (index >= 0) {
     const currentOrder = cart[index];
     if (currentOrder.quantity < max) {
       currentOrder.quantity++;
       currentOrder.totalPrice += price;
     }
-    if (currentOrder.quantity == max) {
-      btn.setAttribute("disabled", "true");
+
+    if (currentOrder.quantity === max) {
+      button.setAttribute("disabled", "true");
     }
   } else {
     cart.push({
@@ -86,20 +93,23 @@ const addToCart = (btn, product) => {
       limitation: max,
     });
   }
+
   calculateTotal();
+
   totalWrapper.style.visibility = "visible";
+
   renderCart();
 };
 
 const renderProduct = (product) => {
-  const container = $.createElement("div");
+  const container = $.createElement("li");
   container.className = "product-card";
 
   const img = $.createElement("img");
   img.setAttribute("src", `${BASE_PATH}${product.img}`);
   img.className = "img";
 
-  const title = $.createElement("div");
+  const title = $.createElement("span");
   title.innerHTML = product.title;
   title.className = "product-title";
 
@@ -111,26 +121,32 @@ const renderProduct = (product) => {
   max.innerHTML = `Max: ${product.max}`;
   max.className = "max";
 
-  const btn = $.createElement("button");
-  btn.innerHTML = "Add To Cart";
-  btn.className = "btn";
-  if (!product.max) btn.setAttribute("disabled", "true");
+  const button = $.createElement("button");
+  button.innerHTML = "Add To Cart";
+  button.className = "button";
 
-  btn.addEventListener("click", () => {
-    addToCart(btn, product);
+  if (!product.max) {
+    button.setAttribute("disabled", "true");
+  }
+
+  button.addEventListener("click", () => {
+    addToCart(button, product);
   });
 
   const division = $.createElement("div");
 
-  division.append(price, max, btn);
+  division.append(price, max, button);
   container.append(img, title, division);
+
   productList.append(container);
 };
 
 const renderCart = () => {
   table.style.visibility = "visible";
+
   tbody.innerHTML = "";
-  cart.forEach((order) => {
+
+  cart.forEach((order, index) => {
     const tr = $.createElement("tr");
 
     const imageContainer = $.createElement("td");
@@ -155,34 +171,42 @@ const renderCart = () => {
 
     const minus = $.createElement("i");
     minus.className = "fa fa-minus fa-lg";
+
     minus.addEventListener("click", (_) => {
-      if (plus.style.visibility == "hidden") plus.style.visibility = "visible";
-      decreaseQuantity(order);
+      if (plus.style.visibility === "hidden") {
+        plus.style.visibility = "visible";
+      }
+
+      decreaseQuantity(order, index);
     });
 
     const trash = $.createElement("i");
     trash.className = "fa fa-trash fa-lg";
+
     trash.addEventListener("click", (_) => {
-      const orderIndex = cart.findIndex((_order) => _order.id == order.id);
+      const orderIndex = cart.findIndex((_order) => _order.id === order.id);
       deleteOrder(orderIndex);
     });
 
     const plus = $.createElement("i");
     plus.className = "fa fa-plus fa-lg";
-    if (order.quantity == order.limitation) {
+    if (order.quantity === order.limitation) {
       plus.style.visibility = "hidden";
     }
     plus.addEventListener("click", (_) => {
-      if (minus.style.visibility == "hidden")
+      if (minus.style.visibility === "hidden") {
         minus.style.visibility = "visible";
+      }
+
       if (order.quantity < order.limitation) {
         order.quantity++;
         order.totalPrice += order.price;
         renderCart();
         calculateTotal();
       }
-      if (order.quantity == order.limitation) {
-        const orderIndex = cart.findIndex((_order) => _order.id == order.id);
+
+      if (order.quantity === order.limitation) {
+        const orderIndex = cart.findIndex((_order) => _order.id === order.id);
         const product = findProduct(orderIndex);
         product.querySelector("button").setAttribute("disabled", "true");
       }
