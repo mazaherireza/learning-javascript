@@ -1,0 +1,30 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    #wrapper-clock {
+      inline-size: 80%;
+      block-size: 8rem;
+
+      column-gap: 0.5rem;
+
+      .time {
+        inline-size: 3rem;
+        block-size: 3rem;
+
+        line-height: 3rem;
+        font-size: x-large;
+
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
