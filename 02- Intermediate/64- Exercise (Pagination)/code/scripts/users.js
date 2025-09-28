@@ -1,4 +1,4 @@
-const userList = [
+const users = [
   { id: "USR_10001", firstName: "Reza", lastName: "Mazaheri" },
   { id: "USR_10002", firstName: "Yousef", lastName: "Amini" },
   { id: "USR_10003", firstName: "Hossein", lastName: "Kalaei" },
@@ -22,4 +22,4 @@ const userList = [
   { id: "USR_10021", firstName: "Ashraf", lastName: "Sarkhosh" },
 ];
 
-export { userList };
+export { users };

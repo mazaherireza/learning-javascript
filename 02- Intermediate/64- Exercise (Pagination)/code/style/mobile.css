@@ -1,0 +1,33 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .wrapper {
+      inline-size: 95%;
+      block-size: 15rem;
+
+      .users {
+        .card {
+          font-size: x-small;
+        }
+      }
+
+      .pagination {
+        button {
+          font-size: x-small;
+
+          inline-size: 1.5rem;
+          block-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
