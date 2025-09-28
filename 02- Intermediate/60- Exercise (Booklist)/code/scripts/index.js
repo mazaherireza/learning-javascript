@@ -10,12 +10,13 @@ const num = $.querySelector("#num");
 
 const tbody = $.querySelector("tbody");
 
-const addBtn = $.querySelector("#add-btn");
+const addButton = $.querySelector("#add-button");
 
 let bookList = [];
 
 const isValid = (value, input = "title") => {
   let validation = true;
+
   try {
     if (!value.length) {
       validation = false;
@@ -38,12 +39,15 @@ const showNum = () => {
 
 const deleteRow = (event, { title }) => {
   const index = bookList.findIndex((book) => book.title === title);
+
   if (index >= 0) {
     bookList.splice(index, 1);
     localStorage.setItem("bookList", JSON.stringify(bookList));
   }
+
   const td = event.target.parentElement;
   const tr = td.parentElement;
+
   tr.remove();
   showNum();
 };
@@ -58,11 +62,11 @@ const representOnDOM = (book) => {
   author.innerHTML = book.author;
 
   const action = $.createElement("td");
-  const btn = $.createElement("button");
-  btn.innerHTML = "Delete";
-  action.append(btn);
+  const button = $.createElement("button");
+  button.innerHTML = "Delete";
+  action.append(button);
 
-  btn.addEventListener("click", (event) => {
+  button.addEventListener("click", (event) => {
     deleteRow(event, book);
   });
 
@@ -74,10 +78,11 @@ const representOnDOM = (book) => {
 const doSomeCleanUp = () => {
   bookTitle.value = "";
   bookAuthor.value = "";
+  
   bookTitle.focus();
 };
 
-addBtn.addEventListener("click", () => {
+addButton.addEventListener("click", () => {
   const title = bookTitle.value.trim();
   const author = bookAuthor.value.trim();
 
@@ -109,6 +114,7 @@ addBtn.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
   bookList = JSON.parse(localStorage.getItem("bookList")) ?? [];
+
   bookList.forEach((book) => {
     representOnDOM(book);
   });

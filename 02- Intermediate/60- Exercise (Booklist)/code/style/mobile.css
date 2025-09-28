@@ -1,0 +1,55 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .booklist-wrapper {
+      inline-size: 100%;
+
+      #booklist-title {
+        font-size: small;
+      }
+
+      input[type="text"] {
+        padding: 0.25rem 0.25rem;
+
+        font-size: small;
+      }
+
+      button {
+        font-size: x-small;
+
+        padding: 0.5rem 0.5rem;
+      }
+
+      table {
+        thead {
+          tr {
+            th {
+              font-size: small;
+
+              padding-block: 0.25rem;
+            }
+          }
+        }
+
+        tbody {
+          tr {
+            td {
+              font-size: x-small;
+
+              padding-block: 0.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
