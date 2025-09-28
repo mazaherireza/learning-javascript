@@ -5,12 +5,14 @@ const text = $.querySelector("#text");
 
 const renderToDOM = (event, key) => {
   const { code } = event;
+
   if (code == "Backspace") {
     text.innerHTML = text.innerHTML.slice(0, -1);
   } else if (code == "Space") {
     text.innerHTML += " ";
   } else if (ALPHANUMERIC_KEYS.includes(code)) {
     const childCount = key.childElementCount;
+
     if (childCount) {
       /*
       like this: 
@@ -30,10 +32,14 @@ const renderToDOM = (event, key) => {
 
 $.body.addEventListener("keyup", (event) => {
   const { code } = event;
+
   const key = $.querySelector(`#${code}`);
+
   if (key) {
     renderToDOM(event, key);
+
     key.classList.add("animate");
+
     key.addEventListener("animationend", () => {
       key.classList.remove("animate");
     });
