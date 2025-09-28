@@ -1,0 +1,113 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  overflow-x: auto;
+
+  padding: 1rem;
+
+  #playground {
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 4fr;
+
+    #text {
+      margin-block-start: 1rem;
+
+      padding: 1rem;
+
+      font-weight: bold;
+      font-size: large;
+    }
+
+    .keyboard {
+      min-inline-size: 90%;
+
+      margin-inline: auto;
+
+      background-color: silver;
+
+      padding: 0.75rem;
+
+      border-radius: 0.5rem;
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(17, minmax(2.5rem, 1fr));
+        gap: 0.25rem;
+
+        margin-block-end: 0.5rem;
+
+        .key {
+          font-weight: bold;
+
+          background-color: black;
+          color: white;
+
+          max-block-size: 3rem;
+
+          text-align: center;
+
+          line-height: 3rem;
+
+          border-radius: 0.25rem;
+        }
+
+        .multi-key {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          font-size: small;
+
+          line-height: initial;
+        }
+
+        #Backspace,
+        #Enter {
+          grid-column: 14 / span 3;
+        }
+
+        #Tab,
+        #ShiftLeft {
+          grid-column: 1 / span 3;
+        }
+
+        #CapsLock {
+          grid-column: 1 / span 2;
+        }
+
+        #ShiftRight {
+          grid-column: 14 / span 2;
+        }
+
+        #ControlRight {
+          grid-column: 13 / span 2;
+        }
+
+        #Space {
+          grid-column: 6 / span 6;
+        }
+
+        #ControlLeft {
+          grid-column: 1 / span 2;
+        }
+
+        .animate {
+          animation: change 0.25s linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes change {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,9 @@
+body {
+  #playground {
+    .keyboard {
+      .key {
+        font-size: x-small;
+      }
+    }
+  }
+}
