@@ -1,0 +1,67 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .wrapper {
+      max-block-size: 25rem;
+
+      header {
+        padding: 0.5rem;
+
+        flex-direction: column;
+        row-gap: 0.75rem;
+
+        > div {
+          &:first-child {
+            #logo {
+              inline-size: 2rem;
+              block-size: 2rem;
+
+              border-width: 1px;
+
+              font-size: medium;
+
+              border-radius: 0.5rem;
+            }
+
+            span {
+              font-size: small;
+            }
+          }
+        }
+      }
+
+      #content {
+        h2 {
+          font-size: medium;
+        }
+
+        h3 {
+          font-size: small;
+        }
+
+        p {
+          font-size: x-small;
+        }
+
+        ol {
+          li {
+            font-size: x-small;
+          }
+        }
+
+        img {
+          inline-size: 100%;
+        }
+      }
+    }
+  }
+}
