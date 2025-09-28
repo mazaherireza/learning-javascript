@@ -1,0 +1,42 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .main-wrapper {
+      inline-size: 80%;
+
+      margin-inline: auto;
+
+      h3 {
+        font-size: small;
+      }
+
+      #todo-input {
+        inline-size: 100%;
+      }
+
+      .wrapper {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+
+        #todo-box,
+        #doing-box,
+        #done-box {
+          min-block-size: 12rem;
+
+          .todo-card {
+            font-size: x-small;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,19 +10,23 @@ const createTodo = (todoTitle) => {
   const div = $.createElement("div");
   div.classList.add("todo-card");
   div.setAttribute("draggable", "true");
+
   const icon = $.createElement("i");
   icon.className = "fa fa-times";
   icon.addEventListener("click", (event) => {
     event.target.parentNode.remove();
   });
+
   const title = $.createElement("span");
   title.innerHTML = todoTitle;
+
   div.append(title, icon);
   todoBox.appendChild(div);
 };
 
 todoInput.addEventListener("keydown", (event) => {
   const todoTitle = todoInput.value.trim();
+
   if (event.key == "Enter" && todoTitle) {
     createTodo(todoTitle);
     todoInput.value = "";
