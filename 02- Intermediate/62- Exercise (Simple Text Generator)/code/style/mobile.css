@@ -1,0 +1,42 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .main-wrapper {
+      inline-size: 100%;
+
+      .wrapper {
+        .input-wrapper {
+          input[type="number"] {
+            inline-size: 15%;
+          }
+
+          label,
+          input[type="number"] {
+            font-size: small;
+          }
+        }
+
+        button {
+          inline-size: 3rem;
+
+          font-size: small;
+        }
+      }
+
+      #quote-list {
+        .card {
+          font-size: small;
+        }
+      }
+    }
+  }
+}
