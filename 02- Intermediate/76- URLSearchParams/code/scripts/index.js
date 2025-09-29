@@ -1,4 +1,4 @@
-// The URLSearchParams interface defines utility methods to work with the query string of a URL.
+// The URLSearchParams interface, defines utility methods to work with the query string of a URL.
 
 // location = "https://quera.org/problemset?difficulty=EZ&tag=80"
 
