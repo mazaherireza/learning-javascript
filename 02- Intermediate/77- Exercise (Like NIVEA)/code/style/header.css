@@ -1,7 +1,8 @@
 header {
   position: sticky;
-  top: 0;
+  inset-block-start: 0;
   z-index: 2;
+
   background-color: white;
   color: var(--primary);
 }
@@ -14,20 +15,29 @@ header .header-wrapper {
 
 header #logo {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
+
+  inline-size: 4rem;
+  block-size: 4rem;
+
   line-height: 4rem;
+
   text-align: center;
+
   text-transform: uppercase;
+
   background-color: var(--primary);
   color: white;
-  border-radius: 50%;
+
+  border-radius: 99rem;
+
   font-weight: bold;
 }
 
 header nav a {
-  margin-right: 2rem;
+  margin-inline-end: 2rem;
+
   font-weight: bold;
+
   text-transform: uppercase;
 }
 
@@ -41,14 +51,17 @@ header nav a {
   }
 
   header #logo {
-    width: 3rem;
-    height: 3rem;
+    inline-size: 3rem;
+    block-size: 3rem;
+
     line-height: 3rem;
+
     font-size: small;
   }
 
   header nav a {
-    margin-right: 0.75rem;
+    margin-inline-end: 0.75rem;
+
     font-size: small;
   }
 }
@@ -67,6 +80,6 @@ header nav a {
   }
 
   header nav a {
-    margin-right: 0;
+    margin-inline-end: 0;
   }
 }

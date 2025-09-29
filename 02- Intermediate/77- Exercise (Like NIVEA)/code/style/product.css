@@ -6,23 +6,28 @@
 }
 
 .fa-star {
-  margin-right: 0.25rem;
+  margin-inline-end: 0.25rem;
+
   color: var(--gold-700);
 }
 
 .rating-count {
   font-size: small;
+
   color: var(--gray-400);
 }
 
 .headline {
-  margin-top: 1rem;
+  margin-block: 1rem;
+
   font-size: xx-large;
   font-weight: bold;
+
   color: var(--primary);
+
   text-transform: uppercase;
+
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .product-detail {
@@ -32,8 +37,8 @@
 }
 
 .product-image {
-  max-width: 16rem;
-  height: auto;
+  max-inline-size: 16rem;
+  block-size: auto;
 }
 
 .col {
@@ -42,31 +47,44 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
   padding: 1.5rem;
+
   background-color: var(--primary-100);
+
   border-radius: 0.5rem;
 }
 
 .description {
   color: var(--primary);
+
   font-weight: bold;
+
   text-align: justify;
 }
 
 .buy-now-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
+
+  inline-size: 80%;
+
   background-color: white;
+
   border-radius: 0.5rem;
+
   padding: 2rem;
 }
 
 .buy-now-headline {
   font-weight: bold;
+
   text-transform: uppercase;
+
   color: var(--primary);
-  margin-bottom: 1.5rem;
+
+  margin-block-end: 1.5rem;
+
   text-align: center;
 }
 
@@ -74,21 +92,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 1rem;
 }
 
 .online-stores img {
-  width: 5rem;
-  height: auto;
+  inline-size: 5rem;
+  block-size: auto;
 }
 
 .online-stores button {
-  max-width: 8rem;
-  height: 2.5rem;
+  max-inline-size: 8rem;
+  block-size: 2.5rem;
+
   color: white;
   background-color: var(--primary);
+
   border: none;
   border-radius: 0.5rem;
+
   padding: 0.25rem 0.5rem;
 }
 
@@ -111,7 +133,7 @@
   }
 
   .product-image {
-    max-width: 10rem;
+    max-inline-size: 10rem;
   }
 
   .product-detail .col:last-child {
@@ -124,8 +146,9 @@
   }
 
   .online-stores button {
-    max-width: 5rem;
-    height: 2rem;
+    max-inline-size: 5rem;
+    block-size: 2rem;
+
     font-size: small;
   }
 }
@@ -140,7 +163,7 @@
   }
 
   .online-stores img {
-    max-width: 4rem;
+    max-inline-size: 4rem;
   }
 
   .online-stores button {

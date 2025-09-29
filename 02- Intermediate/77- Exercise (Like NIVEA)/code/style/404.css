@@ -1,17 +1,25 @@
 main {
-  background: var(--primary) url(../assets/images/404.webp) no-repeat center center / cover;
-  height: 80vh;
+  background: var(--primary) url(/assets/images/404.webp) no-repeat center
+    center / cover;
+
+  block-size: 80vh;
+  block-size: 80dvh;
+
   position: relative;
 }
 
 .podium-container {
   position: absolute;
-  top: 5rem;
-  left: 2rem;
+  inset-block-start: 5rem;
+  inset-inline-start: 2rem;
+
   background-color: white;
   color: var(--primary);
+
   padding: 2rem;
+
   border-radius: 0.25rem;
+
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -25,15 +33,18 @@ main {
 .podium-container button {
   background-color: var(--primary);
   color: white;
+
   border: none;
   border-radius: 0.5rem;
+
   padding: 0.5rem 1rem;
 }
 
 @media screen and (max-width: 768px) {
   .podium-container {
-    top: 6rem;
-    left: 1rem;
+    inset-block-start: 6rem;
+    inset-inline-start: 1rem;
+
     padding: 1rem;
   }
 
@@ -47,13 +58,14 @@ main {
 
   .podium-container button {
     font-size: small;
+
     border-radius: 0.25rem;
   }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
   .podium-container {
-    max-width: 16rem;
+    max-inline-size: 16rem;
   }
 
   .podium-container button {

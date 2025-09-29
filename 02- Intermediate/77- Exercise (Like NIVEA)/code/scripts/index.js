@@ -3,13 +3,14 @@ import { products } from "./constants.js";
 const $ = document;
 const productList = $.querySelector(".product-list");
 
-const BASE_PATH = "./assets/images/";
+const BASE_PATH = "/assets/images/";
 const STAR_COUNT = 5;
 
 const renderProducts = () => {
   const fragment = $.createDocumentFragment();
+
   products.forEach((product) => {
-    const container = $.createElement("div");
+    const container = $.createElement("li");
     container.className = "product-card";
     container.addEventListener("click", (_) => {
       const splittedHref = location.href.split("/");
@@ -17,6 +18,7 @@ const renderProducts = () => {
       const newHref = `${splittedHref.join("/")}/product.html?productId=${
         product.id
       }`;
+
       location.href = newHref;
     });
 
@@ -55,6 +57,7 @@ const renderProducts = () => {
     container.append(img, ratingContainer, buyButton, subline, headline);
     fragment.append(container);
   });
+
   productList.append(fragment);
 };
 

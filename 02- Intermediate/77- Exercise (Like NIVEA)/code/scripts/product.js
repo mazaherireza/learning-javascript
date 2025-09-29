@@ -2,7 +2,7 @@ import { products } from "./constants.js";
 
 const $ = document;
 const container = $.querySelector("main .container");
-const BASE_PATH = "./assets/images/";
+const BASE_PATH = "/assets/images/";
 
 const renderProduct = (product) => {
   const html = `
@@ -21,7 +21,7 @@ const renderProduct = (product) => {
 
     <div class="product-detail">
       <div class="col">
-        <img class="product-image" src="${BASE_PATH}${product.img}" alt="${product.title}" />
+        <img class="product-image" src="${BASE_PATH}${product.img}" alt="" />
       </div>
       <div class="col">
         <div class="description">${product.description}</div>
@@ -30,7 +30,7 @@ const renderProduct = (product) => {
 
           <div class="store-container">
             <div class="online-stores">
-              <img class="shop-image" src="${BASE_PATH}amazon.png" alt="Amazon" />
+              <img class="shop-image" src="${BASE_PATH}Amazon.png" alt="Amazon" />
               <button>Buy Now</button>
             </div>
           </div>
@@ -39,6 +39,7 @@ const renderProduct = (product) => {
     </div>
   </div>
  `;
+
   container.insertAdjacentHTML("beforeend", html);
 };
 
@@ -46,7 +47,7 @@ window.addEventListener("load", () => {
   const parameter = new URLSearchParams(location.search);
   const id = parameter.get("productId");
   // console.log(typeof id) <------------- string
-  const product = products.find((product) => product.id == id);
+  const product = products.find((product) => product.id === id);
   if (product) {
     renderProduct(product);
   } else {

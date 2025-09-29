@@ -1,5 +1,6 @@
 body {
-  min-height: 100dvh;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
 }
 
 main {
@@ -7,10 +8,10 @@ main {
 }
 
 .main-wrapper {
-  margin-top: 1rem;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  inline-size: 90%;
+
+  margin-block-start: 1rem;
+  margin-inline: auto;
 }
 
 .product-list {
@@ -23,22 +24,27 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   cursor: pointer;
+
   border: 2px solid transparent;
   border-radius: 0.25rem;
+
   padding: 0.5rem;
+
   transition: all 1s;
 }
 
 .product-card:hover {
   border: 2px solid var(--primary);
   box-shadow: 0.5rem 0.25rem 0.125rem silver;
+
   transform: translateY(-1rem);
 }
 
 .product-card .img {
-  width: 10rem;
-  height: auto;
+  inline-size: 10rem;
+  block-size: auto;
 }
 
 .rating-container {
@@ -47,22 +53,26 @@ main {
 
 .rating-count {
   font-size: small;
+
   color: var(--gray-400);
 }
 
 .fa-star {
   color: var(--gold-700);
-  margin-right: 0.25rem;
+
+  margin-inline-end: 0.25rem;
 }
 
 .buyButton {
   color: var(--primary);
+
   align-self: self-end;
 }
 
 .subline,
 .headline {
   text-transform: uppercase;
+
   color: var(--primary);
 }
 
@@ -71,6 +81,7 @@ main {
 }
 
 .headline {
-  margin-top: 0.5rem;
+  margin-block-start: 0.5rem;
+
   font-weight: bold;
 }
