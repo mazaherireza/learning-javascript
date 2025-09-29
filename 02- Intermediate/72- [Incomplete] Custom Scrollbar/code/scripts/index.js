@@ -1,15 +1,15 @@
 const $ = document;
 
 const wrapper = $.querySelector("#wrapper");
-const img = $.querySelector("header img");
 const header = $.querySelector("header");
+const img = $.querySelector("header img");
 const customScroll = $.querySelector("#custom-scroll");
-const anchorList = $.querySelectorAll(".anchor");
+const anchors = $.querySelectorAll(".anchor");
 
 const THRESHOLD = 0;
 
 const applyStyle = (color) => {
-  anchorList.forEach((anchor) => {
+  anchors.forEach((anchor) => {
     anchor.style.color = color;
   });
 };
@@ -23,8 +23,6 @@ const resizeImg = (size) => {
 //const iWidth = innerWidth;
 
 wrapper.addEventListener("scroll", () => {
-  //console.log(wrapper.clientHeight);
-  //console.log(wrapper.scrollTop);
   if (wrapper.scrollTop > THRESHOLD) {
     if (!header.classList.contains("threshold")) {
       header.classList.add("threshold");

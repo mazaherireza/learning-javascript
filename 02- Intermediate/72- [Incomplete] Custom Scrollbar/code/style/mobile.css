@@ -1,0 +1,56 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    #wrapper {
+      header {
+        .logo {
+          display: none;
+        }
+
+        nav {
+          flex-direction: column-reverse;
+
+          .links {
+            flex-flow: column;
+            align-items: center;
+            row-gap: 0.5rem;
+
+            a {
+              font-size: x-small;
+            }
+          }
+        }
+      }
+
+      .content {
+        img {
+          width: 80%;
+          height: 40%;
+        }
+      }
+
+      footer {
+        h5 {
+          text-align: center;
+
+          font-size: x-small;
+        }
+
+        .links {
+          a {
+            font-size: x-small;
+          }
+        }
+      }
+    }
+  }
+}
