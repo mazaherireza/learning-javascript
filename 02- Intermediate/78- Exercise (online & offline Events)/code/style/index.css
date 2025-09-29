@@ -1,0 +1,71 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    .wrapper {
+      margin-block-start: 2rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .avatar {
+        inline-size: 8rem;
+        block-size: 8rem;
+
+        border: 2px solid black;
+        border-radius: 99rem;
+
+        position: relative;
+
+        background: #78ffd6 url(/assets/images/profile.png) no-repeat center
+          center / cover;
+      }
+
+      .status {
+        inline-size: 1rem;
+        block-size: 1rem;
+
+        border-radius: 99rem;
+
+        position: absolute;
+        inset-inline-start: 0.5rem;
+        inset-block-end: 0.5rem;
+
+        border: 1px solid white;
+
+        background-color: silver;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .online {
+        background-color: #00ff7f;
+      }
+
+      .offline {
+        background-color: #d2042d;
+      }
+    }
+  }
+}

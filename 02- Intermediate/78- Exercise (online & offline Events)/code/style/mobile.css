@@ -1,0 +1,34 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .wrapper {
+      .avatar {
+        inline-size: 6rem;
+        block-size: 6rem;
+
+        border-width: 1px;
+      }
+
+      .status {
+        inline-size: 0.75rem;
+        block-size: 0.75rem;
+
+        inset-inline-start: 0.5rem;
+        inset-block-end: 0.25rem;
+      }
+
+      .name {
+        font-size: small;
+      }
+    }
+  }
+}
