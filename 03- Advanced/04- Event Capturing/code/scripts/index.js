@@ -6,6 +6,7 @@ divisions.forEach((division) => {
     "click",
     (event) => {
       console.log(event.target);
+
       console.log(division.getAttribute("class").split(" ")[1]);
     },
     { capture: true }
