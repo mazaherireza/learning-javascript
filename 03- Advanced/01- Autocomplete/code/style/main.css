@@ -5,18 +5,25 @@
   --gray-400: #b7b7b7;
 }
 
-* {
+*,
+*::before,
+*::after {
   font-family: "Times New Roman", Times, serif;
+
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 }
 
 input[type="submit"] {
   cursor: pointer;
+
   text-transform: uppercase;
 }
 
-input:focus {
-  outline: none;
+input {
+  &:focus {
+    outline: none;
+  }
 }

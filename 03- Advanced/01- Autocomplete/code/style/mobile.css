@@ -1,0 +1,29 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .main-wrapper {
+      inline-size: 100%;
+
+      #headline {
+        font-size: small;
+      }
+
+      form {
+        gap: 0.5rem;
+
+        input[type="submit"] {
+          font-size: x-small;
+        }
+      }
+    }
+  }
+}
