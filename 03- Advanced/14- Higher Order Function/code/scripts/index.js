@@ -2,7 +2,7 @@ const me = {
   firstName: "Reza",
   lastName: "Mazaheri",
   occupation: "Frontend Developer",
-  age: 35,
+  age: 36,
   favourites: [
     "Learning European languages",
     "Books",
@@ -21,6 +21,7 @@ const introduction = () => {
     const { firstName, lastName } = me;
     console.log(`Salut!, I'm ${fullName(firstName, lastName)}.`);
   };
+  
   return salutation;
 };
 
