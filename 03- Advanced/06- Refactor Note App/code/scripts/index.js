@@ -6,27 +6,30 @@ const selectedColor = $.querySelector("#selected-color");
 
 const notes = $.querySelector("#notes");
 
-const addBtn = $.querySelector("#add");
-const refreshBtn = $.querySelector("#refresh");
+const addButton = $.querySelector("#add");
+const refreshButton = $.querySelector("#refresh");
 
 let backgroundColor = "#FFF";
 
 const createNote = () => {
   const title = note.value.trim();
+
   if (title) {
-    const div = $.createElement("div");
+    const listItem = $.createElement("li");
     const span = $.createElement("span");
     const icon = $.createElement("i");
 
     icon.className = "fa fa-trash";
     span.innerHTML = title;
 
-    div.appendChild(span);
-    div.appendChild(icon);
+    listItem.appendChild(span);
+    listItem.appendChild(icon);
 
-    div.style.background = backgroundColor;
-    div.className = "card";
-    notes.appendChild(div);
+    listItem.style.background = backgroundColor;
+    listItem.className = "card";
+
+    notes.appendChild(listItem);
+    
     note.value = "";
   }
 };
@@ -38,18 +41,20 @@ notes.addEventListener("click", (event) => {
 });
 
 note.addEventListener("keyup", (event) => {
-  if (event.code == "Enter") {
+  if (event.code === "Enter") {
     createNote();
   }
 });
 
-addBtn.addEventListener("click", () => {
+addButton.addEventListener("click", () => {
   createNote();
 });
 
-refreshBtn.addEventListener("click", () => {
+refreshButton.addEventListener("click", () => {
   note.value = "";
+
   backgroundColor = "#FFF";
+
   selectedColor.style.backgroundColor = backgroundColor;
 });
 
