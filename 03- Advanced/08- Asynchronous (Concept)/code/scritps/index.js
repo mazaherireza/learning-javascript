@@ -4,6 +4,7 @@ const display = (text) => {
 
 display("One");
 display("Two");
+
 setTimeout(() => {
   display("Delayed Three!");
 }, 5_000);
