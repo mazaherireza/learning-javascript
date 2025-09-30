@@ -10,6 +10,7 @@ const prependCurrency = (cost, symbol = "€") => `${symbol}${cost}`;
 
 const display = () => {
   const { title, author, cost } = getBook();
+  
   console.log(
     `${title} witten by ${author}, ${prependCurrency(`${cost}`, "$")}`
   );
