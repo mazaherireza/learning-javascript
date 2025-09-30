@@ -1,23 +1,20 @@
-const PREFIX = "BK";
-
 const books = [
   {
-    id: "BK_0",
+    id: globalThis.crypto.randomUUID(),
     title: "A Man Called Ove",
     author: "Fredrik Backman",
   },
   {
-    id: "BK_1",
+    id: globalThis.crypto.randomUUID(),
     title: "One Hundred Years of Solitude",
     author: "Gabriel García Márquez",
   },
 ];
 
 const addBook = ({ title, author }, callback) => {
-  const len = books.length;
   setTimeout(() => {
     books.push({
-      id: `${PREFIX}_${len}`,
+      id: globalThis.crypto.randomUUID(),
       title,
       author,
     });
