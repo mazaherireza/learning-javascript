@@ -16,7 +16,7 @@ body {
     padding: 1rem;
 
     #playground-title {
-      margin-bottom: 1rem;
+      margin-block-end: 1rem;
     }
   }
 }
