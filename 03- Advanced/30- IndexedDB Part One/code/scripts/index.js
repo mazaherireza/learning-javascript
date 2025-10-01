@@ -5,6 +5,7 @@ let DB;
 const createDatabase = () => {
   const NAME = "Learning";
   const VERSION = 1;
+
   const request = indexedDB.open(NAME, VERSION);
   request.onerror = (error) => {
     console.error("IndexedDB error: ", error);
