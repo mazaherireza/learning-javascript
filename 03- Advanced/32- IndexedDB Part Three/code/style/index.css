@@ -1,0 +1,23 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: var(--primary)
+      linear-gradient(to left, var(--secondary), var(--primary));
+
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    #playground-title {
+      margin-bottom: 1rem;
+    }
+  }
+}
