@@ -1,6 +1,7 @@
 // Use underscore (_) as the numeric separators to create a visual separation between groups of digits.
 
 const x = 8_000;
+
 console.log(x);
 console.log(parseInt(x)); // 8000
 console.log(Number(x));
