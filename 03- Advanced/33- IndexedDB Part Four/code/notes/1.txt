@@ -5,6 +5,7 @@ The steps to remove objects from an Object Store are similar to when they are ad
 
 function removeStudent(key) {
   const request = db.transaction("Students", "readwrite").objectStore("Students").delete(key)
+
   request.onsuccess = () => { console.log(`Student deleted, email: ${request.result}`) }
   request.onerror = (error) => { console.error(`Error to delete student: ${error}`) }
 }
@@ -27,11 +28,13 @@ to which the key of the object to be obtained is passed as a parameter.
 
 function getStudent(key) {
   const request = db.tansaction("Students").objectStore("Students").get(key)
+
   request.onsuccess = () => {
     const student = request.result 
     return student
   }
 }
+
 ...
 `Error to get student information: ${error}`
 
@@ -63,6 +66,7 @@ function printStudents() {
 
   request.onsuccess = () => {
     const cursor = request.result
+    
     if(cursor) {
       printInfo(cursor.value)
       cursor.continue()

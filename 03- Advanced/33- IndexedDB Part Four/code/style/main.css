@@ -4,9 +4,13 @@
   --red: #dc143c;
 }
 
-* {
+*,
+*::before,
+*::after {
   font-family: "Times New Roman", Times, serif;
+
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 }
@@ -14,5 +18,6 @@
 input[type="submit"],
 button {
   cursor: pointer;
+  
   text-transform: uppercase;
 }
