@@ -8,7 +8,7 @@ const users = [
   },
   {
     id: "FR_1002",
-    username: "reza.mazaher",
+    username: "reza.mazaheri",
     firstName: "Reza",
     occupation: "Frontend Developer",
     degree: "Bachelor's Degree",
@@ -18,4 +18,5 @@ const users = [
 const { firstName = "Anonymous", id: userID } = users.find(
   (user) => user.id === "FR_1001"
 );
+
 console.log(firstName);
