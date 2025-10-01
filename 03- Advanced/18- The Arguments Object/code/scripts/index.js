@@ -9,16 +9,22 @@
 function sum() {
   console.log(arguments);
   console.log(typeof arguments); // object
+
   // arguments.forEach((element) => { <---------- Uncaught TypeError: arguments.forEach is not a function
   //   console.log(element);
   // });
+
   const len = arguments.length;
+
   let sum = 0;
+
   for (let index = 0; index < len; index++) {
     sum += arguments[index];
   }
+
   return sum;
 }
 
 const percentages = [10, 20, 5, 40, 10, 35];
+
 console.log(sum(...percentages));
