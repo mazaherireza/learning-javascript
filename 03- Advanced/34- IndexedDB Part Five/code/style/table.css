@@ -1,0 +1,35 @@
+.table-container {
+  padding-block-start: 2rem;
+
+  inline-size: 80%;
+
+  margin-inline: auto;
+
+  table {
+    inline-size: 80%;
+
+    margin-inline: auto;
+
+    thead {
+      tr {
+        font-weight: bold;
+
+        th {
+          border-block-end: 1px solid black;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          text-align: center;
+
+          .fa-trash {
+            color: var(--red);
+          }
+        }
+      }
+    }
+  }
+}

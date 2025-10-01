@@ -1,0 +1,60 @@
+.form-container {
+  inline-size: 50%;
+
+  margin-inline: auto;
+
+  background-image: radial-gradient(ellipse at top, var(--primary), white);
+  background-color: var(--primary);
+
+  border-radius: 0.5rem;
+
+  form {
+    inline-size: 80%;
+
+    margin-inline: auto;
+
+    padding: 2rem 1rem;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      font-weight: bold;
+
+      inline-size: 100%;
+
+      border: none;
+      border-radius: 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      display: block;
+
+      padding: 0.5rem;
+
+      margin-block-end: 0.5rem;
+
+      &:focus {
+        outline: 2px solid var(--primary);
+      }
+    }
+
+    input[type="password"] {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+      letter-spacing: 0.125rem;
+    }
+
+    input[type="submit"] {
+      margin-block-start: 1rem;
+
+      padding-block: 0.5rem;
+
+      background-color: var(--primary);
+      color: white;
+    }
+  }
+}
