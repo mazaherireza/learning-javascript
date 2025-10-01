@@ -1,4 +1,4 @@
-let age = 65;
+const age = 65;
 
 age > 60 &&
   console.log(
