@@ -19,4 +19,5 @@ const mask = (phoneNumber, sign = "#") => {
 };
 
 const phoneNumber = "09354848902";
+
 console.log(mask(phoneNumber, "*"));
