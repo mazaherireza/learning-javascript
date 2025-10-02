@@ -2,7 +2,7 @@
   JS Function call()
   ------------------
   Method Reuse <------------- **
-  With the call() method, you can write A method that can be used on DIFFERENT objects. <----------- ***
+  With the call() method, you can write a method that can be used on DIFFERENT objects. <----------- ***
   
   In JS, all functions are object methods. <---------------- **
   ... it is a function of the global object.
@@ -23,4 +23,5 @@ import { developers } from "./developers.js";
 const INDEX = 0;
 const developer = developers[INDEX];
 const { city, country } = developer;
+
 console.log(person.fullName.call(developer, city, country));

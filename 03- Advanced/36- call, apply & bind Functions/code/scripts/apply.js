@@ -2,7 +2,7 @@
   JS Function apply()
   -------------------
   Method Reuse <------------------- **
-  With the apply() method, you can write A method that can be used on DIFFERENT objects. 
+  With the apply() method, you can write a method that can be used on DIFFERENT objects. 
 
   The call() method takes arguments separately. 
   The apply() method takes arguments as an array. <------------------- **
