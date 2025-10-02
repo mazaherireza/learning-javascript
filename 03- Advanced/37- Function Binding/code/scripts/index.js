@@ -4,6 +4,7 @@ const INDEX = 0;
 const developer = developers[INDEX];
 
 const INTERVAL = 1_000;
+
 const person = {
   firstName: "FirstName",
   lastName: "LastName",
@@ -18,6 +19,7 @@ const person = {
       INTERVAL
     );
   },
+
   displayPosition: function () {
     setTimeout(() => {
       console.log(`${this.position} Developer`);
@@ -26,8 +28,9 @@ const person = {
 };
 
 const { city, country } = developer;
+
 person.fullName(); // Yousef Amini from Tehran, Iran.
-person.fullName.call(developer, city, country); // Yousef Amini from Tehran, Iran.
+person.fullName.call(developer, city, country); // Yousef Amini from Isfahan, Iran.
 person.displayPosition(); // undefined Developer
 person.displayPosition.bind(developer)(); // Fullstack Developer
 
