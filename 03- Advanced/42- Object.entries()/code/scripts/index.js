@@ -1,7 +1,7 @@
 /*
   Object.entries()
   ----------------
-  JS Object.entries() static method returns an array of the key/value pairs of an object.
+  JS Object.entries() static method, returns an array of the key/value pairs of an object.
   ... does NOT change the original object. <------------- **
 */
 
@@ -11,9 +11,9 @@ const employee = {
   occupation: "Frontend Developer",
 };
 
-for (const key in employee) console.log(employee[key]);
-
-console.table(employee);
+for (const key in employee) {
+  console.log(employee[key]);
+}
 
 console.log(Object.entries(employee)); // ["firstName", "Reza"], ...
 
@@ -23,15 +23,14 @@ console.log(
     b: "CSS",
     c: "JavaScript",
     d: "TypeScript",
-    e: "VueJS",
-    f: "ReactJS",
+    e: "ReactJS",
   })
 );
 
 // ["a", "HTML"], ...
 
 /* 
-  The first element is the property key (which is ALWAYS a string), and the second element is the property value.
+  The first element, is the property key (which is ALWAYS a string), and the second element is the property value.
 */
 
 const scores = {
@@ -41,5 +40,6 @@ const scores = {
   Listening: 7.5,
 };
 
-for (const [topic, score] of Object.entries(scores))
+for (const [topic, score] of Object.entries(scores)) {
   console.log(`${topic}: ${score}`);
+}
