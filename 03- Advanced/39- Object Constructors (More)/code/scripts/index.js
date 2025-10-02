@@ -2,7 +2,7 @@ function Person(firstName, lastName, age) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.age = age;
-  
+
   this.setFirstName = function (firstName) {
     this.firstName = firstName;
   };
@@ -11,7 +11,7 @@ function Person(firstName, lastName, age) {
   };
 }
 
-const friend = new Person("Valentine", "Amini", 25);
+const friend = new Person("Valentine", "Amini", 26);
 
 friend.setFirstName("Yousef");
 console.log(friend.getFullname()); // Implicit Binding (Using .)
