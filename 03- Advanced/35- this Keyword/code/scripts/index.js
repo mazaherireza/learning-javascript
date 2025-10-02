@@ -33,6 +33,7 @@ function test() {
   "use strict";
   console.log(this); // undefined
 }
+
 test();
 
 /* 

@@ -31,7 +31,7 @@ Instead, and item's DEFINITION space is its lexical scope.
 const salutation = (name = "Reza") => console.log(`Salut ${name}!`)
 salutation's lexical scope is the global environment. <------------------ ***
 
-Any time your hear lexical, think DEFINITION.
+Any time you're hear lexical, think DEFINITION.
 
 An alternative to the lexical scope is the dynamic scope. 
 
