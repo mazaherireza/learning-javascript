@@ -17,6 +17,7 @@
 */
 
 let numbers = [];
+
 numbers = new Proxy(numbers, {
   // To intercept property writing.
   set(target, property, value) {

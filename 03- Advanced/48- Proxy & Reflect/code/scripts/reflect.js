@@ -3,7 +3,9 @@
   -------
   Reflect is a built-in object that simplifies creatin of Proxy.
   
-  ... internal methods such as [[Get]], [[Set]] and others are specification-only, they can't be called directly.
+  ... internal methods such as [[Get]], [[Set]] and others are specification-only, 
+  they can't be called directly.
+
   The Reflect object makes that somewhat possible.
   Its methods are minimal wrappers around the internal methods. <---------- **
 
@@ -15,6 +17,7 @@
 */
 
 const user = {};
+
 Reflect.set(user, "firstName", "Reza");
 console.log(user.firstName);
 
@@ -37,6 +40,7 @@ movie = new Proxy(movie, {
     console.log(`GET ${prop}`);
     return Reflect.get(target, prop, receiver);
   },
+
   set(target, prop, value, receiver) {
     console.log(`SET ${prop} = ${value}`);
     return Reflect.set(target, prop, value, receiver);
@@ -52,5 +56,5 @@ movie.title = "Her";
   Reflect.set writes an object property and returns true if successful, false otherwise.
   
   ... if a trap wants to forward the call to the object, 
-  it’s enough to call Reflect.<method> with the same arguments.
+  its enough to call Reflect.<method> with the same arguments.
 */
