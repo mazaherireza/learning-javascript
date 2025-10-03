@@ -4,6 +4,7 @@
   The most common traps are for reading/writing properties.
 
   To intercept reading, the handler should have a method get(target, property, receiver).
+
   It triggers when a property is read, with following arguments:
   target: is the target object, the one passed as the first argument to new Proxy
   property: property name
@@ -16,6 +17,7 @@
 
 // ... we'll wrap a regular array into the proxy that traps reading and returns 0 if there's no such property.
 let numbers = [1001, 1002, 1003];
+
 numbers = new Proxy(numbers, {
   get(target, property) {
     return property in target ? target[property] : 0; // returns 0 for nonexistent values.
@@ -28,7 +30,8 @@ console.log(numbers[0]);
 
 // We can use Proxy to implement any logic for "default" values. <-------------- **
 
-// ... we’ll wrap dictionary in a proxy that intercepts reading operations:
+// ... we'll wrap dictionary in a proxy that intercepts reading operations:
+
 let dictionary = {
   Hello: "Hola",
   Bye: "Adiós",
