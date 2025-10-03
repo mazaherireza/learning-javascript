@@ -27,6 +27,7 @@ console.log(user.firstName);
 */
 
 // ... both traps get and set transparently forward reading/writting operations to the object.
+
 const movie = {
   title: "Green Book",
 };
@@ -50,6 +51,6 @@ movie.title = "Her";
   Reflect.get reads an object property.
   Reflect.set writes an object property and returns true if successful, false otherwise.
   
-  ...  if a trap wants to forward the call to the object, 
+  ... if a trap wants to forward the call to the object, 
   it’s enough to call Reflect.<method> with the same arguments.
 */

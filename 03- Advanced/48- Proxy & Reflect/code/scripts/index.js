@@ -20,7 +20,7 @@ let numbers = [];
 numbers = new Proxy(numbers, {
   // To intercept property writing.
   set(target, property, value) {
-    if (typeof value == "number") {
+    if (typeof value === "number") {
       target[property] = value;
       return true;
     } else {
