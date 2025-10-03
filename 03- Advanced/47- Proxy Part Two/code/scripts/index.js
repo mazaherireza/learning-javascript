@@ -15,13 +15,14 @@
  */
 
 // ... we'll wrap a regular array into the proxy that traps reading and returns 0 if there's no such property.
-let numbers = [1_001, 1_002, 1_003];
+let numbers = [1001, 1002, 1003];
 numbers = new Proxy(numbers, {
   get(target, property) {
     return property in target ? target[property] : 0; // returns 0 for nonexistent values.
     // 0: default value
   },
 });
+
 console.log(numbers[8]);
 console.log(numbers[0]);
 
