@@ -26,7 +26,9 @@ console.log(vowels.keys()); // SetIterator
 console.log(vowels.values()); // SetIterator {"a", "e", "i", ...}
 
 const iterator = vowels.values();
-for (const value of iterator) console.log(value);
+for (const value of iterator) {
+  console.log(value);
+}
 
 vowels.forEach((char) => {
   console.log(char);
