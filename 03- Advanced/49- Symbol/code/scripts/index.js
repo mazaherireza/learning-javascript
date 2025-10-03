@@ -6,7 +6,8 @@
   So that obj[1] is the same as obj["1"], and obj[true] is the same as obj["true"].
 
   ... let's explore symbols, ...
-  A symbol represents a UNIQUE identifier. 
+  A symbol represents a UNIQUE identifier.
+
   A value of this type can be created using Symbol(). 
 */
 
@@ -19,7 +20,7 @@ console.log(id); // Symbol()
 
   Symbols are guaranteed to be unique. <--------------- **
   Even if we create many symbols with exactly the same description, they are different values <------------- *
-  The description is just a label that doesn’t affect anything.
+  The description is just a label that doesn't affect anything.
 */
 
 const pCode1 = Symbol("Personnel Code");
@@ -31,7 +32,7 @@ console.log(pCode1 == pCode2); // false
 console.warn("Symbols don't auto-convert to a string");
 
 /*
-  Most values in JS support implicit conversion to a string.
+  Most values in JS, support implicit conversion to a string.
   Symbols are special. They don't auto-convert. <-------------- **
 
   That's a "language guard" against messing up,
