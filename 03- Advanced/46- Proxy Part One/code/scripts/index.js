@@ -19,19 +19,23 @@
 */
 
 // ... a proxy without any traps:
+
 let target = {};
 let proxy = new Proxy(target, {}); // empty handler
 proxy.test = "Test";
+
 console.log(target.test); // the property appeared in target!
 console.log(proxy.test); // we can read it from proxy too
+
 for (let key in proxy) {
   console.log(key);
 }
+
 /*
   As there are no traps, ALL operations on proxy are forwarded to target.
   1. A writing operation proxy.test =, sets the value on target.
   2. A reading operation proxy.test, returns the value from target.
-  3. Iteration over proxy returns values from target.
+  3. Iteration over proxy, returns values from target.
 
   Without any traps, proxy is a transparent wrapper around target.
 */
@@ -49,6 +53,7 @@ for (let key in proxy) {
   
   ... [[Set]], the internal method to write a property, ... are only used on the specification,
   we can't call them directly by name.
+  
   Proxy traps intercept invocation of these methods. 
 */
 
