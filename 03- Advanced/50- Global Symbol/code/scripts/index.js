@@ -18,10 +18,11 @@ const user = {
 
 const id = Symbol("id");
 console.log(id); // Symbol(id)
+
 user[id] = "USR_1001AEH";
-user.age = 35;
+user.age = 36;
 // user.id = "USR_1001AEH"; <----------------- *********** Wrong *************
-console.log(user); // { ..., age: 35, Symbol(id): "USR_1001AEH" }
+console.log(user); // { ..., age: 36, Symbol(id): "USR_1001AEH" }
 console.log(user.id); // undefined <----------------- ************ Wrong **************
 console.log(user[id]); // USR_1001AEH, We can access the data using the symbol as the key.
 
@@ -35,7 +36,7 @@ console.log(user[id]); // USR_1001AEH, We can access the data using the symbol a
   The third-party code won't be aware of newly defined symbols, <----------- ***
   so it's safe to add symbols to the user objects.
 
-  Also, imagine that another script wants to have its own identifier inside user, for its own purposes.
+  Also, imagine that another script, wants to have its own identifier inside user, for its own purposes.
   .... can create its own Symbol("id"), like this:
   
   let id = Symbol("id")
@@ -56,6 +57,7 @@ console.log(user[id]); // USR_1001AEH, We can access the data using the symbol a
 */
 
 const identifier = Symbol("identifier");
+
 let friend = {
   name: "Yousef",
   [identifier]: "FRD_1001AMI", // NOT identtifier: "FRD_1001AMI"
@@ -73,7 +75,9 @@ console.log(friend); // {name: 'Yousef', Symbol(identifier): 'FRD_1001AMI'}
   Symbolic properties do NOT participate in for...in loop: <------------- *
 */
 
-for (let key in friend) console.log(key);
+for (let key in friend) {
+  console.log(key);
+}
 
 // the direct access by the symbol works <------------ **
 console.log(`Direct: ${friend[identifier]}`);
@@ -94,6 +98,7 @@ console.log(clone[id]);
   Global Symbols
   --------------
   ..., usually all symbols are different, even if they have the same name. 
+
   But sometimes we want same-named symbols to be same entities. <-------------- **
   For instance, different parts of our application want to access symbol "id" meaning exactly the same property.
 
@@ -127,8 +132,8 @@ console.log(Symbol.keyFor(anotherKey)); // NC
 
 /*
   The Symbol.keyFor internally uses the global symbol registry to look up the key for the symbol. 
-  So it doesn’t work for non-global symbols. <--------------- ***
-  If the symbol is not global, it won’t be able to find it and returns undefined.
+  So it doesn't work for non-global symbols. <--------------- ***
+  If the symbol is not global, it won't be able to find it and returns undefined.
 */
 
 const globalSymbol = Symbol.for("label");
