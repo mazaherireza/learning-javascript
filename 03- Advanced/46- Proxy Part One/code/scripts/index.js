@@ -6,7 +6,9 @@
   or transparently allowing the object to handle them.
 
   The syntax:
+
   let proxy = new Proxy(target, handler)
+
   target: is an obejct to wrap, can be anything, inlcuding functions. <---------------- **
   handler: proxy configuration <-------------- *
   an object with "traps", methods that intercept operations. <------------- **
@@ -22,8 +24,9 @@ let proxy = new Proxy(target, {}); // empty handler
 proxy.test = "Test";
 console.log(target.test); // the property appeared in target!
 console.log(proxy.test); // we can read it from proxy too
-for (let key in proxy) console.log(key);
-
+for (let key in proxy) {
+  console.log(key);
+}
 /*
   As there are no traps, ALL operations on proxy are forwarded to target.
   1. A writing operation proxy.test =, sets the value on target.
