@@ -9,8 +9,9 @@ const addBook = (title, author) => {
           title,
           author,
         })
-      )
+      ) {
         resolve("Resolved");
+      }
     }, 5_000);
   });
 };
