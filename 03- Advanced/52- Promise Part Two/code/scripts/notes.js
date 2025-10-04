@@ -36,12 +36,13 @@ rejectedPromise.catch((result) => {
   console.log(result);
   return `%${result}%`;
 });
+
 rejectedPromise.catch((result) => {
   console.log(result);
   return `%${result}%`;
 });
 
-// ... they proccess it independently.
+// ... they proccess it, independently.
 
 // Returning promises <------------ *
 // A handler used in .then (handler) may create and return a promise.
@@ -78,8 +79,10 @@ class Thenable {
   constructor(response) {
     this.response = response;
   }
+
   then(resolve, reject) {
     console.log(resolve);
+
     setTimeout(() => resolve(this.response * 5), 1_000);
   }
 }

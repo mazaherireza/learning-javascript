@@ -13,6 +13,7 @@ const addBook = (title, author) => {
     }, 5_000);
   });
 };
+
 const displayBooks = () => {
   console.table(books);
 };
