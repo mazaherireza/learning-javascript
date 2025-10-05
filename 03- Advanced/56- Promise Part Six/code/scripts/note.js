@@ -2,11 +2,13 @@
   Microtasks
   ----------
   Promise handlers, .then/.catch/.finally are always asynchronous. <------------ ***
+  
   Even when a Promise is immediately resolved, the code on the lines below .then/...
   will still execute BEFORE these handlers.
 */
 
 const promise = Promise.resolve(); // the promise is definitely done from the beginning.
+
 promise.then(() => console.log("Promise done!"));
 console.log("End of code!");
 
@@ -38,6 +40,7 @@ console.log("End of code!");
 */
 
 const p = Promise.reject(new Error("Promise Failed!"));
+
 window.onunhandledrejection = (event) => {
   console.log("event.reason is: ", event.reason);
 };
