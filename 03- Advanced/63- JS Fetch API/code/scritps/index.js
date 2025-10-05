@@ -32,9 +32,10 @@ const populateName = ({ first, last }) => {
 
 window.onload = () => {
   const INDEX = 0;
+
   fetch(BASE_URL)
     .then((response) => {
-      if (response.status == 200) {
+      if (response.status === 200) {
         // When the fetch is successful, we read and parse the data using json() <--------- ***
         return response.json();
       }
