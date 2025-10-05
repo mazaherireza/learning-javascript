@@ -9,8 +9,11 @@ const $ = document;
 const loadScript = (source, callback) => {
   const script = $.createElement("script");
   script.src = source;
+
   script.onload = () => callback(null, script); // ... in case of successful loading.
+
   script.onerror = () => callback(new Error(`Script load error for ${source}`));
+
   $.head.append(script);
 };
 
@@ -22,8 +25,11 @@ const loadScript = (source, callback) => {
 const loadScriptPromise = (source) => {
   return new Promise((resolve, reject) => {
     loadScript(source, (error, script) => {
-      if (error) reject(error);
-      else resolve(script);
+      if (error) {
+        reject(error);
+      } else {
+        resolve(script);
+      }
     });
   });
 };
@@ -37,6 +43,7 @@ const loadScriptPromise = (source) => {
 */
 
 // ... it accepts a to-promisify function func and returns a wrapper function.
+
 function promisify(func) {
   // A wrapper function
   return function (...args) {
@@ -48,10 +55,15 @@ function promisify(func) {
     return new Promise((resolve, reject) => {
       // Custom callback for func
       function callback(error, result) {
-        if (error) reject(error);
-        else resolve(result);
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result);
+        }
       }
+
       args.push(callback);
+
       func.call(this, ...args); // <---------- ****
       /*
         ... call() method is a predefined JS method.
@@ -72,17 +84,21 @@ loadScript("js/index.js", () => {});
 */
 
 // anotherPromisify(func, true) to get array of results
+
 function anotherPromisify(fun, manyArgs = false) {
   return function (...args) {
     return new Promise((resolve, reject) => {
       function callback(error, ...results) {
-        if (error) reject(error);
-        else {
+        if (error) {
+          reject(error);
+        } else {
           // resolve with all callback results if manyArgs is specified
           resolve(manyArgs ? results : results[0]);
         }
       }
+
       args.push(callback);
+
       fun.call(this, ...args);
     });
   };
