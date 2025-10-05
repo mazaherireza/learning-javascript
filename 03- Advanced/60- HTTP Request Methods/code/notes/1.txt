@@ -5,8 +5,8 @@ What is HTTP?
 The Hypertext Transfer Protocol (HTTP) is designed to enable communications between clients and servers.
 HTTP works as a request-response protocol between a client and server.
 
-... a client (browser) sends an HTTP request to the server,then the server returns a response to the client. 
-The response contains status information about the request and may also contain the requested content.
+... a client (browser) sends an HTTP request to the server, then the server returns a response to the client. 
+The response, contains status information about the request and may also contain the requested content.
 
 HTTP Methods
 ------------
