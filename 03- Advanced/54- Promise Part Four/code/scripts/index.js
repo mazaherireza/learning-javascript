@@ -5,15 +5,19 @@ const addBook = (title, author) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(); // <----- Promise handlers are ALWAYS asynchronous
+
       console.log("After resolve.");
+
       books.push({
         title,
         author,
       });
+
       reject("Rjected!");
     }, 5_000);
   });
 };
+
 const displayBooks = () => {
   console.table(books);
 };

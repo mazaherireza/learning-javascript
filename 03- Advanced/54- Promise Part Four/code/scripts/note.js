@@ -10,6 +10,7 @@
   ... we want many promises to execute in parallel and wait until all of them are ready.
 
   const promise = Promise.all(iterable)
+
   Promise.all takes an iterable (usually, an array of promises) and returns a new promise.
   The new promise resolves when all listed promises are resolved, and the array of their results becomes its result.
 
@@ -38,18 +39,20 @@ Promise.all(requests) // Waits until ALL jobs are resolved
 /*
   Promise.allSettled
   ------------------
-  ... just waits for all promises to settle, regardless of the result. <-------------- **
+  ... just waits for all promises to settle, regardless of the result. <------------- **
+  
   The resulting array has:
   {status: "fulfilled", value: result} for successful responses
   {status: "rejected", reason: error} for errors
 */
 
 Promise.allSettled(URLs.map((URL) => fetch(URL))).then((results) => {
-  results.forEach((result, index) => {
-    if (result.status == "fulfilled") {
+  results.forEach((result) => {
+    if (result.status === "fulfilled") {
       //
     }
-    if (result.status == "rejected") {
+
+    if (result.status === "rejected") {
       //
     }
   });
@@ -66,6 +69,7 @@ if (!Promise.allSettled) {
     status: "rejected",
     reason,
   });
+
   const resolveHandler = (value) => ({
     status: "fulfilled",
     value,
@@ -75,6 +79,7 @@ if (!Promise.allSettled) {
     const convertedPromises = promises.map((promise) => {
       Promise.resolve(promise).then(resolveHandler, rejectedHandler);
     });
+
     return Promise.all(convertedPromises);
   };
 }
