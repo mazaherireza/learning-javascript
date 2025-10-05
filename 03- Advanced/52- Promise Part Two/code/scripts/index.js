@@ -8,8 +8,12 @@ const addBook = (title, author) => {
         title,
         author,
       });
-      if (false) resolve();
-      else reject("Failed!");
+
+      if (false) {
+        resolve();
+      } else {
+        reject("Failed!");
+      }
     }, 5_000);
   });
 };

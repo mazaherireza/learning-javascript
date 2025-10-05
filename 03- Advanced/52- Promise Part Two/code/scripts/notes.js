@@ -1,6 +1,6 @@
 // Promises Chaining
 
-// The idea is that the result is passed through the chain of .then handlers.
+// The idea is that, the result is passed through the chain of .then handlers.
 
 new Promise((resolve, reject) => {
   setTimeout(() => resolve(1), 2_000); // The initial promise, resolves in 2 seconds
@@ -45,6 +45,7 @@ rejectedPromise.catch((result) => {
 // ... they proccess it, independently.
 
 // Returning promises <------------ *
+
 // A handler used in .then (handler) may create and return a promise.
 // ... further handlers WAIT until it settles, and then get its result. <---------------- **
 
@@ -53,6 +54,7 @@ new Promise(function (resolve, reject) {
 })
   .then(function (result) {
     console.log(result);
+
     return new Promise(function (resolve, reject) {
       setTimeout(() => resolve(result * 2), 2_000);
     });
@@ -65,7 +67,9 @@ new Promise(function (resolve, reject) {
 
 /*
   ... promisified loadScript, ...
+
   ... there are no signs of "pyramid of doom".
+  
   ... the nested function has access to the outer scope. <--------------- **
 */
 
