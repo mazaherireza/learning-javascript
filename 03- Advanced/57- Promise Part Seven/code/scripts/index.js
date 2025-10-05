@@ -6,8 +6,11 @@ const loadStyle = (path) => {
       const link = $.createElement("link");
       link.rel = "stylesheet";
       link.href = path;
+
       link.onload = () => resolve("Loaded");
+
       link.onerror = () => reject("Error");
+
       $.head.append(link);
     }, 2_000);
   });
@@ -15,4 +18,4 @@ const loadStyle = (path) => {
 
 const log = (response) => console.log(response);
 
-loadStyle("./style/mobile.css").then(log).catch(log);
+loadStyle("/style/mobile.css").then(log).catch(log);
