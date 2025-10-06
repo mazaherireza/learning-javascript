@@ -73,8 +73,11 @@ function promisify(func) {
   };
 }
 
-const test = promisify(loadScript);
-loadScript("js/index.js", () => {});
+// Usage:
+if (true) {
+  const loadScriptPromise = promisify(loadScript);
+  loadScriptPromise("js/index.js", () => {});
+}
 
 // ... wrapper returns a promise and forwards the call to the original func, ...
 
@@ -92,7 +95,7 @@ function anotherPromisify(fun, manyArgs = false) {
         if (error) {
           reject(error);
         } else {
-          // resolve with all callback results if manyArgs is specified
+          // resolve with all callback results, if manyArgs is specified
           resolve(manyArgs ? results : results[0]);
         }
       }

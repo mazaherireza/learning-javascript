@@ -5,7 +5,7 @@ const promise = new Promise((resolve, reject) => {
   for (let ch of programmingLanguage) {
     console.log(ch);
 
-    if (ch == CHAR) {
+    if (ch === CHAR) {
       resolve("Success"); // PromiseResult: "Success"
       // Why iteration didn't terminate? <---------- ***
     }
