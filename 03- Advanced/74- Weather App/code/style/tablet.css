@@ -1,0 +1,7 @@
+body {
+  main {
+    .wrapper {
+      inline-size: 70%;
+    }
+  }
+}

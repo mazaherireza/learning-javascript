@@ -1,0 +1,19 @@
+body {
+  main {
+    flex-basis: 100%;
+
+    .wrapper {
+      inline-size: 100%;
+
+      border: none;
+
+      input[type="text"] {
+        font-size: small;
+      }
+
+      .result {
+        font-size: small;
+      }
+    }
+  }
+}

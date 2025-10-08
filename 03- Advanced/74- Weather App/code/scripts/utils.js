@@ -31,6 +31,7 @@ const fullDate = () => {
   const month = now.getMonth();
   const year = now.getFullYear();
   const weekDay = now.getDay();
+  
   return `${WEEKDAYS[weekDay]} ${day} ${MONTHS[month]} ${year}`;
 };
 

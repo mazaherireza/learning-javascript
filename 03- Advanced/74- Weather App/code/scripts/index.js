@@ -10,15 +10,16 @@ import { renderToDOM } from "./render.js";
 import { BASE_URL, API_KEY } from "./constants.js";
 
 const $ = document;
+
 const city = $.querySelector("#city");
-const result = $.querySelector(".result");
 const loading = $.querySelector("#loading");
 
 city.onkeypress = (event) => {
-  console.log(event.code);
-  if (event.code == "Enter") {
+  if (event.code === "Enter") {
     loading.style.visibility = "visible";
+
     const keySearch = city.value;
+
     fetch(`${BASE_URL}?q=${keySearch}&appid=${API_KEY}`)
       .then((response) => response.json())
       .then((data) => {
