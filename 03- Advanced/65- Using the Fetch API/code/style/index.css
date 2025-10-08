@@ -4,32 +4,32 @@ body {
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
 
-main {
-  background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
+  main {
+    background: #a8ff78 linear-gradient(to left, #78ffd6, #a8ff78);
 
-  display: grid;
-  place-content: center;
-}
+    display: grid;
+    place-content: center;
+  }
 
-#playground {
-  padding: 1rem;
-}
+  #playground {
+    padding: 1rem;
 
-#playground #playground-title {
-  margin-block-end: 1rem;
-}
+    #playground-title {
+      margin-block-end: 1rem;
+    }
 
-.wrapper-buttons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
+    .wrapper-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
-button {
-  font-weight: bold;
-  padding: 0.5rem 1rem;
+      button {
+        font-weight: bold;
+        padding: 0.5rem 1rem;
 
-  border-radius: 0.25rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
 }
