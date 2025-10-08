@@ -31,7 +31,7 @@ User agent: ... a computer program representing a person
 a user agent can be a bot scraping webpages, a download manager, ...
 
 Along with each request they make to the server, 
-browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string.)
+browsers include a self-identifying User-Agent HTTP header called a user agent (UA) string.
 
 A web page can embed a variety of different types of resources such as:
 style information, scripts, media

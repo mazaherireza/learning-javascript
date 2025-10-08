@@ -5,12 +5,16 @@
   A Promise that resolves to a JavaScript object.
 */
 
-const request = new Request("/js/books.json"); // Starts with / NOT ./
+const request = new Request("/scripts/books.json"); // Starts with / NOT ./
+
 fetch(request)
   .then((response) => response.json())
   .then((data) => {
     console.table(data.books);
-    for (const book of data.books) console.log(book.title);
+
+    for (const book of data.books) {
+      console.log(book.title);
+    }
   });
 
 /*
@@ -22,28 +26,34 @@ fetch(request)
   To abort incomplete fetch() operations, use the AbortController and AbortSignal interfaces.
 */
 
-const URL = "/resource/Audio.mp3";
+const URL = "/resource/audio.mp3";
+
 const controller = new AbortController();
 const signal = controller.signal;
 
 const $ = document;
-const downloadBtn = $.querySelector("#download");
-const abortBtn = $.querySelector("#abort");
-abortBtn.setAttribute("disabled", true);
+const downloadButton = $.querySelector("#download");
+const abortButton = $.querySelector("#abort");
 
-downloadBtn.addEventListener("click", async () => {
-  abortBtn.removeAttribute("disabled");
+abortButton.setAttribute("disabled", true);
+
+downloadButton.addEventListener("click", async () => {
+  abortButton.removeAttribute("disabled");
+
   try {
     const response = await fetch(URL, { signal }); // <------------ ***
+
     console.log("Download Complete", response);
   } catch (error) {
     console.error(`Download error: ${error.message}`);
   }
 });
 
-abortBtn.addEventListener("click", () => {
-  abortBtn.setAttribute("disabled", true);
+abortButton.addEventListener("click", () => {
+  abortButton.setAttribute("disabled", true);
+
   controller.abort(); // <----------------- ***
+
   console.log("Download aborted");
 });
 
