@@ -16,8 +16,11 @@ import { range } from "./utils.js";
 
 const $ = document;
 const images = $.querySelectorAll("img");
+
 const mapFn = (img) => img.src;
+
 const sources = Array.from(images, mapFn);
+
 const insecureSources = sources.filter((link) => link.startsWith("http://"));
 
 console.log(range(1, 17, 3));
@@ -25,4 +28,5 @@ console.log(range(1, 17, 3));
 const alphabets = range("A".charCodeAt(0), "Z".charCodeAt(0), 1).map((num) =>
   String.fromCharCode(num)
 );
+
 console.log(alphabets);

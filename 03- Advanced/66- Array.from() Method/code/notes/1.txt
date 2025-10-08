@@ -41,7 +41,8 @@ including images, CSS stylesheets, JavaScript files, fonts, and video.
 ... it's far more convenient to store files all on a dedicated web server because:
 A dedicated web server is typically more available (up and running).
 Excluding downtime and system troubles, a dedicated web server is always connected to the Internet.
-A dedicated web server can have the same IP address all the time. This is known as a dedicated IP address.
+A dedicated web server can have the same IP address all the time. 
+This is known as a dedicated IP address.
 
 Communicating through HTTP
 Second, a web server provides support for HTTP (Hypertext Transfer Protocol). 
