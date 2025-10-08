@@ -42,7 +42,7 @@ async function post(URL = "", data = {}) {
     body: JSON.stringify(data),
   });
   // parses JSON response into native JS objects <-------------- ***
-  return response.json();
+  return await response.json();
 }
 
 post("fake-url", { fullname: "Reza Mazaheri" }).then((data) => {
