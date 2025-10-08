@@ -1,8 +1,8 @@
 const $ = document;
 
-let _userId = $.querySelector("#user-id");
-let _id = $.querySelector("#id");
-let _title = $.querySelector("#title");
+const _userId = $.querySelector("#user-id");
+const _id = $.querySelector("#id");
+const _title = $.querySelector("#title");
 
 const populateJSON = ({ userId, id, title }) => {
   _userId.innerHTML = userId;

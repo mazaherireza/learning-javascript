@@ -1,0 +1,13 @@
+body {
+  main {
+    #hero-title {
+      font-size: larger;
+    }
+  }
+
+  #playgroud {
+    #playground-title {
+      font-size: large;
+    }
+  }
+}
