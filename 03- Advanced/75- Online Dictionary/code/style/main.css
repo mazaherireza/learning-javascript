@@ -2,9 +2,13 @@
   --primary: #feef00;
 }
 
-* {
+*,
+*::before,
+*::after {
   font-family: "Times New Roman", Times, serif;
+
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 }
@@ -14,11 +18,12 @@
 }
 
 ol {
-  padding-left: 1rem;
-}
+  padding-inline-start: 1rem;
 
-ol li {
-  font-weight: bold;
-  font-size: small;
-  margin-bottom: 0.25rem;
+  li {
+    font-weight: bold;
+    font-size: small;
+
+    margin-block-end: 0.25rem;
+  }
 }

@@ -1,0 +1,9 @@
+body {
+  main {
+    inline-size: 90%;
+
+    input[type="text"] {
+      font-size: small;
+    }
+  }
+}
