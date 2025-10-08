@@ -11,8 +11,11 @@
         method: "PUT", <--------------------- **
         body: formData,
       });
+
       const result = await response.json();
+
       console.log("Success: ", result);
+
     } catch (error) {
     console.error("Error: ", error);
     }
@@ -23,6 +26,7 @@
 
   formData.append("username", "rezamazaheri");
   formData.append("avatar", fileField.files[0]);
+
   upload(formData); 
 */
 
@@ -63,7 +67,11 @@ uploadMultiple(formData);
 async function fetchImage() {
   try {
     const response = await fetch("Something.jpg");
-    if (!response.ok) throw new Error("Network response was not OK.");
+
+    if (!response.ok) {
+      throw new Error("Network response was not OK.");
+    }
+
     // The response is a Blob object, containing the binary data.
     const _blob = await response.blob();
     img.src = URL.createObjectURL(_blob);
@@ -71,4 +79,5 @@ async function fetchImage() {
     console.error("There has been a problem with your fetch operation:", error);
   }
 }
+
 fetchImage();
