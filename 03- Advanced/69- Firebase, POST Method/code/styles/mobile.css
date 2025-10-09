@@ -10,7 +10,7 @@ body {
       font-size: large;
     }
 
-    .form {
+    form {
       inline-size: 90%;
     }
   }

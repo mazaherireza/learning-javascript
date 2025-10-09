@@ -9,7 +9,7 @@ body {
   #playground {
     grid-row: 2 / span 2;
 
-    .form {
+    form {
       inline-size: 40%;
     }
   }
