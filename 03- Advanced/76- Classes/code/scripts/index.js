@@ -8,4 +8,5 @@ class Person {
 }
 
 const friend = new Person("Yousef", "Amini", "Fullstack Developer", "Isfahan");
+
 console.log(`${friend.firstname}, from ${friend.hometown}`);
