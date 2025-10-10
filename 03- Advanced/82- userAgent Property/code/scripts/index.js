@@ -7,7 +7,9 @@
 
 window.onload = () => {
   const UA = navigator.userAgent;
+
   let browser;
+
   if (UA.match(/edg/i)) {
     browser = "Edge";
   } else if (UA.match(/firefox/i)) {
@@ -19,7 +21,12 @@ window.onload = () => {
   } else if (UA.match(/safari/i)) {
     browser = "Safari";
   }
+
   const $ = document;
+
   const img = $.querySelector(`img[alt=${browser}]`);
-  if (img) img.className = "active";
+
+  if (img) {
+    img.className = "active";
+  }
 };

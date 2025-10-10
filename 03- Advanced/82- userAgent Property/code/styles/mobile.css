@@ -1,0 +1,20 @@
+body {
+  main {
+    #hero-title {
+      font-size: large;
+    }
+  }
+
+  section {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .browsers {
+      img {
+        inline-size: 2rem;
+        block-size: 2rem;
+      }
+    }
+  }
+}
