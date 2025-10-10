@@ -1,0 +1,39 @@
+body {
+  main {
+    #hero-title {
+      font-size: larger;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: large;
+    }
+
+    .main-wrapper {
+      inline-size: 100%;
+
+      h3 {
+        font-size: small;
+      }
+
+      input {
+        padding: 0.25rem 0.5rem;
+      }
+
+      .action-wrapper {
+        button {
+          padding: 0.25rem 0.5rem;
+        }
+      }
+
+      .todo-wrapper {
+        .card {
+          .status {
+            font-size: x-small;
+          }
+        }
+      }
+    }
+  }
+}
