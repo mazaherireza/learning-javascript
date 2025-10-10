@@ -22,6 +22,7 @@ class Person {
 class Professor extends Person {
   constructor(firstname, lastname, occupation, hometown, department, courses) {
     super(firstname, lastname, occupation, hometown);
+    
     this.department = department;
     this.courses = [...courses];
   }
