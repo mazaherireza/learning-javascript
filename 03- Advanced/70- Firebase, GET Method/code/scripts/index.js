@@ -6,6 +6,7 @@ const fetchUsers = () => {
     .then((response) => response.json())
     .then((data) => {
       const users = Object.entries(data);
+      
       users.forEach((user) => {
         renderToDOM(user);
       });

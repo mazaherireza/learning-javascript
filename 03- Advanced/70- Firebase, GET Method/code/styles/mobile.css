@@ -1,0 +1,29 @@
+body {
+  main {
+    #hero-title {
+      font-size: larger;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: large;
+    }
+
+    h3 {
+      font-size: small;
+    }
+
+    .wrapper {
+      inline-size: 95%;
+
+      .user-wrapper {
+        font-size: small;
+
+        .fa {
+          font-size: small;
+        }
+      }
+    }
+  }
+}

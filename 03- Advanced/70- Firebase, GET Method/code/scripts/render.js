@@ -1,4 +1,5 @@
 const $ = document;
+
 const wrapper = $.querySelector(".wrapper");
 
 const renderToDOM = ([id, user]) => {
