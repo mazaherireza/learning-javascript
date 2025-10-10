@@ -1,16 +1,19 @@
 import { URL } from "./URL.js";
 
 const $ = document;
+
 const wrapper = $.querySelector(".wrapper");
 const snackbar = $.querySelector("#snackbar");
 
 const INTERVAL = 5_000;
+
 const deleteUser = (userID) => {
   fetch(`${URL}/users/${userID}.json`, {
     method: "DELETE",
   })
     .then(() => {
       populateSnackbar("User Deleted.");
+
       fetchUsers();
     })
     .catch(() => {
@@ -18,6 +21,7 @@ const deleteUser = (userID) => {
     })
     .finally(() => {
       snackbar.className = "show";
+
       setTimeout(() => {
         snackbar.className = snackbar.className.replace("show", "");
       }, INTERVAL);
@@ -58,6 +62,7 @@ const fetchUsers = () => {
     .then((data) => {
       const users = Object.entries(data);
       wrapper.innerHTML = "";
+      
       users.forEach((user) => {
         renderToDOM(user);
       });
