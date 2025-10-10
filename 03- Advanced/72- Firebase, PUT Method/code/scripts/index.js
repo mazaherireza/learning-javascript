@@ -1,12 +1,14 @@
 import { URL } from "./URL.js";
 
 const $ = document;
+
 const wrapper = $.querySelector(".wrapper");
 const snackbar = $.querySelector("#snackbar");
 
 const modal = $.querySelector(".modal");
 
 const INTERVAL = 5_000;
+
 const deleteUser = (userID) => {
   fetch(`${URL}/users/${userID}.json`, {
     method: "DELETE",
@@ -62,6 +64,7 @@ const openEditModal = ({ id, user }) => {
       }),
     }).then((response) => {
       closeEditModal();
+
       fetchUsers();
     });
   };
@@ -86,11 +89,13 @@ const renderToDOM = ([id, user]) => {
   trash.addEventListener("click", () => {
     deleteUser(id);
   });
+
   const edit = $.createElement("i");
   edit.className = "fa fa-edit fa-lg";
   edit.addEventListener("click", () => {
     openEditModal({ id, user });
   });
+
   const actions = $.createElement("div");
   actions.append(trash, edit);
 
@@ -107,6 +112,7 @@ const fetchUsers = () => {
     .then((data) => {
       const users = Object.entries(data);
       wrapper.innerHTML = "";
+
       users.forEach((user) => {
         renderToDOM(user);
       });
