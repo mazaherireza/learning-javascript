@@ -8,17 +8,18 @@ customElements.define(
         ... so that the correct prototype chain is established. <------------ *
       */
       super();
+
       console.log("Custom Element Created!");
+
       this.innerHTML = `
       <style>
         h5 {
-          width: 50%;
+          inline-size: 50%;
           border: 1px solid black;
           padding: 1rem;
           border-radius: 0.25rem;
           text-align: center;
-          margin-left: auto;
-          margin-right: auto;
+          margin-inline: auto;
         }
       </style>
       <h5>Reza Mazaheri</h5>`;

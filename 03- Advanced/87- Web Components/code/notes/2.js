@@ -30,9 +30,13 @@ customElements.define(
     constructor() {
       super();
     }
+
     connectedCallback() {}
+
     disconnectedCallback() {}
+    
     adoptedCallback() {}
+
     attributeChangedCallback(avatar, oldValue, newValue) {
       console.log(`Attribute ${avatar} has changed.`);
     }
