@@ -15,11 +15,14 @@ customElements.define(
       <style>
         h5 {
           inline-size: 50%;
+
           border: 1px solid black;
-          padding: 1rem;
           border-radius: 0.25rem;
-          text-align: center;
+
           margin-inline: auto;
+          padding: 1rem;
+          
+          text-align: center;
         }
       </style>
       <h5>Reza Mazaheri</h5>`;

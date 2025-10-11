@@ -1,8 +1,9 @@
 const $ = document;
+
 const template = $.createElement("template");
 
 template.innerHTML = `
-  <link rel="stylesheet" href="./style/user-media.css" />
+  <link rel="stylesheet" href="/styles/user-media.css" />
   <h5>Reza Mazaheri</h5>
 `;
 
@@ -12,9 +13,11 @@ customElements.define(
     constructor() {
       super();
       // console.log(this);
+
       const shadowRoot = this.attachShadow({
         mode: "open",
       });
+
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
   }

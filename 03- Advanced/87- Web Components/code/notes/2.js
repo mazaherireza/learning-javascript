@@ -34,7 +34,7 @@ customElements.define(
     connectedCallback() {}
 
     disconnectedCallback() {}
-    
+
     adoptedCallback() {}
 
     attributeChangedCallback(avatar, oldValue, newValue) {
@@ -42,3 +42,4 @@ customElements.define(
     }
   }
 );
+w
