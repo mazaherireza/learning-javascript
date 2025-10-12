@@ -28,6 +28,7 @@
 */
 
 const $ = document;
+
 $.cookie = "username=rezamazaheri";
 
 // You can also add an expiry date (in UTC time).
@@ -129,3 +130,5 @@ const checkCookie = () => {
     setCookie("username", username, 365);
   }
 };
+
+checkCookie();
