@@ -17,8 +17,10 @@
   using something like the following:
 */
 
-const $ = document
+const $ = document;
+
 const template = $.querySelector("template#introduction");
+
 $.body.appendChild(template.content);
 
 /*
@@ -28,13 +30,16 @@ $.body.appendChild(template.content);
   Let's define a web component that uses our template as the content of its shadow DOM. 
 */
 
-createElement.define(
+customElements.define(
   "exam-card",
   class ExamCard extends HTMLElement {
     constructor() {
       super();
+
       const template = $.querySelector("template#introduction");
+
       const shadowRoot = this.attachShadow({ mode: "open" });
+
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
   }
@@ -47,5 +52,6 @@ createElement.define(
   And because we are appending its contents to a shadow DOM, 
   we can include some styling information inside the template in a <style> element,
   which is then encapsulated inside the custom element. <------------------- *
+  
   This wouldn't work if we just appended it to the standard DOM. <------------------- **
 */
