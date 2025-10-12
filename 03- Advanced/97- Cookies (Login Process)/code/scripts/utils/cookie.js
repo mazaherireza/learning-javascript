@@ -4,7 +4,9 @@ const $ = document;
 
 const doesExist = (key) => {
   const keyValues = $.cookie.split("; ");
+
   const index = keyValues.findIndex((keyValue) => keyValue.startsWith(key));
+  
   return index == -1 ? false : true;
 };
 

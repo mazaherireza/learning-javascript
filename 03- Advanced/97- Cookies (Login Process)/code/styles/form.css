@@ -1,0 +1,83 @@
+.form-container {
+  inline-size: 50%;
+
+  box-shadow: 0.5rem 0.25rem 0.5rem var(--primary);
+
+  border-radius: 0.5rem;
+}
+
+.form-container form {
+  inline-size: 80%;
+
+  margin-inline: auto;
+  padding: 2rem 1rem;
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    font-weight: bold;
+
+    inline-size: 100%;
+
+    display: block;
+
+    padding: 0.5rem;
+    margin-block-end: 0.5rem;
+
+    border: 1px solid var(--primary);
+    border-radius: 0.25rem;
+  }
+
+  input[type="text"] {
+    &:focus {
+      outline: 2px solid var(--primary);
+    }
+  }
+
+  input[type="password"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    letter-spacing: 0.125rem;
+
+    &:focus {
+      outline: 2px solid var(--primary);
+    }
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--primary);
+  }
+
+  input[type="submit"] {
+    margin-block-start: 1rem;
+    padding-block: 0.5rem;
+
+    border: 1px solid var(--primary);
+
+    background-color: white;
+
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form-container {
+    inline-size: 75%;
+
+    form {
+      inline-size: 90%;
+
+      label {
+        font-size: small;
+      }
+    }
+  }
+}
