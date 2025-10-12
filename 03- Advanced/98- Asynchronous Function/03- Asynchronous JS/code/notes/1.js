@@ -37,7 +37,7 @@ const flirtation = async () => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("❤");
-    }, 5_000);
+    }, 5000);
   });
   $.querySelector("#love").innerHTML = await promise;
 };

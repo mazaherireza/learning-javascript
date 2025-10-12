@@ -1,13 +1,16 @@
 import { user } from "./user.js";
 
-const INTERVAL = 2_000;
+const INTERVAL = 2000;
 
 const isLogin = ({ username }) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       // Do Something
-      if (username.startsWith("r")) resolve(true);
-      else reject(false);
+      if (username.startsWith("r")) {
+        resolve(true);
+      } else {
+        reject(false);
+      }
     }, INTERVAL);
   });
 };
@@ -17,6 +20,7 @@ const getCourses = (username) => {
     setTimeout(() => {
       // Do Something
       console.log(`Username is: ${username}.`);
+
       resolve(["Introduction to JavaSciprt", "Introduction to Python"]);
     }, INTERVAL);
   });
@@ -38,12 +42,16 @@ const getCourseInfo = (title) => {
 
 async function execute() {
   const flag = await isLogin(user);
+
   if (flag) {
     const courses = await getCourses(user.username);
+
     const course = await getCourseInfo(courses[0]);
+
     console.log(
       `Information of course "${course.title}": Instructor: ${course.instructor}, Duration: ${course.duration}`
     );
+    
     console.log("The End!");
   }
 }
