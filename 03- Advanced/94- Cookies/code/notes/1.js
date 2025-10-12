@@ -30,7 +30,8 @@
 const $ = document;
 $.cookie = "username=rezamazaheri";
 
-// You can also add an expiry date (in UTC time). By default, the cookie is deleted when the browser is closed:
+// You can also add an expiry date (in UTC time).
+// By default, the cookie is deleted when the BROWSER is closed:
 $.cookie = "username=rezamazaheri; expires=Thu, 18 Dec 2013 12:00:00 UTC";
 
 // With a path parameter, you can tell the browser what path the cookie belongs to.
@@ -85,8 +86,11 @@ document.cookie =
 
 const setCookie = (key, value, exdays) => {
   const time = new Date();
-  time.setTime(time.getTime() + exdays * 24 * 60 * 60 * 1_000);
+
+  time.setTime(time.getTime() + exdays * 24 * 60 * 60 * 1000);
+
   const expires = `"expires=${time.toUTCString()}"`;
+
   $.cookie = `${key}=${value}; ${expires}; path="/"`;
 };
 
@@ -94,26 +98,34 @@ const getCookie = (key) => {
   // Decode the cookie string, to handle cookies with special characters, e.g. '$'
   const decoded = decodeURIComponent($.cookie);
   const cookies = decoded.split(";");
+
   console.log(cookies);
+
   const cookieName = key + "=";
 
   cookies.forEach((cookie) => {
     let temp = cookie;
-    while(temp.charAt(0) = " ") 
-        temp = temp.substring(1)
-    if(temp.indexOf(cookieName) == 0) 
-        return temp.substring(cookieName.length, temp.length)
-  })
-  return ""
+
+    while (temp.charAt(0) === " ") {
+      temp = temp.substring(1);
+    }
+
+    if (temp.indexOf(cookieName) === 0) {
+      return temp.substring(cookieName.length, temp.length);
+    }
+  });
+
+  return "";
 };
 
 const checkCookie = () => {
-    const username = getCookie("username"); 
-    if(username != "") {
-        alert("Welcome.")
-    }
-    else {
-        const username = "rezamazaheri"
-        setCookie("username", username, 365)
-    } 
-}
+  const username = getCookie("username");
+
+  if (username !== "") {
+    alert("Welcome.");
+  } else {
+    const username = "rezamazaheri";
+
+    setCookie("username", username, 365);
+  }
+};
