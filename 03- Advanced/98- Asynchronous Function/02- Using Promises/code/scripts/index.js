@@ -1,13 +1,17 @@
 import { user } from "./user.js";
 
-const INTERVAL = 2_000;
+const INTERVAL = 2000;
 
 const isLogin = ({ username }) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       // Do Something
-      if (username.startsWith("r")) resolve(true);
-      else reject(false);
+      if (username.startsWith("r")) {
+        resolve(true);
+      } else {
+        reject(false);
+      }
+
     }, INTERVAL);
   });
 };
@@ -17,6 +21,7 @@ const getCourses = (username) => {
     setTimeout(() => {
       // Do Something
       console.log(`Username is: ${username}.`);
+
       resolve(["Introduction to JavaSciprt", "Introduction to Python"]);
     }, INTERVAL);
   });
@@ -27,6 +32,7 @@ const getCourseInfo = (title) => {
     setTimeout(() => {
       // Do Something
       console.log(`Title is: ${title}`);
+      
       resolve({
         title,
         duration: "8h 45m",
