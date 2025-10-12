@@ -1,0 +1,58 @@
+@import url("/style/main.css");
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  inline-size: 40%;
+
+  margin-inline: auto;
+  padding: 0.5rem;
+
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+
+  > div {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  img {
+    inline-size: 5rem;
+    block-size: 5rem;
+
+    border-radius: 99rem;
+  }
+
+  button {
+    background-color: white;
+    color: red;
+
+    padding: 0.5rem;
+
+    border: 1px solid red;
+    border-radius: 0.25rem;
+
+    font-weight: bold;
+    font-size: x-small;
+  }
+
+  &:hover {
+    border: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .user-container {
+    inline-size: 70%;
+
+    font-size: small;
+
+    img {
+      inline-size: 3rem;
+      block-size: 3rem;
+    }
+  }
+}
