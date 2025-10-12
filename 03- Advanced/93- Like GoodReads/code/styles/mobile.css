@@ -1,0 +1,17 @@
+body {
+  main {
+    #hero-title {
+      font-size: larger;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: medium;
+    }
+
+    .books-container {
+      flex-direction: column;
+    }
+  }
+}

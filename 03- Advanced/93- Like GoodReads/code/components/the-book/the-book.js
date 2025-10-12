@@ -1,10 +1,11 @@
 const $ = document;
+
 const template = $.createElement("template");
 
 template.innerHTML = `
-  <link rel="stylesheet" href="components/the-book/the-book.css" />
+  <link rel="stylesheet" href="/components/the-book/the-book.css" />
   <div class="book-container">
-    <img alt="Book" />
+    <img alt="" />
     <slot name="title"></slot>
     <slot name="author"></slot>
     <div class="details">
@@ -28,16 +29,20 @@ class TheBook extends HTMLElement {
     const img = shadowRoot.querySelector("img");
     img.setAttribute("src", this.getAttribute("img"));
 
-    const btn = shadowRoot.querySelector(".details button");
+    const button = shadowRoot.querySelector(".details button");
+
     let isVisible = false;
-    btn.onclick = () => {
+
+    button.onclick = () => {
       const rate = shadowRoot.querySelector(".rate");
+      
       isVisible = !isVisible;
+
       if (isVisible) {
-        btn.innerHTML = "Hide Rate";
+        button.innerHTML = "Hide Rate";
         rate.style.display = "inline";
       } else {
-        btn.innerHTML = "Show Rate";
+        button.innerHTML = "Show Rate";
         rate.style.display = "none";
       }
     };

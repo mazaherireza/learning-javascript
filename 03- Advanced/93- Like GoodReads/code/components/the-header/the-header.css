@@ -1,0 +1,14 @@
+@import url("/style/main.css");
+
+header {
+  border: 2px solid black;
+  border-radius: 1rem;
+
+  padding: 1rem 1rem;
+}
+
+@media screen and (max-width: 425px) {
+  h2 {
+    font-size: medium;
+  }
+}

@@ -1,0 +1,71 @@
+@import url("/style/main.css");
+
+.book-container {
+  font-family: "Times New Roman", Times, serif;
+
+  border: 1px solid black;
+  border-radius: 0.5rem;
+
+  padding: 0.5rem;
+
+  inline-size: 12rem;
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    inline-size: 10rem;
+
+    block-size: 12rem;
+
+    border-radius: 0.25rem;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .author {
+    font-style: italic;
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    inline-size: 80%;
+
+    margin-inline: auto;
+
+    button {
+      border: none;
+      outline: none;
+
+      font-weight: bold;
+
+      padding: 0.25rem;
+
+      opacity: 0.5;
+
+      border-radius: 0.25rem;
+
+      transition: opacity 1s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .rate {
+      display: none;
+      font-weight: bold;
+      font-size: small;
+    }
+  }
+}
