@@ -179,7 +179,7 @@ async function logIngredients() {
   async/await has the same concurrency semantics as normal promise chains.
   await within one async function does NOT stop the entire program, <--------------------- **
   only the parts that depend on its value, 
-  so other async jobs can still run while the await is pending. <--------------------- **
+  so other async jobs can still run while the await is pending. <--------------------- ** ?
 */
 
 /*
