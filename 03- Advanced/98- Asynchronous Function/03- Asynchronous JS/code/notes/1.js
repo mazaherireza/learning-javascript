@@ -40,7 +40,7 @@ const flirtation = async () => {
       resolve("❤");
     }, 5000);
   });
-  
+
   $.querySelector("#love").innerHTML = await promise;
 };
 
