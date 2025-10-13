@@ -1,6 +1,7 @@
 import { constructRegex } from "./utils.js";
 
 const $ = document;
+
 const regexInput = $.querySelector("#regex");
 const text = $.querySelector("#text");
 
@@ -10,7 +11,7 @@ const applyRegex = (regex) => {
 };
 
 regexInput.onkeyup = (event) => {
-  if (event.key == "Enter") {
+  if (event.key === "Enter") {
     const regex = constructRegex(regexInput.value);
     applyRegex(regex);
   }

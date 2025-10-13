@@ -1,0 +1,27 @@
+body {
+  main {
+    #hero-title {
+      font-size: larger;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: large;
+    }
+
+    .wrapper {
+      inline-size: 90%;
+
+      input[type="text"] {
+        font-size: medium;
+        margin-block-end: 1rem;
+      }
+
+      #text {
+        line-height: 1.5rem;
+        font-size: small;
+      }
+    }
+  }
+}
