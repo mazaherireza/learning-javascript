@@ -73,10 +73,13 @@ async function foo() {
   const result1 = await new Promise((resolve) => {
     setTimeout(() => resolve("One"), 5_000);
   });
+
   console.log(result1);
+
   const result2 = await new Promise((resolve) => {
     setTimeout(() => resolve("Two"), 5_000);
   });
+
   console.log(result2);
 }
 

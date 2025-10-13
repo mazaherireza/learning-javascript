@@ -8,7 +8,7 @@
 
 function resolveAfter2s() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve("[resolvedAfter2s] Resolved."), 2_000);
+    setTimeout(() => resolve("[resolvedAfter2s] Resolved."), 2000);
   });
 }
 

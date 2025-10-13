@@ -51,7 +51,7 @@ async function execute() {
     console.log(
       `Information of course "${course.title}": Instructor: ${course.instructor}, Duration: ${course.duration}`
     );
-    
+
     console.log("The End!");
   }
 }

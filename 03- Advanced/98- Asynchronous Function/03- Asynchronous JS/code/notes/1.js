@@ -33,12 +33,14 @@ salutation().then(
 */
 
 const $ = document;
+
 const flirtation = async () => {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve("❤");
     }, 5000);
   });
+  
   $.querySelector("#love").innerHTML = await promise;
 };
 
