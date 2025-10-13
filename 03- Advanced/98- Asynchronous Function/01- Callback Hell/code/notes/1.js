@@ -15,7 +15,9 @@
 */
 
 const add = (x, y) => x + y;
+
 const subtract = (x, y) => x - y;
+
 const calculateResult = (callback, x, y) => callback(x, y);
 
 calculateResult(add, 100, 101);
@@ -37,12 +39,16 @@ calculateResult(add, 100, 101);
 */
 
 const words = document.querySelectorAll(".word");
-const INTERVAL = 1_000;
+
+const INTERVAL = 1000;
+
 const animateAll = (animate) => {
   setTimeout(() => {
     animate(words[0]);
+
     setTimeout(() => {
       animate(words[1]);
+
       setTimeout(() => {
         animate(words[2]);
       }, INTERVAL);

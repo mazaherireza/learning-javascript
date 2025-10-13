@@ -10,10 +10,10 @@ const isLogin = ({ username }, callback) => {
 
       return true;
     }
+
     callback(false);
 
     return false;
-
   }, INTERVAL);
 };
 
@@ -36,7 +36,6 @@ const getCourseInfo = (title, callback) => {
       duration: "8h 45m",
       instructor: "Ramtin Khosravi",
     });
-
   }, INTERVAL);
 };
 
@@ -45,7 +44,7 @@ isLogin(user, (result) => {
 
   getCourses(user.username, (coursers) => {
     console.log(`username course(s): ${coursers}`);
-    
+
     getCourseInfo(coursers[0], (information) => {
       console.log(
         `Information of course "${coursers[0]}": Instructor: ${information.instructor}, Duration: ${information.duration}`
