@@ -11,7 +11,6 @@ const isLogin = ({ username }) => {
       } else {
         reject(false);
       }
-
     }, INTERVAL);
   });
 };
@@ -32,7 +31,7 @@ const getCourseInfo = (title) => {
     setTimeout(() => {
       // Do Something
       console.log(`Title is: ${title}`);
-      
+
       resolve({
         title,
         duration: "8h 45m",

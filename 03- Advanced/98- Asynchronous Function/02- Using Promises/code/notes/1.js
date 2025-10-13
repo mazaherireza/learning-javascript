@@ -104,6 +104,7 @@ doSomething()
 */
 
 const listOfIngredients = [];
+
 doSomething()
   .then((url) => {
     // Missing "return" keyword in front of fetch(url).
@@ -160,6 +161,7 @@ async function logIngredients() {
   const url = await doSomething();
   const res = await fetch(url);
   const data = await res.json();
+
   listOfIngredients.push(data);
   console.log(listOfIngredients);
 }
@@ -192,6 +194,7 @@ try {
   const result = syncDoSomething();
   const newResult = syncDoSomethingElse(result);
   const finalResult = syncDoThirdThing(newResult);
+
   console.log(`Got the final result: ${finalResult}`);
 } catch (error) {
   failure(error);
