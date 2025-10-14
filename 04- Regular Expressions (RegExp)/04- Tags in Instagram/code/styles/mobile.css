@@ -1,0 +1,23 @@
+body {
+  main {
+    #hero-title {
+      font-size: larger;
+    }
+  }
+
+  #playground {
+    #playground-title {
+      font-size: large;
+    }
+
+    form {
+      inline-size: 95%;
+
+      textarea,
+      p,
+      button {
+        font-size: small;
+      }
+    }
+  }
+}
