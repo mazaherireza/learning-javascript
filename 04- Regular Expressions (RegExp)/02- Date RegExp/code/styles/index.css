@@ -1,0 +1,49 @@
+body {
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  main {
+    background: #d1d8e0 radial-gradient(#d1d8e0, #ffffff);
+    display: grid;
+    place-content: center;
+  }
+
+  #playground {
+    padding: 1rem;
+
+    #playground-title {
+      margin-block-end: 1rem;
+    }
+
+    form {
+      inline-size: 80%;
+      
+      margin-inline: auto;
+
+      input {
+        inline-size: 100%;
+
+        padding: 0.25rem 0.5rem;
+
+        font-weight: bold;
+        font-size: large;
+
+        margin-block-end: 1rem;
+      }
+
+      button {
+        font-weight: bold;
+        font-size: large;
+
+        border: none;
+
+        padding: 0.25rem 0.5rem;
+
+        border-radius: 0.25rem;
+      }
+    }
+  }
+}
